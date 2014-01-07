@@ -1,0 +1,841 @@
+{
+
+  "saga": {
+
+    "name": "Saga Noren",
+    "slug": "saga",
+    "text" : " 30 år. Politikommisær.",
+    "longText": "Saga arbejder hos kriminalpolitiet i Malmø og til hendes store glæde er Hans tilbage som hendes chef. Martin har hun ikke haft kontakt med siden August’s ( Martins søn) begravelse. Privat har Saga et forhold til Jacob Sandberg, en fyr hun mødte på en bar for lidt over 7 måneder siden. Han elsker hende som hun er, og de er lige flyttet samme. Saga forsøger at forstå, hvordan man skal opføre sig, når man lever i et parforhold, og hun læser en masse bøger om det. Men Saga er fokuseret på sit arbejde, og bryder alle de uskrevne regler der er i et parforhold. Ringer ikke når hun kommer senere hjem, og har allerede spist ude, selvom Jacob venter med maden.",
+    "image": "saga.jpg",
+    "voteId": 2,
+
+    "relations": [
+      {
+        "slug": "martin",
+        "name": "Martin",
+        "text": "Sagas politimakker i Danmark."
+      },
+      {
+        "slug": "pernille",
+        "name": "Pernille",
+        "text": "Saga’s danske kollega på sagen."
+      },
+      {
+        "slug": "rasmus",
+        "name": "Rasmus",
+        "text": "Svensk kollega til Saga."
+      },
+      
+      {
+        "slug": "hans",
+        "name": "Hans",
+        "text": "Hans er Sagas chef i Malmø"
+      },
+      
+      {
+        "slug": "lillian",
+        "name": "Lillian",
+        "text": "Lillian er chefen i København, som også kender Saga"
+      },
+      
+      {
+        "slug": "rasmus",
+        "name": "Rasmuzzzzzz",
+        "text": "Hep hep hep hep hep"
+      }
+    ],
+
+    "media": [
+      {
+        "type": "video",
+        "resourceId": 1532330,
+        "image": "/NR/rdonlyres/33278B96-4891-4FD1-82D9-2975E7CFAA90/5336707/6007536dd3a94f9f908cbcbc084840a7_SAGAOGMARTINBROEN.jpg"
+      },
+      {
+        "type": "video",
+        "resourceId": 1532330,
+        "image": "/NR/rdonlyres/33278B96-4891-4FD1-82D9-2975E7CFAA90/5336707/6007536dd3a94f9f908cbcbc084840a7_SAGAOGMARTINBROEN.jpg"
+      },
+      {
+        "type": "image",
+        "url" : "/tjenester/Broen2/Foto_B/saga/saga_afs1_1.jpg"
+      },
+      {
+        "type": "image",
+        "url" : "/tjenester/Broen2/Foto_B/saga/saga_afs1_2.jpg"
+      }
+    ]
+  },
+
+
+  "martin": {
+
+    "name": "Martin Rode",
+    "slug": "martin",
+    "text" : "40 år. kriminalkommisær.",
+    "longText": "Martin arbejder hos Københavns politi – og han er stærkt traumatiseret efter August’s død. Han er ikke deprimeret og apatisk – mere rastløs og frustreret. Han humør svinger meget og nogle gange vælter vreden frem .Han arbejder næste 24 timer i døgnet og forsøger at flygte fra sorgen. Da Saga kontakter ham, for at få hjælp til at opklare en ny sag der vedrører både Danmark og Sverige, bliver han glad Martin og Mette er flyttet fra hinanden og Martin bor midlertidigt på et motel. Mette bor i et nyt hus uden for København med alle 5 børn, og ansat en barnepige, Anna-Dea, som hjælper hende.",
+    "image": "martin.jpg",
+    "voteId": 3,
+
+    "relations": [
+      {
+        "slug": "saga",
+        "name": "Saga",
+        "text": "Martins politimakker i Sverige."
+      },
+      {
+        "slug": "lillian",
+        "name": "Lillian",
+        "text": "Martins chef i København."
+      },
+      {
+        "slug": "pernille",
+        "name": "Pernille",
+        "text": "Martins danske kollega."
+      },
+      {
+        "slug": "rasmus",
+        "name": "Rasmus",
+        "text": "Svensk kollega til Martin."
+      },
+      {
+        "slug": "hans",
+        "name": "Hans",
+        "text": "Chefen i Malmø hvor Martin arbejder med på sagen."
+      }
+    ],
+
+    "media": [ {
+        "type": "video",
+        "resourceId": 1532330,
+        "image": "/NR/rdonlyres/33278B96-4891-4FD1-82D9-2975E7CFAA90/5336707/6007536dd3a94f9f908cbcbc084840a7_SAGAOGMARTINBROEN.jpg"
+      },
+      {
+        "type": "image",
+        "url" : "/tjenester/Broen2/Foto_B/martin/martin_afs1_1.jpg"
+      },
+      {
+        "type": "image",
+        "url" : "/tjenester/Broen2/Foto_B/martin/martin_afs1_2.jpg"
+      }
+    
+   ]
+  },
+  
+  "rasmus": {
+    
+    "name": "Rasmus Larsson",
+    "slug": "rasmus",
+    "text" : "30 år. kriminalbetjent.",
+    "longText": "Rasmus er lige blevet færdig på politiskolen med topkarakterer – og det er ingen hemmelighed at han ser den igangværende sag som et springbræt i sin karriere, - Han er ambitiøs og grundig. For Rasmus er det vigtigt at få anerkendelse for det han gør – at blive set og bekræftet. Han er vant til det, og har svært ved at forstå hvorfor Saga ikke værdsætter det hans indsats. Det er en af grundene til at han bliver irriteret på hende. Rasmus er cool og vil helst gå klædt i T-shirt og jeans. Han er miljøbevidst og er omhyggelig med at sortere affald og handle økologisk. Han bor sammen med en pige. Han tager sig primært af opklaringsarbejdet på den svenske side, men vil gerne ud i marken. ",
+    "image": "rasmus.jpg",
+    "voteId": 4,
+
+    "relations": [
+      {
+        "slug": "saga",
+        "name": "Saga",
+        "text": "Rasmus overordnede i Sverige."
+      },
+      
+      {
+        "slug": "pernille",
+        "name": "Pernille",
+        "text": "Kollega fra Danmark der også arbejder på sagen."
+      },
+      {
+        "slug": "martin",
+        "name": "Martin",
+        "text": "Kollega fra Danmark på linie med Saga."
+      },
+      {
+        "slug": "hans",
+        "name": "Hans",
+        "text": "Chefen i Malmø, hvor Rasmus arbejder."
+      }
+    ],
+
+    "media": [ {
+        "type": "video",
+        "resourceId": 1532330,
+        "image": "/NR/rdonlyres/33278B96-4891-4FD1-82D9-2975E7CFAA90/5336707/6007536dd3a94f9f908cbcbc084840a7_SAGAOGMARTINBROEN.jpg"
+      },
+      {
+        "type": "image",
+        "url" : "/tjenester/Broen2/Foto_B/rasmus/rasmus_afs1_1.jpg"
+      },
+      {
+        "type": "image",
+        "url" : "/tjenester/Broen2/Foto_B/rasmus/rasmus_afs1_2.jpg"
+      }
+    
+   ]
+  },
+  
+  
+  
+  "pernille": {
+
+    "name": "Pernille Lindegaard",
+    "slug": "pernille",
+    "text" : "35 år. kriminalbetjent.",
+    "longText": "Pernille er en dygtig og effektiv opklarer ved Københavns politi. Hun kan opfange maget information på kort tid og sortere det fra som er vigtigst. Hun udstråler naturlig selvsikkerhed, er varm og glad, betænksom og omsorgsfuld, og vil gerne have at alle føler sig godt tilpas. Hun stiller altid op for andre, Hun er fysisk, står ofte tæt på den hun snakker med, og hun og hun røre ofte ved og har fysisk kontakt til personer tæt på hende. Pernille tænker over hvordan hun går klædt, men har sin egen tøjstil og den er ikke så striks. Hun er single, har mange venner, og vil gerne finde en at dele livet med. Hun tager sig primært af opklaringen på den danske side. ",
+    "image": "pernille.jpg",
+    "voteId": 5,
+
+    "relations": [
+      {
+        "slug": "saga",
+        "name": "Saga",
+        "text": "Pernilles overordnede i Sverige."
+      },
+      {
+        "slug": "rasmus",
+        "name": "Rasmus",
+        "text": "Svensk kollega der også arbejder på sagen."
+      },
+      {
+        "slug": "hans",
+        "name": "Hans",
+        "text": "Chefen i Malmø hvor Pernille lige nu arbejder."
+      },
+    {
+        "slug": "martin",
+        "name": "Martin",
+        "text": "Kollega fra Danmark."
+      }
+    ],
+
+    "media": [ {
+        "type": "video",
+        "resourceId": 1532330,
+        "image": "/NR/rdonlyres/33278B96-4891-4FD1-82D9-2975E7CFAA90/5336707/6007536dd3a94f9f908cbcbc084840a7_SAGAOGMARTINBROEN.jpg"
+      },
+      {
+        "type": "image",
+        "url" : "/tjenester/Broen2/Foto_B/pernille/pernille_afs1_1.jpg"
+      },
+      {
+        "type": "image",
+        "url" : "/tjenester/Broen2/Foto_B/pernille/pernille_afs1_2.jpg"
+      }
+    
+   ]
+  },
+  
+  
+  "john": {
+
+    "name": "John",
+    "slug": "john",
+    "text" : "Politidataekspert.",
+    "longText": "John er den eneste ( udover Saga og Hans) på stationen i Malmø vi genkender fra sidste sæson af broen.",
+    "image": "john.jpg",
+    "voteId": 6,
+
+    "relations": [
+      {
+        "slug": "saga",
+        "name": "Saga",
+        "text": "Saga er Johns kollega og de arbejder tæt sammen."
+      },
+    {
+        "slug": "hans",
+        "name": "Hans",
+        "text": "Politidirektøren i Malmø, Johns kollega."
+      },
+    {
+        "slug": "martin",
+        "name": "Martin",
+        "text": "Kriminalkommisær fra København, der er med i efterforskningen i Sverige."
+      }
+      
+    
+    ],
+
+    "media": [ {
+        "type": "video",
+        "resourceId": 1532330,
+        "image": "/NR/rdonlyres/33278B96-4891-4FD1-82D9-2975E7CFAA90/5336707/6007536dd3a94f9f908cbcbc084840a7_SAGAOGMARTINBROEN.jpg"
+      },
+      {
+        "type": "image",
+        "url" : "/tjenester/Broen2/Foto_B/john/john_afs1_1.jpg"
+      },
+      {
+        "type": "image",
+        "url" : "/tjenester/Broen2/Foto_B/john/john_afs1_2.jpg"
+      }
+    
+   ]
+  },
+  
+  
+  "hans": {
+
+    "name": "Hans",
+    "slug": "hans",
+    "text" : "Politidirektør i Malmø.",
+    "longText": "Hans er stadigvæk Saga chef.  Han skulle egentlig være flyttet til Göteborg med sin kone, for at komme tættere på børn og børnebørn. Men deres barn fik istedet job i Malmø og flyttede ned til dem i Malmø, så Hans er stadigvæk chef. ",
+    "image": "hans.jpg",
+    "voteId": 7,
+
+    "relations": [
+      {
+        "slug": "saga",
+        "name": "Saga",
+        "text": "Saga er ansat under Hans i malmø."
+      },
+      {
+        "slug": "rasmus",
+        "name": "Rasmus",
+        "text": "Svensk betjent der arbejder på sagen."
+      },
+      {
+        "slug": "lillian",
+        "name": "Lillian",
+        "text": "Politidirektøren i København, Hans's kollega."
+      },
+    {
+        "slug": "martin",
+        "name": "Martin",
+        "text": "Kriminalkommisær fra København, der er med i efterforskningen i Sverige."
+      },
+    {
+        "slug": "pernille",
+        "name": "Pernille",
+        "text": "Dansk betjent der arbejder på sagen."
+      }
+    ],
+
+    "media": [ {
+        "type": "video",
+        "resourceId": 1532330,
+        "image": "/NR/rdonlyres/33278B96-4891-4FD1-82D9-2975E7CFAA90/5336707/6007536dd3a94f9f908cbcbc084840a7_SAGAOGMARTINBROEN.jpg"
+      },
+      {
+        "type": "image",
+        "url" : "/tjenester/Broen2/Foto_B/hans/hans_afs1_1.jpg"
+      },
+      {
+        "type": "image",
+        "url" : "/tjenester/Broen2/Foto_B/hans/hans_afs1_2.jpg"
+      }
+    
+   ]
+  },
+  
+  
+  
+  "lillian": {
+
+    "name": "Lillian",
+    "slug": "lillian",
+    "text" : "Politidirektør i København.",
+    "longText": "Lillian er Martins chef i København og, og hun har udpeget Martin til at koordinere sikkerheden på et kommende EU topmøde i købehavn, men Lillian lader Martin tage opgaven sammen med Saga i Sverige. Hun sætter dog den betingelse at Martin skal fortsætte sin terapi – for at komme videre efter tabet af August.",
+    "image": "lillian.jpg",
+    "voteId": 8,
+
+    "relations": [
+      {
+        "slug": "saga",
+        "name": "Saga",
+        "text": "Saga er ansat under Hans i Malmø."
+      },
+      {
+        "slug": "hans",
+        "name": "Hans",
+        "text": "Politidirektøren i Malmø, Lillians kollega."
+      },
+    {
+        "slug": "martin",
+        "name": "Martin",
+        "text": "Kriminalkommisær fra København, der er med i efterforskningen i Sverige."
+      }
+    ],
+
+    "media": [ {
+        "type": "video",
+        "resourceId": 1532330,
+        "image": "/NR/rdonlyres/33278B96-4891-4FD1-82D9-2975E7CFAA90/5336707/6007536dd3a94f9f908cbcbc084840a7_SAGAOGMARTINBROEN.jpg"
+      },
+      {
+        "type": "image",
+        "url" : "/tjenester/Broen2/Foto_B/lillian/lillian_afs1_1.jpg"
+      },
+      {
+        "type": "image",
+        "url" : "/tjenester/Broen2/Foto_B/lillian/lillian_afs1_2.jpg"
+      }
+    
+   ]
+  },
+  
+  
+  
+  "niklas": {
+
+    "name": "Niklas Nilsson",
+    "slug": "niklas",
+    "text" : "25 år - Laboratorieassistent",
+    "longText": "Niklas har arbejdet på Mediconus i 2 år. Han trives med sit job og er tilfreds med det han laver. Kom i kontakt med Mads for 5 år siden ved en hus besættelse. Han er imponeret af Mads, hans vilje og drivkraft. Følte at han blev noget da han kom med i gruppen. Da hans forældre døde i en bilulykke lidt over to år siden, fik han forældremyndigheden over sin lille bror, Linus (13 år). Han er meget bekymret for sin bror og ønsker i virkeligheden at trække sig ud af gruppen, men er bange for hvordan Mads vil reagere. Han ved også at gruppen har brug for hans ekspertise og  kontakter fra Medisonus..",
+    "image": "niklas.jpg",
+    "voteId": 9,
+
+    "relations": [
+      {
+        "slug": "linus",
+        "name": "Linus",
+        "text": "Linus er Niklas's lillebror."
+      },
+      {
+        "slug": "mads",
+        "name": "Mads",
+        "text": "Mads er lederen i den gruppe Niklas er med i."
+      },
+    {
+        "slug": "kattis",
+        "name": "Kattis",
+        "text": "Kattis er aktivist i gruppen, og er lidt skeptisk overfor det der sker."
+      },
+     {
+        "slug": "matilde",
+        "name": "Matilde",
+        "text": "Matilde er aktivist i samme gruppe som Niklas."
+      },
+    {
+        "slug": "julian",
+        "name": "Julian",
+        "text": "Julian er den der styrer gruppen udefra."
+      }
+    ],
+
+    "media": [ {
+        "type": "video",
+        "resourceId": 1532330,
+        "image": "/NR/rdonlyres/33278B96-4891-4FD1-82D9-2975E7CFAA90/5336707/6007536dd3a94f9f908cbcbc084840a7_SAGAOGMARTINBROEN.jpg"
+      },
+      {
+        "type": "image",
+        "url" : "/tjenester/Broen2/Foto_B/niklas/niklas_afs1_1.jpg"
+      },
+      {
+        "type": "image",
+        "url" : "/tjenester/Broen2/Foto_B/niklas/niklas_afs1_2.jpg"
+      }
+    
+   ]
+  },
+  
+  
+  
+  
+  "linus": {
+
+    "name": "Linus Nilsson",
+    "slug": "linus",
+    "text" : "Skoleelev.",
+    "longText": "Linus går i skole, men har svært ved at få venner og bliver mobbet og holdt uden for. Han bor alene med sin storebror Niklas, da de har mistet deres forældre i en bilulykke. Han er meget nervøs for at han også skal miste sin storebror.",
+    "image": "linus.jpg",
+    "voteId": 10,
+
+    "relations": [
+      {
+        "slug": "niklas",
+        "name": "Niklas",
+        "text": "Niklas er Linus's storebror og den eneste familie han har."
+      }
+      
+    
+    ],
+
+    "media": [ {
+        "type": "video",
+        "resourceId": 1532330,
+        "image": "/NR/rdonlyres/33278B96-4891-4FD1-82D9-2975E7CFAA90/5336707/6007536dd3a94f9f908cbcbc084840a7_SAGAOGMARTINBROEN.jpg"
+      },
+      {
+        "type": "image",
+        "url" : "/tjenester/Broen2/Foto_B/linus/linus_afs1_1.jpg"
+      },
+      {
+        "type": "image",
+        "url" : "/tjenester/Broen2/Foto_B/linus/linus_afs1_2.jpg"
+      }
+    
+   ]
+  },
+  
+  
+  
+  
+  
+  
+  
+  
+  "mads": {
+
+    "name": "Mads Nielsen",
+    "slug": "mads",
+    "text" : "Lederen i gruppen.",
+    "longText": "Lederen i gruppen, selvsikker og med psykopatiske træk. Han har haft forskellige småjobs, har en baggrund som miljøaktivist, men er ikke med i gruppen pga. sin over bevisning, men mere for det adrenalin kick det giver at udføre attentaterne og slås med politiet. I forbindelse med COP 15 blev Mads også anholdt. Han er opført i politiets register for mindre narkotika kriminalitet, og vold mod tjenestemand i forbindelse med demonstrationer. Han er vant til at bestemme, kræver respekt og ingen må sige ham imod. Han har let paranoide træk og er mistænksom. Han har en agenda og den skal alle følge. Frygtløs og beslutsom, og tøver aldrig med at bruge vold hvis det er  nødvendigt. Han har været samme med Matilde i et års tid.",
+    "image": "mads.jpg",
+    "voteId": 11,
+
+    "relations": [
+      {
+        "slug": "niklas",
+        "name": "Niklas",
+        "text": "Niklas er med i gruppen, og er bange for Mads."
+      },
+    {
+        "slug": "matilde",
+        "name": "Matilde",
+        "text": "Matilde er med i gruppen og kæreste med Mads."
+      },
+    {
+        "slug": "kattis",
+        "name": "Kattis",
+        "text": "Kattis oer også med i gruppen som aktivist."
+      },
+    {
+        "slug": "julian",
+        "name": "Julian",
+        "text": "Julian er den der styrer gruppen udefra."
+      }
+    
+    
+      
+    
+    ],
+
+    "media": [ {
+        "type": "video",
+        "resourceId": 1572939,
+        "image": "/NR/rdonlyres/33278B96-4891-4FD1-82D9-2975E7CFAA90/5336707/6007536dd3a94f9f908cbcbc084840a7_SAGAOGMARTINBROEN.jpg"
+      },
+      {
+        "type": "image",
+        "url" : "/tjenester/Broen2/Foto_B/mads/mads_afs1_1.jpg"
+      },
+      {
+        "type": "image",
+        "url" : "/tjenester/Broen2/Foto_B/mads/mads_afs1_2.jpg"
+      }
+    
+   ]
+  },
+  
+  
+  
+  
+  "kattis": {
+
+    "name": "Katarina Lövgren",
+    "slug": "kattis",
+    "text" : "Miljøaktivist.",
+    "longText": " Kattis var i sine ygre dage dyreaktivist og var blandt andet med til at slippe mink ud, og kæmpe for dyrs rettigheder. I den forbindelse mødte hun Matilde, og blev senere kontaktet af Julian, der på Matildes opfordring tog hende med i gruppen. Hun eruddannet civilingenør i Lund, lidt rastløs og usikker og leder lidt efter sin egen identitet. hun er ikke bange for at sige sin mening, og hun er imod vold aktioner med dødelig udgang.",
+    "image": "kattis.jpg",
+
+    "relations": [
+      {
+        "slug": "niklas",
+        "name": "Niklas",
+        "text": "Niklas er med i gruppen, og bryder sig heller ikke om vold."
+      },
+    {
+        "slug": "matilde",
+        "name": "Matilde",
+        "text": "Matilde er med i gruppen og kæreste med Mads."
+      },
+    {
+        "slug": "mads",
+        "name": "Mads",
+        "text": "Mads er lederen af gruppen og den der bestemmer."
+      },
+    {
+        "slug": "julian",
+        "name": "Julian",
+        "text": "Julian er den, der styrer gruppen udefra."
+      }
+      
+    
+    ],
+
+    "media": [ {
+        "type": "video",
+        "resourceId": 1572939,
+        "image": "/NR/rdonlyres/33278B96-4891-4FD1-82D9-2975E7CFAA90/5336707/6007536dd3a94f9f908cbcbc084840a7_SAGAOGMARTINBROEN.jpg"
+      },
+      {
+        "type": "image",
+        "url" : "/tjenester/Broen2/Foto_B/kattis/kattis_afs1_1.jpg"
+      },
+      {
+        "type": "image",
+        "url" : "/tjenester/Broen2/Foto_B/kattis/kattis_afs1_2.jpg"
+      },
+    {
+        "type": "image",
+        "url" : "/tjenester/Broen2/Foto_B/kattis/kattis_afs1_3.jpg"
+      }
+    
+   ]
+  },
+  
+  
+  
+  
+  "matilde": {
+
+    "name": "Matilde Madsen",
+    "slug": "matilde",
+    "text" : "25 år - Miljøaktivist",
+    "longText": "Matilde er Julians halvsøster. Hun har været miljøaktivist siden teenageårerne, og hun har et kald og er klar til at ofre sig selv for at redde jorden. Hun kæmper og gir aldig op og hader hvis folk er feje. Matilde drages af farlige og dominerende mænd. Hun kom ind i gruppen via Julian, men ingen ved at de er halvsøskende, selvom det ikke er tilladt at have nære bånd til nogle i organisationen",
+    "image": "matilde.jpg",
+
+    "relations": [
+      {
+        "slug": "linus",
+        "name": "Linus",
+        "text": "Linus er Niklas's lillebror."
+      },
+      {
+        "slug": "mads",
+        "name": "Mads",
+        "text": "Mads er lederen i den gruppe Niklas er med i."
+      },
+    {
+        "slug": "kattis",
+        "name": "Kattis",
+        "text": "Kattis er aktivist i gruppen, og er lidt skeptisk overfor det der sker."
+      },
+     {
+        "slug": "matilde",
+        "name": "Matilde",
+        "text": "Matilde er aktivist i samme gruppe som Niklas."
+      },
+    {
+        "slug": "julian",
+        "name": "Julian",
+        "text": "Julian er den der styrer gruppen udefra."
+      }
+    ],
+
+    "media": [ {
+        "type": "video",
+        "resourceId": 1532330,
+        "image": "/NR/rdonlyres/33278B96-4891-4FD1-82D9-2975E7CFAA90/5336707/6007536dd3a94f9f908cbcbc084840a7_SAGAOGMARTINBROEN.jpg"
+      },
+      {
+        "type": "image",
+        "url" : "/tjenester/Broen2/Foto_B/matilde/matilde_afs1_1.jpg"
+      },
+      {
+        "type": "image",
+        "url" : "/tjenester/Broen2/Foto_B/matilde/matilde_afs1_2.jpg"
+      }
+    
+   ]
+  },
+  
+  
+  
+  "julian": {
+
+    "name": "Julian Christensen",
+    "slug": "julian",
+    "text" : " 32 år - IT Ekspert og ejer et IT firma.",
+    "longText": "Uddannet Programmør og systemanalytiker. Han har mange penge og er med til at finansiere projektet ” gør verden bedre”, og han har altid interesseret sig for miljøet. Han har en dyr smag, og han har et specielt forhold til sin halvsøster, som egentlig er det eneste mennesker han kan lide. Han er ansvarlig for rekruttering til gruppen og dens mission. ",
+    "image": "julian.jpg",
+
+    "relations": [
+      {
+        "slug": "niklas",
+        "name": "Niklas",
+        "text": "Niklas er med i gruppen."
+      },
+    {
+        "slug": "matilde",
+        "name": "Matilde",
+        "text": "Matilde er med i gruppen og søster til Julian."
+      },
+    {
+        "slug": "kattis",
+        "name": "Kattis",
+        "text": "Kattis er også med i gruppen som aktivist."
+      },
+    {
+        "slug": "mads",
+        "name": "Mads",
+        "text": "Mads er leder af gruppe, som Julian rekrutteer til."
+      },
+    {
+        "slug": "laura",
+        "name": "Laura",
+        "text": "Laura er ansat i receptionen i Julians firma."
+      }
+    
+    
+      
+    
+    ],
+
+    "media": [ {
+        "type": "video",
+        "resourceId": 1572939,
+        "image": "/NR/rdonlyres/33278B96-4891-4FD1-82D9-2975E7CFAA90/5336707/6007536dd3a94f9f908cbcbc084840a7_SAGAOGMARTINBROEN.jpg"
+      },
+      {
+        "type": "image",
+        "url" : "/tjenester/Broen2/Foto_B/julian/julian_afs1_1.jpg"
+      },
+      {
+        "type": "image",
+        "url" : "/tjenester/Broen2/Foto_B/julian/julian_afs1_2.jpg"
+      }
+    
+   ]
+  },
+  
+  
+  
+  "laura": {
+
+    "name": "Laura Westberg",
+    "slug": "laura",
+    "text" : " 18 år - Gymnasieelev.",
+    "longText": "Laura bor sammen med sin far Axel, og går i gymnasiet. Laura er meget ambitiøs,  har let ved at lære og stiller meget høje krav til sig selv. Hun vil være den bedste .Hun er konkurrence menneske og hader at tabe. Hun arbejder ved siden af skolen i Julians IT Firma og hun elsker sko – har mindst 100 par. Laura er social og har mange bekendte, men er alligevel svær at komme rigtig ind på livet af. Hun ved at hun ser godt ud og kan lide at manipulere med folk, og hun tester ofte hvor langt hun kan gå. Hendes forældre er skilt, og Lauras mor på i udlandet. ",
+    "image": "laura.jpg",
+
+    "relations": [
+      {
+        "slug": "beate",
+        "name": "Beate",
+        "text": "Beate er Lauras lærer og elskerinde."
+      },
+    {
+        "slug": "julian",
+        "name": "Julian",
+        "text": "Julian er Lauras chef i IT firmaet."
+      },
+    {
+        "slug": "axel",
+        "name": "Axel",
+        "text": "Axel er Lauras far."
+      }
+    
+    
+    
+      
+    
+    ],
+
+    "media": [ {
+        "type": "video",
+        "resourceId": 1572939,
+        "image": "/NR/rdonlyres/33278B96-4891-4FD1-82D9-2975E7CFAA90/5336707/6007536dd3a94f9f908cbcbc084840a7_SAGAOGMARTINBROEN.jpg"
+      },
+      {
+        "type": "image",
+        "url" : "/tjenester/Broen2/Foto_B/laura/laura_afs1_1.jpg"
+      },
+      {
+        "type": "image",
+        "url" : "/tjenester/Broen2/Foto_B/laura/laura_afs1_2.jpg"
+      }
+    
+   ]
+  },
+  
+  
+  
+  "axel": {
+
+    "name": "Axel Westberg",
+    "slug": "axel",
+    "text" : " 45 år - Filmfotograf.",
+    "longText": " Axel er filmfotograf og har har et mindre produktionsselskab, der laver dokumentarfilm, i Malmø. Han har været gift med Karin der arbejder i EU og bor i Bruxelles. Axel bor sammen med Laura i en mindre villa i det gamle Limhamn. Axel synes det ervigtigt med en god relation til sin datter og han har givet hende meget frihed. Han bekymrer sig også for hende og stiller altid op når hun behøver hjælp og kører hende til forskellige aktiviteter. men han synes også det er vigtigt ikke at ødelægge hende, og hu må lære at man ikke kan få alt hvad man vil. Man må også kunne lære at tåle modgang, noget Laura har meget svært ved. Han er stolt over at hun er så ambitiøs og dygtig, men også lidt bange for at hun stiller for store krav til sig selv. Aksel går meget op i sit arbejde som fotograf, og er sammne med en producent igang med at lave en dokumentarfilm om miljø forurening i Østersøen.  ",
+    "image": "axel.jpg",
+
+    "relations": [
+      {
+        "slug": "beate",
+        "name": "Beate",
+        "text": "Beate er Lauras lærer og elskerinde."
+      },
+    {
+        "slug": "laura",
+        "name": "Laura",
+        "text": "Laura er Axels datter."
+      }
+    
+    
+    
+      
+    
+    ],
+
+    "media": [ {
+        "type": "video",
+        "resourceId": 1572939,
+        "image": "/NR/rdonlyres/33278B96-4891-4FD1-82D9-2975E7CFAA90/5336707/6007536dd3a94f9f908cbcbc084840a7_SAGAOGMARTINBROEN.jpg"
+      },
+      {
+        "type": "image",
+        "url" : "/tjenester/Broen2/Foto_B/laura/laura_afs1_1.jpg"
+      },
+      {
+        "type": "image",
+        "url" : "/tjenester/Broen2/Foto_B/laura/laura_afs1_2.jpg"
+      }
+    
+   ]
+  },
+  
+  
+  
+  
+  "beate": {
+
+    "name": "Beate",
+    "slug": "beate",
+    "text" : " 33 år - Gymnasielærer.",
+    "longText": " Beate er lærer på Lauras gymnasium. Derudover har hun et hemmeligt forhold til sin elev, og det er ikke helt ukompliseret. Hun er en  ",
+    "image": "beate.jpg",
+
+    "relations": [
+      
+    {
+        "slug": "laura",
+        "name": "Laura",
+        "text": "Laura er Beates elev og elsker."
+      }
+    
+    
+    
+      
+    
+    ],
+
+    "media": [ {
+        "type": "video",
+        "resourceId": 1572939,
+        "image": "/NR/rdonlyres/33278B96-4891-4FD1-82D9-2975E7CFAA90/5336707/6007536dd3a94f9f908cbcbc084840a7_SAGAOGMARTINBROEN.jpg"
+      },
+      {
+        "type": "image",
+        "url" : "/tjenester/Broen2/Foto_B/laura/laura_afs1_1.jpg"
+      },
+      {
+        "type": "image",
+        "url" : "/tjenester/Broen2/Foto_B/laura/laura_afs1_2.jpg"
+      }
+    
+   ]
+  }
+  
+ } 
+
+
+

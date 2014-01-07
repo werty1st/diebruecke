@@ -13,3 +13,16 @@ results
 
 npm-debug.log
 node_modules
+
+
+.kansorc
+config.php
+*~
+*.lock
+*.DS_Store
+.*.swp
+*.out
+emailadressen
+cache
+
+!.gitignore
