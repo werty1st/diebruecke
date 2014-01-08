@@ -1,16 +1,19 @@
 <html class="dfsf">
+<link rel="stylesheet" href="styles/base.css" media="screen"/>
 <link rel="stylesheet" href="styles/broen.css" media="screen"/>
-<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-<!-- <script src="//ajax.googleapis.com/ajax/libs/mootools/1.4.5/mootools.js"></script> -->
 <script src="//ajax.googleapis.com/ajax/libs/mootools/1.4.5/mootools-yui-compressed.js"></script>
-
-<script data-main="js/libs/more.js" src="js/libs/more.js"></script>
-<script data-main="js/libs/require.js" src="js/libs/require.js"></script>
-
 <script type="text/javascript" src="js/broen.js"></script>
 <div id="broen-gallery-container"> </div>
 
+<script type="text/javascript" src="modules.js"></script>
 <script type="text/javascript">
     new DR.BroenGallery.App('broen-gallery-container');
+    // var session = require(["modules"]);
+	require(["modules"], function() {
+		console.log(this);
+		console.log(kanso);
+		var session = require("session");
+		return true;
+	});    
 </script>
 </html>

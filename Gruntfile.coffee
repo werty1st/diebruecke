@@ -43,8 +43,12 @@ module.exports = (grunt) ->
                 tasks: ['less', 'shell:kansopush']
 
             data:
-                files: ['data.json','img/**']
+                files: ['data.json','index.html','img/**']
                 tasks: ['shell:kansopush']
+
+            kanso:
+                files: ['kanso.json']
+                tasks: ['shell:kansoinstall', 'shell:kansopush']
 
         #shell
         shell:
@@ -58,6 +62,12 @@ module.exports = (grunt) ->
                       "kanso push"
                 options:
                     stdout: true
+
+            kansoinstall:
+                command:
+                      "kanso install"
+                options:
+                    stdout: true                    
 
 
     #Load the plugins

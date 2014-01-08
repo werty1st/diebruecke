@@ -48,3 +48,10 @@ class DR.BroenGallery.VoteMachine
 
         return weekNr
 
+###
+todo
+dr-widget-swipe-carousel.js fehlt
+swipe.js fehlt
+usw
+http://requirejs.org/docs/faq-advanced.html namepsace benutzen damit couchdb funktioniert
+###

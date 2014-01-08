@@ -4,7 +4,10 @@
     "description": "Modul mit Hintergrundinformationen und Beziehungen der Hauptfiguren",
     "attachments": ["index.html","data.json","img","js","styles"],
     "dependencies": {
-        "attachments": null       
+        "attachments": null,
+        "modules": null,
+        "db"    :null,        
+        "session": null     
     }
 }
 

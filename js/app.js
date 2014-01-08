@@ -182,6 +182,15 @@ DR.BroenGallery.VoteMachine = (function() {
 
 })();
 
+/*
+todo
+dr-widget-swipe-carousel.js fehlt
+swipe.js fehlt
+usw
+http://requirejs.org/docs/faq-advanced.html namepsace benutzen damit couchdb funktioniert
+*/
+
+
 window.log = function(x, y) {
   if (y == null) {
     y = '';
