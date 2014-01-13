@@ -29,7 +29,8 @@ module.exports = (grunt) ->
                 separator: ';'
 
             dist:
-                src: ['js/libs/*.js', 'js/config.js', 'js/app.js']
+                src: ['js/config.js', 'js/app.js']
+                #src: ['js/libs/*.js', 'js/config.js', 'js/app.js']
                 dest: 'js/broen.js'
 
         #Watch

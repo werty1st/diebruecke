@@ -123,16 +123,15 @@ DR.BroenGallery.VoteMachine = (function() {
   VoteMachine.prototype.hasVotedThisWeek = false;
 
   function VoteMachine(app) {
-    var _this = this;
+    var Hash;
     this.app = app;
-    require(["more"], function() {
-      _this.cookie = new Hash.Cookie('benzErGud2', {
-        duration: 365
-      });
-      _this.currentWeek = _this.getWeek(new Date());
-      _this.hasVotedThisWeek = _this.hasVotedThisWeek();
-      return _this;
+    Hash = require("js/libs/more.js");
+    this.cookie = new Hash.Cookie('benzErGud2', {
+      duration: 365
     });
+    this.currentWeek = this.getWeek(new Date());
+    this.hasVotedThisWeek = this.hasVotedThisWeek();
+    return this;
   }
 
   VoteMachine.prototype.hasVotedThisWeek = function() {
@@ -512,7 +511,7 @@ MediaView = (function() {
     }
     if (!this.hasBeenOpened) {
       el = $('broen-gallery-swipe-carousel');
-      require(["dr-widget-swipe-carousel"], function(Swipe) {
+      require(["js/libs/dr-widget-swipe-carousel"], function(Swipe) {
         _this.swipe = new Swipe(el, {
           startSlide: index
         });

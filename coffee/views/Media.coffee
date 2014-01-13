@@ -41,7 +41,7 @@ class MediaView
 
         if not @hasBeenOpened
             el = $('broen-gallery-swipe-carousel')
-            require ["dr-widget-swipe-carousel"], (Swipe) =>
+            require ["js/libs/dr-widget-swipe-carousel"], (Swipe) =>
                 @swipe = new Swipe el,
                     startSlide: index
 

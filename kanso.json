@@ -2,7 +2,7 @@
     "name": "b2",
     "version": "0.0.1",
     "description": "Modul mit Hintergrundinformationen und Beziehungen der Hauptfiguren",
-    "attachments": ["index.html","data.json","img","js","styles"],
+    "attachments": ["index.html","data.json","img","js/libs","js/broen.js","styles"],
     "dependencies": {
         "attachments": null,
         "modules": null,
