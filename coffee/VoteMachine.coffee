@@ -3,7 +3,7 @@ class DR.BroenGallery.VoteMachine
 
     constructor: (app)->
         @app = app
-        Hash = require ("js/libs/more.js")
+        #Hash = require ("js/libs/more")
         @cookie = new Hash.Cookie 'benzErGud2',
             duration: 365
 
@@ -21,7 +21,7 @@ class DR.BroenGallery.VoteMachine
 
     vote: (slug) ->
         if @hasVotedThisWeek
-            alert 'Du har allerede afgivet din stemme i denne uge.'
+            alert 'Sie haben in dieser Woche bereits einmal abgestimmt.'
         else
             voteId = @app.data[slug].voteId
 
@@ -29,12 +29,12 @@ class DR.BroenGallery.VoteMachine
                 url: DR.BroenGallery.config.voteEndpoint + '?qid=5&aid=' + voteId
 
                 onSuccess: =>
-                   alert 'Tak for din stemme. Du kan stemme igen næste uge.'
+                   alert 'Vielen Dank für Ihre Stimme. Sie können nächste Woche noch einmal abstimmen.'
                    @cookie.set 'week', @currentWeek
                    @hasVotedThisWeek = true
 
                 onFailure: ->
-                    alert 'fejl!'
+                    alert 'Serverfehler! Es wurde keine Stimme vergeben.'
 
             req.send()
          

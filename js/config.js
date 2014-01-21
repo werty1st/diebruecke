@@ -6,7 +6,7 @@ DR.BroenGallery.config = {
     jsonDataTestUrl: 'http://socialbld01.net.dr.dk/broen/test.json',
 
     votingEnabled: true,
-    voteEndpoint: 'http://www.dr.dk/tjenester/Quickpoll/front/vote',
+    voteEndpoint: 'Quickpoll/front/vote',
 
     faces: {
         url: 'img/faces/',

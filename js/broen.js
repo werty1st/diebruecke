@@ -6,7 +6,7 @@ DR.BroenGallery.config = {
     jsonDataTestUrl: 'http://socialbld01.net.dr.dk/broen/test.json',
 
     votingEnabled: true,
-    voteEndpoint: 'http://www.dr.dk/tjenester/Quickpoll/front/vote',
+    voteEndpoint: 'Quickpoll/front/vote',
 
     faces: {
         url: 'img/faces/',
@@ -91,7 +91,7 @@ if(host == 'www.dr.dk') {
   };
 
   App.prototype.html = function() {
-    return "<div id=\"broen-gallery\" class=\"section boxed container-green-light\">\n    <h2><a href=\"#home\">MISTÆNKTE</a><a id=\"broen-home-link\" class=\"dr-icon-link-small dr-link-readmore hide\" href=\"#home\">Se alle</a></h2>\n\n    <div id=\"broen-gallery-home\" class=\"hide\">\n        <p class=\"intro-text\">Nedenfor kan du se de vigtigste personer i Broen II og deres relationer til hinanden.</p>\n        <div id=\"broen-gallery-home-persons\"></div>\n        <div id=\"broen-gallery-home-popover\" class=\"hide container-green\"></div>\n    </div>\n    \n    <div id=\"broen-gallery-person\">\n        <div id=\"broen-gallery-person-info\"></div>\n        <div id=\"broen-gallery-graph\">\n            <div id=\"broen-gallery-graph-popover\" class=\"hide container-green\"></div>\n        </div>\n    </div>\n</div>";
+    return "<div id=\"broen-gallery\" class=\"section boxed container-green-light\">\n    <h2><a href=\"#home\">Verdächtige</a><a id=\"broen-home-link\" class=\"dr-icon-link-small dr-link-readmore hide\" href=\"#home\">Se alle</a></h2>\n\n    <div id=\"broen-gallery-home\" class=\"hide\">\n        <p class=\"intro-text\">Hier sind die wichtigsten Personen in die Brücke II und ihre Beziehungen zueinander.</p>\n        <div id=\"broen-gallery-home-persons\"></div>\n        <div id=\"broen-gallery-home-popover\" class=\"hide container-green\"></div>\n    </div>\n    \n    <div id=\"broen-gallery-person\">\n        <div id=\"broen-gallery-person-info\"></div>\n        <div id=\"broen-gallery-graph\">\n            <div id=\"broen-gallery-graph-popover\" class=\"hide container-green\"></div>\n        </div>\n    </div>\n</div>";
   };
 
   return App;
@@ -143,9 +143,7 @@ DR.BroenGallery.VoteMachine = (function() {
   VoteMachine.prototype.hasVotedThisWeek = false;
 
   function VoteMachine(app) {
-    var Hash;
     this.app = app;
-    Hash = require("js/libs/more.js");
     this.cookie = new Hash.Cookie('benzErGud2', {
       duration: 365
     });
@@ -168,18 +166,18 @@ DR.BroenGallery.VoteMachine = (function() {
     var req, voteId,
       _this = this;
     if (this.hasVotedThisWeek) {
-      return alert('Du har allerede afgivet din stemme i denne uge.');
+      return alert('Sie haben in dieser Woche bereits einmal abgestimmt.');
     } else {
       voteId = this.app.data[slug].voteId;
       req = new Request({
         url: DR.BroenGallery.config.voteEndpoint + '?qid=5&aid=' + voteId,
         onSuccess: function() {
-          alert('Tak for din stemme. Du kan stemme igen næste uge.');
+          alert('Vielen Dank für Ihre Stimme. Sie können nächste Woche noch einmal abstimmen.');
           _this.cookie.set('week', _this.currentWeek);
           return _this.hasVotedThisWeek = true;
         },
         onFailure: function() {
-          return alert('fejl!');
+          return alert('Serverfehler! Es wurde keine Stimme vergeben.');
         }
       });
       return req.send();

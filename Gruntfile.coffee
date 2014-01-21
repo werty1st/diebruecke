@@ -79,7 +79,10 @@ module.exports = (grunt) ->
     grunt.loadNpmTasks 'grunt-shell'
 
     #Register tasks
-    grunt.registerTask 'dev', ['coffee', 'less', 'concat', 'shell:kansopush', 'watch']
-    grunt.registerTask 'live', ['coffee', 'less', 'concat', 'shell:kansopush', 'watch']
+    grunt.registerTask 'dev', ['coffee', 'less', 'concat', 'watch']
+    grunt.registerTask 'live', ['coffee', 'less', 'concat', 'watch']
+    
+    #grunt.registerTask 'live', ['coffee', 'less', 'concat', 'shell:kansopush', 'watch']
+    
     
     

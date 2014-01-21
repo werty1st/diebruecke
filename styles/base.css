@@ -1,7 +1,10 @@
 /* 21.875em */
 /* 43.75em */
 /* 59.9999999999em */
-/* 60em */@font-face {
+/* 60em */
+
+/*
+@font-face {
   font-family: "gibsonLight";
   src: url("../../fonts/gibson/light/gibson-light-webfont.eot");
   src: url("../../fonts/gibson/light/gibson-light-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/gibson/light/gibson-light-webfont.woff") format("woff"), url("../../fonts/gibson/light/gibson-light-webfont.ttf") format("truetype"), url("../../fonts/gibson/light/gibson-light-webfont.svg") format("svg");
@@ -31,6 +34,8 @@
   src: url("../../fonts/dricons/dr-icons-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/dricons/dr-icons-webfont.woff") format("woff"), url("../../fonts/dricons/dr-icons-webfont.ttf") format("truetype"), url("../../fonts/dricons/dr-icons-webfont.svg") format("svg");
   font-weight: normal;
 }
+*/
+
 * {
   margin: 0;
   padding: 0;

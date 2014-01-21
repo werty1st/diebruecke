@@ -1,4 +1,5 @@
 {
+  "_id": "data.json",
     
   "saga": {
 
@@ -49,101 +50,101 @@
   
     { "type": "video",
         "resourceId": 1576003,
-        "image": "/tjenester/Broen2/Foto_video/AFS1/1_Saga.jpg"
+        "image": "img/Foto_video/AFS1/1_Saga.jpg"
       },
       
     {
         "type": "video",
         "resourceId": 1581450,
-        "image": "/tjenester/Broen2/Foto_video/AFS1/1_saga_kommer_hjem.jpg"
+        "image": "img/Foto_video/AFS1/1_saga_kommer_hjem.jpg"
       },
     {
         "type": "video",
         "resourceId": 1581454,
-        "image": "/tjenester/Broen2/Foto_video/AFS1/1_Lilian_saga.jpg"
+        "image": "img/Foto_video/AFS1/1_Lilian_saga.jpg"
       },
     {
         "type": "video",
         "resourceId": 1590039,
-        "image": "/tjenester/Broen2/Foto_video/AFS2/2_saga_film.jpg"
+        "image": "img/Foto_video/AFS2/2_saga_film.jpg"
       },
     {
         "type": "video",
         "resourceId": 1590313,
-        "image": "/tjenester/Broen2/Foto_video/AFS2/2_Saga_jakob.jpg"
+        "image": "img/Foto_video/AFS2/2_saga_jakob.jpg"
       },
     {
         "type": "video",
         "resourceId": 1599755,
-        "image": "/tjenester/Broen2/Foto_video/AFS3/3_saga_martin_bil.jpg"
+        "image": "img/Foto_video/AFS3/3_saga_martin_bil.jpg"
       },
     {
         "type": "video",
         "resourceId": 1603738,
-        "image": "/tjenester/Broen2/Foto_video/AFS4/4_saga_lig.jpg"
+        "image": "img/Foto_video/AFS4/4_saga_lig.jpg"
       },
      {
         "type": "video",
         "resourceId": 1615956,
-        "image": "/tjenester/Broen2/Foto_video/AFS6/6_saga_overfald.jpg"
+        "image": "img/Foto_video/AFS6/6_saga_overfald.jpg"
       },
      {
         "type": "video",
         "resourceId": 1616259,
-        "image": "/tjenester/Broen2/Foto_video/AFS6/6_saga_martin_lig.jpg"
+        "image": "img/Foto_video/AFS6/6_saga_martin_lig.jpg"
       },
     {
         "type": "video",
         "resourceId": 1622022,
-        "image": "/tjenester/Broen2/Foto_video/AFS7/7_saga_jakobmor.jpg"
+        "image": "img/Foto_video/AFS7/7_saga_jakobmor.jpg"
       },
       {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/saga/saga_afs1_1.jpg"
+        "url" : "img/Foto_B/saga/saga_afs1_1.jpg"
       },
       {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/saga/saga_afs1_2.jpg"
+        "url" : "img/Foto_B/saga/saga_afs1_2.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/saga/saga_afs2_1.jpg"
+        "url" : "img/Foto_B/saga/saga_afs2_1.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/saga/saga_afs2_2.jpg"
+        "url" : "img/Foto_B/saga/saga_afs2_2.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/saga/saga_afs3_1.jpg"
+        "url" : "img/Foto_B/saga/saga_afs3_1.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/saga/saga_afs3_2.jpg"
+        "url" : "img/Foto_B/saga/saga_afs3_2.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/saga/saga_afs4_1.jpg"
+        "url" : "img/Foto_B/saga/saga_afs4_1.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/saga/saga_afs4_2.jpg"
+        "url" : "img/Foto_B/saga/saga_afs4_2.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/saga/saga_afs5_1.jpg"
+        "url" : "img/Foto_B/saga/saga_afs5_1.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/saga/saga_afs5_2.jpg"
+        "url" : "img/Foto_B/saga/saga_afs5_2.jpg"
       },
      {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/saga/saga_afs6_1.jpg"
+        "url" : "img/Foto_B/saga/saga_afs6_1.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/saga/saga_afs6_2.jpg"
+        "url" : "img/Foto_B/saga/saga_afs6_2.jpg"
       }
     ]
   },
@@ -205,72 +206,72 @@
     "media": [ {
         "type": "video",
         "resourceId": 1581452,
-        "image": "/tjenester/Broen2/Foto_video/AFS1/1_martin_1møde_med_saga.jpg"
+        "image": "img/Foto_video/AFS1/1_martin_1mde_med_saga.jpg"
       },
     {
         "type": "video",
         "resourceId": 1581444,
-        "image": "/tjenester/Broen2/Foto_video/AFS1/1_martin_og_saga_i_bil.jpg"
+        "image": "img/Foto_video/AFS1/1_martin_og_saga_i_bil.jpg"
       },
     {
         "type": "video",
         "resourceId": 1590053,
-        "image": "/tjenester/Broen2/Foto_video/AFS2/2_martin_parkering.jpg"
+        "image": "img/Foto_video/AFS2/2_martin_parkering.jpg"
       },
     {
         "type": "video",
         "resourceId": 1605272,
-        "image": "/tjenester/Broen2/Foto_video/AFS4/4_jens_martin.jpg"
+        "image": "img/Foto_video/AFS4/4_jens_martin.jpg"
       },
      {
         "type": "video",
         "resourceId": 1616270,
-        "image": "/tjenester/Broen2/Foto_video/AFS6/6_saga_martin_broen.jpg"
+        "image": "img/Foto_video/AFS6/6_saga_martin_broen.jpg"
       },
       {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/martin/martin_afs1_1.jpg"
+        "url" : "img/Foto_B/martin/martin_afs1_1.jpg"
       },
       {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/martin/martin_afs1_2.jpg"
+        "url" : "img/Foto_B/martin/martin_afs1_2.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/martin/martin_afs2_1.jpg"
+        "url" : "img/Foto_B/martin/martin_afs2_1.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/martin/martin_afs2_2.jpg"
+        "url" : "img/Foto_B/martin/martin_afs2_2.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/martin/martin_afs3_1.jpg"
+        "url" : "img/Foto_B/martin/martin_afs3_1.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/martin/martin_afs3_2.jpg"
+        "url" : "img/Foto_B/martin/martin_afs3_2.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/martin/martin_afs4_1.jpg"
+        "url" : "img/Foto_B/martin/martin_afs4_1.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/martin/martin_afs4_2.jpg"
+        "url" : "img/Foto_B/martin/martin_afs4_2.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/martin/martin_afs5_1.jpg"
+        "url" : "img/Foto_B/martin/martin_afs5_1.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/martin/martin_afs6_1.jpg"
+        "url" : "img/Foto_B/martin/martin_afs6_1.jpg"
       }
    ,
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/martin/martin_afs6_2.jpg"
+        "url" : "img/Foto_B/martin/martin_afs6_2.jpg"
       }
     
     
@@ -315,33 +316,33 @@
       {
         "type": "video",
         "resourceId": 1590022,
-        "image": "/tjenester/Broen2/Foto_video/AFS2/2_rasmus_saga.jpg"
+        "image": "img/Foto_video/AFS2/2_rasmus_saga.jpg"
       },
     {
         "type": "video",
         "resourceId": 1603743,
-        "image": "/tjenester/Broen2/Foto_video/AFS4/4_rasmus_linus.jpg"
+        "image": "img/Foto_video/AFS4/4_rasmus_linus.jpg"
       },
     {
         "type": "video",
         "resourceId": 1599762,
-        "image": "/tjenester/Broen2/Foto_video/AFS3/3_rasmus_saga_martin.jpg"
+        "image": "img/Foto_video/AFS3/3_rasmus_saga_martin.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/rasmus/rasmus_afs1_1.jpg"
+        "url" : "img/Foto_B/rasmus/rasmus_afs1_1.jpg"
       },
       {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/rasmus/rasmus_afs1_2.jpg"
+        "url" : "img/Foto_B/rasmus/rasmus_afs1_2.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/rasmus/rasmus_afs3_1.jpg"
+        "url" : "img/Foto_B/rasmus/rasmus_afs3_1.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/rasmus/rasmus_afs6_1.jpg"
+        "url" : "img/Foto_B/rasmus/rasmus_afs6_1.jpg"
       }
     
    ]
@@ -386,29 +387,29 @@
       {
         "type": "video",
         "resourceId": 1590027,
-        "image": "/tjenester/Broen2/Foto_video/AFS2/2_pernille_saga.jpg"
+        "image": "img/Foto_video/AFS2/2_pernille_saga.jpg"
       },
      {
         "type": "video",
         "resourceId": 1605270,
-        "image": "/tjenester/Broen2/Foto_video/AFS4/4_pernille_martin.jpg"
+        "image": "img/Foto_video/AFS4/4_pernille_martin.jpg"
       },
     
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/pernille/pernille_afs1_1.jpg"
+        "url" : "img/Foto_B/pernille/pernille_afs1_1.jpg"
       },
       {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/pernille/pernille_afs1_2.jpg"
+        "url" : "img/Foto_B/pernille/pernille_afs1_2.jpg"
       },
      {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/pernille/pernille_afs3_1.jpg"
+        "url" : "img/Foto_B/pernille/pernille_afs3_1.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/pernille/pernille_afs6_1.jpg"
+        "url" : "img/Foto_B/pernille/pernille_afs6_1.jpg"
       }
     
    ]
@@ -448,11 +449,11 @@
     "media": [ 
       {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/john/john_afs1_1.jpg"
+        "url" : "img/Foto_B/john/john_afs1_1.jpg"
       },
       {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/john/john_afs1_2.jpg"
+        "url" : "img/Foto_B/john/john_afs1_2.jpg"
       }
     
    ]
@@ -501,40 +502,40 @@
       {
         "type": "video",
         "resourceId": 1583699,
-        "image": "/tjenester/Broen2/Foto_video/AFS1/1_Hans_saga.jpg"
+        "image": "img/Foto_video/AFS1/1_Hans_saga.jpg"
       },
     {
         "type": "video",
         "resourceId": 1590067,
-        "image": "/tjenester/Broen2/Foto_video/AFS2/2_hans_udredning.jpg"
+        "image": "img/Foto_video/AFS2/2_hans_udredning.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/hans/hans_afs1_1.jpg"
+        "url" : "img/Foto_B/hans/hans_afs1_1.jpg"
       },
       {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/hans/hans_afs1_2.jpg"
+        "url" : "img/Foto_B/hans/hans_afs1_2.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/hans/hans_afs2_1.jpg"
+        "url" : "img/Foto_B/hans/hans_afs2_1.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/hans/hans_afs3_1.jpg"
+        "url" : "img/Foto_B/hans/hans_afs3_1.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/hans/hans_afs3_2.jpg"
+        "url" : "img/Foto_B/hans/hans_afs3_2.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/hans/hans_afs4_1.jpg"
+        "url" : "img/Foto_B/hans/hans_afs4_1.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/hans/hans_afs4_2.jpg"
+        "url" : "img/Foto_B/hans/hans_afs4_2.jpg"
       }
     
    ]
@@ -573,39 +574,39 @@
     "media": [ {
         "type": "video",
         "resourceId": 1581454,
-        "image": "/tjenester/Broen2/Foto_video/AFS1/1_Lilian_saga.jpg"
+        "image": "img/Foto_video/AFS1/1_Lilian_saga.jpg"
       },
     
     {
         "type": "video",
         "resourceId": 1581442,
-        "image": "/tjenester/Broen2/Foto_video/AFS1/1_Lillian_martinsnakslut.jpg"
+        "image": "img/Foto_video/AFS1/1_Lillian_martinsnakslut.jpg"
       },
     {
         "type": "video",
         "resourceId": 1606064,
-        "image": "/tjenester/Broen2/Foto_video/AFS4/4_lillian_martin.jpg"
+        "image": "img/Foto_video/AFS4/4_lillian_martin.jpg"
       },
     {
         "type": "video",
         "resourceId": 1615970,
-        "image": "/tjenester/Broen2/Foto_video/AFS6/6_lillian_hospital.jpg"
+        "image": "img/Foto_video/AFS6/6_lillian_hospital.jpg"
       },
       {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/lillian/lillian_afs1_1.jpg"
+        "url" : "img/Foto_B/lillian/lillian_afs1_1.jpg"
       },
       {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/lillian/lillian_afs1_2.jpg"
+        "url" : "img/Foto_B/lillian/lillian_afs1_2.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/lillian/lillian_afs4_1.jpg"
+        "url" : "img/Foto_B/lillian/lillian_afs4_1.jpg"
       },
       {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/lillian/lillian_afs4_2.jpg"
+        "url" : "img/Foto_B/lillian/lillian_afs4_2.jpg"
       }
     
    ]
@@ -641,19 +642,19 @@
       {
         "type": "video",
         "resourceId": 1581446,
-        "image": "/tjenester/Broen2/Foto_video/AFS1/1_martin_mette.jpg"
+        "image": "img/Foto_video/AFS1/1_martin_mette.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/mette/mette_afs1_1.jpg"
+        "url" : "img/Foto_B/mette/mette_afs1_1.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/mette/mette_afs1_2.jpg"
+        "url" : "img/Foto_B/mette/mette_afs1_2.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/mette/mette_afs6_1.jpg"
+        "url" : "img/Foto_B/mette/mette_afs6_1.jpg"
       }
     
    ]
@@ -688,11 +689,11 @@
       {
         "type": "video",
         "resourceId": 1607478,
-        "image": "/tjenester/Broen2/Foto_video/AFS1/1_niels_martin.jpg"
+        "image": "img/Foto_video/AFS1/1_niels_martin.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/niels/niels_afs1_1.jpg"
+        "url" : "img/Foto_B/niels/niels_afs1_1.jpg"
       }
     
    ]
@@ -742,25 +743,25 @@
       {
         "type": "video",
         "resourceId": 1585037,
-        "image": "/tjenester/Broen2/Foto_video/AFS2/2_niklas_frugt.jpg"
+        "image": "img/Foto_video/AFS2/2_niklas_frugt.jpg"
       },
     {
         "type": "video",
         "resourceId": 1585153,
-        "image": "/tjenester/Broen2/Foto_video/AFS2/2_niklas_skolen.jpg"
+        "image": "img/Foto_video/AFS2/2_niklas_skolen.jpg"
       },
     {
         "type": "video",
         "resourceId": 1585041,
-        "image": "/tjenester/Broen2/Foto_video/AFS2/2_niklas_gruppen.jpg"
+        "image": "img/Foto_video/AFS2/2_niklas_gruppen.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/niklas/niklas_afs1_1.jpg"
+        "url" : "img/Foto_B/niklas/niklas_afs1_1.jpg"
       },
       {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/niklas/niklas_afs1_2.jpg"
+        "url" : "img/Foto_B/niklas/niklas_afs1_2.jpg"
       }
     
    ]
@@ -792,38 +793,38 @@
     "media": [ {
         "type": "video",
         "resourceId": 1582190,
-        "image": "/tjenester/Broen2/Foto_video/AFS1/1_linus_ild.jpg"
+        "image": "img/Foto_video/AFS1/1_linus_ild.jpg"
       },
     {
         "type": "video",
         "resourceId": 1591070,
-        "image": "/tjenester/Broen2/Foto_video/AFS2/2_linus_hjemme.jpg"
+        "image": "img/Foto_video/AFS2/2_linus_hjemme.jpg"
       },
     {
         "type": "video",
         "resourceId": 1591054,
-        "image": "/tjenester/Broen2/Foto_video/AFS2/2_linus_afsløring.jpg"
+        "image": "img/Foto_video/AFS2/2_linus_afslring.jpg"
       },
     {
         "type": "video",
         "resourceId": 1599760,
-        "image": "/tjenester/Broen2/Foto_video/AFS3/3_niklas_linus.jpg"
+        "image": "img/Foto_video/AFS3/3_niklas_linus.jpg"
       },
       {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/linus/linus_afs1_1.jpg"
+        "url" : "img/Foto_B/linus/linus_afs1_1.jpg"
       },
       {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/linus/linus_afs1_2.jpg"
+        "url" : "img/Foto_B/linus/linus_afs1_2.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/linus/linus_afs3_1.jpg"
+        "url" : "img/Foto_B/linus/linus_afs3_1.jpg"
       },
       {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/linus/linus_afs3_2.jpg"
+        "url" : "img/Foto_B/linus/linus_afs3_2.jpg"
       }
     
    ]
@@ -877,20 +878,20 @@
       {
         "type": "video",
         "resourceId": 1590344,
-        "image": "/tjenester/Broen2/Foto_video/AFS2/2_mads_kattis_matilde_niklas.jpg"
+        "image": "img/Foto_video/AFS2/2_mads_kattis_matilde_niklas.jpg"
       },
     {
         "type": "video",
         "resourceId": 1593824,
-        "image": "/tjenester/Broen2/Foto_video/AFS2/2_mads_bil.jpg"
+        "image": "img/Foto_video/AFS2/2_mads_bil.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/mads/mads_afs1_1.jpg"
+        "url" : "img/Foto_B/mads/mads_afs1_1.jpg"
       },
       {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/mads/mads_afs1_2.jpg"
+        "url" : "img/Foto_B/mads/mads_afs1_2.jpg"
       }
     
    ]
@@ -938,16 +939,16 @@
       {
         "type": "video",
         "resourceId": 1590344,
-        "image": "/tjenester/Broen2/Foto_video/AFS2/2_mads_kattis_matilde_niklas.jpg"
+        "image": "img/Foto_video/AFS2/2_mads_kattis_matilde_niklas.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/kattis/kattis_afs1_1.jpg"
+        "url" : "img/Foto_B/kattis/kattis_afs1_1.jpg"
       },
       
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/kattis/kattis_afs1_3.jpg"
+        "url" : "img/Foto_B/kattis/kattis_afs1_3.jpg"
       }
     
    ]
@@ -998,19 +999,19 @@
       {
         "type": "video",
         "resourceId": 1590344,
-        "image": "/tjenester/Broen2/Foto_video/AFS2/2_mads_kattis_matilde_niklas.jpg"
+        "image": "img/Foto_video/AFS2/2_mads_kattis_matilde_niklas.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/matilde/matilde_afs1_1.jpg"
+        "url" : "img/Foto_B/matilde/matilde_afs1_1.jpg"
       },
       {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/matilde/matilde_afs1_2.jpg"
+        "url" : "img/Foto_B/matilde/matilde_afs1_2.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/matilde/matilde_afs2_1.jpg"
+        "url" : "img/Foto_B/matilde/matilde_afs2_1.jpg"
       }
     
    ]
@@ -1066,36 +1067,36 @@
     {
         "type": "video",
         "resourceId": 1591104,
-        "image": "/tjenester/Broen2/Foto_video/AFS2/2_julian_laura.jpg"
+        "image": "img/Foto_video/AFS2/2_julian_laura.jpg"
       },
     {
         "type": "video",
         "resourceId": 1603748,
-        "image": "/tjenester/Broen2/Foto_video/AFS4/4_julian.jpg"
+        "image": "img/Foto_video/AFS4/4_julian.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/julian/julian_afs1_1.jpg"
+        "url" : "img/Foto_B/julian/julian_afs1_1.jpg"
       },
       {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/julian/julian_afs1_2.jpg"
+        "url" : "img/Foto_B/julian/julian_afs1_2.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/julian/julian_afs4_1.jpg"
+        "url" : "img/Foto_B/julian/julian_afs4_1.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/julian/julian_afs4_2.jpg"
+        "url" : "img/Foto_B/julian/julian_afs4_2.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/julian/julian_afs5_1.jpg"
+        "url" : "img/Foto_B/julian/julian_afs5_1.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/julian/julian_afs5_2.jpg"
+        "url" : "img/Foto_B/julian/julian_afs5_2.jpg"
       }
     
    ]
@@ -1139,46 +1140,46 @@
     "media": [ {
         "type": "video",
         "resourceId": 1581325,
-        "image": "/tjenester/Broen2/Foto_video/AFS1/1_laura_skolen_læreren.jpg"
+        "image": "img/Foto_video/AFS1/1_laura_skolen_lreren.jpg"
       },
     {
         "type": "video",
         "resourceId": 1581448,
-        "image": "/tjenester/Broen2/Foto_video/AFS1/1_Laura_beate.jpg"
+        "image": "img/Foto_video/AFS1/1_Laura_beate.jpg"
       },
     {
         "type": "video",
         "resourceId": 1585186,
-        "image": "/tjenester/Broen2/Foto_video/AFS2/2_laura_axel.jpg"
+        "image": "img/Foto_video/AFS2/2_laura_axel.jpg"
       },
     {
         "type": "video",
         "resourceId": 1585173,
-        "image": "/tjenester/Broen2/Foto_video/AFS2/2_laura_karakterer.jpg"
+        "image": "img/Foto_video/AFS2/2_laura_karakterer.jpg"
       },
       {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/laura/laura_afs1_1.jpg"
+        "url" : "img/Foto_B/laura/laura_afs1_1.jpg"
       },
       {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/laura/laura_afs1_2.jpg"
+        "url" : "img/Foto_B/laura/laura_afs1_2.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/laura/laura_afs2_1.jpg"
+        "url" : "img/Foto_B/laura/laura_afs2_1.jpg"
       },
       {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/laura/laura_afs2_2.jpg"
+        "url" : "img/Foto_B/laura/laura_afs2_2.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/laura/laura_afs4_1.jpg"
+        "url" : "img/Foto_B/laura/laura_afs4_1.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/laura/laura_afs4_2.jpg"
+        "url" : "img/Foto_B/laura/laura_afs4_2.jpg"
       }
     
    ]
@@ -1217,28 +1218,28 @@
     "media": [ {
         "type": "video",
         "resourceId": 1583728,
-        "image": "/tjenester/Broen2/Foto_video/AFS1/1_Axel_Laura_telf.jpg"
+        "image": "img/Foto_video/AFS1/1_Axel_Laura_telf.jpg"
       },
     {
         "type": "video",
         "resourceId": 1622020,
-        "image": "/tjenester/Broen2/Foto_video/AFS7/7_axel_laura.jpg"
+        "image": "img/Foto_video/AFS7/7_axel_laura.jpg"
       },
       {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/axel/axel_afs1_1.jpg"
+        "url" : "img/Foto_B/axel/axel_afs1_1.jpg"
       },
       {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/axel/axel_afs1_2.jpg"
+        "url" : "img/Foto_B/axel/axel_afs1_2.jpg"
       },
      {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/axel/axel_afs3_1.jpg"
+        "url" : "img/Foto_B/axel/axel_afs3_1.jpg"
       },
       {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/axel/axel_afs3_2.jpg"
+        "url" : "img/Foto_B/axel/axel_afs3_2.jpg"
       }
     
    ]
@@ -1279,25 +1280,25 @@
     "media": [ {
         "type": "video",
         "resourceId": 1581448,
-        "image": "/tjenester/Broen2/Foto_video/AFS1/1_Laura_beate.jpg"
+        "image": "img/Foto_video/AFS1/1_Laura_beate.jpg"
       },
     {
         "type": "video",
         "resourceId": 1599769,
-        "image": "/tjenester/Broen2/Foto_video/AFS3/3_beate_laura.jpg"
+        "image": "img/Foto_video/AFS3/3_beate_laura.jpg"
       },
     {
         "type": "video",
         "resourceId": 1610751,
-        "image": "/tjenester/Broen2/Foto_video/AFS5/5_beate_axel.jpg"
+        "image": "img/Foto_video/AFS5/5_beate_axel.jpg"
       },
       {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/beate/beate_afs1_1.jpg"
+        "url" : "img/Foto_B/beate/beate_afs1_1.jpg"
       },
       {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/beate/beate_afs1_2.jpg"
+        "url" : "img/Foto_B/beate/beate_afs1_2.jpg"
       }
     
    ]
@@ -1332,29 +1333,29 @@
     "media": [ {
         "type": "video",
         "resourceId": 1589689,
-        "image": "/tjenester/Broen2/Foto_video/AFS1/1_jens_i_fængsel.jpg"
+        "image": "img/Foto_video/AFS1/1_jens_i_ngsel.jpg"
       },
     {
         "type": "video",
         "resourceId": 1605272,
-        "image": "/tjenester/Broen2/Foto_video/AFS4/4_jens_martin.jpg"
+        "image": "img/Foto_video/AFS4/4_jens_martin.jpg"
       },
     {
         "type": "video",
         "resourceId": 1610759,
-        "image": "/tjenester/Broen2/Foto_video/AFS5/5_jens_martin.jpg"
+        "image": "img/Foto_video/AFS5/5_jens_martin.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/jens/jens_afs1_1.jpg"
+        "url" : "img/Foto_B/jens/jens_afs1_1.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/jens/jens_afs5_1.jpg"
+        "url" : "img/Foto_B/jens/jens_afs5_1.jpg"
       },
      {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/jens/jens_afs6_1.jpg"
+        "url" : "img/Foto_B/jens/jens_afs6_1.jpg"
       }
       
     
@@ -1390,33 +1391,33 @@
     "media": [ {
         "type": "video",
         "resourceId": 1589860,
-        "image": "/tjenester/Broen2/Foto_video/AFS1/1_jacob_saga.jpg"
+        "image": "img/Foto_video/AFS1/1_jacob_saga.jpg"
       },
     {
         "type": "video",
         "resourceId": 1590313,
-        "image": "/tjenester/Broen2/Foto_video/AFS2/2_Saga_jakob.jpg"
+        "image": "img/Foto_video/AFS2/2_saga_jakob.jpg"
       },
     {
         "type": "video",
         "resourceId": 1606058,
-        "image": "/tjenester/Broen2/Foto_video/AFS4/4_jacob_saga.jpg"
+        "image": "img/Foto_video/AFS4/4_jacob_saga.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/jakob/jakob_afs1_1.jpg"
+        "url" : "img/Foto_B/jakob/jakob_afs1_1.jpg"
       },
       {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/jakob/jakob_afs1_2.jpg"
+        "url" : "img/Foto_B/jakob/jakob_afs1_2.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/jakob/jakob_afs6_1.jpg"
+        "url" : "img/Foto_B/jakob/jakob_afs6_1.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/jakob/jakob_afs6_2.jpg"
+        "url" : "img/Foto_B/jakob/jakob_afs6_2.jpg"
       }
       
     
@@ -1462,11 +1463,11 @@
     "media": [ 
       {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/marcus/marcus_afs1_1.jpg"
+        "url" : "img/Foto_B/marcus/marcus_afs1_1.jpg"
       },
       {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/marcus/marcus_afs1_2.jpg"
+        "url" : "img/Foto_B/marcus/marcus_afs1_2.jpg"
       }
     
    ]
@@ -1514,44 +1515,44 @@
     "media": [ {
         "type": "video",
         "resourceId": 1599764,
-        "image": "/tjenester/Broen2/Foto_video/AFS3/3_Alexander_caroline.jpg"
+        "image": "img/Foto_video/AFS3/3_Alexander_caroline.jpg"
       },
     {
         "type": "video",
         "resourceId": 1610757,
-        "image": "/tjenester/Broen2/Foto_video/AFS5/5_alexander_caroline.jpg"
+        "image": "img/Foto_video/AFS5/5_alexander_caroline.jpg"
       },
     {
         "type": "video",
         "resourceId": 1615972,
-        "image": "/tjenester/Broen2/Foto_video/AFS6/6_alexander_caroline_2.jpg"
+        "image": "img/Foto_video/AFS6/6_alexander_caroline_2.jpg"
       },
     {
         "type": "video",
         "resourceId": 1616263,
-        "image": "/tjenester/Broen2/Foto_video/AFS6/6_alexander_caroline.jpg"
+        "image": "img/Foto_video/AFS6/6_alexander_caroline.jpg"
       },
     {
         "type": "video",
         "resourceId": 1616256,
-        "image": "/tjenester/Broen2/Foto_video/AFS6/6_bodil_caroline.jpg"
+        "image": "img/Foto_video/AFS6/6_bodil_caroline.jpg"
       },
     {
         "type": "video",
         "resourceId": 1622024 ,
-        "image": "/tjenester/Broen2/Foto_video/AFS7/7_caroline_roder.jpg"
+        "image": "img/Foto_video/AFS7/7_caroline_roder.jpg"
       },
       {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/caroline/caroline_afs3_1.jpg"
+        "url" : "img/Foto_B/caroline/caroline_afs3_1.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/caroline/caroline_afs4_1.jpg"
+        "url" : "img/Foto_B/caroline/caroline_afs4_1.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/caroline/caroline_afs4_2.jpg"
+        "url" : "img/Foto_B/caroline/caroline_afs4_2.jpg"
       }
      
     
@@ -1603,36 +1604,36 @@
     "media": [ {
         "type": "video",
         "resourceId": 1601712,
-        "image": "/tjenester/Broen2/Foto_video/AFS3/3_bodil_caroline.jpg"
+        "image": "img/Foto_video/AFS3/3_bodil_caroline.jpg"
       },
     {
         "type": "video",
         "resourceId": 1606288,
-        "image": "/tjenester/Broen2/Foto_video/AFS4/4_bodil_caroline.jpg"
+        "image": "img/Foto_video/AFS4/4_bodil_caroline.jpg"
       },
     {
         "type": "video",
         "resourceId": 1610755,
-        "image": "/tjenester/Broen2/Foto_video/AFS5/5_claudio_bodil.jpg"
+        "image": "img/Foto_video/AFS5/5_claudio_bodil.jpg"
       },
     {
         "type": "video",
         "resourceId": 1616256,
-        "image": "/tjenester/Broen2/Foto_video/AFS6/6_bodil_caroline.jpg"
+        "image": "img/Foto_video/AFS6/6_bodil_caroline.jpg"
       },
     {
         "type": "video",
         "resourceId": 1622034,
-        "image": "/tjenester/Broen2/Foto_video/AFS7/7_bodil_victoria.jpg"
+        "image": "img/Foto_video/AFS7/7_bodil_victoria.jpg"
       },
     
       {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/bodil/bodil_afs3_1.jpg"
+        "url" : "img/Foto_B/bodil/bodil_afs3_1.jpg"
       },
       {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/bodil/bodil_afs3_2.jpg"
+        "url" : "img/Foto_B/bodil/bodil_afs3_2.jpg"
       }
     
    ]
@@ -1670,31 +1671,31 @@
     "media": [ {
         "type": "video",
         "resourceId": 1599764,
-        "image": "/tjenester/Broen2/Foto_video/AFS3/3_Alexander_caroline.jpg"
+        "image": "img/Foto_video/AFS3/3_Alexander_caroline.jpg"
       },
     {
         "type": "video",
         "resourceId": 1606303,
-        "image": "/tjenester/Broen2/Foto_video/AFS4/4_Alexander_caroline.jpg"
+        "image": "img/Foto_video/AFS4/4_Alexander_caroline.jpg"
       },
     {
         "type": "video",
         "resourceId": 1610757,
-        "image": "/tjenester/Broen2/Foto_video/AFS5/5_alexander_caroline.jpg"
+        "image": "img/Foto_video/AFS5/5_alexander_caroline.jpg"
       },
     {
         "type": "video",
         "resourceId": 1615972,
-        "image": "/tjenester/Broen2/Foto_video/AFS6/6_alexander_caroline_2.jpg"
+        "image": "img/Foto_video/AFS6/6_alexander_caroline_2.jpg"
       },
     {
         "type": "video",
         "resourceId": 1616263,
-        "image": "/tjenester/Broen2/Foto_video/AFS6/6_alexander_caroline.jpg"
+        "image": "img/Foto_video/AFS6/6_alexander_caroline.jpg"
       },
       {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/alexander/alexander_afs3_1.jpg"
+        "url" : "img/Foto_B/alexander/alexander_afs3_1.jpg"
       }
       
     
@@ -1747,35 +1748,35 @@
     {
         "type": "video",
         "resourceId": 1601724,
-        "image": "/tjenester/Broen2/Foto_video/AFS3/3_gertrud.jpg"
+        "image": "img/Foto_video/AFS3/3_gertrud.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/gertrud/gertrud_afs3_1.jpg"
+        "url" : "img/Foto_B/gertrud/gertrud_afs3_1.jpg"
       },
       {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/gertrud/gertrud_afs3_2.jpg"
+        "url" : "img/Foto_B/gertrud/gertrud_afs3_2.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/gertrud/gertrud_afs7_1.jpg"
+        "url" : "img/Foto_B/gertrud/gertrud_afs7_1.jpg"
       },
       {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/gertrud/gertrud_afs7_2.jpg"
+        "url" : "img/Foto_B/gertrud/gertrud_afs7_2.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/gertrud/gertrud_afs9_1.jpg"
+        "url" : "img/Foto_B/gertrud/gertrud_afs9_1.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/gertrud/gertrud_afs9_2.jpg"
+        "url" : "img/Foto_B/gertrud/gertrud_afs9_2.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/gertrud/gertrud_afs9_3.jpg"
+        "url" : "img/Foto_B/gertrud/gertrud_afs9_3.jpg"
       }
     
    ]
@@ -1813,19 +1814,19 @@
     {
         "type": "video",
         "resourceId": 1601724,
-        "image": "/tjenester/Broen2/Foto_video/AFS3/3_gertrud.jpg"
+        "image": "img/Foto_video/AFS3/3_gertrud.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/peter/peter_afs3_1.jpg"
+        "url" : "img/Foto_B/peter/peter_afs3_1.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/peter/peter_afs3_2.jpg"
+        "url" : "img/Foto_B/peter/peter_afs3_2.jpg"
       },
       {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/gertrud/gertrud_afs3_2.jpg"
+        "url" : "img/Foto_B/gertrud/gertrud_afs3_2.jpg"
       }
     
    ]
@@ -1867,25 +1868,25 @@
     {
         "type": "video",
         "resourceId": 1604603,
-        "image": "/tjenester/Broen2/Foto_video/AFS4/4_annadea.jpg"
+        "image": "img/Foto_video/AFS4/4_annadea.jpg"
       },
      {
         "type": "video",
         "resourceId": 1615970,
-        "image": "/tjenester/Broen2/Foto_video/AFS6/6_lillian_hospital.jpg"
+        "image": "img/Foto_video/AFS6/6_lillian_hospital.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/annadea/3_annadea_afs3_1.jpg"
+        "url" : "img/Foto_B/annadea/3_annadea_afs3_1.jpg"
       },
    
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/annadea/4_annadea_afs4_2.jpg"
+        "url" : "img/Foto_B/annadea/4_annadea_afs4_2.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/annadea/6_annadea_afs6_1.jpg"
+        "url" : "img/Foto_B/annadea/6_annadea_afs6_1.jpg"
       }
       
     
@@ -1945,37 +1946,37 @@
     {
         "type": "video",
         "resourceId": 1605268,
-        "image": "/tjenester/Broen2/Foto_video/AFS4/4_victoria_caroline.jpg"
+        "image": "img/Foto_video/AFS4/4_victoria_caroline.jpg"
       },
     {
         "type": "video",
         "resourceId": 1616275,
-        "image": "/tjenester/Broen2/Foto_video/AFS6/6_victoria_oliver.jpg"
+        "image": "img/Foto_video/AFS6/6_victoria_oliver.jpg"
       },
     {
         "type": "video",
         "resourceId": 1622034,
-        "image": "/tjenester/Broen2/Foto_video/AFS7/7_bodil_victoria.jpg"
+        "image": "img/Foto_video/AFS7/7_bodil_victoria.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/victoria/victoria_afs4_1.jpg"
+        "url" : "img/Foto_B/victoria/victoria_afs4_1.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/victoria/victoria_afs4_2.jpg"
+        "url" : "img/Foto_B/victoria/victoria_afs4_2.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/victoria/victoria_afs4_3.jpg"
+        "url" : "img/Foto_B/victoria/victoria_afs4_3.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/victoria/victoria_afs6_1.jpg"
+        "url" : "img/Foto_B/victoria/victoria_afs6_1.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/victoria/victoria_afs6_2.jpg"
+        "url" : "img/Foto_B/victoria/victoria_afs6_2.jpg"
       }
       
     
@@ -2020,29 +2021,29 @@
     {
         "type": "video",
         "resourceId": 1605266,
-        "image": "/tjenester/Broen2/Foto_video/AFS4/4_claudio.jpg"
+        "image": "img/Foto_video/AFS4/4_claudio.jpg"
       },
      {
         "type": "video",
         "resourceId": 1610755,
-        "image": "/tjenester/Broen2/Foto_video/AFS5/5_claudio_bodil.jpg"
+        "image": "img/Foto_video/AFS5/5_claudio_bodil.jpg"
       },
     {
         "type": "video",
         "resourceId": 1616259,
-        "image": "/tjenester/Broen2/Foto_video/AFS6/6_saga_martin_lig.jpg"
+        "image": "img/Foto_video/AFS6/6_saga_martin_lig.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/claudio/claudio_afs4_1.jpg"
+        "url" : "img/Foto_B/claudio/claudio_afs4_1.jpg"
       },
       {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/claudio/claudio_afs4_2.jpg"
+        "url" : "img/Foto_B/claudio/claudio_afs4_2.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/claudio/claudio_afs4_3.jpg"
+        "url" : "img/Foto_B/claudio/claudio_afs4_3.jpg"
       }
     
    ]
@@ -2095,36 +2096,36 @@
     {
         "type": "video",
         "resourceId": 1610763,
-        "image": "/tjenester/Broen2/Foto_video/AFS5/5_oliver_bodil.jpg"
+        "image": "img/Foto_video/AFS5/5_oliver_bodil.jpg"
       },
     {
         "type": "video",
         "resourceId": 1616275,
-        "image": "/tjenester/Broen2/Foto_video/AFS6/6_victoria_oliver.jpg"
+        "image": "img/Foto_video/AFS6/6_victoria_oliver.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/oliver/oliver_afs5_1.jpg"
+        "url" : "img/Foto_B/oliver/oliver_afs5_1.jpg"
       },
      {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/oliver/oliver_afs6_1.jpg"
+        "url" : "img/Foto_B/oliver/oliver_afs6_1.jpg"
       },
      {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/oliver/oliver_afs6_2.jpg"
+        "url" : "img/Foto_B/oliver/oliver_afs6_2.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/oliver/oliver_afs9_1.jpg"
+        "url" : "img/Foto_B/oliver/oliver_afs9_1.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/oliver/oliver_afs9_2.jpg"
+        "url" : "img/Foto_B/oliver/oliver_afs9_2.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/oliver/oliver_afs9_3.jpg"
+        "url" : "img/Foto_B/oliver/oliver_afs9_3.jpg"
       }
     
     
@@ -2167,15 +2168,15 @@
    
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/ramon/ramon_afs6_1.jpg"
+        "url" : "img/Foto_B/ramon/ramon_afs6_1.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/ramon/ramon_afs6_2.jpg"
+        "url" : "img/Foto_B/ramon/ramon_afs6_2.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/ramon/ramon_afs6_3.jpg"
+        "url" : "img/Foto_B/ramon/ramon_afs6_3.jpg"
       }
     
       
@@ -2216,15 +2217,15 @@
     
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/richard/richard_afs6_1.jpg"
+        "url" : "img/Foto_B/richard/richard_afs6_1.jpg"
       },
      {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/richard/richard_afs6_2.jpg"
+        "url" : "img/Foto_B/richard/richard_afs6_2.jpg"
       },
      {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/richard/richard_afs6_3.jpg"
+        "url" : "img/Foto_B/richard/richard_afs6_3.jpg"
       }
     
       
@@ -2271,11 +2272,11 @@
     
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/lennart/lennart_afs8_1.jpg"
+        "url" : "img/Foto_B/lennart/lennart_afs8_1.jpg"
       },
      {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/lennart/lennart_afs8_2.jpg"
+        "url" : "img/Foto_B/lennart/lennart_afs8_2.jpg"
       }
     
       
@@ -2316,11 +2317,11 @@
     
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/helga/helga_afs8_1.jpg"
+        "url" : "img/Foto_B/helga/helga_afs8_1.jpg"
       },
      {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/helga/helga_afs8_2.jpg"
+        "url" : "img/Foto_B/helga/helga_afs8_2.jpg"
       }
     
     
@@ -2361,11 +2362,11 @@
     
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/resa/resa_afs8_1.jpg"
+        "url" : "img/Foto_B/resa/resa_afs8_1.jpg"
       },
       {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/resa/resa_afs8_2.jpg"
+        "url" : "img/Foto_B/resa/resa_afs8_2.jpg"
       }
      
     
@@ -2407,11 +2408,11 @@
     
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/fabian/fabian_afs9_1.jpg"
+        "url" : "img/Foto_B/fabian/fabian_afs9_1.jpg"
       },
     {
         "type": "image",
-        "url" : "/tjenester/Broen2/Foto_B/fabian/fabian_afs9_2.jpg"
+        "url" : "img/Foto_B/fabian/fabian_afs9_2.jpg"
       }
       
      
