@@ -7,10 +7,12 @@
     "dependencies": {
         "attachments": null,
         "modules": null,
-        "db"    :null,        
-        "session": null
+        "session": null,
+        "properties": null,
+        "jquery": null,
+        "db"    :null
     },
-    "attachments": ["index.html","data.json","img", "js/libs","js/broen.js","styles"]
+    "attachments": ["index.html","management.html","data.json","img", "js/libs","js/broen.js","styles"]
 }
 
 

@@ -44,7 +44,7 @@ module.exports = (grunt) ->
                 tasks: ['less', 'shell:kansopush']
 
             data:
-                files: ['data.json','index.html','img/**']
+                files: ['data.json','index.html','management.html','lib/**','img/**']
                 tasks: ['shell:kansopush']
 
             kanso:
