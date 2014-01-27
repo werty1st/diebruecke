@@ -16,9 +16,3 @@ find . -name "*.jpg" -exec sh -c 'echo "$1"; echo $(dirname $1)/s79_$(basename $
 
 //thumbnails erstellen
 find . -name "*.jpg" -exec sh -c 'convert -resize 79x79 -quality 85 "$1" $(dirname $1)/s79_$(basename $1)' _ {} \;
-
-
-
-transform data.json
-
-kanso transform map --module=splitPersons.js data.json output.json

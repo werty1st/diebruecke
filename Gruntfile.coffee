@@ -44,7 +44,7 @@ module.exports = (grunt) ->
                 tasks: ['less', 'shell:kansopush']
 
             data:
-                files: ['data.json','index.html','management.html','lib/**','img/**']
+                files: ['data.json','index.html','wartung.html','lib/**','img/**']
                 tasks: ['shell:kansopush']
 
             kanso:
@@ -79,10 +79,8 @@ module.exports = (grunt) ->
     grunt.loadNpmTasks 'grunt-shell'
 
     #Register tasks
-    grunt.registerTask 'dev', ['coffee', 'less', 'concat', 'watch']
-    grunt.registerTask 'live', ['coffee', 'less', 'concat', 'watch']
-    
-    #grunt.registerTask 'live', ['coffee', 'less', 'concat', 'shell:kansopush', 'watch']
+    grunt.registerTask 'dev', ['coffee', 'less', 'concat', 'shell:kansopush', 'watch']
+    grunt.registerTask 'live', ['coffee', 'less', 'concat', 'shell:kansopush', 'watch']
     
     
     

@@ -12,9 +12,15 @@
 	<script type="text/javascript" src="modules.js"></script>
 	<script type="text/javascript">
 		var $ = require('jquery');
-		var db = require('db').current();//use("epgservice")
+		var db = require('db').use("diebruecke")
 
-		db.getView("allslugs");
+		db.getView("b2","byType",function(err,data){
+			if (err){
+				console.log (err);
+			} else if (data.rows){
+				console.log(data.rows);
+			}
+		});
 		
 		
 	</script>	
