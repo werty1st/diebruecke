@@ -5,7 +5,8 @@
     "load": "lib/app",
     "modules": ["lib"],
     "attachments": ["index.html","wartung.html","data.json","img", "js/libs","js/broen.js","styles"],
-    "dust": {
+    "handlebars": {
+        "all_partials": false,
         "templates": "templates"
     },
     "duality": {
@@ -19,10 +20,9 @@
         "jquery": null,
         "db"    :null,
         "settings": null,
-        "duality": null,
-        "dust": null,
-        "duality-dust": null,
-        "couchtypes": null
+        "handlebars": null,
+        "handlebars-helpers": null,
+        "duality-handlebars": null
     }
 }
 
