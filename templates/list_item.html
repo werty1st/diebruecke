@@ -1,7 +1,35 @@
-<div class="listitem">
-  <h1>{{name}}</h1>
-  <div class="body">
-    Freischaltdatum
-  </div>
-  <div>Edit, Show</div>
-</div>
+<h1>Übersicht</h1>
+<table>
+	{{#each items}}  
+		  	<tr>
+		  		<td colspan="6">
+		  			<h2>{{name}}</h2>
+		  		</td>
+		  	</tr>
+		  	<tr>
+		  		<td>
+		  			<div class="body">sichtbar: ja/nein</div>
+		  		</td>
+		  		<td>
+		  			<div class="body">Freischaltdatum: XX.XX.XX</div>
+		  		</td>
+		  		<td>
+		  			<div class="body">Stimmen: XXX</div>
+		  		</td>
+		  		<td>
+		  			<div class="body">+1</div>
+		  		</td>
+		  		<td>
+		  			<div class="body">-1</div> 
+		  		</td>
+		  		<td>
+		  			<div class="editable" style="display:none">
+		  				<a href="http://localhost:5984/diebruecke/_design/b2/_show/detail_view_edit/{{slug}}">Edit</a>
+		  			</div>
+		  			<div>
+		  				<a href="http://localhost:5984/diebruecke/_design/b2/_show/detail_view/{{slug}}">Show</a>
+		  			</div>
+		  		</td>
+		  	</tr>		  
+	{{/each}}
+</table>	

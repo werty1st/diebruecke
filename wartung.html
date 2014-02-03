@@ -13,6 +13,9 @@
 	<script type="text/javascript">
 		var $ = require('jquery');
 		var db = require('db').use("diebruecke")
+		console.log(db);
+		
+		var handlebars = require('handlebars');
 
 		db.getView("b2","byType",function(err,data){
 			if (err){
@@ -22,6 +25,12 @@
 			}
 		});
 		
+        var context = {};
+        	context = JSON.parse(data).response.sendungsdetails;
+        	context.imgurls = "getById/json/"+id+"/small";
+        	context.imgurll = "getById/json/"+id+"/large";
+		var html = handlebars.templates['details.html'](context);
+		$("#details").append(html);		
 		
 	</script>	
 </html>

@@ -2,15 +2,28 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
   <head> 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
-    <title>{title}</title> 
+    <script src="http://localhost:5984/diebruecke/_design/b2/modules.js"></script>
+    <title>{{title}}</title> 
   </head> 
   <body> 
-    <div id="content">
-      {{title}}
-    </div> 
-       <div id="content">
-      {{body}}
+
+    {{#if list}}
+    <div id="list">
+      {{{list}}}
     </div>
-    <script src="{baseURL}/modules.js"></script>
+    {{/if}}
+
+    {{#if content}}
+    <div id="content">
+      {{{content}}}
+    </div>
+    {{/if}}
+
+    
+    <script type="text/javascript">
+
+    </script>
+
+
   </body>
 </html>
