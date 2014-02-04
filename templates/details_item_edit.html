@@ -5,20 +5,48 @@
 <script src="http://localhost:5984/diebruecke/_design/b2/static/jquery-ui-1.10.4.custom.js"></script>
 <script src="http://localhost:5984/diebruecke/_design/b2/static/jquery-ui-timepicker-addon.js"></script>
 
-<h1>Übersicht</h1>
+<h1>Details</h1>
 
 
 
 <h2>{{doc.name}}</h2>
-<div class="body">
-	<label for="checkbox_id">sichtbar</label>
-	<input type="Checkbox" disabled="disabled" name="sichtbar" id="checkbox_id" value="visibilty" checked="checked">
-</div>
-<div class="body" id="datepicker">Freischaltdatum: <input type="text" value="11.11.2011" id="datepicker_text"/></div>
-<div class="body" id="datepicker2">Freischaltzeit:  <input type="text" value="10:15" id="datepicker2_text"/></div>
-<div class="body">Stimmen: XXX</div>
-<div class="body">+1</div>
-<div class="body">-1</div> 
+
+<table>
+	<tr>
+		<td>
+			<label for="checkbox_id">sichtbar</label>
+		</td>
+		<td>
+			<input type="Checkbox" disabled="disabled" name="sichtbar" id="checkbox_id" value="visibilty" checked="checked">
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<label for="datepicker_text">Freischaltdatum:</label>
+		</td>
+		<td>
+			<input type="text" value="{{freischaltdatum}}" id="datepicker_text" style="position: relative; z-index:99999"/>
+		</td>
+	</tr>	
+	<tr>
+		<td>
+			<label for="datepicker2_text">Freischaltzeit:</label>
+		</td>
+		<td>
+			<input type="text" value="{{freischaltzeit}}" id="datepicker2_text"/>
+		</td>
+	</tr>			
+	<tr>
+		<td>
+			<label for="votes_text">Stimmen:</label>
+		</td>
+		<td>
+			<input id="votes_text" type="text" value="{{stimmen}}">
+		</td>
+	</tr>		
+	</div>
+
+<table>
 
 <div><input type="button" value="Save"/></div>
 
@@ -36,15 +64,17 @@
 	  }
 	});
 
-	var myDate = new Date();
-	var prettyDate =(myDate.getMonth()+1) + '/' + myDate.getDate() + '/' +
-	    myDate.getFullYear();
-	$("#date_pretty").val(prettyDate);
+
 
 	$('#datepicker_text').datetimepicker({
 		altField: "#datepicker2_text",
 		dateFormat: "dd.mm.yy",
-		timeFormat: "HH:mm"
+		timeFormat: "HH:mm",
+		onSelect: function(dateText) {
+			console.log($("#datepicker_text").val());
+			console.log($("#datepicker2_text").val());
+		}
 	});	
+	
 
 </script>
