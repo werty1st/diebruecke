@@ -32,50 +32,49 @@
             <li><a href="#contact">Contact</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#userstatus" id="userstatus">Login</a></li>
+            <li><a href="#login"  id="userstatus_login" onclick='$("#modaltrigger").click();'>Login</a></li>
+            <li><a href="#logout" id="userstatus_logout" onclick='userLogout();'>Logout</a></li>
           </ul>          
         </div><!--/.nav-collapse -->
       </div>
     </div>
 
-    <div class="container" id="wrapper">
-      <div id="loginmodal" style="display:none;">
-        <h1>User Login</h1>
-        <form id="loginform" name="loginform" method="post" action="index.html">
-          <label for="username">Username:</label>
-          <input type="text" name="username" id="username" class="txtfield" tabindex="1">
-           
-          <label for="password">Password:</label>
-          <input type="password" name="password" id="password" class="txtfield" tabindex="2">
-           
-          <div class="center"><input type="submit" name="loginbtn" id="loginbtn" class="flatbtn-blu hidemodal" value="Log In" tabindex="3"></div>
-        </form>
+  <div class="container" id="wrapper">
+    <div id="loginmodal" style="display:none;">
+      <h1>User Login</h1>
+      <form id="loginform" name="loginform" method="post" action="index.html">
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username" class="txtfield" tabindex="1">
+         
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" class="txtfield" tabindex="2">
+         
+        <div class="center"><input type="submit" name="loginbtn" id="loginbtn" class="flatbtn-blu hidemodal" value="Log In" tabindex="3"></div>
+      </form>
+    </div>
+    <!-- Main component for a primary marketing message or call to action -->
+
+
+    <div class="jumbotron">
+      {{#if list}}
+      <div id="list">
+        {{{list}}}
       </div>
-      <!-- Main component for a primary marketing message or call to action -->
+      {{/if}}
 
-
-
-      <div class="jumbotron">
-        {{#if list}}
-        <div id="list">
-          {{{list}}}
-        </div>
-        {{/if}}
-
-        {{#if content}}
-        <div id="content">
-          {{{content}}}
-        </div>
-        {{/if}}
+      {{#if content}}
+      <div id="content">
+        {{{content}}}
       </div>
+      {{/if}}
+    </div>
 
-    </div> <!-- /container -->
+  </div> <!-- /container -->
   
 
     <script type="text/javascript">
       var session    = require('session');
       var handlebars = require('handlebars');
-      var userCtx = {};
 
       function getloginStatus(){
 
@@ -87,46 +86,56 @@
           }
           else     // success server antwortet
           {
-            userCtx = info.userCtx;
-            userctx(info.userCtx);
+            loginUser(info.userCtx);
           }
         });
 
       };
 
-      function userctx(userCtx){
+      function validUser(){
+        console.log("user eingeloggt");
+        $('.editable').css('display',"block");
+        $('#userstatus_login').css('display',"none");
+        $('#userstatus_logout').css('display',"block");
+        $('#loginform>#username').val("");
+        $('#loginform>#password').val("");
+      }
+
+      function invalidUser(){
+        console.log("nicht gegnügend rechte oder nicht eingeloggt");
+        $('.editable').css('display',"none");
+        $('#userstatus_login').css('display',"block");
+        $('#userstatus_logout').css('display',"none");
+
+      }
+
+      function userLogout(){
+        session.logout(function (err, response) {
+            if (err) // an error occurred logging out
+              console.log(err);
+            else     // success
+            {
+              invalidUser();
+            }
+          });
+      }
+
+      function loginUser(userCtx){
 
         if (userCtx && userCtx.roles){
               //user eingeloggt
               if (intersect_safe(["redakteur","_admin"], userCtx.roles)){
-                $('.editable').css('display',"block");
-                console.log("user eingeloggt")
+                validUser();
                 return true;                
               } else {
-                console.log("nicht gegnügend rechte oder nicht eingeloggt")
+                invalidUser();
+                return false;
               }
-              $( "#userstatus" ).text("Logout");
             } else {
               //kein user eingeloggt
-              $( "#userstatus" ).text("Login");
+              invalidUser();
             }
       }
-
-      $( "#userstatus" ).click(function() {
-        if(userCtx.roles.length>0){
-          session.logout(function (err, response) {
-            if (err) // an error occurred logging out
-              console.log(err);
-            else     // success
-              $("#userstatus").text("Login");
-              user = null;
-          });
-        } else {
-            $("#modaltrigger").click();
-            return false;          
-        }
-      });
-
 
 
     </script>
@@ -135,6 +144,8 @@
     (function($){$.fn.extend({leanModal:function(options){var defaults={top:100,overlay:0.5,closeButton:null};var overlay=$("<div id='lean_overlay'></div>");$("body").append(overlay);options=$.extend(defaults,options);return this.each(function(){var o=options;$(this).click(function(e){var modal_id=$(this).attr("href");$("#lean_overlay").click(function(){close_modal(modal_id)});$(o.closeButton).click(function(){close_modal(modal_id)});var modal_height=$(modal_id).outerHeight();var modal_width=$(modal_id).outerWidth();
     $("#lean_overlay").css({"display":"block",opacity:0});$("#lean_overlay").fadeTo(200,o.overlay);$(modal_id).css({"display":"block","position":"fixed","opacity":0,"z-index":11000,"left":50+"%","margin-left":-(modal_width/2)+"px","top":o.top+"px"});$(modal_id).fadeTo(200,1);e.preventDefault()})});function close_modal(modal_id){$("#lean_overlay").fadeOut(200);$(modal_id).css({"display":"none"})}}})})(jQuery);
 
+
+    //AUTOSTART
     $(function(){
 
         $('#loginform').submit(function(e){
@@ -144,12 +155,11 @@
 
             session.login(username, password, function (err, response) {
                 if (err) // an error occurred logging in
-                    console.log("kein login");
+                    console.log("no connection");
                 else     // success
-                {
+                {                    
                     console.log(response);
-                    $( "#userstatus" ).text("Logout");
-                    getloginStatus();
+                    loginUser(response);
                 }
             });
             return false;
@@ -159,6 +169,9 @@
         getloginStatus();
     });
 
+
+
+    //UTILS
       function intersect_safe(a, b)
       {
         var ai=0, bi=0;

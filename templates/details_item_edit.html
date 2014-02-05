@@ -12,6 +12,30 @@
 <h2>{{doc.name}}</h2>
 
 <table>
+	<tr >
+		<td rowspan="7">
+			<div id="mainimage">
+			<!-- http://localhost:5984/diebruecke/_design/b2/img%2ffaces%2falexander.jpg -->
+				<img width="150" heigth="200" src="{{baseurl}}/{{doc.image}}">
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<label for="shortText_id">Kurztext</label>
+		</td>
+		<td>
+			<input type="text" id="shortText_id" size="50">
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<label for="longText_id">Langtext</label>
+		</td>
+		<td>
+			<textarea id="longText_id" cols="50"></textarea>
+		</td>
+	</tr>	
 	<tr>
 		<td>
 			<label for="checkbox_id">sichtbar</label>
@@ -48,21 +72,25 @@
 
 <table>
 
+
+
+<div>
+Media
+Videos und Bilder
+</div>
+
+
 <div><input type="button" value="Save"/></div>
 
 <script type="text/javascript">
-	var session = require('session');
+	var db    = require('db');
 
-	session.info(function (err, info) {
-	if (err) // an error occurred getting session info
-	  console.log("error");
-	else     // success
-	  if ($.inArray("redakteur", info.userCtx.roles))
-	  {
-	    $('.editable').css('display',"block");
-
-	  }
-	});
+	//get data for user
+	// db.getDoc(id, function(err,response){
+	// 	if(!err){
+	// 		console.log(response);
+	// 	}
+	// });
 
 
 
