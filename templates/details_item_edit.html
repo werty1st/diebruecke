@@ -2,8 +2,11 @@
 <link rel="stylesheet" href="http://localhost:5984/diebruecke/_design/b2/static/jquery-ui-timepicker-addon.css">
 <link rel="stylesheet" href="http://localhost:5984/diebruecke/_design/b2/static/ui-lightness/jquery-ui-1.10.4.custom.css">
 
+<link rel="stylesheet" href="http://localhost:5984/diebruecke/_design/b2/static/select/bootstrap-select.css">
+
 <script src="http://localhost:5984/diebruecke/_design/b2/static/jquery-ui-1.10.4.custom.js"></script>
 <script src="http://localhost:5984/diebruecke/_design/b2/static/jquery-ui-timepicker-addon.js"></script>
+<script src="http://localhost:5984/diebruecke/_design/b2/static/select/bootstrap-select.js"></script>
 
 <h1>Details</h1>
 
@@ -15,25 +18,24 @@
 	<tr >
 		<td rowspan="7">
 			<div id="mainimage">
-			<!-- http://localhost:5984/diebruecke/_design/b2/img%2ffaces%2falexander.jpg -->
-				<img width="150" heigth="200" src="{{baseurl}}/{{doc.image}}">
+				<img width="150" heigth="200" src="{{imgbaseurl}}/{{doc.image}}">
 			</div>
 		</td>
 	</tr>
 	<tr>
 		<td>
-			<label for="shortText_id">Kurztext</label>
+			<label for="text">Kurztext</label>
 		</td>
 		<td>
-			<input type="text" id="shortText_id" size="50">
+			<input type="text" id="text" size="50" value="{{doc.text}}">
 		</td>
 	</tr>
 	<tr>
 		<td>
-			<label for="longText_id">Langtext</label>
+			<label for="longText">Langtext</label>
 		</td>
 		<td>
-			<textarea id="longText_id" cols="50"></textarea>
+			<textarea id="longText" cols="50">{{doc.longText}}</textarea>
 		</td>
 	</tr>	
 	<tr>
@@ -46,26 +48,27 @@
 	</tr>
 	<tr>
 		<td>
-			<label for="datepicker_text">Freischaltdatum:</label>
+			<label for="freischaltepisode">freischalten:</label>
 		</td>
 		<td>
-			<input type="text" value="{{freischaltdatum}}" id="datepicker_text" style="position: relative; z-index:99999"/>
-		</td>
-	</tr>	
-	<tr>
-		<td>
-			<label for="datepicker2_text">Freischaltzeit:</label>
-		</td>
-		<td>
-			<input type="text" value="{{freischaltzeit}}" id="datepicker2_text"/>
+			<select id="freischaltepisode" class="selectpicker" data-style="btn-primary">
+				{{#select doc.freischaltepisode}}
+			    <option value="0">von Anfang an</option>
+			    <option value="1">nach Episode 1</option>
+			    <option value="2">nach Episode 2</option>
+			    <option value="3">nach Episode 3</option>
+			    <option value="4">nach Episode 4</option>
+			    <option value="5">nach Episode 5</option>
+				{{/select}}   
+			  </select>
 		</td>
 	</tr>			
 	<tr>
 		<td>
-			<label for="votes_text">Stimmen:</label>
+			<label for="stimmen">Stimmen:</label>
 		</td>
 		<td>
-			<input id="votes_text" type="text" value="{{stimmen}}">
+			<input id="stimmen" type="text" value="{{doc.stimmen}}">
 		</td>
 	</tr>		
 	</div>
@@ -74,33 +77,90 @@
 
 
 
-<div>
-Media
-Videos und Bilder
+<div id="relations">
+Beziehungen
+{{#list doc.relations}}	
+	{{name}}
+	<!-- slug auf freischaltwoche prüfen und anzeigen
+	text übersetzt per ajax laden -->
+{{/list}}
 </div>
 
+http://localhost:5984/diebruecke/_design/b2/img/faces//alexander.jpg
 
-<div><input type="button" value="Save"/></div>
+http://localhost:5984/ 						 img/Foto_video/AFS6/6_alexander_caroline.jpg
+http://localhost:5984/diebruecke/_design/b2/ img/Foto_video/AFS3/3_alexander_caroline.jpg
+
+
+<div id="media">
+Bilder und Videos
+{{#list doc.media}}
+	<div class="{{type}}">
+		<img src="{{../mediabaseurl}}/{{image}}"/>
+	</div>
+{{/list}}
+</div>
+
+<div>
+<button class="btn btn-primary ladda-button" data-style="zoom-in" id="save_doc"><span class="ladda-label">speichern</span></button>
+</div>
 
 <script type="text/javascript">
-	var db    = require('db');
+	var db = require('db').use("{{baseurl}}");
 
-	//get data for user
-	// db.getDoc(id, function(err,response){
-	// 	if(!err){
-	// 		console.log(response);
-	// 	}
-	// });
+	var userurl = "{{baseurl}}{{doc.slug}}";
+
+	var user = "";
 
 
+	db.getDoc("{{doc.slug}}", function(err,response){
+		if(err) return;
+		
 
-	$('#datepicker_text').datetimepicker({
-		altField: "#datepicker2_text",
+		user = response;
+
+		//$('.selectpicker').selectpicker("val", user.freischaltepisode);
+	});
+	$('.selectpicker').selectpicker();
+
+
+	$( "#save_doc" ).click(function( event ) {
+		event.preventDefault();		
+		//animation
+		var l = Ladda.create(this);
+		l.start();
+
+
+		//user data object
+		user.text = $("#text").val();
+		user.longText = $("#longText").val();
+		user.freischaltepisode = $("#freischaltepisode").val();
+		// user.freischaltzeit = $("#freischaltzeit").val();
+		user.stimmen = $("#stimmen").val();
+		// user.text = $("#text").val();
+		db.saveDoc(user, docSaved(l));
+	});
+
+	function docSaved(l){
+		return function(err, response){
+			l.stop();
+			if (err) return;
+			
+			
+			if (response.ok)
+				user._rev = response.rev;
+		}
+	}
+
+
+
+	$('#freischaltdatum').datetimepicker({
+		altField: "#freischaltzeit",
 		dateFormat: "dd.mm.yy",
 		timeFormat: "HH:mm",
 		onSelect: function(dateText) {
-			console.log($("#datepicker_text").val());
-			console.log($("#datepicker2_text").val());
+			console.log($("#freischaltdatum").val());
+			console.log($("#freischaltzeit").val());
 		}
 	});	
 	
