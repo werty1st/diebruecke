@@ -3,13 +3,13 @@ class DR.BroenGallery.VoteMachine
 
     constructor: (app)->
         @app = app
-        #Hash = require ("js/libs/more")
-        @cookie = new Hash.Cookie 'benzErGud2',
-            duration: 365
+        require ["js/libs/more"], =>
+            @cookie = new Hash.Cookie 'benzErGud2',
+                duration: 365
 
-        @currentWeek = @getWeek(new Date())
-        @hasVotedThisWeek = this.hasVotedThisWeek()
-        return this
+            @currentWeek = @getWeek(new Date())
+            @hasVotedThisWeek = this.hasVotedThisWeek()
+            return this
 
     hasVotedThisWeek: ->
         lastVotedWeek = @cookie.get 'week'

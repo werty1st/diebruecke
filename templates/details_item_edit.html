@@ -86,19 +86,16 @@ Beziehungen
 {{/list}}
 </div>
 
-http://localhost:5984/diebruecke/_design/b2/img/faces//alexander.jpg
-
-http://localhost:5984/ 						 img/Foto_video/AFS6/6_alexander_caroline.jpg
-http://localhost:5984/diebruecke/_design/b2/ img/Foto_video/AFS3/3_alexander_caroline.jpg
-
 
 <div id="media">
-Bilder und Videos
-{{#list doc.media}}
-	<div class="{{type}}">
-		<img src="{{../mediabaseurl}}/{{image}}"/>
-	</div>
-{{/list}}
+	<ul class="imagelist">
+		Bilder und Videos
+		{{#list doc.media}}	
+			<div class="{{type}}">
+				<a href="{{../mediabaseurl}}/{{preview}}" ><img src="{{../mediabaseurl}}/{{thumbnail}}"/></a>
+			</div>
+		{{/list}}
+	</ul>
 </div>
 
 <div>

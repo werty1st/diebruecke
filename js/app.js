@@ -123,13 +123,16 @@ DR.BroenGallery.VoteMachine = (function() {
   VoteMachine.prototype.hasVotedThisWeek = false;
 
   function VoteMachine(app) {
+    var _this = this;
     this.app = app;
-    this.cookie = new Hash.Cookie('benzErGud2', {
-      duration: 365
+    require(["js/libs/more"], function() {
+      _this.cookie = new Hash.Cookie('benzErGud2', {
+        duration: 365
+      });
+      _this.currentWeek = _this.getWeek(new Date());
+      _this.hasVotedThisWeek = _this.hasVotedThisWeek();
+      return _this;
     });
-    this.currentWeek = this.getWeek(new Date());
-    this.hasVotedThisWeek = this.hasVotedThisWeek();
-    return this;
   }
 
   VoteMachine.prototype.hasVotedThisWeek = function() {
@@ -509,7 +512,7 @@ MediaView = (function() {
     }
     if (!this.hasBeenOpened) {
       el = $('broen-gallery-swipe-carousel');
-      require(["js/libs/dr-widget-swipe-carousel"], function(Swipe) {
+      require(["dr-widget-swipe-carousel"], function(Swipe) {
         _this.swipe = new Swipe(el, {
           startSlide: index
         });
@@ -536,9 +539,9 @@ MediaView = (function() {
     for (_i = 0, _len = _ref.length; _i < _len; _i++) {
       media = _ref[_i];
       if (media.type === 'image') {
-        html += "" + (DR.BroenGallery.getImg(media.url, 79, 79));
+        html += "" + (DR.BroenGallery.getImg(media.thumbnail, 79, 79));
       } else if (media.type === 'video') {
-        html += "<span class=\"image-wrap dr-icon-play-boxed-small\">\n    " + (DR.BroenGallery.getImg(media.image, 79, 79)) + "\n</span>";
+        html += "<span class=\"image-wrap dr-icon-play-boxed-small\">\n    " + (DR.BroenGallery.getImg(media.thumbnail, 79, 79)) + "\n</span>";
       }
     }
     return html + "</div><div id=\"broen-gallery-person-media-slider\" class=\"hide\"></div>";

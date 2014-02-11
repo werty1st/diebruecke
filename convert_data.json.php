@@ -78,6 +78,17 @@ function delete_garbage($jsdata){
 		$obj1 = $obj->doc;
 		// var_dump($obj1);
 
+
+		//all slugs
+		if (property_exists($obj1,"slug"))
+			{
+				echo $obj1->slug."\n";
+				$obj1->_deleted = true;
+				// $docs[$obj1->slug} = $obj1;
+				array_push($docs, $obj1);
+				continue;
+			}
+
 		//old slugs without porper id
 		if (property_exists($obj1,"slug"))
 			if ($obj1->slug != $obj1->_id){
@@ -120,11 +131,15 @@ function td() {
 
 	foreach ($jsdata as $key => $value) {
 		echo "Name: ".$key."\n";
+		toLower($value);
 		array_push($outdata, $value);
 	}
 
+
+
 	file_put_contents("data_split.json",json_encode($outdata));
 
+	
 
 	$text = "kanso transform map ".
 	  '--src="function (doc) { doc[\"_id\"] = doc.slug; doc.type=\"person\"; return doc; }" '.
@@ -137,4 +152,72 @@ function td() {
 	unlink("data_split_ids.json");
 
 	echo"finished\n";
+}
+
+function makeLinkThumbnail($path){
+
+	$path = strtolower($path);
+	$pi = pathinfo($path);
+
+	$prefix = "s79_";
+
+	$path = $pi["dirname"]."/".$prefix.$pi["basename"];
+
+	
+	return $path;
+}
+
+function getFreigabeEpisode($path){
+
+	if (strpos($path, "afs1")) return "1";
+	if (strpos($path, "afs2")) return "2";
+	if (strpos($path, "afs3")) return "3";
+	if (strpos($path, "afs4")) return "4";
+	if (strpos($path, "afs5")) return "5";
+	if (strpos($path, "afs6")) return "6";
+	if (strpos($path, "afs7")) return "7";
+	if (strpos($path, "afs8")) return "8";
+	if (strpos($path, "afs9")) return "9";
+	if (strpos($path, "afs10")) return "10";
+
+
+}
+
+function toLower($person){
+
+	$person->image = strtolower($person->image);
+	foreach ($person->media as $key => $value) {
+		
+		if ($person->media[$key]->type == "video"){
+			//video image vorhanden,resourceId kein url
+
+			$image	   = strtolower($person->media[$key]->image);
+			$thumbnail = makeLinkThumbnail($image);
+
+
+			$person->media[$key]->freischaltepisode = getFreigabeEpisode($image);
+			$person->media[$key]->thumbnail = $thumbnail;
+			$person->media[$key]->image   = $image;
+			$person->media[$key]->video     = "";
+
+			//delete
+			// unset($person->media[$key]->image);
+			unset($person->media[$key]->resourceId);
+
+		} else if ($person->media[$key]->type == "image")
+		{
+			//image url vorhanden kein resourceId
+
+			$image	   = strtolower($person->media[$key]->url);
+			$thumbnail = makeLinkThumbnail($image);
+
+			$person->media[$key]->freischaltepisode = getFreigabeEpisode($image);
+			$person->media[$key]->thumbnail = $thumbnail;
+			$person->media[$key]->image   = $image;
+
+			//delete
+			unset($person->media[$key]->url);
+		}
+	}
+
 }

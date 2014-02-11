@@ -41,7 +41,7 @@ class MediaView
 
         if not @hasBeenOpened
             el = $('broen-gallery-swipe-carousel')
-            require ["js/libs/dr-widget-swipe-carousel"], (Swipe) =>
+            require ["dr-widget-swipe-carousel"], (Swipe) =>
                 @swipe = new Swipe el,
                     startSlide: index
 
@@ -62,12 +62,12 @@ class MediaView
         for media in @media
             if media.type is 'image'
                 html += """
-                        #{DR.BroenGallery.getImg(media.url, 79, 79)}
+                        #{DR.BroenGallery.getImg(media.thumbnail, 79, 79)}
                         """
             else if media.type is 'video'
                 html += """
                         <span class="image-wrap dr-icon-play-boxed-small">
-                            #{DR.BroenGallery.getImg(media.image, 79, 79)}
+                            #{DR.BroenGallery.getImg(media.thumbnail, 79, 79)}
                         </span>
                         """
 

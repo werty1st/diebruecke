@@ -2,7 +2,7 @@ var DR = DR || {};
 DR.BroenGallery = {};
 
 DR.BroenGallery.config = {
-    jsonDataUrl: 'data.json',
+    jsonDataUrl: '/diebruecke/_design/b2/_list/getDatajson/personen',
     jsonDataTestUrl: 'http://socialbld01.net.dr.dk/broen/test.json',
 
     votingEnabled: true,
