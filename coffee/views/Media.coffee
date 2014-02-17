@@ -32,29 +32,39 @@ class MediaView
                 this.closeSlider()
 
     initSlider: ->
+        console.log "init slider"+this        
         @slider = document.getElementById 'broen-gallery-person-media-slider'
         @slider.innerHTML = this.getSliderHTML()
 
+
     openSlider: (index) ->
+        console.log "open slider index: "+index
+        ###
         @slider.className = ''
         if @isMobile then document.body.className = 'broen'
-
+        ###
         if not @hasBeenOpened
-            el = $('broen-gallery-swipe-carousel')
-            require ["dr-widget-swipe-carousel"], (Swipe) =>
-                @swipe = new Swipe el,
-                    startSlide: index
-
-                window.fireEvent 'dr-dom-inserted', [$$('span.image-wrap')]
-                window.fireEvent 'dr-dom-inserted', [$$('div.dr-widget-video-player')]
+            new NivooSlider($("Slider"),
+              directionNavPosition: "outside"
+              effect: "random"
+              interval: 5000
+              orientation: "random"
+            )       
         else
-            @swipe.slide index
+            #@swipe.slide index
+
+        @el = document.getElementById 'broen-gallery-person-media-slider'
+        @el.className = ''
+
 
         @hasBeenOpened = true
+        
 
     closeSlider: ->
+        console.log "close slider"+this
         @slider.className = 'hide'
         if @isMobile then document.body.className = ''
+
 
     html: ->
         html = '<div>'
@@ -75,29 +85,21 @@ class MediaView
 
 
     getSliderHTML: ->
-        html = """<div class="section boxed">
-                     <h3>#{@name} - billeder/video<a href="#" class="dr-link-readmore dr-icon-close">Luk</a></h3>
-                     <div id="broen-gallery-swipe-carousel" class="dr-widget-swipe-carousel" data-min-item-span="8">"""
+        html = """<div id='Slider' class='nivoo-slider'>
+                     <h3>#{@name} - Fotos/Videos<a href="#" class="dr-link-readmore dr-icon-close">Schließen</a></h3>
+                     <div class="swipe-wrap">"""
 
         for media in @media
             if media.type is 'image'
                 html += """
-                        <div class="carousel-item">
-                            <div class="item">
-                                <span role="presentation" aria-hidden="true" class="image-wrap ratio-16-9">
-                                    <noscript data-src="#{media.url}" data-width="0" data-height="0">
-                                        <img src="#{media.url}" alt="" width="0" height="0" role="presentation" aria-hidden="true" />
-                                    </noscript>
-                                </span>
-                            </div>
+                        <div class='image'>
+                                <img src="#{media.image}" alt="" width="0" height="0" role="presentation" aria-hidden="true2" />
                         </div>
                         """
             else if media.type is 'video'
                 html += """
-                        <div class="carousel-item video">
-                            <div class="item">
-                                <div class="dr-widget-video-player ratio-16-9" data-resource="http://www.dr.dk/handlers/GetResource.ashx?id=#{media.resourceId}" data-image="#{media.image}"></div>
-                            </div>
+                        <div class="video">
+                                <img src="#{media.image}" alt="" width="0" height="0" role="presentation" aria-hidden="true2" />
                         </div>
                         """
 
