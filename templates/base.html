@@ -60,9 +60,9 @@
 
 
     <div class="jumbotron">
-      {{#if list}}
+      {{#if knusper}}
       <div id="list">
-        {{{list}}}
+        {{{knusper}}}
       </div>
       {{/if}}
 
@@ -176,24 +176,18 @@
 
 
     //UTILS
-      function intersect_safe(a, b)
+      function intersect_safe(arr1, arr2)
       {
-        var ai=0, bi=0;
-        var result = new Array();
+        var results = [];
 
-        while( ai < a.length && bi < b.length )
-        {
-           if      (a[ai] < b[bi] ){ ai++; }
-           else if (a[ai] > b[bi] ){ bi++; }
-           else /* they're equal */
-           {
-             result.push(a[ai]);
-             ai++;
-             bi++;
-           }
+        for (var i = 0; i < arr1.length; i++) {
+            if (arr2.indexOf(arr1[i]) !== -1) {
+                // results.push(arr1[i]);
+                return true;
+            }
         }
 
-        return (result.length>0);
+        return false;
       }
     </script>
 
