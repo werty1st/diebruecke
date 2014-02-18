@@ -519,35 +519,33 @@ MediaView = (function() {
   };
 
   MediaView.prototype.initSlider = function() {
-    console.log("init slider" + this);
     this.slider = document.getElementById('broen-gallery-person-media-slider');
     return this.slider.innerHTML = this.getSliderHTML();
   };
 
   MediaView.prototype.openSlider = function(index) {
-    console.log("open slider index: " + index);
-    /*
-    @slider.className = ''
-    if @isMobile then document.body.className = 'broen'
-    */
-
+    var el,
+      _this = this;
+    this.slider.className = '';
+    if (this.isMobile) {
+      document.body.className = 'broen';
+    }
     if (!this.hasBeenOpened) {
-      new NivooSlider($("Slider"), {
-        directionNavPosition: "outside",
-        effect: "random",
-        interval: 5000,
-        orientation: "random"
+      el = $('broen-gallery-swipe-carousel');
+      require(["dr-widget-swipe-carousel"], function(Swipe) {
+        _this.swipe = new Swipe(el, {
+          startSlide: index
+        });
+        window.fireEvent('dr-dom-inserted', [$$('span.image-wrap')]);
+        return window.fireEvent('dr-dom-inserted', [$$('div.dr-widget-video-player')]);
       });
     } else {
-
+      this.swipe.slide(index);
     }
-    this.el = document.getElementById('broen-gallery-person-media-slider');
-    this.el.className = '';
     return this.hasBeenOpened = true;
   };
 
   MediaView.prototype.closeSlider = function() {
-    console.log("close slider" + this);
     this.slider.className = 'hide';
     if (this.isMobile) {
       return document.body.className = '';
@@ -571,14 +569,14 @@ MediaView = (function() {
 
   MediaView.prototype.getSliderHTML = function() {
     var html, media, _i, _len, _ref;
-    html = "<div id='Slider' class='nivoo-slider'>\n<h3>" + this.name + " - Fotos/Videos<a href=\"#\" class=\"dr-link-readmore dr-icon-close\">Schließen</a></h3>\n<div class=\"swipe-wrap\">";
+    html = "<div class=\"section boxed\">\n<h3>" + this.name + " - Fotos/Videos<a href=\"#\" class=\"dr-link-readmore dr-icon-close\">Schließen</a></h3>\n<div id=\"broen-gallery-swipe-carousel\" class=\"dr-widget-swipe-carousel\" data-min-item-span=\"8\">";
     _ref = this.media;
     for (_i = 0, _len = _ref.length; _i < _len; _i++) {
       media = _ref[_i];
       if (media.type === 'image') {
-        html += "<div class='image'>\n        <img src=\"" + media.image + "\" alt=\"\" width=\"0\" height=\"0\" role=\"presentation\" aria-hidden=\"true2\" />\n</div>";
+        html += "<div class=\"carousel-item\">\n    <div class=\"item\">\n        <span role=\"presentation\" aria-hidden=\"true\" class=\"image-wrap ratio-16-9\">\n            <img src=\"" + media.image + "\" alt=\"\" width=\"0\" height=\"0\" role=\"presentation\" aria-hidden=\"true\" />                                    \n        </span>\n    </div>\n</div>";
       } else if (media.type === 'video') {
-        html += "<div class=\"video\">\n        <img src=\"" + media.image + "\" alt=\"\" width=\"0\" height=\"0\" role=\"presentation\" aria-hidden=\"true2\" />\n</div>";
+        html += "<div class=\"carousel-item\">\n    <div class=\"item\">\n        todo video playbutton overlay+function to laod player\n        <span role=\"presentation\" aria-hidden=\"true\" class=\"image-wrap ratio-16-9\">\n            <img src=\"" + media.image + "\" alt=\"\" width=\"0\" height=\"0\" role=\"presentation\" aria-hidden=\"true\"\n            video-url=\"" + media.video + "\" />                                    \n        </span>\n    </div>\n</div>";
       }
     }
     return html + "</div></div>";

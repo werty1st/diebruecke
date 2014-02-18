@@ -32,39 +32,29 @@ class MediaView
                 this.closeSlider()
 
     initSlider: ->
-        console.log "init slider"+this        
         @slider = document.getElementById 'broen-gallery-person-media-slider'
         @slider.innerHTML = this.getSliderHTML()
 
-
     openSlider: (index) ->
-        console.log "open slider index: "+index
-        ###
         @slider.className = ''
         if @isMobile then document.body.className = 'broen'
-        ###
+
         if not @hasBeenOpened
-            new NivooSlider($("Slider"),
-              directionNavPosition: "outside"
-              effect: "random"
-              interval: 5000
-              orientation: "random"
-            )       
+            el = $('broen-gallery-swipe-carousel')
+            require ["dr-widget-swipe-carousel"], (Swipe) =>
+                @swipe = new Swipe el,
+                    startSlide: index
+
+                window.fireEvent 'dr-dom-inserted', [$$('span.image-wrap')]
+                window.fireEvent 'dr-dom-inserted', [$$('div.dr-widget-video-player')]
         else
-            #@swipe.slide index
-
-        @el = document.getElementById 'broen-gallery-person-media-slider'
-        @el.className = ''
-
+            @swipe.slide index
 
         @hasBeenOpened = true
-        
 
     closeSlider: ->
-        console.log "close slider"+this
         @slider.className = 'hide'
         if @isMobile then document.body.className = ''
-
 
     html: ->
         html = '<div>'
@@ -85,21 +75,31 @@ class MediaView
 
 
     getSliderHTML: ->
-        html = """<div id='Slider' class='nivoo-slider'>
+        html = """<div class="section boxed">
                      <h3>#{@name} - Fotos/Videos<a href="#" class="dr-link-readmore dr-icon-close">Schließen</a></h3>
-                     <div class="swipe-wrap">"""
+                     <div id="broen-gallery-swipe-carousel" class="dr-widget-swipe-carousel" data-min-item-span="8">"""
 
         for media in @media
             if media.type is 'image'
                 html += """
-                        <div class='image'>
-                                <img src="#{media.image}" alt="" width="0" height="0" role="presentation" aria-hidden="true2" />
+                        <div class="carousel-item">
+                            <div class="item">
+                                <span role="presentation" aria-hidden="true" class="image-wrap ratio-16-9">
+                                    <img src="#{media.image}" alt="" width="0" height="0" role="presentation" aria-hidden="true" />                                    
+                                </span>
+                            </div>
                         </div>
                         """
             else if media.type is 'video'
                 html += """
-                        <div class="video">
-                                <img src="#{media.image}" alt="" width="0" height="0" role="presentation" aria-hidden="true2" />
+                        <div class="carousel-item">
+                            <div class="item">
+                                todo video playbutton overlay+function to laod player
+                                <span role="presentation" aria-hidden="true" class="image-wrap ratio-16-9">
+                                    <img src="#{media.image}" alt="" width="0" height="0" role="presentation" aria-hidden="true"
+                                    video-url="#{media.video}" />                                    
+                                </span>
+                            </div>
                         </div>
                         """
 
