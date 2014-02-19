@@ -512,8 +512,10 @@ MediaView = (function() {
         }
         index = target.getParent().getChildren().indexOf(target);
         return _this.openSlider(index);
-      } else if (target.className === 'dr-link-readmore dr-icon-close') {
-        return _this.closeSlider();
+      } else {
+        if (target.className === 'dr-link-readmore dr-icon-close') {
+          return _this.closeSlider();
+        }
       }
     });
   };
@@ -568,15 +570,17 @@ MediaView = (function() {
   };
 
   MediaView.prototype.getSliderHTML = function() {
-    var html, media, _i, _len, _ref;
+    var html, i1, media, _i, _len, _ref;
     html = "<div class=\"section boxed\">\n<h3>" + this.name + " - Fotos/Videos<a href=\"#\" class=\"dr-link-readmore dr-icon-close\">Schließen</a></h3>\n<div id=\"broen-gallery-swipe-carousel\" class=\"dr-widget-swipe-carousel\" data-min-item-span=\"8\">";
+    i1 = 0;
     _ref = this.media;
     for (_i = 0, _len = _ref.length; _i < _len; _i++) {
       media = _ref[_i];
+      i1++;
       if (media.type === 'image') {
-        html += "<div class=\"carousel-item\">\n    <div class=\"item\">\n        <span role=\"presentation\" aria-hidden=\"true\" class=\"image-wrap ratio-16-9\">\n            <img src=\"" + media.image + "\" alt=\"\" width=\"0\" height=\"0\" role=\"presentation\" aria-hidden=\"true\" />                                    \n        </span>\n    </div>\n</div>";
+        html += "<div class=\"carousel-item\">\n    <div class=\"item\" >\n        <span role=\"presentation\" aria-hidden=\"true\" class=\"image-wrap ratio-16-9\">\n            <img src=\"" + media.image + "\" alt=\"\" width=\"0\" height=\"0\" role=\"presentation\" aria-hidden=\"true\" />                                    \n        </span>\n    </div>\n</div>";
       } else if (media.type === 'video') {
-        html += "<div class=\"carousel-item\">\n    <div class=\"item\">\n        todo video playbutton overlay+function to laod player\n        <span role=\"presentation\" aria-hidden=\"true\" class=\"image-wrap ratio-16-9\">\n            <img src=\"" + media.image + "\" alt=\"\" width=\"0\" height=\"0\" role=\"presentation\" aria-hidden=\"true\"\n            video-url=\"" + media.video + "\" />                                    \n        </span>\n    </div>\n</div>";
+        html += "<div class=\"carousel-item\">\n    <div class=\"item\" >\n        <span role=\"presentation\" aria-hidden=\"true\" class=\"image-wrap ratio-16-9\">\n                <div class=\"icon-film play-overlay\" >\n                </div>\n                <div class=\"play-base\" >\n                    <img src=\"" + media.image + "\" id=\"video" + i1 + "\" onclick=\"playvideo(this);return false;\" alt=\"\" width=\"0\" height=\"0\" role=\"presentation\" aria-hidden=\"true\" video-url=\"" + media.video + "\" /> \n                </div>\n        </span>\n    </div>\n</div>";
       }
     }
     return html + "</div></div>";

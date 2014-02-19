@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chrome 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:noNamespaceSchemaLocation="http://test1.syzygy.de/zdf/zdfplayer/schema/configuration.xsd"
+    >
+	<media>
+		<type>video</type>
+		<assetID>1410212</assetID>		
+	</media>
+	<settings> 
+		<autoHideDelay>2500</autoHideDelay>
+		<initialBitrate>1700000</initialBitrate>
+        <tracking>
+            <beacon>
+                <enabledFlash>true</enabledFlash>
+                <enabledHTML5>true</enabledHTML5>
+                <scriptUrl><![CDATA[http://secure-eu.imrworldwide.com/novms/js/2/ggcmb390.js]]></scriptUrl>
+                <clientId>de-605920</clientId>
+                <vcid>b01</vcid>
+                <cisuffix></cisuffix>
+                <sfcode>eu</sfcode>
+                <prod>vc</prod>
+                <videoType>content</videoType>
+                <twentyFourSevenAssets>1822600,1822544,1822586,1822440</twentyFourSevenAssets>
+                <events>
+                    <event id="3" track="true">
+                        <!-- mandatory -->
+                        <metadata_mappings beaconName="livestream">
+                            <mapping source="mediathek">
+                                <zdfName modelName="isLive">type</zdfName>
+                            </mapping>
+                        </metadata_mappings>
+                        <metadata_mappings beaconName="uurl" delimiter="_">
+                            <mapping source="mediathek">
+                                <zdfName modelName="ci"></zdfName>
+                                <zdfName modelName="vcid"></zdfName>
+                                <zdfName modelName="id">assetId</zdfName>
+                            </mapping>
+                        </metadata_mappings>
+                        <metadata_mappings beaconName="length">
+                            <mapping source="mediathek">
+                                <zdfName modelName="lengthSec">lengthSec</zdfName>
+                            </mapping>
+                        </metadata_mappings>
+                        <metadata_mappings beaconName="censuscateory" delimiter="|">
+                            <mapping source="mediathek">
+                                <zdfName modelName="channelTitle">originChannelTitle</zdfName>
+                                <zdfName modelName="title">title</zdfName>
+                            </mapping>
+                        </metadata_mappings>
+                        <metadata_mappings beaconName="title" delimiter="|">
+                            <mapping source="mediathek">
+                                <zdfName modelName="channelTitle">originChannelTitle</zdfName>
+                                <zdfName modelName="title">title</zdfName>
+                            </mapping>
+                        </metadata_mappings>
+                        <!-- custom mandatory -->
+                        <metadata_mappings beaconName="nol_raw_c7" prefix="p7," delimiter="_">
+                            <mapping source="mediathek">
+                                <zdfName modelName="ci"></zdfName>
+                                <zdfName modelName="vcid"></zdfName>
+                                <zdfName modelName="id">assetId</zdfName>
+                            </mapping>
+                        </metadata_mappings>
+                        <metadata_mappings beaconName="nol_raw_c8" prefix="p8,">
+                            <mapping source="mediathek">
+                                <zdfName modelName="lengthSec">lengthSec</zdfName>
+                            </mapping>
+                        </metadata_mappings>
+                        <metadata_mappings beaconName="nol_raw_c9" prefix="p9," delimiter="|">
+                            <mapping source="mediathek">
+                                <zdfName modelName="channelTitle">originChannelTitle</zdfName>
+                                <zdfName modelName="title">title</zdfName>
+                            </mapping>
+                        </metadata_mappings>
+                        <metadata_mappings beaconName="nol_raw_c10" prefix="p10,">
+                            <mapping source="mediathek">
+                                <zdfName modelName="channelName">channel</zdfName>
+                            </mapping>
+                        </metadata_mappings>
+                        <metadata_mappings beaconName="nol_raw_c18" prefix="p18,">
+                            <mapping source="mediathek">
+                                <zdfName modelName="isLive">type</zdfName>
+                            </mapping>
+                        </metadata_mappings>
+                        <!-- custom optional -->
+                        <metadata_mappings beaconName="nol_raw_c14" prefix="p14,">
+                            <mapping source="mediathek">
+                                <zdfName modelName="airTime">airtime</zdfName>
+                            </mapping>
+                        </metadata_mappings>
+                        <metadata_mappings beaconName="nol_raw_c15" prefix="p15," delimiter="|">
+                            <mapping source="mediathek">
+                                <zdfName modelName="programProdNumber">programProdNumber</zdfName>
+                                <zdfName modelName="articleProdNumber">articleProdNumber</zdfName>
+                            </mapping>
+                        </metadata_mappings>
+                        <metadata_mappings beaconName="nol_raw_c19" prefix="p19,">
+                            <mapping source="mediathek">
+                                <zdfName modelName="basename">basename</zdfName>
+                            </mapping>
+                        </metadata_mappings>
+                    </event>
+                    <event id="5" track="true"></event>
+                    <event id="6" track="true"></event>
+                    <event id="7" track="true"></event>
+                    <event id="8" track="true"></event>
+                    <event id="49" track="true"></event>
+                </events>
+            </beacon>
+        </tracking>
+	</settings>
+	<services/>
+	<dictionary/>
+	<plugins/>	
+	<assets/>
+	<widgets/>
+</chrome>

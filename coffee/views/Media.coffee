@@ -28,8 +28,9 @@ class MediaView
                 index = target.getParent().getChildren().indexOf(target) 
                 this.openSlider(index)
 
-            else if target.className is 'dr-link-readmore dr-icon-close'
-                this.closeSlider()
+            else 
+                if target.className is 'dr-link-readmore dr-icon-close'
+                    this.closeSlider()
 
     initSlider: ->
         @slider = document.getElementById 'broen-gallery-person-media-slider'
@@ -79,11 +80,13 @@ class MediaView
                      <h3>#{@name} - Fotos/Videos<a href="#" class="dr-link-readmore dr-icon-close">Schließen</a></h3>
                      <div id="broen-gallery-swipe-carousel" class="dr-widget-swipe-carousel" data-min-item-span="8">"""
 
+        i1=0
         for media in @media
+            i1++
             if media.type is 'image'
                 html += """
                         <div class="carousel-item">
-                            <div class="item">
+                            <div class="item" >
                                 <span role="presentation" aria-hidden="true" class="image-wrap ratio-16-9">
                                     <img src="#{media.image}" alt="" width="0" height="0" role="presentation" aria-hidden="true" />                                    
                                 </span>
@@ -93,14 +96,18 @@ class MediaView
             else if media.type is 'video'
                 html += """
                         <div class="carousel-item">
-                            <div class="item">
-                                todo video playbutton overlay+function to laod player
+                            <div class="item" >
                                 <span role="presentation" aria-hidden="true" class="image-wrap ratio-16-9">
-                                    <img src="#{media.image}" alt="" width="0" height="0" role="presentation" aria-hidden="true"
-                                    video-url="#{media.video}" />                                    
+                                        <div class="icon-film play-overlay" >
+                                        </div>
+                                        <div class="play-base" >
+                                            <img src="#{media.image}" id="video#{i1}" onclick="playvideo(this);return false;" alt="" width="0" height="0" role="presentation" aria-hidden="true" video-url="#{media.video}" /> 
+                                        </div>
                                 </span>
                             </div>
                         </div>
                         """
 
         return html + "</div></div>"
+
+#todo video playbutton overlay+function to laod player        

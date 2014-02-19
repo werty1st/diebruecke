@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<video-page xmlns:ns2="http://www.mediathek.zdf.de/tivi/flashxml/util" xmlns:ns4="http://www.mediathek.zdf.de/tivi/flashxml/formitaeten" xmlns:ns3="http://www.mediathek.zdf.de/tivi/flashxml/teaser" xmlns="http://www.mediathek.zdf.de/tivi/flashxml/player">
+    <ns2:status>ok</ns2:status>
+    <video type="record">
+        <ns2:ivw>
+            <ns2:count>http://tivi.ivwbox.de/cgi-bin/ivw/CP/ZDFde/ZDFtivi/tiviVideothek;pur%2B+Sendungen/pur%2B+unter+L%C3%B6wen%21/WebEdition</ns2:count>
+            <ns2:family>http://2df.ivwbox.de/cgi-bin/ivw/CP;/ZDFtivi/tiviVideothek/pur%2B+Sendungen/pur%2B+unter+L%C3%B6wen%21/pur%2B+unter+L%C3%B6wen%21/V000936656</ns2:family>
+        </ns2:ivw>
+        <ns2:context>
+            <ns2:id>936656</ns2:id>
+            <ns2:parent>
+                <ns2:name>Ganze Sendung</ns2:name>
+                <ns2:page>/tiviVideos/kanal/pur%2B+Sendungen/895212?view=flashXml</ns2:page>
+            </ns2:parent>
+            <ns2:home-id>893542</ns2:home-id>
+        </ns2:context>
+        <streams>
+            <stream>
+                <low>http://fstreaming.zdf.de/tivi/56/100104_suedafrika_sendung_pur.meta</low>
+                <medium>http://fstreaming.zdf.de/tivi/300/100104_suedafrika_sendung_pur.meta</medium>
+                <high>http://fstreaming.zdf.de/tivi/veryhigh/100104_suedafrika_sendung_pur.meta</high>
+            </stream>
+        </streams>
+        <formitaeten>
+            <ns4:formitaet basetype="h264_aac_mp4_rtsp_mov_http" isDownload="false">
+                <ns4:quality>veryhigh</ns4:quality>
+                <ns4:url>http://hstreaming.zdf.de/tivi/veryhigh/100104_suedafrika_sendung_pur.mov</ns4:url>
+                <ns4:ratio>16:9</ns4:ratio>
+                <ns4:height>384</ns4:height>
+                <ns4:width>688</ns4:width>
+                <ns4:videoBitrate>1682000</ns4:videoBitrate>
+                <ns4:audioBitrate>48000</ns4:audioBitrate>
+                <ns4:filesize>328205327</ns4:filesize>
+            </ns4:formitaet>
+            <ns4:formitaet basetype="h264_aac_mp4_rtsp_mov_http" isDownload="false">
+                <ns4:quality>high</ns4:quality>
+                <ns4:url>http://hstreaming.zdf.de/tivi/300/100104_suedafrika_sendung_pur.mov</ns4:url>
+                <ns4:ratio>16:9</ns4:ratio>
+                <ns4:height>240</ns4:height>
+                <ns4:width>432</ns4:width>
+                <ns4:videoBitrate>623000</ns4:videoBitrate>
+                <ns4:audioBitrate>48000</ns4:audioBitrate>
+                <ns4:filesize>121582633</ns4:filesize>
+            </ns4:formitaet>
+            <ns4:formitaet basetype="h264_aac_mp4_rtsp_mov_http" isDownload="false">
+                <ns4:quality>low</ns4:quality>
+                <ns4:url>http://hstreaming.zdf.de/tivi/56/100104_suedafrika_sendung_pur.mov</ns4:url>
+                <ns4:ratio>16:9</ns4:ratio>
+                <ns4:height>112</ns4:height>
+                <ns4:width>192</ns4:width>
+                <ns4:videoBitrate>67000</ns4:videoBitrate>
+                <ns4:audioBitrate>48000</ns4:audioBitrate>
+                <ns4:filesize>13199297</ns4:filesize>
+            </ns4:formitaet>
+            <ns4:formitaet basetype="h264_aac_mp4_rtmp_zdfmeta_http" isDownload="false">
+                <ns4:quality>veryhigh</ns4:quality>
+                <ns4:url>http://fstreaming.zdf.de/tivi/veryhigh/100104_suedafrika_sendung_pur.meta</ns4:url>
+                <ns4:ratio>16:9</ns4:ratio>
+                <ns4:height>384</ns4:height>
+                <ns4:width>688</ns4:width>
+                <ns4:videoBitrate>1682000</ns4:videoBitrate>
+                <ns4:audioBitrate>48000</ns4:audioBitrate>
+                <ns4:filesize>328205327</ns4:filesize>
+            </ns4:formitaet>
+            <ns4:formitaet basetype="h264_aac_mp4_rtmp_zdfmeta_http" isDownload="false">
+                <ns4:quality>high</ns4:quality>
+                <ns4:url>http://fstreaming.zdf.de/tivi/300/100104_suedafrika_sendung_pur.meta</ns4:url>
+                <ns4:ratio>16:9</ns4:ratio>
+                <ns4:height>240</ns4:height>
+                <ns4:width>432</ns4:width>
+                <ns4:videoBitrate>623000</ns4:videoBitrate>
+                <ns4:audioBitrate>48000</ns4:audioBitrate>
+                <ns4:filesize>121582633</ns4:filesize>
+            </ns4:formitaet>
+            <ns4:formitaet basetype="h264_aac_mp4_rtmp_zdfmeta_http" isDownload="false">
+                <ns4:quality>low</ns4:quality>
+                <ns4:url>http://fstreaming.zdf.de/tivi/56/100104_suedafrika_sendung_pur.meta</ns4:url>
+                <ns4:ratio>16:9</ns4:ratio>
+                <ns4:height>112</ns4:height>
+                <ns4:width>192</ns4:width>
+                <ns4:videoBitrate>67000</ns4:videoBitrate>
+                <ns4:audioBitrate>48000</ns4:audioBitrate>
+                <ns4:filesize>13199297</ns4:filesize>
+            </ns4:formitaet>
+            <ns4:formitaet basetype="h264_aac_mp4_rtmp_smil_http" isDownload="false">
+                <ns4:quality>veryhigh</ns4:quality>
+                <ns4:url>http://fstreaming.zdf.de/tivi/veryhigh/100104_suedafrika_sendung_pur.smil</ns4:url>
+                <ns4:ratio>16:9</ns4:ratio>
+                <ns4:height>112</ns4:height>
+                <ns4:width>192</ns4:width>
+                <ns4:videoBitrate>67000</ns4:videoBitrate>
+                <ns4:audioBitrate>48000</ns4:audioBitrate>
+                <ns4:filesize>13199297</ns4:filesize>
+            </ns4:formitaet>
+            <ns4:formitaet basetype="h264_aac_mp4_rtmp_smil_http" isDownload="false">
+                <ns4:quality>high</ns4:quality>
+                <ns4:url>http://fstreaming.zdf.de/tivi/300/100104_suedafrika_sendung_pur.smil</ns4:url>
+                <ns4:ratio>16:9</ns4:ratio>
+                <ns4:height>112</ns4:height>
+                <ns4:width>192</ns4:width>
+                <ns4:videoBitrate>67000</ns4:videoBitrate>
+                <ns4:audioBitrate>48000</ns4:audioBitrate>
+                <ns4:filesize>13199297</ns4:filesize>
+            </ns4:formitaet>
+            <ns4:formitaet basetype="h264_aac_mp4_rtmp_smil_http" isDownload="false">
+                <ns4:quality>low</ns4:quality>
+                <ns4:url>http://fstreaming.zdf.de/tivi/56/100104_suedafrika_sendung_pur.smil</ns4:url>
+                <ns4:ratio>16:9</ns4:ratio>
+                <ns4:height>112</ns4:height>
+                <ns4:width>192</ns4:width>
+                <ns4:videoBitrate>67000</ns4:videoBitrate>
+                <ns4:audioBitrate>48000</ns4:audioBitrate>
+                <ns4:filesize>13199297</ns4:filesize>
+            </ns4:formitaet>
+            <ns4:formitaet basetype="h264_aac_mp4_http_na_na" isDownload="false">
+                <ns4:quality>veryhigh</ns4:quality>
+                <ns4:url>http://www.metafilegenerator.de/ondemand/zdf/hbbtv/none/tivi/100104_suedafrika_sendung_pur_vh.mp4</ns4:url>
+                <ns4:ratio>16:9</ns4:ratio>
+                <ns4:height>384</ns4:height>
+                <ns4:width>688</ns4:width>
+                <ns4:videoBitrate>1682000</ns4:videoBitrate>
+                <ns4:audioBitrate>48000</ns4:audioBitrate>
+                <ns4:filesize>328205327</ns4:filesize>
+                <ns4:facets>
+                    <ns4:facet>hbbtv</ns4:facet>
+                </ns4:facets>
+            </ns4:formitaet>
+            <ns4:formitaet basetype="h264_aac_mp4_http_na_na" isDownload="false">
+                <ns4:quality>high</ns4:quality>
+                <ns4:url>http://rodl.zdf.de/none/tivi/100104_suedafrika_sendung_pur_h.mp4</ns4:url>
+                <ns4:ratio>16:9</ns4:ratio>
+                <ns4:height>240</ns4:height>
+                <ns4:width>432</ns4:width>
+                <ns4:videoBitrate>623000</ns4:videoBitrate>
+                <ns4:audioBitrate>48000</ns4:audioBitrate>
+                <ns4:filesize>121582633</ns4:filesize>
+                <ns4:facets>
+                    <ns4:facet>restriction_useragent</ns4:facet>
+                </ns4:facets>
+            </ns4:formitaet>
+            <ns4:formitaet basetype="h264_aac_mp4_http_na_na" isDownload="false">
+                <ns4:quality>veryhigh</ns4:quality>
+                <ns4:url>http://rodl.zdf.de/none/tivi/100104_suedafrika_sendung_pur_vh.mp4</ns4:url>
+                <ns4:ratio>16:9</ns4:ratio>
+                <ns4:height>384</ns4:height>
+                <ns4:width>688</ns4:width>
+                <ns4:videoBitrate>1682000</ns4:videoBitrate>
+                <ns4:audioBitrate>48000</ns4:audioBitrate>
+                <ns4:filesize>328205327</ns4:filesize>
+                <ns4:facets>
+                    <ns4:facet>restriction_useragent</ns4:facet>
+                </ns4:facets>
+            </ns4:formitaet>
+            <ns4:formitaet basetype="wmv3_wma9_asf_mms_asx_http" isDownload="false">
+                <ns4:quality>high</ns4:quality>
+                <ns4:url>http://wstreaming.zdf.de/tivi/300/100104_suedafrika_sendung_pur.asx</ns4:url>
+                <ns4:ratio>16:9</ns4:ratio>
+                <ns4:height>240</ns4:height>
+                <ns4:width>432</ns4:width>
+                <ns4:videoBitrate>552436</ns4:videoBitrate>
+                <ns4:audioBitrate>64024</ns4:audioBitrate>
+                <ns4:filesize>106805926</ns4:filesize>
+            </ns4:formitaet>
+            <ns4:formitaet basetype="wmv3_wma9_asf_mms_asx_http" isDownload="false">
+                <ns4:quality>low</ns4:quality>
+                <ns4:url>http://wstreaming.zdf.de/tivi/56/100104_suedafrika_sendung_pur.asx</ns4:url>
+                <ns4:ratio>16:9</ns4:ratio>
+                <ns4:height>112</ns4:height>
+                <ns4:width>192</ns4:width>
+                <ns4:videoBitrate>140738</ns4:videoBitrate>
+                <ns4:audioBitrate>8000</ns4:audioBitrate>
+                <ns4:filesize>26149857</ns4:filesize>
+            </ns4:formitaet>
+        </formitaeten>
+        <information>
+            <headline>
+                <title>pur+</title>
+                <subtitle>pur+ unter Löwen!</subtitle>
+            </headline>
+            <text>Ob Eric die Rangerprüfung besteht?</text>
+            <broadcastInfo>
+                <airTime>2013-04-01T19:25:00.000+02:00</airTime>
+                <origin>KiKA</origin>
+            </broadcastInfo>
+            <duration>P0Y0M0DT0H26M0.000S</duration>
+            <availableUntil>2015-04-01T19:50:00.000+02:00</availableUntil>
+            <webtipp>
+                <headline>Mehr pur+</headline>
+                <text>Hier gibt's alle Infos zu pur+</text>
+                <image>/tiviVideos/contentblob/895212/tiviWtBild/2605738</image>
+                <link>http://www.tivi.de/fernsehen/purplus/start/index.html</link>
+            </webtipp>
+        </information>
+        <externalImage>/tiviVideos/contentblob/1652120/imageFile/6243527</externalImage>
+        <ns3:linked-teasers>
+            <ns3:video-teaser>
+                <ns3:headline>Hinter den Kulissen von pur+</ns3:headline>
+                <ns3:image>/tiviVideos/contentblob/899560/tiviTeaserbild/2592651</ns3:image>
+                <ns3:page>/tiviVideos/beitrag/pur%2B/893542/899560?view=flashXml</ns3:page>
+                <ns3:text></ns3:text>
+                <ns3:duration>P0Y0M0DT0H4M27.000S</ns3:duration>
+                <ns3:duration-background-color>0xD14902</ns3:duration-background-color>
+                <ns3:top-background-color>0xF35B00</ns3:top-background-color>
+                <ns3:bottom-background-color>0xF38040</ns3:bottom-background-color>
+            </ns3:video-teaser>
+        </ns3:linked-teasers>
+    </video>
+</video-page>

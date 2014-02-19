@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response>
+    <status>
+        <statuscode>ok</statuscode>
+    </status>
+    <ivwUrls>
+        <value key="count">http://heute.ivw-fake.zdf.de/cgi-bin/ivw/CP/ZHMediathek/ZDF_heute_journal;/ZDF_heute_journal/Video/Web</value>
+        <value key="family">http://2df.ivw-fake.zdf.de/cgi-bin/ivw/CP;/ZDFheute/Startseite/ZDF_heute_journal/Video/Entspannung_nach_dem_Sondergipfel/M001393068</value>
+    </ivwUrls>
+</response>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response>
+    <status>
+        <statuscode>ok</statuscode>
+    </status>
+    <teaserlist>
+        <additionalTeaser>false</additionalTeaser>
+        <information>
+            <title>ZDF heute journal</title>
+            <shortTitle>ZDF heute journal</shortTitle>
+            <detail>Das Nachrichten-Magazin im ZDF.</detail>
+        </information>
+        <teasers>
+            <teaser>
+                <type>video</type>
+                <teaserimages>
+                    <teaserimage alt="ZDF heute journal Logo" key="75x52">http://www.zdf.de/ZDFmediathek/contentblob/1430002/timg75x52blob/5256945</teaserimage>
+                    <teaserimage alt="ZDF heute journal Logo" key="476x268">http://www.zdf.de/ZDFmediathek/contentblob/1430002/timg476x268blob/5256946</teaserimage>
+                    <teaserimage alt="ZDF heute journal Logo" key="298x168">http://www.zdf.de/ZDFmediathek/contentblob/1430002/timg298x168blob/5256947</teaserimage>
+                    <teaserimage alt="ZDF heute journal Logo" key="276x155">http://www.zdf.de/ZDFmediathek/contentblob/1430002/timg276x155blob/5256940</teaserimage>
+                    <teaserimage alt="ZDF heute journal Logo" key="644x363">http://www.zdf.de/ZDFmediathek/contentblob/1430002/timg644x363blob/5256949</teaserimage>
+                    <teaserimage alt="ZDF heute journal Logo" key="476x176">http://www.zdf.de/ZDFmediathek/contentblob/1430002/timg476x176blob/5256944</teaserimage>
+                    <teaserimage alt="ZDF heute journal Logo" key="144x81">http://www.zdf.de/ZDFmediathek/contentblob/1430002/timg144x81blob/5256950</teaserimage>
+                    <teaserimage alt="ZDF heute journal Logo" key="485x273">http://www.zdf.de/ZDFmediathek/contentblob/1430002/timg485x273blob/5256939</teaserimage>
+                    <teaserimage alt="ZDF heute journal Logo" key="94x65">http://www.zdf.de/ZDFmediathek/contentblob/1430002/timg94x65blob/5256937</teaserimage>
+                    <teaserimage alt="ZDF heute journal Logo" key="72x54">http://www.zdf.de/ZDFmediathek/contentblob/1430002/timg72x54blob/5256943</teaserimage>
+                    <teaserimage alt="ZDF heute journal Logo" key="173x120">http://www.zdf.de/ZDFmediathek/contentblob/1430002/timg173x120blob/5256938</teaserimage>
+                    <teaserimage alt="ZDF heute journal Logo" key="236x133">http://www.zdf.de/ZDFmediathek/contentblob/1430002/timg236x133blob/5256948</teaserimage>
+                    <teaserimage alt="ZDF heute journal Logo" key="116x88">http://www.zdf.de/ZDFmediathek/contentblob/1430002/timg116x88blob/5256942</teaserimage>
+                    <teaserimage alt="ZDF heute journal Logo" key="116x54">http://www.zdf.de/ZDFmediathek/contentblob/1430002/timg116x54blob/5256941</teaserimage>
+                </teaserimages>
+                <information>
+                    <title>ZDF heute journal</title>
+                    <detail>Aktuelle Informationen und Hintergründe zum Tag im heute journal - live!</detail>
+                </information>
+                <details>
+                    <assetId>1430002</assetId>
+                    <originChannelId>228</originChannelId>
+                    <originChannelTitle>ZDF heute journal</originChannelTitle>
+                    <channel>ZDF</channel>
+                    <channelLogoSmall>http://www.zdf.de/ZDFmediathek/contentblob/1209114/logoSmall/4006919</channelLogoSmall>
+                    <length>00:28:00.000</length>
+                    <airtime>27.10.2011 22:05</airtime>
+                    <airtimeEnd>27.10.2011 22:33</airtimeEnd>
+                    <timetolive>27.10.2012 22:40</timetolive>
+                    <vcmsUrl>http://www.zdf.de/ZDFmediathek/beitrag/live/1430002/ZDF-heute-journal</vcmsUrl>
+                </details>
+            </teaser>
+            <teaser>
+                <type>video</type>
+                <teaserimages>
+                    <teaserimage alt="türkische Armee" key="75x52">http://www.zdf.de/ZDFmediathek/contentblob/1471132/timg75x52blob/5231039</teaserimage>
+                    <teaserimage alt="türkische Armee" key="476x268">http://www.zdf.de/ZDFmediathek/contentblob/1471132/timg476x268blob/5231040</teaserimage>
+                    <teaserimage alt="türkische Armee" key="298x168">http://www.zdf.de/ZDFmediathek/contentblob/1471132/timg298x168blob/5231041</teaserimage>
+                    <teaserimage alt="türkische Armee" key="276x155">http://www.zdf.de/ZDFmediathek/contentblob/1471132/timg276x155blob/5231034</teaserimage>
+                    <teaserimage alt="türkische Armee" key="644x363">http://www.zdf.de/ZDFmediathek/contentblob/1471132/timg644x363blob/5231043</teaserimage>
+                    <teaserimage alt="türkische Armee" key="476x176">http://www.zdf.de/ZDFmediathek/contentblob/1471132/timg476x176blob/5231038</teaserimage>
+                    <teaserimage alt="türkische Armee" key="144x81">http://www.zdf.de/ZDFmediathek/contentblob/1471132/timg144x81blob/5231044</teaserimage>
+                    <teaserimage alt="türkische Armee" key="485x273">http://www.zdf.de/ZDFmediathek/contentblob/1471132/timg485x273blob/5231033</teaserimage>
+                    <teaserimage alt="türkische Armee" key="94x65">http://www.zdf.de/ZDFmediathek/contentblob/1471132/timg94x65blob/5231031</teaserimage>
+                    <teaserimage alt="türkische Armee" key="72x54">http://www.zdf.de/ZDFmediathek/contentblob/1471132/timg72x54blob/5231037</teaserimage>
+                    <teaserimage alt="türkische Armee" key="173x120">http://www.zdf.de/ZDFmediathek/contentblob/1471132/timg173x120blob/5231032</teaserimage>
+                    <teaserimage alt="türkische Armee" key="236x133">http://www.zdf.de/ZDFmediathek/contentblob/1471132/timg236x133blob/5231042</teaserimage>
+                    <teaserimage alt="türkische Armee" key="116x88">http://www.zdf.de/ZDFmediathek/contentblob/1471132/timg116x88blob/5231036</teaserimage>
+                    <teaserimage alt="türkische Armee" key="116x54">http://www.zdf.de/ZDFmediathek/contentblob/1471132/timg116x54blob/5231035</teaserimage>
+                </teaserimages>
+                <information>
+                    <title>Türkei: Kurdenkonflikt wieder entflammt</title>
+                    <detail>An der Grenze zum Irak haben kurdische PKK-Rebellen bei einem Angriff auf die türkische Armee 24 Soldaten getötet. Die Antwort der türkischen Armee kam sofort - und vor allem mit gewaltiger Macht.</detail>
+                </information>
+                <details>
+                    <assetId>1471132</assetId>
+                    <originChannelId>228</originChannelId>
+                    <originChannelTitle>ZDF heute journal</originChannelTitle>
+                    <otherChannels>506180</otherChannels>
+                    <channel>ZDF</channel>
+                    <channelLogoSmall>http://www.zdf.de/ZDFmediathek/contentblob/1209114/logoSmall/4006919</channelLogoSmall>
+                    <length>00:03:04.000</length>
+                    <airtime>19.11.2011 21:55</airtime>
+                    <timetolive>18.10.2012 21:55</timetolive>
+                    <fsk>0</fsk>
+                    <hasCaption>false</hasCaption>
+                    <vcmsUrl>http://www.zdf.de/ZDFmediathek/beitrag/video/1471132/Tuerkei-Kurdenkonflikt-wieder-entflammt</vcmsUrl>
+                </details>
+            </teaser>
+            <teaser>
+                <type>video</type>
+                <context>
+                    <contextLink>http://borgia.zdf.de/ZDFde/inhalt/17/0,1872,8332273,00.html?dr=1</contextLink>
+                </context>
+                <teaserimages>
+                    <teaserimage alt="Rodrigo Borgia und De Haro" key="75x52">http://www.zdf.de/ZDFmediathek/contentblob/1463452/timg75x52blob/5257859</teaserimage>
+                    <teaserimage alt="Rodrigo Borgia und De Haro" key="476x268">http://www.zdf.de/ZDFmediathek/contentblob/1463452/timg476x268blob/5257860</teaserimage>
+                    <teaserimage alt="Rodrigo Borgia und De Haro" key="298x168">http://www.zdf.de/ZDFmediathek/contentblob/1463452/timg298x168blob/5257861</teaserimage>
+                    <teaserimage alt="Rodrigo Borgia und De Haro" key="276x155">http://www.zdf.de/ZDFmediathek/contentblob/1463452/timg276x155blob/5257854</teaserimage>
+                    <teaserimage alt="Rodrigo Borgia und De Haro" key="644x363">http://www.zdf.de/ZDFmediathek/contentblob/1463452/timg644x363blob/5257863</teaserimage>
+                    <teaserimage alt="Rodrigo Borgia und De Haro" key="476x176">http://www.zdf.de/ZDFmediathek/contentblob/1463452/timg476x176blob/5257858</teaserimage>
+                    <teaserimage alt="Rodrigo Borgia und De Haro" key="144x81">http://www.zdf.de/ZDFmediathek/contentblob/1463452/timg144x81blob/5257864</teaserimage>
+                    <teaserimage alt="Rodrigo Borgia und De Haro" key="485x273">http://www.zdf.de/ZDFmediathek/contentblob/1463452/timg485x273blob/5257853</teaserimage>
+                    <teaserimage alt="Rodrigo Borgia und De Haro" key="94x65">http://www.zdf.de/ZDFmediathek/contentblob/1463452/timg94x65blob/5257851</teaserimage>
+                    <teaserimage alt="Rodrigo Borgia und De Haro" key="72x54">http://www.zdf.de/ZDFmediathek/contentblob/1463452/timg72x54blob/5257857</teaserimage>
+                    <teaserimage alt="Rodrigo Borgia und De Haro" key="173x120">http://www.zdf.de/ZDFmediathek/contentblob/1463452/timg173x120blob/5257852</teaserimage>
+                    <teaserimage alt="Rodrigo Borgia und De Haro" key="236x133">http://www.zdf.de/ZDFmediathek/contentblob/1463452/timg236x133blob/5257862</teaserimage>
+                    <teaserimage alt="Rodrigo Borgia und De Haro" key="116x88">http://www.zdf.de/ZDFmediathek/contentblob/1463452/timg116x88blob/5257856</teaserimage>
+                    <teaserimage alt="Rodrigo Borgia und De Haro" key="116x54">http://www.zdf.de/ZDFmediathek/contentblob/1463452/timg116x54blob/5257855</teaserimage>
+                </teaserimages>
+                <information>
+                    <title>"Borgia" - Folge 5</title>
+                    <detail>Die Franzosen besetzen die Ewige Stadt, plündern und vergewaltigen. Rodrigo will mit König Karl verhandeln. Ein politisches Tauziehen beginnt.</detail>
+                </information>
+                <details>
+                    <assetId>1463452</assetId>
+                    <originChannelId>1415454</originChannelId>
+                    <originChannelTitle>Borgia</originChannelTitle>
+                    <channel>ZDF</channel>
+                    <channelLogoSmall>http://www.zdf.de/ZDFmediathek/contentblob/1209114/logoSmall/4006919</channelLogoSmall>
+                    <length>100 min</length>
+                    <airtime>26.10.2011 20:15</airtime>
+                    <timetolive>03.11.2011 22:00</timetolive>
+                    <fsk>0</fsk>
+                    <hasCaption>true</hasCaption>
+                    <vcmsUrl>http://www.zdf.de/ZDFmediathek/beitrag/video/1463452/Borgia---Folge-5</vcmsUrl>
+                </details>
+            </teaser>
+        </teasers>
+    </teaserlist>
+</response>

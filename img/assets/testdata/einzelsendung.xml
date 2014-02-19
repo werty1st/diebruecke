@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response>
+    <status>
+        <statuscode>ok</statuscode>
+    </status>
+    <teaserlist>
+        <additionalTeaser>false</additionalTeaser>
+        <information>
+            <title>das aktuelle sportstudio vom 05.11.</title>
+            <shortTitle>das aktuelle sportstudio vom 05.11.</shortTitle>
+            <detail>das aktuelle sportstudio vom 05. November mit Studiogast Roman Weidenfeller von Borussia Dortmund und Berichten und Interviews zum 12. Spieltag der Fußball-Bundesliga. Außerdem: das Torwandschießen.</detail>
+        </information>
+        <teasers>
+            <teaser>
+                <type>video</type>
+                <teaserimages>
+                    <teaserimage alt="Michael Ballack und Jochen Breyer" key="75x52">http://www.zdf.de/ZDFmediathek/contentblob/1485516/timg75x52blob/5296601</teaserimage>
+                    <teaserimage alt="Michael Ballack und Jochen Breyer" key="476x268">http://www.zdf.de/ZDFmediathek/contentblob/1485516/timg476x268blob/5296602</teaserimage>
+                    <teaserimage alt="Michael Ballack und Jochen Breyer" key="298x168">http://www.zdf.de/ZDFmediathek/contentblob/1485516/timg298x168blob/5296603</teaserimage>
+                    <teaserimage alt="Michael Ballack und Jochen Breyer" key="276x155">http://www.zdf.de/ZDFmediathek/contentblob/1485516/timg276x155blob/5296596</teaserimage>
+                    <teaserimage alt="Michael Ballack und Jochen Breyer" key="644x363">http://www.zdf.de/ZDFmediathek/contentblob/1485516/timg644x363blob/5296605</teaserimage>
+                    <teaserimage alt="Michael Ballack und Jochen Breyer" key="476x176">http://www.zdf.de/ZDFmediathek/contentblob/1485516/timg476x176blob/5296600</teaserimage>
+                    <teaserimage alt="Michael Ballack und Jochen Breyer" key="144x81">http://www.zdf.de/ZDFmediathek/contentblob/1485516/timg144x81blob/5296606</teaserimage>
+                    <teaserimage alt="Michael Ballack und Jochen Breyer" key="485x273">http://www.zdf.de/ZDFmediathek/contentblob/1485516/timg485x273blob/5296595</teaserimage>
+                    <teaserimage alt="Michael Ballack und Jochen Breyer" key="94x65">http://www.zdf.de/ZDFmediathek/contentblob/1485516/timg94x65blob/5296593</teaserimage>
+                    <teaserimage alt="Michael Ballack und Jochen Breyer" key="72x54">http://www.zdf.de/ZDFmediathek/contentblob/1485516/timg72x54blob/5296599</teaserimage>
+                    <teaserimage alt="Michael Ballack und Jochen Breyer" key="173x120">http://www.zdf.de/ZDFmediathek/contentblob/1485516/timg173x120blob/5296594</teaserimage>
+                    <teaserimage alt="Michael Ballack und Jochen Breyer" key="236x133">http://www.zdf.de/ZDFmediathek/contentblob/1485516/timg236x133blob/5296604</teaserimage>
+                    <teaserimage alt="Michael Ballack und Jochen Breyer" key="116x88">http://www.zdf.de/ZDFmediathek/contentblob/1485516/timg116x88blob/5296598</teaserimage>
+                    <teaserimage alt="Michael Ballack und Jochen Breyer" key="116x54">http://www.zdf.de/ZDFmediathek/contentblob/1485516/timg116x54blob/5296597</teaserimage>
+                </teaserimages>
+                <information>
+                    <title>Ballack: "Kann Liga jetzt genießen"</title>
+                    <detail>Leverkusens Michael Ballack ist nach dem Unentschieden gegen den HSV mit dem Spiel seines Teams nicht besonders zufrieden. Mit seiner aktuellen Situation bei Bayer hingegen fühlt er sich wohl.</detail>
+                </information>
+                <details>
+                    <assetId>1485516</assetId>
+                    <originChannelId>1482758</originChannelId>
+                    <originChannelTitle>das aktuelle sportstudio vom 05.11.</originChannelTitle>
+                    <otherChannels>492;610;646</otherChannels>
+                    <channel>ZDF</channel>
+                    <channelLogoSmall>http://www.zdf.de/ZDFmediathek/contentblob/1209114/logoSmall/4009102</channelLogoSmall>
+                    <length>00:06:20.000</length>
+                    <airtime>05.11.2011 23:55</airtime>
+                    <timetolive>05.11.2012 11:00</timetolive>
+                    <fsk>0</fsk>
+                    <hasCaption>false</hasCaption>
+                    <vcmsUrl>http://www.zdf.de/ZDFmediathek/beitrag/video/1485516/Ballack-Kann-Liga-jetzt-geniessen</vcmsUrl>
+                </details>
+            </teaser>
+            <teaser>
+                <type>video</type>
+                <teaserimages>
+                    <teaserimage alt="Torwandschießen" key="75x52">http://www.zdf.de/ZDFmediathek/contentblob/1485530/timg75x52blob/5296227</teaserimage>
+                    <teaserimage alt="Torwandschießen" key="476x268">http://www.zdf.de/ZDFmediathek/contentblob/1485530/timg476x268blob/5296228</teaserimage>
+                    <teaserimage alt="Torwandschießen" key="298x168">http://www.zdf.de/ZDFmediathek/contentblob/1485530/timg298x168blob/5296229</teaserimage>
+                    <teaserimage alt="Torwandschießen" key="276x155">http://www.zdf.de/ZDFmediathek/contentblob/1485530/timg276x155blob/5296222</teaserimage>
+                    <teaserimage alt="Torwandschießen" key="644x363">http://www.zdf.de/ZDFmediathek/contentblob/1485530/timg644x363blob/5296231</teaserimage>
+                    <teaserimage alt="Torwandschießen" key="476x176">http://www.zdf.de/ZDFmediathek/contentblob/1485530/timg476x176blob/5296226</teaserimage>
+                    <teaserimage alt="Torwandschießen" key="144x81">http://www.zdf.de/ZDFmediathek/contentblob/1485530/timg144x81blob/5296232</teaserimage>
+                    <teaserimage alt="Torwandschießen" key="485x273">http://www.zdf.de/ZDFmediathek/contentblob/1485530/timg485x273blob/5296221</teaserimage>
+                    <teaserimage alt="Torwandschießen" key="94x65">http://www.zdf.de/ZDFmediathek/contentblob/1485530/timg94x65blob/5296219</teaserimage>
+                    <teaserimage alt="Torwandschießen" key="72x54">http://www.zdf.de/ZDFmediathek/contentblob/1485530/timg72x54blob/5296225</teaserimage>
+                    <teaserimage alt="Torwandschießen" key="173x120">http://www.zdf.de/ZDFmediathek/contentblob/1485530/timg173x120blob/5296220</teaserimage>
+                    <teaserimage alt="Torwandschießen" key="236x133">http://www.zdf.de/ZDFmediathek/contentblob/1485530/timg236x133blob/5296230</teaserimage>
+                    <teaserimage alt="Torwandschießen" key="116x88">http://www.zdf.de/ZDFmediathek/contentblob/1485530/timg116x88blob/5296224</teaserimage>
+                    <teaserimage alt="Torwandschießen" key="116x54">http://www.zdf.de/ZDFmediathek/contentblob/1485530/timg116x54blob/5296223</teaserimage>
+                </teaserimages>
+                <information>
+                    <title>Oldie gegen Youngster an der Torwand</title>
+                    <detail>15 Jahre liegen zwischen Torhüter Roman Weidenfeller und YouTube-Kandidat Tom Hanker. An der Torwand spielt das jedoch keine Rolle.</detail>
+                </information>
+                <details>
+                    <assetId>1485530</assetId>
+                    <originChannelId>1482758</originChannelId>
+                    <originChannelTitle>das aktuelle sportstudio vom 05.11.</originChannelTitle>
+                    <otherChannels>492</otherChannels>
+                    <channel>ZDF</channel>
+                    <channelLogoSmall>http://www.zdf.de/ZDFmediathek/contentblob/1209114/logoSmall/4009102</channelLogoSmall>
+                    <length>00:03:00.000</length>
+                    <airtime>05.11.2011 22:45</airtime>
+                    <timetolive>04.11.2012 22:45</timetolive>
+                    <fsk>0</fsk>
+                    <hasCaption>false</hasCaption>
+                    <vcmsUrl>http://www.zdf.de/ZDFmediathek/beitrag/video/1485530/Oldie-gegen-Youngster-an-der-Torwand</vcmsUrl>
+                </details>
+            </teaser>
+            <teaser>
+                <type>video</type>
+                <teaserimages>
+                    <teaserimage alt="Sport kompakt vom 05. November" key="75x52">http://www.zdf.de/ZDFmediathek/contentblob/1485526/timg75x52blob/5296211</teaserimage>
+                    <teaserimage alt="Sport kompakt vom 05. November" key="476x268">http://www.zdf.de/ZDFmediathek/contentblob/1485526/timg476x268blob/5296212</teaserimage>
+                    <teaserimage alt="Sport kompakt vom 05. November" key="298x168">http://www.zdf.de/ZDFmediathek/contentblob/1485526/timg298x168blob/5296213</teaserimage>
+                    <teaserimage alt="Sport kompakt vom 05. November" key="276x155">http://www.zdf.de/ZDFmediathek/contentblob/1485526/timg276x155blob/5296206</teaserimage>
+                    <teaserimage alt="Sport kompakt vom 05. November" key="644x363">http://www.zdf.de/ZDFmediathek/contentblob/1485526/timg644x363blob/5296215</teaserimage>
+                    <teaserimage alt="Sport kompakt vom 05. November" key="476x176">http://www.zdf.de/ZDFmediathek/contentblob/1485526/timg476x176blob/5296210</teaserimage>
+                    <teaserimage alt="Sport kompakt vom 05. November" key="144x81">http://www.zdf.de/ZDFmediathek/contentblob/1485526/timg144x81blob/5296216</teaserimage>
+                    <teaserimage alt="Sport kompakt vom 05. November" key="485x273">http://www.zdf.de/ZDFmediathek/contentblob/1485526/timg485x273blob/5296205</teaserimage>
+                    <teaserimage alt="Sport kompakt vom 05. November" key="94x65">http://www.zdf.de/ZDFmediathek/contentblob/1485526/timg94x65blob/5296203</teaserimage>
+                    <teaserimage alt="Sport kompakt vom 05. November" key="72x54">http://www.zdf.de/ZDFmediathek/contentblob/1485526/timg72x54blob/5296209</teaserimage>
+                    <teaserimage alt="Sport kompakt vom 05. November" key="173x120">http://www.zdf.de/ZDFmediathek/contentblob/1485526/timg173x120blob/5296204</teaserimage>
+                    <teaserimage alt="Sport kompakt vom 05. November" key="236x133">http://www.zdf.de/ZDFmediathek/contentblob/1485526/timg236x133blob/5296214</teaserimage>
+                    <teaserimage alt="Sport kompakt vom 05. November" key="116x88">http://www.zdf.de/ZDFmediathek/contentblob/1485526/timg116x88blob/5296208</teaserimage>
+                    <teaserimage alt="Sport kompakt vom 05. November" key="116x54">http://www.zdf.de/ZDFmediathek/contentblob/1485526/timg116x54blob/5296207</teaserimage>
+                </teaserimages>
+                <information>
+                    <title>Sport kompakt vom 05. November</title>
+                    <detail>Der aktuelle Sport vom Tage, zusammengefasst im Nachrichtenblock. Diesmal mit dem Handball-Supercup zwischen Deutschland gegen Schweden und der Riders-Tour im Reiten.</detail>
+                </information>
+                <details>
+                    <assetId>1485526</assetId>
+                    <originChannelId>1482758</originChannelId>
+                    <originChannelTitle>das aktuelle sportstudio vom 05.11.</originChannelTitle>
+                    <otherChannels>492;610;1214902</otherChannels>
+                    <channel>ZDF</channel>
+                    <channelLogoSmall>http://www.zdf.de/ZDFmediathek/contentblob/1209114/logoSmall/4009102</channelLogoSmall>
+                    <length>00:01:03.000</length>
+                    <airtime>05.11.2011 22:40</airtime>
+                    <timetolive>12.11.2011 22:40</timetolive>
+                    <fsk>0</fsk>
+                    <hasCaption>false</hasCaption>
+                    <vcmsUrl>http://www.zdf.de/ZDFmediathek/beitrag/video/1485526/Sport-kompakt-vom-05.-November</vcmsUrl>
+                </details>
+            </teaser>
+            <teaser>
+                <type>video</type>
+                <teaserimages>
+                    <teaserimage alt="Stefan Bradl" key="75x52">http://www.zdf.de/ZDFmediathek/contentblob/1485524/timg75x52blob/5296269</teaserimage>
+                    <teaserimage alt="Stefan Bradl" key="476x268">http://www.zdf.de/ZDFmediathek/contentblob/1485524/timg476x268blob/5296270</teaserimage>
+                    <teaserimage alt="Stefan Bradl" key="298x168">http://www.zdf.de/ZDFmediathek/contentblob/1485524/timg298x168blob/5296271</teaserimage>
+                    <teaserimage alt="Stefan Bradl" key="276x155">http://www.zdf.de/ZDFmediathek/contentblob/1485524/timg276x155blob/5296264</teaserimage>
+                    <teaserimage alt="Stefan Bradl" key="644x363">http://www.zdf.de/ZDFmediathek/contentblob/1485524/timg644x363blob/5296273</teaserimage>
+                    <teaserimage alt="Stefan Bradl" key="476x176">http://www.zdf.de/ZDFmediathek/contentblob/1485524/timg476x176blob/5296268</teaserimage>
+                    <teaserimage alt="Stefan Bradl" key="144x81">http://www.zdf.de/ZDFmediathek/contentblob/1485524/timg144x81blob/5296274</teaserimage>
+                    <teaserimage alt="Stefan Bradl" key="485x273">http://www.zdf.de/ZDFmediathek/contentblob/1485524/timg485x273blob/5296263</teaserimage>
+                    <teaserimage alt="Stefan Bradl" key="94x65">http://www.zdf.de/ZDFmediathek/contentblob/1485524/timg94x65blob/5296261</teaserimage>
+                    <teaserimage alt="Stefan Bradl" key="72x54">http://www.zdf.de/ZDFmediathek/contentblob/1485524/timg72x54blob/5296267</teaserimage>
+                    <teaserimage alt="Stefan Bradl" key="173x120">http://www.zdf.de/ZDFmediathek/contentblob/1485524/timg173x120blob/5296262</teaserimage>
+                    <teaserimage alt="Stefan Bradl" key="236x133">http://www.zdf.de/ZDFmediathek/contentblob/1485524/timg236x133blob/5296272</teaserimage>
+                    <teaserimage alt="Stefan Bradl" key="116x88">http://www.zdf.de/ZDFmediathek/contentblob/1485524/timg116x88blob/5296266</teaserimage>
+                    <teaserimage alt="Stefan Bradl" key="116x54">http://www.zdf.de/ZDFmediathek/contentblob/1485524/timg116x54blob/5296265</teaserimage>
+                </teaserimages>
+                <information>
+                    <title>Bradl: "Brauche Zeit, es zu realisieren"</title>
+                    <detail>Stefan Bradl ist der erste deutsche Motorradweltmeister seit 18 Jahren. In der Moto2-Serie hat der 22-Jährige bereits vor dem letzten Rennen den Titel sicher. Bradl selbst kann es noch kaum glauben.</detail>
+                </information>
+                <details>
+                    <assetId>1485524</assetId>
+                    <originChannelId>1482758</originChannelId>
+                    <originChannelTitle>das aktuelle sportstudio vom 05.11.</originChannelTitle>
+                    <otherChannels>492;610;1214902</otherChannels>
+                    <channel>ZDF</channel>
+                    <channelLogoSmall>http://www.zdf.de/ZDFmediathek/contentblob/1209114/logoSmall/4009102</channelLogoSmall>
+                    <length>00:01:00.000</length>
+                    <airtime>05.11.2011 22:35</airtime>
+                    <timetolive>19.11.2011 22:35</timetolive>
+                    <fsk>0</fsk>
+                    <hasCaption>false</hasCaption>
+                    <vcmsUrl>http://www.zdf.de/ZDFmediathek/beitrag/video/1485524/Bradl-Brauche-Zeit%252C-es-zu-realisieren</vcmsUrl>
+                </details>
+            </teaser>
+            <teaser>
+                <type>video</type>
+                <teaserimages>
+                    <teaserimage alt="Bundestrainer Joachim Löw" key="75x52">http://www.zdf.de/ZDFmediathek/contentblob/1485518/timg75x52blob/5296147</teaserimage>
+                    <teaserimage alt="Bundestrainer Joachim Löw" key="476x268">http://www.zdf.de/ZDFmediathek/contentblob/1485518/timg476x268blob/5296148</teaserimage>
+                    <teaserimage alt="Bundestrainer Joachim Löw" key="298x168">http://www.zdf.de/ZDFmediathek/contentblob/1485518/timg298x168blob/5296149</teaserimage>
+                    <teaserimage alt="Bundestrainer Joachim Löw" key="276x155">http://www.zdf.de/ZDFmediathek/contentblob/1485518/timg276x155blob/5296142</teaserimage>
+                    <teaserimage alt="Bundestrainer Joachim Löw" key="644x363">http://www.zdf.de/ZDFmediathek/contentblob/1485518/timg644x363blob/5296151</teaserimage>
+                    <teaserimage alt="Bundestrainer Joachim Löw" key="476x176">http://www.zdf.de/ZDFmediathek/contentblob/1485518/timg476x176blob/5296146</teaserimage>
+                    <teaserimage alt="Bundestrainer Joachim Löw" key="144x81">http://www.zdf.de/ZDFmediathek/contentblob/1485518/timg144x81blob/5296152</teaserimage>
+                    <teaserimage alt="Bundestrainer Joachim Löw" key="485x273">http://www.zdf.de/ZDFmediathek/contentblob/1485518/timg485x273blob/5296141</teaserimage>
+                    <teaserimage alt="Bundestrainer Joachim Löw" key="94x65">http://www.zdf.de/ZDFmediathek/contentblob/1485518/timg94x65blob/5296139</teaserimage>
+                    <teaserimage alt="Bundestrainer Joachim Löw" key="72x54">http://www.zdf.de/ZDFmediathek/contentblob/1485518/timg72x54blob/5296145</teaserimage>
+                    <teaserimage alt="Bundestrainer Joachim Löw" key="173x120">http://www.zdf.de/ZDFmediathek/contentblob/1485518/timg173x120blob/5296140</teaserimage>
+                    <teaserimage alt="Bundestrainer Joachim Löw" key="236x133">http://www.zdf.de/ZDFmediathek/contentblob/1485518/timg236x133blob/5296150</teaserimage>
+                    <teaserimage alt="Bundestrainer Joachim Löw" key="116x88">http://www.zdf.de/ZDFmediathek/contentblob/1485518/timg116x88blob/5296144</teaserimage>
+                    <teaserimage alt="Bundestrainer Joachim Löw" key="116x54">http://www.zdf.de/ZDFmediathek/contentblob/1485518/timg116x54blob/5296143</teaserimage>
+                </teaserimages>
+                <information>
+                    <title>Löw: "Bayern haben guten Lauf"</title>
+                    <detail>Im "sportstudio"-Interview sagt Bundestrainer Joachim Löw, dass der FC Bayern klar der Favorit auf die Deutsche Meisterschaft ist. Es gäbe nur ein Team, dass den Münchenern gefährlich werden könnte.</detail>
+                </information>
+                <details>
+                    <assetId>1485518</assetId>
+                    <originChannelId>1482758</originChannelId>
+                    <originChannelTitle>das aktuelle sportstudio vom 05.11.</originChannelTitle>
+                    <otherChannels>492;610;646</otherChannels>
+                    <channel>ZDF</channel>
+                    <channelLogoSmall>http://www.zdf.de/ZDFmediathek/contentblob/1209114/logoSmall/4009102</channelLogoSmall>
+                    <length>00:02:06.000</length>
+                    <airtime>05.11.2011 22:30</airtime>
+                    <timetolive>04.11.2012 22:30</timetolive>
+                    <fsk>0</fsk>
+                    <hasCaption>false</hasCaption>
+                    <vcmsUrl>http://www.zdf.de/ZDFmediathek/beitrag/video/1485518/Loew-Bayern-haben-guten-Lauf</vcmsUrl>
+                </details>
+            </teaser>
+            <teaser>
+                <type>video</type>
+                <teaserimages>
+                    <teaserimage alt="Roman Weidenfeller" key="75x52">http://www.zdf.de/ZDFmediathek/contentblob/1485522/timg75x52blob/5296179</teaserimage>
+                    <teaserimage alt="Roman Weidenfeller" key="476x268">http://www.zdf.de/ZDFmediathek/contentblob/1485522/timg476x268blob/5296180</teaserimage>
+                    <teaserimage alt="Roman Weidenfeller" key="298x168">http://www.zdf.de/ZDFmediathek/contentblob/1485522/timg298x168blob/5296181</teaserimage>
+                    <teaserimage alt="Roman Weidenfeller" key="276x155">http://www.zdf.de/ZDFmediathek/contentblob/1485522/timg276x155blob/5296174</teaserimage>
+                    <teaserimage alt="Roman Weidenfeller" key="644x363">http://www.zdf.de/ZDFmediathek/contentblob/1485522/timg644x363blob/5296183</teaserimage>
+                    <teaserimage alt="Roman Weidenfeller" key="476x176">http://www.zdf.de/ZDFmediathek/contentblob/1485522/timg476x176blob/5296178</teaserimage>
+                    <teaserimage alt="Roman Weidenfeller" key="144x81">http://www.zdf.de/ZDFmediathek/contentblob/1485522/timg144x81blob/5296184</teaserimage>
+                    <teaserimage alt="Roman Weidenfeller" key="485x273">http://www.zdf.de/ZDFmediathek/contentblob/1485522/timg485x273blob/5296173</teaserimage>
+                    <teaserimage alt="Roman Weidenfeller" key="94x65">http://www.zdf.de/ZDFmediathek/contentblob/1485522/timg94x65blob/5296171</teaserimage>
+                    <teaserimage alt="Roman Weidenfeller" key="72x54">http://www.zdf.de/ZDFmediathek/contentblob/1485522/timg72x54blob/5296177</teaserimage>
+                    <teaserimage alt="Roman Weidenfeller" key="173x120">http://www.zdf.de/ZDFmediathek/contentblob/1485522/timg173x120blob/5296172</teaserimage>
+                    <teaserimage alt="Roman Weidenfeller" key="236x133">http://www.zdf.de/ZDFmediathek/contentblob/1485522/timg236x133blob/5296182</teaserimage>
+                    <teaserimage alt="Roman Weidenfeller" key="116x88">http://www.zdf.de/ZDFmediathek/contentblob/1485522/timg116x88blob/5296176</teaserimage>
+                    <teaserimage alt="Roman Weidenfeller" key="116x54">http://www.zdf.de/ZDFmediathek/contentblob/1485522/timg116x54blob/5296175</teaserimage>
+                </teaserimages>
+                <information>
+                    <title>Grandioser Spruch</title>
+                    <detail>Dass sein Spruch in einem Interview nach Gewinn der Meisterschaft Kultstatus erreichen würde, hat BVB-Tohüter Roman Weidenfeller vermutlich nicht geahnt. Auch im "sportstudio" verfolgt ihn der Satz.</detail>
+                </information>
+                <details>
+                    <assetId>1485522</assetId>
+                    <originChannelId>1482758</originChannelId>
+                    <originChannelTitle>das aktuelle sportstudio vom 05.11.</originChannelTitle>
+                    <otherChannels>492;610;646</otherChannels>
+                    <channel>ZDF</channel>
+                    <channelLogoSmall>http://www.zdf.de/ZDFmediathek/contentblob/1209114/logoSmall/4009102</channelLogoSmall>
+                    <length>00:13:36.000</length>
+                    <airtime>05.11.2011 22:25</airtime>
+                    <timetolive>04.11.2012 22:25</timetolive>
+                    <fsk>0</fsk>
+                    <hasCaption>false</hasCaption>
+                    <vcmsUrl>http://www.zdf.de/ZDFmediathek/beitrag/video/1485522/Grandioser-Spruch</vcmsUrl>
+                </details>
+            </teaser>
+            <teaser>
+                <type>video</type>
+                <teaserimages>
+                    <teaserimage alt="Uwe Seeler" key="75x52">http://www.zdf.de/ZDFmediathek/contentblob/1485528/timg75x52blob/5296163</teaserimage>
+                    <teaserimage alt="Uwe Seeler" key="476x268">http://www.zdf.de/ZDFmediathek/contentblob/1485528/timg476x268blob/5296164</teaserimage>
+                    <teaserimage alt="Uwe Seeler" key="298x168">http://www.zdf.de/ZDFmediathek/contentblob/1485528/timg298x168blob/5296165</teaserimage>
+                    <teaserimage alt="Uwe Seeler" key="276x155">http://www.zdf.de/ZDFmediathek/contentblob/1485528/timg276x155blob/5296158</teaserimage>
+                    <teaserimage alt="Uwe Seeler" key="644x363">http://www.zdf.de/ZDFmediathek/contentblob/1485528/timg644x363blob/5296167</teaserimage>
+                    <teaserimage alt="Uwe Seeler" key="476x176">http://www.zdf.de/ZDFmediathek/contentblob/1485528/timg476x176blob/5296162</teaserimage>
+                    <teaserimage alt="Uwe Seeler" key="144x81">http://www.zdf.de/ZDFmediathek/contentblob/1485528/timg144x81blob/5296168</teaserimage>
+                    <teaserimage alt="Uwe Seeler" key="485x273">http://www.zdf.de/ZDFmediathek/contentblob/1485528/timg485x273blob/5296157</teaserimage>
+                    <teaserimage alt="Uwe Seeler" key="94x65">http://www.zdf.de/ZDFmediathek/contentblob/1485528/timg94x65blob/5296155</teaserimage>
+                    <teaserimage alt="Uwe Seeler" key="72x54">http://www.zdf.de/ZDFmediathek/contentblob/1485528/timg72x54blob/5296161</teaserimage>
+                    <teaserimage alt="Uwe Seeler" key="173x120">http://www.zdf.de/ZDFmediathek/contentblob/1485528/timg173x120blob/5296156</teaserimage>
+                    <teaserimage alt="Uwe Seeler" key="236x133">http://www.zdf.de/ZDFmediathek/contentblob/1485528/timg236x133blob/5296166</teaserimage>
+                    <teaserimage alt="Uwe Seeler" key="116x88">http://www.zdf.de/ZDFmediathek/contentblob/1485528/timg116x88blob/5296160</teaserimage>
+                    <teaserimage alt="Uwe Seeler" key="116x54">http://www.zdf.de/ZDFmediathek/contentblob/1485528/timg116x54blob/5296159</teaserimage>
+                </teaserimages>
+                <information>
+                    <title>Eine Legende wird 75</title>
+                    <detail>Uwe Seeler hat mit seinen Toren für den HSV und die Nationalmannschaft einen Ehrenplatz im deutschen Fußball erlangt. Zum 75. Geburtstag gratuliert die Fußballprominenz "Uns Uwe".</detail>
+                </information>
+                <details>
+                    <assetId>1485528</assetId>
+                    <originChannelId>1482758</originChannelId>
+                    <originChannelTitle>das aktuelle sportstudio vom 05.11.</originChannelTitle>
+                    <otherChannels>492;610;646</otherChannels>
+                    <channel>ZDF</channel>
+                    <channelLogoSmall>http://www.zdf.de/ZDFmediathek/contentblob/1209114/logoSmall/4009102</channelLogoSmall>
+                    <length>00:02:15.000</length>
+                    <airtime>05.11.2011 22:23</airtime>
+                    <timetolive>04.11.2012 22:23</timetolive>
+                    <fsk>0</fsk>
+                    <hasCaption>false</hasCaption>
+                    <vcmsUrl>http://www.zdf.de/ZDFmediathek/beitrag/video/1485528/Eine-Legende-wird-75</vcmsUrl>
+                </details>
+            </teaser>
+            <teaser>
+                <type>video</type>
+                <teaserimages>
+                    <teaserimage alt="Thorsten Fink" key="75x52">http://www.zdf.de/ZDFmediathek/contentblob/1485510/timg75x52blob/5296047</teaserimage>
+                    <teaserimage alt="Thorsten Fink" key="476x268">http://www.zdf.de/ZDFmediathek/contentblob/1485510/timg476x268blob/5296048</teaserimage>
+                    <teaserimage alt="Thorsten Fink" key="298x168">http://www.zdf.de/ZDFmediathek/contentblob/1485510/timg298x168blob/5296049</teaserimage>
+                    <teaserimage alt="Thorsten Fink" key="276x155">http://www.zdf.de/ZDFmediathek/contentblob/1485510/timg276x155blob/5296042</teaserimage>
+                    <teaserimage alt="Thorsten Fink" key="644x363">http://www.zdf.de/ZDFmediathek/contentblob/1485510/timg644x363blob/5296051</teaserimage>
+                    <teaserimage alt="Thorsten Fink" key="476x176">http://www.zdf.de/ZDFmediathek/contentblob/1485510/timg476x176blob/5296046</teaserimage>
+                    <teaserimage alt="Thorsten Fink" key="144x81">http://www.zdf.de/ZDFmediathek/contentblob/1485510/timg144x81blob/5296052</teaserimage>
+                    <teaserimage alt="Thorsten Fink" key="485x273">http://www.zdf.de/ZDFmediathek/contentblob/1485510/timg485x273blob/5296041</teaserimage>
+                    <teaserimage alt="Thorsten Fink" key="94x65">http://www.zdf.de/ZDFmediathek/contentblob/1485510/timg94x65blob/5296039</teaserimage>
+                    <teaserimage alt="Thorsten Fink" key="72x54">http://www.zdf.de/ZDFmediathek/contentblob/1485510/timg72x54blob/5296045</teaserimage>
+                    <teaserimage alt="Thorsten Fink" key="173x120">http://www.zdf.de/ZDFmediathek/contentblob/1485510/timg173x120blob/5296040</teaserimage>
+                    <teaserimage alt="Thorsten Fink" key="236x133">http://www.zdf.de/ZDFmediathek/contentblob/1485510/timg236x133blob/5296050</teaserimage>
+                    <teaserimage alt="Thorsten Fink" key="116x88">http://www.zdf.de/ZDFmediathek/contentblob/1485510/timg116x88blob/5296044</teaserimage>
+                    <teaserimage alt="Thorsten Fink" key="116x54">http://www.zdf.de/ZDFmediathek/contentblob/1485510/timg116x54blob/5296043</teaserimage>
+                </teaserimages>
+                <information>
+                    <title>Fink: "Laut, aber positiv"</title>
+                    <detail>Mit dem Unentschieden sind nach Schlusspfiff weder Leverkusen noch Hamburg zufrieden. Auf HSV-Seite wurde Trainer Thorsten Fink in der Halbzeitpause bereits laut und versuchte sein Team wachzurütteln.</detail>
+                </information>
+                <details>
+                    <assetId>1485510</assetId>
+                    <originChannelId>1482758</originChannelId>
+                    <originChannelTitle>das aktuelle sportstudio vom 05.11.</originChannelTitle>
+                    <otherChannels>492;610;646</otherChannels>
+                    <channel>ZDF</channel>
+                    <channelLogoSmall>http://www.zdf.de/ZDFmediathek/contentblob/1209114/logoSmall/4009102</channelLogoSmall>
+                    <length>00:01:02.000</length>
+                    <airtime>05.11.2011 22:15</airtime>
+                    <timetolive>04.11.2012 22:15</timetolive>
+                    <fsk>0</fsk>
+                    <hasCaption>false</hasCaption>
+                    <vcmsUrl>http://www.zdf.de/ZDFmediathek/beitrag/video/1485510/Fink-Laut%252C-aber-positiv</vcmsUrl>
+                </details>
+            </teaser>
+            <teaser>
+                <type>video</type>
+                <teaserimages>
+                    <teaserimage alt="Katrin Müller-Hohenstein" key="75x52">http://www.zdf.de/ZDFmediathek/contentblob/1484820/timg75x52blob/5293093</teaserimage>
+                    <teaserimage alt="Katrin Müller-Hohenstein" key="476x268">http://www.zdf.de/ZDFmediathek/contentblob/1484820/timg476x268blob/5293094</teaserimage>
+                    <teaserimage alt="Katrin Müller-Hohenstein" key="298x168">http://www.zdf.de/ZDFmediathek/contentblob/1484820/timg298x168blob/5293095</teaserimage>
+                    <teaserimage alt="Katrin Müller-Hohenstein" key="276x155">http://www.zdf.de/ZDFmediathek/contentblob/1484820/timg276x155blob/5293088</teaserimage>
+                    <teaserimage alt="Katrin Müller-Hohenstein" key="644x363">http://www.zdf.de/ZDFmediathek/contentblob/1484820/timg644x363blob/5293097</teaserimage>
+                    <teaserimage alt="Katrin Müller-Hohenstein" key="476x176">http://www.zdf.de/ZDFmediathek/contentblob/1484820/timg476x176blob/5293092</teaserimage>
+                    <teaserimage alt="Katrin Müller-Hohenstein" key="144x81">http://www.zdf.de/ZDFmediathek/contentblob/1484820/timg144x81blob/5293098</teaserimage>
+                    <teaserimage alt="Katrin Müller-Hohenstein" key="485x273">http://www.zdf.de/ZDFmediathek/contentblob/1484820/timg485x273blob/5293087</teaserimage>
+                    <teaserimage alt="Katrin Müller-Hohenstein" key="94x65">http://www.zdf.de/ZDFmediathek/contentblob/1484820/timg94x65blob/5293085</teaserimage>
+                    <teaserimage alt="Katrin Müller-Hohenstein" key="72x54">http://www.zdf.de/ZDFmediathek/contentblob/1484820/timg72x54blob/5293091</teaserimage>
+                    <teaserimage alt="Katrin Müller-Hohenstein" key="173x120">http://www.zdf.de/ZDFmediathek/contentblob/1484820/timg173x120blob/5293086</teaserimage>
+                    <teaserimage alt="Katrin Müller-Hohenstein" key="236x133">http://www.zdf.de/ZDFmediathek/contentblob/1484820/timg236x133blob/5293096</teaserimage>
+                    <teaserimage alt="Katrin Müller-Hohenstein" key="116x88">http://www.zdf.de/ZDFmediathek/contentblob/1484820/timg116x88blob/5293090</teaserimage>
+                    <teaserimage alt="Katrin Müller-Hohenstein" key="116x54">http://www.zdf.de/ZDFmediathek/contentblob/1484820/timg116x54blob/5293089</teaserimage>
+                </teaserimages>
+                <information>
+                    <title>"Uns Uwe" wird 75 und ein Oldie zu Gast</title>
+                    <detail>Katrin Müller-Hohenstein präsentiert die Themen der Sendung: Im exklusiven Abendspiel des 12. Bundesliga-Spieltags empfängt Leverkusen den HSV und Uwe Seeler wird 75. Zu Gast ist Roman Weidenfeller.</detail>
+                </information>
+                <details>
+                    <assetId>1484820</assetId>
+                    <originChannelId>1482758</originChannelId>
+                    <originChannelTitle>das aktuelle sportstudio vom 05.11.</originChannelTitle>
+                    <otherChannels>492</otherChannels>
+                    <channel>ZDF</channel>
+                    <channelLogoSmall>http://www.zdf.de/ZDFmediathek/contentblob/1209114/logoSmall/4009102</channelLogoSmall>
+                    <length>00:01:06.000</length>
+                    <airtime>04.11.2011 16:00</airtime>
+                    <timetolive>03.11.2012 16:00</timetolive>
+                    <fsk>0</fsk>
+                    <hasCaption>false</hasCaption>
+                    <vcmsUrl>http://www.zdf.de/ZDFmediathek/beitrag/video/1484820/Uns-Uwe-wird-75-und-ein-Oldie-zu-Gast</vcmsUrl>
+                </details>
+            </teaser>
+            <teaser>
+                <type>video</type>
+                <teaserimages>
+                    <teaserimage alt="Dortmunds Trainer Jürgen Klopp" key="75x52">http://www.zdf.de/ZDFmediathek/contentblob/1484500/timg75x52blob/5291495</teaserimage>
+                    <teaserimage alt="Dortmunds Trainer Jürgen Klopp" key="476x268">http://www.zdf.de/ZDFmediathek/contentblob/1484500/timg476x268blob/5291496</teaserimage>
+                    <teaserimage alt="Dortmunds Trainer Jürgen Klopp" key="298x168">http://www.zdf.de/ZDFmediathek/contentblob/1484500/timg298x168blob/5291497</teaserimage>
+                    <teaserimage alt="Dortmunds Trainer Jürgen Klopp" key="276x155">http://www.zdf.de/ZDFmediathek/contentblob/1484500/timg276x155blob/5291490</teaserimage>
+                    <teaserimage alt="Dortmunds Trainer Jürgen Klopp" key="644x363">http://www.zdf.de/ZDFmediathek/contentblob/1484500/timg644x363blob/5291499</teaserimage>
+                    <teaserimage alt="Dortmunds Trainer Jürgen Klopp" key="476x176">http://www.zdf.de/ZDFmediathek/contentblob/1484500/timg476x176blob/5291494</teaserimage>
+                    <teaserimage alt="Dortmunds Trainer Jürgen Klopp" key="144x81">http://www.zdf.de/ZDFmediathek/contentblob/1484500/timg144x81blob/5291500</teaserimage>
+                    <teaserimage alt="Dortmunds Trainer Jürgen Klopp" key="485x273">http://www.zdf.de/ZDFmediathek/contentblob/1484500/timg485x273blob/5291489</teaserimage>
+                    <teaserimage alt="Dortmunds Trainer Jürgen Klopp" key="94x65">http://www.zdf.de/ZDFmediathek/contentblob/1484500/timg94x65blob/5291487</teaserimage>
+                    <teaserimage alt="Dortmunds Trainer Jürgen Klopp" key="72x54">http://www.zdf.de/ZDFmediathek/contentblob/1484500/timg72x54blob/5291493</teaserimage>
+                    <teaserimage alt="Dortmunds Trainer Jürgen Klopp" key="173x120">http://www.zdf.de/ZDFmediathek/contentblob/1484500/timg173x120blob/5291488</teaserimage>
+                    <teaserimage alt="Dortmunds Trainer Jürgen Klopp" key="236x133">http://www.zdf.de/ZDFmediathek/contentblob/1484500/timg236x133blob/5291498</teaserimage>
+                    <teaserimage alt="Dortmunds Trainer Jürgen Klopp" key="116x88">http://www.zdf.de/ZDFmediathek/contentblob/1484500/timg116x88blob/5291492</teaserimage>
+                    <teaserimage alt="Dortmunds Trainer Jürgen Klopp" key="116x54">http://www.zdf.de/ZDFmediathek/contentblob/1484500/timg116x54blob/5291491</teaserimage>
+                </teaserimages>
+                <information>
+                    <title>Ein Spruch für die Ewigkeit</title>
+                    <detail>Dortmunds Trainer Jürgen Klopp redet im ZDF-Interview in den höchsten Tönen von seinem Torhüter Roman Weidenfeller. Von dessen Spruch nach Gewinn der Meisterschaft ist Klopp immer noch begeistert.</detail>
+                </information>
+                <details>
+                    <assetId>1484500</assetId>
+                    <originChannelId>1482758</originChannelId>
+                    <originChannelTitle>das aktuelle sportstudio vom 05.11.</originChannelTitle>
+                    <otherChannels>492</otherChannels>
+                    <channel>ZDF</channel>
+                    <channelLogoSmall>http://www.zdf.de/ZDFmediathek/contentblob/1209114/logoSmall/4009102</channelLogoSmall>
+                    <length>00:05:56.000</length>
+                    <airtime>04.11.2011 14:55</airtime>
+                    <timetolive>03.11.2012 13:20</timetolive>
+                    <fsk>0</fsk>
+                    <hasCaption>false</hasCaption>
+                    <vcmsUrl>http://www.zdf.de/ZDFmediathek/beitrag/video/1484500/Ein-Spruch-fuer-die-Ewigkeit</vcmsUrl>
+                </details>
+            </teaser>
+            <teaser>
+                <type>video</type>
+                <teaserimages>
+                    <teaserimage alt="Torwandkandidat Tom Hanke" key="75x52">http://www.zdf.de/ZDFmediathek/contentblob/1482742/timg75x52blob/5284713</teaserimage>
+                    <teaserimage alt="Torwandkandidat Tom Hanke" key="476x268">http://www.zdf.de/ZDFmediathek/contentblob/1482742/timg476x268blob/5284714</teaserimage>
+                    <teaserimage alt="Torwandkandidat Tom Hanke" key="298x168">http://www.zdf.de/ZDFmediathek/contentblob/1482742/timg298x168blob/5284715</teaserimage>
+                    <teaserimage alt="Torwandkandidat Tom Hanke" key="276x155">http://www.zdf.de/ZDFmediathek/contentblob/1482742/timg276x155blob/5284708</teaserimage>
+                    <teaserimage alt="Torwandkandidat Tom Hanke" key="644x363">http://www.zdf.de/ZDFmediathek/contentblob/1482742/timg644x363blob/5284717</teaserimage>
+                    <teaserimage alt="Torwandkandidat Tom Hanke" key="476x176">http://www.zdf.de/ZDFmediathek/contentblob/1482742/timg476x176blob/5284712</teaserimage>
+                    <teaserimage alt="Torwandkandidat Tom Hanke" key="144x81">http://www.zdf.de/ZDFmediathek/contentblob/1482742/timg144x81blob/5284718</teaserimage>
+                    <teaserimage alt="Torwandkandidat Tom Hanke" key="485x273">http://www.zdf.de/ZDFmediathek/contentblob/1482742/timg485x273blob/5284707</teaserimage>
+                    <teaserimage alt="Torwandkandidat Tom Hanke" key="94x65">http://www.zdf.de/ZDFmediathek/contentblob/1482742/timg94x65blob/5284705</teaserimage>
+                    <teaserimage alt="Torwandkandidat Tom Hanke" key="72x54">http://www.zdf.de/ZDFmediathek/contentblob/1482742/timg72x54blob/5284711</teaserimage>
+                    <teaserimage alt="Torwandkandidat Tom Hanke" key="173x120">http://www.zdf.de/ZDFmediathek/contentblob/1482742/timg173x120blob/5284706</teaserimage>
+                    <teaserimage alt="Torwandkandidat Tom Hanke" key="236x133">http://www.zdf.de/ZDFmediathek/contentblob/1482742/timg236x133blob/5284716</teaserimage>
+                    <teaserimage alt="Torwandkandidat Tom Hanke" key="116x88">http://www.zdf.de/ZDFmediathek/contentblob/1482742/timg116x88blob/5284710</teaserimage>
+                    <teaserimage alt="Torwandkandidat Tom Hanke" key="116x54">http://www.zdf.de/ZDFmediathek/contentblob/1482742/timg116x54blob/5284709</teaserimage>
+                </teaserimages>
+                <information>
+                    <title>Der Siegerclip von Tom Hanker</title>
+                    <detail>Treffsicher mit der Hacke und aus dem Sitzen überzeugte der 16-Jährige die YouTube-User. Im "sportstudio" muss der Hoffenheim-Fan zeigen, dass er auch an der Torwand trifft.</detail>
+                </information>
+                <details>
+                    <assetId>1482742</assetId>
+                    <originChannelId>1482758</originChannelId>
+                    <originChannelTitle>das aktuelle sportstudio vom 05.11.</originChannelTitle>
+                    <otherChannels>492</otherChannels>
+                    <channel>ZDF</channel>
+                    <channelLogoSmall>http://www.zdf.de/ZDFmediathek/contentblob/1209114/logoSmall/4009102</channelLogoSmall>
+                    <length>00:00:20.000</length>
+                    <airtime>03.11.2011 11:00</airtime>
+                    <timetolive>02.11.2012 10:29</timetolive>
+                    <fsk>0</fsk>
+                    <hasCaption>false</hasCaption>
+                    <vcmsUrl>http://www.zdf.de/ZDFmediathek/beitrag/video/1482742/Der-Siegerclip-von-Tom-Hanker</vcmsUrl>
+                </details>
+            </teaser>
+        </teasers>
+    </teaserlist>
+</response>

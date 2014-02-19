@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response>
+	<status>
+		<statuscode>ok</statuscode>
+	</status>
+	<video>
+		<type>livevideo</type>
+		<context>
+			<contextLink>http://www.zdf.de/ZDFde/inhalt/16/0,1872,1020848,00.html</contextLink>
+		</context>
+		<teaserimages>
+            <teaserimage alt="Das ZDF Testbild" key="75x52">example/assets/images/testbild.jpg</teaserimage>
+            <teaserimage alt="Das ZDF Testbild" key="476x268">example/assets/images/testbild.jpg</teaserimage>
+            <teaserimage alt="Das ZDF Testbild" key="298x168">example/assets/images/testbild.jpg</teaserimage>
+            <teaserimage alt="Das ZDF Testbild" key="404x227">example/assets/images/testbild.jpg</teaserimage>
+            <teaserimage alt="Das ZDF Testbild" key="276x155">example/assets/images/testbild.jpg</teaserimage>
+            <teaserimage alt="Das ZDF Testbild" key="644x363">example/assets/images/testbild.jpg</teaserimage>
+            <teaserimage alt="Das ZDF Testbild" key="476x176">example/assets/images/testbild.jpg</teaserimage>
+            <teaserimage alt="Das ZDF Testbild" key="144x81">example/assets/images/testbild.jpg</teaserimage>
+            <teaserimage alt="Das ZDF Testbild" key="485x273">example/assets/images/testbild.jpg</teaserimage>
+            <teaserimage alt="Das ZDF Testbild" key="94x65">example/assets/images/testbild.jpg</teaserimage>
+            <teaserimage alt="Das ZDF Testbild" key="72x54">example/assets/images/testbild.jpg</teaserimage>
+            <teaserimage alt="Das ZDF Testbild" key="173x120">example/assets/images/testbild.jpg</teaserimage>
+            <teaserimage alt="Das ZDF Testbild" key="236x133">example/assets/images/testbild.jpg</teaserimage>
+            <teaserimage alt="Das ZDF Testbild" key="116x88">example/assets/images/testbild.jpg</teaserimage>
+            <teaserimage alt="Das ZDF Testbild" key="116x54">example/assets/images/testbild.jpg</teaserimage>
+            <teaserimage alt="Das ZDF Testbild" key="672x378">example/assets/images/testbild.jpg</teaserimage>
+        </teaserimages>
+		<information>
+			<title>ZDF</title>
+			<detail>Die Sendung aspekte im Livestream</detail>
+		</information>
+		<details>
+			<assetId>275644</assetId>
+			<originChannelId>500</originChannelId>
+			<originChannelTitle>aspekte</originChannelTitle>
+			<otherChannels>1717968</otherChannels>
+			<channel>ZDF</channel>
+			<channelLogoSmall>http://www-test.zdf.de/ZDFmediathek/contentblob/1209114/logoSmall/4007626</channelLogoSmall>
+			<length>22:00:00.000</length>
+			<airtime>01.04.1963 00:00</airtime>
+			<airtimeEnd>21.09.2014 23:00</airtimeEnd>
+			<timetolive>29.09.2013 13:58</timetolive>
+			<vcmsUrl>http://www-test.zdf.de/ZDFmediathek/beitrag/live/275644/ZDF</vcmsUrl>
+			<extCmsId>1077</extCmsId>
+			<extDataType>event</extDataType>
+		</details>
+        <formitaeten>
+            <formitaet basetype="h264_aac_na_rtsp_mov_http" isDownload="false">
+                <quality>veryhigh</quality>
+                <url>rtsp://3gp-livestreaming1.zdf.de/liveedge2/de10_v1_710.sdp</url>
+            </formitaet>
+            <formitaet basetype="h264_aac_ts_http_m3u8_http" isDownload="false">
+                <quality>high</quality>
+                <url>http://zdf_hds_de-f.akamaihd.net/i/de10_v1@87012/master.m3u8?dw=0</url>
+            </formitaet>
+            <formitaet basetype="h264_aac_3gp_rtsp_na_na" isDownload="false">
+                <quality>med</quality>
+                <url>rtsp://3gp-livestreaming1.zdf.de/liveedge2/de10_v1_189.sdp</url>
+            </formitaet>
+            <formitaet basetype="h264_aac_f4f_http_f4m_http" isDownload="false">
+                <quality>high</quality>
+                <url>http://zdf_hds_de-f.akamaihd.net/z/de10_v1@87012/manifest.f4m</url>
+            </formitaet>
+            <formitaet basetype="h264_aac_3gp_rtsp_na_na" isDownload="false">
+                <quality>high</quality>
+                <url>rtsp://3gp-livestreaming1.zdf.de/liveedge2/de10_v1_710.sdp</url>
+            </formitaet>
+            <formitaet basetype="h264_aac_mp4_rtmp_smil_http" isDownload="false">
+                <quality>veryhigh</quality>
+                <url>http://fstreaming.zdf.de/encoder/de10.smil</url>
+            </formitaet>
+            <formitaet basetype="h264_aac_ts_http_m3u8_http" isDownload="false">
+                <quality>med</quality>
+                <url><![CDATA[http://zdf_hds_de-f.akamaihd.net/i/de10_v1@87012/master.m3u8?b=0-710&dw=0]]></url>
+            </formitaet>
+        </formitaeten>
+		<socialBookmarks>false</socialBookmarks>
+		<copyright></copyright>
+	</video>
+</response>
