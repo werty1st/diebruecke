@@ -120,23 +120,23 @@ div.control-nav {
     margin: 10px 0 0;
     text-align: center;
     }
-    div.control-nav a {
-        color: #aaa;
-		font-size: 20px;
-        outline: none;
-        padding: 2px;
-        text-decoration: none;
-        text-shadow: 0 0 2px #ddd;
-		transition: color 1s;
-        -moz-transition: color 1s;
-        -ms-transition: color 1s;
-        -o-transition: color 1s;
-        -webkit-transition: color 1s;
-        }
-		div.control-nav .disc {
-			font-size: 40px;
-		}
-        div.control-nav a.current,
-        div.control-nav a:hover {
-            color: #333;
-        }
+div.control-nav a {
+    color: #aaa;
+	font-size: 20px;
+    outline: none;
+    padding: 2px;
+    text-decoration: none;
+    text-shadow: 0 0 2px #ddd;
+	transition: color 1s;
+    -moz-transition: color 1s;
+    -ms-transition: color 1s;
+    -o-transition: color 1s;
+    -webkit-transition: color 1s;
+    }
+	div.control-nav .disc {
+		font-size: 40px;
+	}
+    div.control-nav a.current,
+    div.control-nav a:hover {
+        color: #333;
+    }

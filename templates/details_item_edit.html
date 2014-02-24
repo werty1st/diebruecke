@@ -89,22 +89,28 @@ Beziehungen
 
 <div id="media">
 	<ul class="imagelist">
-		Bilder und Videos
 		{{#list doc.media}}	
-			<div class="{{type}}">
-				<a href="{{../mediabaseurl}}/{{preview}}" ><img src="{{../mediabaseurl}}/{{thumbnail}}"/></a>
-			</div>
-			<div class="select_freischaltepisode">
-				<select id="freischaltepisode" class="selectpicker" data-style="btn-primary">
-					{{#select doc.freischaltepisode}}
-				    <option value="0">von Anfang an</option>
-				    <option value="1">nach Episode 1</option>
-				    <option value="2">nach Episode 2</option>
-				    <option value="3">nach Episode 3</option>
-				    <option value="4">nach Episode 4</option>
-				    <option value="5">nach Episode 5</option>
-					{{/select}}   
-				  </select>			
+	
+			<div class="zeile">
+				<div class="zelle">
+					<div class="{{type}}">
+						<a href="{{../mediabaseurl}}/{{image}}" ><img src="{{../mediabaseurl}}/{{thumbnail}}"/></a>
+					</div>
+				</div>
+				<div class="zelle">
+					<div class="select_freischaltepisode">
+						<select id="freischaltepisode" class="selectpicker" data-style="btn-primary" media-url="{{image}}">
+							{{#select freischaltepisode}}
+						    <option value="0">von Anfang an</option>
+						    <option value="1">nach Episode 1</option>
+						    <option value="2">nach Episode 2</option>
+						    <option value="3">nach Episode 3</option>
+						    <option value="4">nach Episode 4</option>
+						    <option value="5">nach Episode 5</option>
+							{{/select}}   
+						  </select>			
+					</div>
+				</div>
 			</div>
 		{{/list}}
 	</ul>
@@ -146,6 +152,21 @@ Beziehungen
 		user.freischaltepisode = $("#freischaltepisode").val();
 		// user.freischaltzeit = $("#freischaltzeit").val();
 		user.stimmen = $("#stimmen").val();
+
+		//getMediaData
+		$("select[media-url]").each(function( index ) {
+			var mediaUrl = $( this ).attr("media-url");
+			var mediaFreischaltepisode = this.value
+
+			console.log( mediaFreischaltepisode + ": " +  mediaUrl);
+			for (var i = 0; i <  user.media.length; i++) {
+				if (user.media[i].image == mediaUrl)
+				{	//save
+					user.media[i].freischaltepisode = mediaFreischaltepisode;
+				}
+			};
+		});
+
 		// user.text = $("#text").val();
 		db.saveDoc(user, docSaved(l));
 	});
@@ -173,5 +194,6 @@ Beziehungen
 		}
 	});	
 	
+
 
 </script>
