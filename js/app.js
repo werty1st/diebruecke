@@ -477,12 +477,7 @@ MediaView = (function() {
     return bindEvent(this.el, 'click', function(e) {
       var index, target;
       target = e.target ? e.target : window.event.srcElement;
-      if (e.preventDefault) {
-        e.preventDefault();
-      } else {
-        e.returnValue = false;
-      }
-      if (target.tagName.toLowerCase() === 'img') {
+      if ((target.tagName.toLowerCase()) === 'img' && (target.className !== "video")) {
         if (!_this.hasBeenOpened) {
           _this.initSlider();
         }
@@ -491,11 +486,21 @@ MediaView = (function() {
           target = target.getParent();
         }
         index = target.getParent().getChildren().indexOf(target);
-        return _this.openSlider(index);
-      } else {
-        if (target.className === 'dr-link-readmore dr-icon-close') {
-          return _this.closeSlider();
+        _this.openSlider(index);
+        if (e.preventDefault) {
+          return e.preventDefault();
+        } else {
+          return e.returnValue = false;
         }
+      } else if (target.className === 'dr-link-readmore dr-icon-close') {
+        if (e.preventDefault) {
+          e.preventDefault();
+        } else {
+          e.returnValue = false;
+        }
+        return _this.closeSlider();
+      } else {
+        return false;
       }
     });
   };
@@ -522,6 +527,7 @@ MediaView = (function() {
         return window.fireEvent('dr-dom-inserted', [$$('div.dr-widget-video-player')]);
       });
     } else {
+      document.getElementById("myvideo").className = "";
       this.swipe.slide(index);
     }
     return this.hasBeenOpened = true;
@@ -530,7 +536,11 @@ MediaView = (function() {
   MediaView.prototype.closeSlider = function() {
     this.slider.className = 'hide';
     if (this.isMobile) {
-      return document.body.className = '';
+      document.body.className = '';
+    }
+    if (player) {
+      player.stop();
+      return document.getElementById("myvideo").className = "hide";
     }
   };
 
@@ -560,7 +570,7 @@ MediaView = (function() {
       if (media.type === 'image') {
         html += "<div class=\"carousel-item\">\n    <div class=\"item\" >\n        <span role=\"presentation\" aria-hidden=\"true\" class=\"image-wrap ratio-16-9\">\n            <img src=\"" + media.image + "\" alt=\"\" width=\"0\" height=\"0\" role=\"presentation\" aria-hidden=\"true\" />                                    \n        </span>\n    </div>\n</div>";
       } else if (media.type === 'video') {
-        html += "<div class=\"carousel-item\">\n    <div class=\"item\" >\n        <span role=\"presentation\" aria-hidden=\"true\" class=\"image-wrap ratio-16-9\">\n                <div class=\"icon-film play-overlay\" >\n                </div>\n                <div class=\"play-base\" >\n                    <img src=\"" + media.image + "\" id=\"video" + i1 + "\" onclick=\"playvideo(this);return false;\" alt=\"\" width=\"0\" height=\"0\" role=\"presentation\" aria-hidden=\"true\" video-url=\"" + media.video + "\" /> \n                </div>\n        </span>\n    </div>\n</div>";
+        html += "<div class=\"carousel-item\">\n    <div class=\"item\" >\n        <span role=\"presentation\" aria-hidden=\"true\" class=\"image-wrap ratio-16-9\">\n                <div class=\"icon-film play-overlay\" >\n                </div>\n                <div class=\"play-base\" >\n                    <img src=\"" + media.image + "\" id=\"video" + i1 + "\" class=\"video\" onclick=\"playvideo(this);return false;\" alt=\"\" width=\"0\" height=\"0\" role=\"presentation\" aria-hidden=\"true\" video-url=\"" + media.video + "\" /> \n                </div>\n        </span>\n    </div>\n</div>";
       }
     }
     return html + "</div></div>";

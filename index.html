@@ -45,17 +45,20 @@
 
 	<script>
 
-		function playvideo(id){
+	var player = null;
+
+
+		function createasset(url){
 
 			var formitaeten = [			
-					new zdfplayer.media.Formitaet({
-						baseType : 'h264_aac_mp4_http_na_na',
-						quality : 'veryhigh',
-						url : 'http://172.29.30.20/zdf/videos/3_caroline_alexander.mp4',
-						videoBitrate : 1680000,
-						audioBitrate : 48000
-					})
-				]
+				new zdfplayer.media.Formitaet({
+					baseType : 'h264_aac_mp4_http_na_na',
+					quality : 'veryhigh',
+					url : url,
+					videoBitrate : 1680000,
+					audioBitrate : 48000
+				})
+			]
 
 			var asset = new zdfplayer.media.ManualAsset({
                 type : 'vod', // default or 'live'
@@ -70,32 +73,59 @@
 				teaserImages : "",
 				family : '',
 				count : ''
-			});
-    	
-			// create player instance via PlayerFactory
-			player = zdfplayer.PlayerFactory.instanciate(
-			{
-				id: 'zdfplayer1',
-				configurationUrl: 'js/libs/configuration_full_feature.xml',
-				mediaAsset : asset,
-				settings:
-				{
-					source : 'manual',
-					autoPlay : true,
-					embedTypes : 'html5',
-					scaleMode : 'letterbox',
-					width : 734,
-					height : 413,
-					isDebugEnabled : false,
-					tracking : { source : 'manual'},
-                    initialQuality: 'high'
-				}
-			});
+			});			
+			return asset;
+		}
 
-			jQuery( "<div id='myvideo'></div>" ).insertBefore("#video1");
-			player.embed("myvideo");
+		function playvideo(el){
+
+			var url = el.getAttribute("video-url");
+			var elid = el.id;
+
+			// register Listener for player ready event
+			// player.addEventListener(zdfplayer.Player.READY, function(event)
+			// {
+			// 	console.log('Hello I am your player. I am ready now');
+			// 	setTimeout( function(){
+			// 		console.log("autoplay");
+			// 		player.play();
+			// 		},3000)
+			// })
+
+			if (!jQuery( "#myvideo" ).length>0){
+
+				// create player instance via PlayerFactory
+				player = zdfplayer.PlayerFactory.instanciate(
+				{
+					id: 'zdfplayer1',
+					configurationUrl: 'js/libs/configuration_full_feature.xml',
+					mediaAsset : createasset(url),
+					preloaderImageUrl : "img/spinner.gif",
+					settings:
+					{
+						source : 'manual',
+						autoPlay : true,
+						embedTypes : 'html5',
+						scaleMode : 'letterbox',
+						width : 734,
+						height : 413,
+						tracking : { source : 'manual'},
+	                    initialQuality: 'high'
+
+					}
+				});
+
+				jQuery( "<div id='myvideo'></div>" ).insertBefore("#"+elid);
+				player.embed("myvideo");			
+				
+			} else
+			{
+				//display
+				jQuery( "#myvideo" ).insertBefore("#"+elid);				
+        		player.changeAsset(createasset(url));
+        		player.play();
+        	}
 			return false;
-        	//player.changeAsset(asset2);
     	}
 	</script>
 </html>

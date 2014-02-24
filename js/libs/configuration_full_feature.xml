@@ -272,10 +272,10 @@
 	</assets>
 	
 	<!-- font assets -->
-	<assets baseURL="example/assets/fonts/">
+	<assets baseURL="img/assets/fonts/">
 		<asset id="defaultFont" type="fontSymbol" color="0xFFFFFF" url="fonts.swf" 
 			   symbol="Verdana" fontFamily="Verdana,Helvetica,Arial,sans-serif" fontSize="11"/> 
-		<asset id="tooltipFont" type="fontSymbol" color="0x000000" url="fonts.swf" 
+		<asset id="tooltipFont" type="fontSymbol" color="0xFFFFFF" url="fonts.swf" 
 			   symbol="Verdana" fontFamily="Verdana,Helvetica,Arial,sans-serif" fontSize="11"/>
 		<asset id="footNote" type="fontSymbol" color="0xAFAFAF" url="fonts.swf" 
 			   symbol="Verdana" fontFamily="Verdana,Helvetica,Arial,sans-serif" fontSize="9"/>
@@ -337,7 +337,7 @@
 			font="tooltipFont"
 			maxWidth="200"
 			delay="500"
-			/>		 
+			/>	
 			
 		<!-- Ende tooltips --> 
 		

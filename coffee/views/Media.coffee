@@ -16,10 +16,10 @@ class MediaView
     addEvents: ->
         bindEvent @el, 'click', (e) =>
             target = if e.target then e.target else window.event.srcElement
-            if e.preventDefault then e.preventDefault() else e.returnValue = false
 
-            if target.tagName.toLowerCase() is 'img'
+            if ((target.tagName.toLowerCase()) is 'img' and (target.className != "video"))
                 this.initSlider() unless @hasBeenOpened
+            
 
                 target = $(target)
                 if target.getParent().hasClass 'image-wrap'
@@ -28,9 +28,13 @@ class MediaView
                 index = target.getParent().getChildren().indexOf(target) 
                 this.openSlider(index)
 
-            else 
-                if target.className is 'dr-link-readmore dr-icon-close'
-                    this.closeSlider()
+                if e.preventDefault then e.preventDefault() else e.returnValue = false
+            else if target.className is 'dr-link-readmore dr-icon-close'
+                if e.preventDefault then e.preventDefault() else e.returnValue = false
+
+                this.closeSlider()
+            else
+                false
 
     initSlider: ->
         @slider = document.getElementById 'broen-gallery-person-media-slider'
@@ -39,6 +43,7 @@ class MediaView
     openSlider: (index) ->
         @slider.className = ''
         if @isMobile then document.body.className = 'broen'
+
 
         if not @hasBeenOpened
             el = $('broen-gallery-swipe-carousel')
@@ -49,6 +54,7 @@ class MediaView
                 window.fireEvent 'dr-dom-inserted', [$$('span.image-wrap')]
                 window.fireEvent 'dr-dom-inserted', [$$('div.dr-widget-video-player')]
         else
+            document.getElementById("myvideo").className = ""
             @swipe.slide index
 
         @hasBeenOpened = true
@@ -56,6 +62,10 @@ class MediaView
     closeSlider: ->
         @slider.className = 'hide'
         if @isMobile then document.body.className = ''
+
+        if player
+            player.stop()
+            document.getElementById("myvideo").className = "hide"
 
     html: ->
         html = '<div>'
@@ -101,7 +111,7 @@ class MediaView
                                         <div class="icon-film play-overlay" >
                                         </div>
                                         <div class="play-base" >
-                                            <img src="#{media.image}" id="video#{i1}" onclick="playvideo(this);return false;" alt="" width="0" height="0" role="presentation" aria-hidden="true" video-url="#{media.video}" /> 
+                                            <img src="#{media.image}" id="video#{i1}" class="video" onclick="playvideo(this);return false;" alt="" width="0" height="0" role="presentation" aria-hidden="true" video-url="#{media.video}" /> 
                                         </div>
                                 </span>
                             </div>
