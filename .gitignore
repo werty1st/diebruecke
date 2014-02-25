@@ -26,3 +26,4 @@ emailadressen
 cache
 
 !.gitignore
+/nbproject/private/

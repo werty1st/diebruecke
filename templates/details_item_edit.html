@@ -110,11 +110,30 @@ Beziehungen
 							{{/select}}   
 						  </select>			
 					</div>
+					<div class="tools">
+						<button type="button" btn-role="delete" class="btn btn-danger">Element löschen</button>
+
+					</div>
 				</div>
 			</div>
 		{{/list}}
 	</ul>
 </div>
+
+
+<div id="videoplayer">
+	<button type="button" id="chosen-btn" style="display:block" class="btn btn-primary">Videodatei auswählen</button>
+	<input type="file" id="chosen" style="display:none" />
+	<video id="video" controls style="width: 50%;"></video>
+</div>
+
+<div id="snaphsot">
+
+	<button id="snap" style="display:block" class="btn btn-primary" onclick="snap()">Vorschaubild erstellen</button>
+	<canvas></canvas>
+</div>
+
+
 
 <div>
 <button class="btn btn-primary ladda-button" data-style="zoom-in" id="save_doc"><span class="ladda-label">speichern</span></button>
@@ -128,6 +147,53 @@ Beziehungen
 	var user = "";
 
 
+	//Video und Foto Script
+
+	// Get handles on the video and canvas elements
+	var video = document.querySelector('video');
+	var canvas = document.querySelector('canvas');
+	// Get a handle on the 2d context of the canvas element
+	var context = canvas.getContext('2d');
+	// Define some vars required later
+	var w, h, ratio;
+
+	// Add a listener to wait for the 'loadedmetadata' state so the video's dimensions can be read
+	video.addEventListener('loadedmetadata', function() {
+		// Calculate the ratio of the video's width to height
+		ratio = video.videoWidth / video.videoHeight;
+		// Define the required width as 100 pixels smaller than the actual video's width
+		w = video.videoWidth - 100;
+		w = 734;
+		// Calculate the height based on the video's width and the ratio
+		h = 413;//parseInt(w / ratio, 10);
+		// Set the canvas width and height to the values just calculated
+		canvas.width = w;
+		canvas.height = h;			
+	}, false);	
+
+
+	document.getElementById('chosen').onchange = function (){
+
+		var vplayer=document.getElementById('video'); // A reference to the video-element
+		var file=document.getElementById('chosen').files[0]; // 1st member in files-collection
+		var fileURL = window.URL.createObjectURL(file);
+		vplayer.src=fileURL;
+		vplayer.load();
+		return ; // A good manner to end up a function
+
+	};
+	
+	// Takes a snapshot of the video
+	function snap() {
+		//resize ti 734x413
+		// Define the size of the rectangle that will be filled (basically the entire element)
+		context.fillRect(0, 0, w, h);
+		// Grab the image from the video
+		context.drawImage(video, 0, 0, w, h);
+	}
+
+	//Ende Video und Foto Script
+
 	db.getDoc("{{doc.slug}}", function(err,response){
 		if(err) return;
 		
@@ -138,6 +204,18 @@ Beziehungen
 	});
 	$('.selectpicker').selectpicker();
 
+
+	$("button[btn-role='delete']").click(function( event ) {
+		var file = this;
+		console.log(file);
+		return false;
+	});
+
+	$( "#chosen-btn" ).click(function( event ) {
+		var file = document.getElementById('chosen');
+		file.click();
+		return false;
+	});
 
 	$( "#save_doc" ).click(function( event ) {
 		event.preventDefault();		
