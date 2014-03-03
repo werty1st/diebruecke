@@ -88,72 +88,95 @@ Beziehungen
 
 
 <div id="media">
-	<ul class="imagelist">
-		{{#list doc.media}}	
-	
-			<div class="zeile">
-				<div class="zelle">
-					<div class="{{type}}">
-						<a href="{{../mediabaseurl}}/{{image}}" ><img src="{{../mediabaseurl}}/{{thumbnail}}"/></a>
-					</div>
-				</div>
-				<div class="zelle">
-					<div class="select_freischaltepisode">
-						<select id="freischaltepisode" class="selectpicker" data-style="btn-primary" media-url="{{image}}">
-							{{#select freischaltepisode}}
-						    <option value="0">von Anfang an</option>
-						    <option value="1">nach Episode 1</option>
-						    <option value="2">nach Episode 2</option>
-						    <option value="3">nach Episode 3</option>
-						    <option value="4">nach Episode 4</option>
-						    <option value="5">nach Episode 5</option>
-							{{/select}}   
-						  </select>			
-					</div>
-					<div class="tools">
-						<button type="button" btn-role="delete" class="btn btn-danger">Element löschen</button>
-
-					</div>
-				</div>
-			</div>
-		{{/list}}
+	<ul id="imagelist">
 	</ul>
 </div>
 
 
-<div id="videoplayer">
-	<button type="button" id="chosen-btn" style="display:block" class="btn btn-primary">Videodatei auswählen</button>
-	<input type="file" id="chosen" style="display:none" />
-	<video id="video" controls style="width: 50%;"></video>
+<button style="display:block" type="button" class="btn btn-default" onclick='$(".add-video").toggle()'>Video hinzufügen</button>
+<div class="add-video" style="display:none">
+	<div id="videoplayer">
+		<button type="button" id="video-chosen-btn" style="display:block" class="btn btn-primary">Videodatei auswählen</button>
+		<input type="file" id="video-chosen" style="display:none" />
+		<video id="video" controls style="width: 50%;"></video>
+	</div>
+
+	<div id="snaphsot">
+
+		<button id="snap" style="display:block" class="btn btn-primary" onclick="snap()">Vorschaubild erstellen</button>
+		<canvas id="videocanvas"></canvas>
+	</div>
+
+
+
+	<div>
+	<button class="btn btn-primary ladda-button" data-style="zoom-in" id="save_doc"><span class="ladda-label">Video speichern</span></button>
+	</div>
 </div>
 
-<div id="snaphsot">
+<button style="display:block" type="button" class="btn btn-default" onclick='$(".add-foto").toggle()'>Foto hinzufügen</button>
+<div class="add-foto" style="display:none">
+	<div id="videoplayer">
+		<button type="button" id="foto-chosen-btn" style="display:block" class="btn btn-primary">Foto auswählen</button>
+		<input type="file" id="foto-chosen" style="display:none" />
+		<img sytle="width:734;height:413" id="foto" />
+	</div>
 
-	<button id="snap" style="display:block" class="btn btn-primary" onclick="snap()">Vorschaubild erstellen</button>
-	<canvas></canvas>
+	<div id="snaphsot">
+
+		<button id="snap" style="display:block" class="btn btn-primary" onclick="snapfoto()">Vorschaubild erstellen</button>
+		<canvas id="fotocanvas"></canvas>
+	</div>
+
+
+
+	<div>
+	<button class="btn btn-primary ladda-button" data-style="zoom-in" id="save_doc"><span class="ladda-label">Foto speichern</span></button>
+	</div>
 </div>
-
-
 
 <div>
 <button class="btn btn-primary ladda-button" data-style="zoom-in" id="save_doc"><span class="ladda-label">speichern</span></button>
 </div>
 
 <script type="text/javascript">
+
+	var baseurl = "{{baseurl}}";
+	var imgbaseurl = "{{imgbaseurl}}";
+	var mediabaseurl = "{{mediabaseurl}}";
+	
 	var db = require('db').use("{{baseurl}}");
 
-	var userurl = "{{baseurl}}{{doc.slug}}";
+	var handlebars = require('handlebars');
+	handlebars.registerHelper('select', function(selected, options) {
+	    return options.fn(this).replace(
+	        new RegExp(' value=\"' + selected + '\"'),
+	        '$& selected="selected"');
+	});
+	handlebars.registerHelper('list', function(items, options) {
+	  var out = "<ul>";
 
+	  if (!items) return;
+	  for(var i=0, l=items.length; i<l; i++) {
+	    out = out + "<li>" + options.fn(items[i]) + "</li>";
+	  }
+
+	  return out + "</ul>";
+	});
+
+
+	
 	var user = "";
-
 
 	//Video und Foto Script
 
 	// Get handles on the video and canvas elements
 	var video = document.querySelector('video');
-	var canvas = document.querySelector('canvas');
+	var videocanvas = document.getElementById('videocanvas');
+	var fotocanvas = document.getElementById('fotocanvas');
 	// Get a handle on the 2d context of the canvas element
-	var context = canvas.getContext('2d');
+	var videocontext = videocanvas.getContext('2d');
+	var fotocontext = fotocanvas.getContext('2d');
 	// Define some vars required later
 	var w, h, ratio;
 
@@ -167,15 +190,15 @@ Beziehungen
 		// Calculate the height based on the video's width and the ratio
 		h = 413;//parseInt(w / ratio, 10);
 		// Set the canvas width and height to the values just calculated
-		canvas.width = w;
-		canvas.height = h;			
+		videocanvas.width = w;
+		videocanvas.height = h;			
 	}, false);	
 
 
-	document.getElementById('chosen').onchange = function (){
+	document.getElementById('video-chosen').onchange = function (){
 
 		var vplayer=document.getElementById('video'); // A reference to the video-element
-		var file=document.getElementById('chosen').files[0]; // 1st member in files-collection
+		var file=document.getElementById('video-chosen').files[0]; // 1st member in files-collection
 		var fileURL = window.URL.createObjectURL(file);
 		vplayer.src=fileURL;
 		vplayer.load();
@@ -183,13 +206,43 @@ Beziehungen
 
 	};
 	
+	document.getElementById('foto-chosen').onchange = function (){
+
+		var img1=document.getElementById('foto'); // A reference to the video-element
+		var file=document.getElementById('foto-chosen').files[0]; // 1st member in files-collection
+		var fileURL = window.URL.createObjectURL(file);
+		img1.src=fileURL;
+		return ; // A good manner to end up a function
+
+	};
+
 	// Takes a snapshot of the video
 	function snap() {
 		//resize ti 734x413
 		// Define the size of the rectangle that will be filled (basically the entire element)
-		context.fillRect(0, 0, w, h);
+		videocontext.fillRect(0, 0, w, h);
 		// Grab the image from the video
-		context.drawImage(video, 0, 0, w, h);
+		videocontext.drawImage(video, 0, 0, w, h);
+	}
+
+	// Takes a snapshot of the video
+	function snapfoto() {
+		var img1=document.getElementById('foto');
+		//resize to 79*79
+		// Define the size of the rectangle that will be filled (basically the entire element)
+		fotocanvas.width = fotocanvas.height = 79;
+		//koordinaten
+		var sx = img1.width/4;
+		var sy = img1.height/8;
+
+		var sh = (img1.height/8)*6;
+		var sw = 1*sh;
+
+		var dx = 0, dy = 0; 
+		var dw = 79, dh = 79; 
+		// Grab the image from the video
+		fotocontext.fillRect(0, 0, dw, dh);
+		fotocontext.drawImage(img1, sx, sy, sw, sh, dx, dy, dw, dh);
 	}
 
 	//Ende Video und Foto Script
@@ -200,9 +253,23 @@ Beziehungen
 
 		user = response;
 
+		db.getView("b2","media", { startkey: ["media",user.slug,0,0], endkey: ["media",user.slug,{},{}] }, function(err,response){
+			if(err)return;
+
+			user.media = [];
+			user.mediaraw = response.rows;
+
+			for (var i = 0; i < response.rows.length; i++) {
+				user.media.push(response.rows[i].value);
+
+			};
+			getMediaList();
+		});
+
 		//$('.selectpicker').selectpicker("val", user.freischaltepisode);
 	});
 	$('.selectpicker').selectpicker();
+
 
 
 	$("button[btn-role='delete']").click(function( event ) {
@@ -211,11 +278,47 @@ Beziehungen
 		return false;
 	});
 
-	$( "#chosen-btn" ).click(function( event ) {
-		var file = document.getElementById('chosen');
+	$( "#video-chosen-btn" ).click(function( event ) {
+		var file = document.getElementById('video-chosen');
 		file.click();
 		return false;
 	});
+
+	$( "#foto-chosen-btn" ).click(function( event ) {
+		var file = document.getElementById('foto-chosen');
+		file.click();
+		return false;
+	});	
+
+
+	function saveMediaData(event){
+		var target = event.target;
+		//getMediaData
+
+		var mediaId = $( target ).attr("doc-id");
+		var mediaFreischaltepisode = target.value
+
+		console.log( mediaFreischaltepisode + ": " +  mediaId);
+		for (var i = 0; i <  user.mediaraw.length; i++) {
+			if (user.mediaraw[i].id == mediaId)
+			{	
+				//link
+				var usermedia = user.mediaraw[i].value;
+				//save
+				usermedia.freischaltepisode = mediaFreischaltepisode;
+				
+				db.saveDoc(usermedia, function(err, response){
+						if (err){
+							alert("Fehler beim speichern.");	
+						} 
+
+						if (response.ok){
+							usermedia._rev = response.rev;
+						}
+					});
+			}
+		}		
+	}
 
 	$( "#save_doc" ).click(function( event ) {
 		event.preventDefault();		
@@ -231,19 +334,7 @@ Beziehungen
 		// user.freischaltzeit = $("#freischaltzeit").val();
 		user.stimmen = $("#stimmen").val();
 
-		//getMediaData
-		$("select[media-url]").each(function( index ) {
-			var mediaUrl = $( this ).attr("media-url");
-			var mediaFreischaltepisode = this.value
 
-			console.log( mediaFreischaltepisode + ": " +  mediaUrl);
-			for (var i = 0; i <  user.media.length; i++) {
-				if (user.media[i].image == mediaUrl)
-				{	//save
-					user.media[i].freischaltepisode = mediaFreischaltepisode;
-				}
-			};
-		});
 
 		// user.text = $("#text").val();
 		db.saveDoc(user, docSaved(l));
@@ -251,9 +342,9 @@ Beziehungen
 
 	function docSaved(l){
 		return function(err, response){
+
 			l.stop();
 			if (err) return;
-			
 			
 			if (response.ok)
 				user._rev = response.rev;
@@ -273,5 +364,23 @@ Beziehungen
 	});	
 	
 
+	//"/diebruecke/_design/b2/templates/media_list.js
+	function getMediaList() {
+
+		 $.get("/diebruecke/_design/b2/static/client_templates/media_list.html",function(response){
+
+		    var template = handlebars.compile(response);
+		    var context = {	imgbaseurl: imgbaseurl,
+                    		mediabaseurl: mediabaseurl,
+                    		baseurl: baseurl,
+                			doc:user}
+			var html    = template(context);
+			$("#imagelist").append(html);
+
+			$("select").on("change", function(event){
+				saveMediaData(event);
+			});
+		  });
+	}
 
 </script>

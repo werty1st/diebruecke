@@ -80,17 +80,17 @@ function delete_garbage($jsdata){
 
 
 		//all slugs
-		// if (property_exists($obj1,"slug")){
-		// 	echo $obj1->slug."\n";
-		// 	$obj1->_deleted = true;
-		// 	// $docs[$obj1->slug} = $obj1;
-		// 	array_push($docs, $obj1);
-		// 	continue;
-		// }
+		if (property_exists($obj1,"slug")){
+			echo $obj1->slug."\n";
+			$obj1->_deleted = true;
+			// $docs[$obj1->slug} = $obj1;
+			array_push($docs, $obj1);
+			continue;
+		}
 
 		//video or images
 		if (property_exists($obj1,"type")){
-			if($obj1->type == "video" OR $obj1->type == "image"){
+			if($obj1->type == "media"){
 				echo $obj1->type == "video"."\n";
 				$obj1->_deleted = true;
 				// $docs[$obj1->slug} = $obj1;
@@ -160,21 +160,21 @@ function td() {
 	  '--src="function (doc) { doc[\"_id\"] = doc.slug; doc.type=\"person\"; return doc; }" '.
 	  "data_split.json data_split_ids.json";
 
-	// system($cmd);
-	// system("kanso upload data_split_ids.json ");
+	system($cmd);
+	system("kanso upload data_split_ids.json ");
 
 
 	$cmd = "kanso transform add-ids ".
-	  '--src="function (doc) { if (doc.type==\"video\" || doc.type==\"image\"); return doc; }" '.
+	  '--src="function (doc) { if (doc.type==\"media\"); return doc; }" '.
 	  "data_split_media.json data_split_media_ids.json";
 
 	system($cmd);
 	system("kanso upload data_split_media_ids.json ");
 
-	// unlink("data_split.json");
-	// unlink("data_split_ids.json");
-	// unlink("data_split_media.json");
-	// unlink("data_split_media_ids.json");
+	unlink("data_split.json");
+	unlink("data_split_ids.json");
+	unlink("data_split_media.json");
+	unlink("data_split_media_ids.json");
 
 	echo"finished\n";
 	
