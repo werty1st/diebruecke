@@ -2,7 +2,7 @@ var DR = DR || {};
 DR.BroenGallery = {};
 
 DR.BroenGallery.config = {
-    jsonDataUrl: '/diebruecke/_design/b2/_list/getDatajson/personen',
+    jsonDataUrl: '/diebruecke/_design/b2/_list/getDatajsonPersonwithMedia/personwithmedia/',
     jsonDataTestUrl: 'http://socialbld01.net.dr.dk/broen/test.json',
 
     votingEnabled: true,
@@ -547,7 +547,9 @@ MediaView = (function() {
         return window.fireEvent('dr-dom-inserted', [$$('div.dr-widget-video-player')]);
       });
     } else {
-      document.getElementById("myvideo").className = "";
+      if (document.getElementById("myvideo")) {
+        document.getElementById("myvideo").className = "";
+      }
       this.swipe.slide(index);
     }
     return this.hasBeenOpened = true;
@@ -560,7 +562,9 @@ MediaView = (function() {
     }
     if (player) {
       player.stop();
-      return document.getElementById("myvideo").className = "hide";
+      if (document.getElementById("myvideo")) {
+        return document.getElementById("myvideo").className = "hide";
+      }
     }
   };
 
@@ -590,7 +594,7 @@ MediaView = (function() {
       if (media.type === 'image') {
         html += "<div class=\"carousel-item\">\n    <div class=\"item\" >\n        <span role=\"presentation\" aria-hidden=\"true\" class=\"image-wrap ratio-16-9\">\n            <img src=\"" + media.image + "\" alt=\"\" width=\"0\" height=\"0\" role=\"presentation\" aria-hidden=\"true\" />                                    \n        </span>\n    </div>\n</div>";
       } else if (media.type === 'video') {
-        html += "<div class=\"carousel-item\">\n    <div class=\"item\" >\n        <span role=\"presentation\" aria-hidden=\"true\" class=\"image-wrap ratio-16-9\">\n                <div class=\"icon-film play-overlay\" >\n                </div>\n                <div class=\"play-base\" >\n                    <img src=\"" + media.image + "\" id=\"video" + i1 + "\" class=\"video\" onclick=\"playvideo(this);return false;\" alt=\"\" width=\"0\" height=\"0\" role=\"presentation\" aria-hidden=\"true\" video-url=\"" + media.video + "\" /> \n                </div>\n        </span>\n    </div>\n</div>";
+        html += "<div class=\"carousel-item\">\n    <div class=\"item\" >\n        <span role=\"presentation\" aria-hidden=\"true\" class=\"image-wrap ratio-16-9\">\n                <div class=\"icon-film play-overlay\" >\n                </div>\n                <div class=\"play-base\" >\n                    <img src=\"" + media.image + "\" id=\"video" + i1 + "\" class=\"video\" onclick=\"playvideo(this);return false;\" alt=\"\" width=\"0\" height=\"0\" role=\"presentation\" aria-hidden=\"true\" video-url=\"" + media.videoURI + "\" /> \n                </div>\n        </span>\n    </div>\n</div>";
       }
     }
     return html + "</div></div>";

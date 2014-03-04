@@ -1,5 +1,13 @@
 <?php
 
+$db_name = "diebruecke";
+$db_host = "http://localhost:5984";
+
+# Additional site configuration settings. Allows to override global settings.
+if (file_exists('config.php')) {
+	include_once('config.php');
+}
+
 $options = getopt("f:");
 
 switch ($options["f"]) {
@@ -76,7 +84,7 @@ function delete_garbage($jsdata){
 
 	foreach ($jsdata->rows as $i => $obj) {
 		$obj1 = $obj->doc;
-		// var_dump($obj1);
+		//var_dump($obj1);
 
 
 		//all slugs
@@ -90,8 +98,8 @@ function delete_garbage($jsdata){
 
 		//video or images
 		if (property_exists($obj1,"type")){
-			if($obj1->type == "media"){
-				echo $obj1->type == "video"."\n";
+			if(($obj1->type == "video") || ($obj1->type == "image") || ($obj1->type == "media")){
+				echo $obj1->type == "foto OR video"."\n";
 				$obj1->_deleted = true;
 				// $docs[$obj1->slug} = $obj1;
 				array_push($docs, $obj1);
@@ -110,13 +118,23 @@ function delete_garbage($jsdata){
 			}
         }
 
-		//doc without type property but no design docs
+		//doc without type property but no design docs		
 		if ((!property_exists($obj1,"type")) && (!strpos($obj1->{"_id"},"_design")==0)){
 			echo "deleting orphaned doc\n";
 			$obj1->_deleted = true;		
 			array_push($docs, $obj1);
 			continue;
 		}
+
+		if (!property_exists($obj1,"type")) echo "kein type";
+		if (strpos($obj1->{"_id"},"_design")==0) echo "ist design";
+/*		echo "doc without type\n";
+		if ((!property_exists($obj1,"type"))){
+			echo "deleting orphaned doc\n";
+			$obj1->_deleted = true;		
+			array_push($docs, $obj1);
+			continue;
+		}*/
 		
 		// //doc type property
 		// if ((!property_exists($obj1,"type")) && (!strpos($obj1->_id,"_design"))){
@@ -144,15 +162,16 @@ function td() {
 	foreach ($jsdata as $key => $person) {
 		echo "Name: ".$key."\n";
 		toLower($person);
-        createMediaDoc($person, $personMedia);
+        //uploadMediaDoc($person);
 		array_push($personJson, $person);
 	}
+	
 
 	//$personJson = array_merge($personJson, $personMedia);
 	//var_dump($personJson); exit;
 
 	file_put_contents("data_split.json",json_encode($personJson));
-	file_put_contents("data_split_media.json",json_encode($personMedia));
+	//file_put_contents("data_split_media.json",json_encode($personMedia));
 
 	
 
@@ -164,24 +183,21 @@ function td() {
 	system("kanso upload data_split_ids.json ");
 
 
-	$cmd = "kanso transform add-ids ".
+	/*$cmd = "kanso transform add-ids ".
 	  '--src="function (doc) { if (doc.type==\"media\"); return doc; }" '.
 	  "data_split_media.json data_split_media_ids.json";
 
 	system($cmd);
 	system("kanso upload data_split_media_ids.json ");
-
-	unlink("data_split.json");
-	unlink("data_split_ids.json");
+	
 	unlink("data_split_media.json");
 	unlink("data_split_media_ids.json");
+	*/
+	
+	unlink("data_split.json");
+	unlink("data_split_ids.json");
 
 	echo"finished\n";
-	
-	echo"\nNow, upload Fotos and Videos\n";
-	//$personMedia array durchlaufen und dateien aus dateisystem als eigene docs hochladen
-
-
 }
 
 function makeLinkThumbnail($path){
@@ -213,10 +229,155 @@ function getFreigabeEpisode($path){
 
 }
 
+function getuuids(){
+	global $db_name, $db_host;
+
+    // create curl resource 
+    $ch = curl_init(); 
+
+    // set url 
+    curl_setopt($ch, CURLOPT_URL, $db_host."/_uuids?count=500"); 
+
+    //return the transfer as a string 
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+
+    // $output contains the output string 
+    $output = curl_exec($ch); 
+
+    // close curl resource to free up system resources 
+    curl_close($ch); 	
+
+    return json_decode($output,true);
+}
+
+function getBase64($file){
+
+}
+
+function uploadMediaDoc($person){
+
+	global $db_name, $db_host;
+
+	//get500uuids
+	$myuuids = getuuids()["uuids"];
+
+	/*curl -X PUT http://admin:s00fa@localhost:5984/test/docid -d
+	{
+		_id: "55dad1faeacb63600c10ad663ae6d966"
+		ownerslug: "alexander"
+		freischaltepisode: 0
+		image: "/diebruecke/55dad1faeacb63600c10ad663ae6d966/image.png"
+		thumbnail: "/diebruecke/55dad1faeacb63600c10ad663ae6d966/thumbnail.png"
+		type: "image",
+
+	    "_attachments": {
+	        "message.png": {
+	            "data": "iVBORw0KGgoAAAANSUhEUgAAAE8A...QmCC",
+	            "content_type": "image/png"
+	        }
+	    }
+	}
+	*/
+
+    foreach ($person->media as $key => $value) {
+		$media = array();
+		$uuid = array_pop($myuuids);
+
+		$media["_id"] = $uuid;
+		$media["ownerslug"] = $person->slug;
+		$media["_attachments"] = array();
+
+        if ($person->media[$key]->type == "video"){
+                //video image vorhanden,resourceId kein url
+        		$media["type"] = "video";
+                $image = strtolower($person->media[$key]->image);                
+
+
+
+                $image = preg_replace('/img/', 'img2', $image, 1);
+				$im = file_get_contents($image);
+				$imdata = base64_encode($im);  
+                $media["_attachments"]["image.jpg"] = array();
+                $media["_attachments"]["image.jpg"]["content_type"] = "image/jpg";
+                $media["_attachments"]["image.jpg"]["data"] = $imdata;
+
+        		//URL kann externer link sein oder auf das attachment zeigen
+        		$media["image"] = "/$db_name/$uuid/image.jpg";
+
+        		$media["freischaltepisode"] = getFreigabeEpisode($image);
+        		//URL kann externer link sein oder auf das attachment zeigen
+
+
+        		$media["thumbnail"] = "/$db_name/$uuid/thumbnail.jpg";
+				$im = file_get_contents(makeLinkThumbnail($image));
+				$imdata = base64_encode($im);  
+                $media["_attachments"]["thumbnail.jpg"] = array();
+                $media["_attachments"]["thumbnail.jpg"]["content_type"] = "image/jpg";
+                $media["_attachments"]["thumbnail.jpg"]["data"] = $imdata;
+
+        		//URL kann externer link sein oder auf das attachment zeigen
+        		$media["videoURI"] = ""; 
+
+
+                //delete
+                // unset($person->media[$key]->image);
+                unset($person->media[$key]->resourceId);		
+
+        } else if ($person->media[$key]->type == "image")
+        {
+                //image url vorhanden kein resourceId
+        		$media["type"] = "image";
+                $image	   = strtolower($person->media[$key]->url);
+
+                $image = preg_replace('/img/', 'img2', $image, 1);
+				$im = file_get_contents($image);
+				$imdata = base64_encode($im);  
+                $media["_attachments"]["image.jpg"] = array();
+                $media["_attachments"]["image.jpg"]["content_type"] = "image/jpg";
+                $media["_attachments"]["image.jpg"]["data"] = $imdata;
+
+        		//URL kann externer link sein oder auf das attachment zeigen
+        		$media["image"] = "/$db_name/$uuid/image.jpg";
+
+        		$media["freischaltepisode"] = getFreigabeEpisode($image);
+        		//URL kann externer link sein oder auf das attachment zeigen
+
+
+        		$media["thumbnail"] = "/$db_name/$uuid/thumbnail.jpg";
+				$im = file_get_contents(makeLinkThumbnail($image));
+				$imdata = base64_encode($im);  
+                $media["_attachments"]["thumbnail.jpg"] = array();
+                $media["_attachments"]["thumbnail.jpg"]["content_type"] = "image/jpg";
+                $media["_attachments"]["thumbnail.jpg"]["data"] = $imdata;
+
+        		//URL kann externer link sein oder auf das attachment zeigen
+        		$media["videoURI"] = ""; 
+
+                //delete
+                unset($person->media[$key]->url);
+        }
+
+
+		$ch = curl_init($db_host."/".$db_name."/$uuid");
+        //var_dump($media); exit;
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+		curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PUT");
+		$jsondata = json_encode($media);
+		curl_setopt($ch, CURLOPT_POSTFIELDS,$jsondata);
+
+		$response = curl_exec($ch);
+		curl_close($ch); 
+    }
+
+
+
+
+}
+
 function createMediaDoc($person,&$uploadmedia){
-	
 
-
+	//link festigen
+	//host:port /_design/b2/
 
     foreach ($person->media as $key => $value) {
 		$media = array();
@@ -226,8 +387,7 @@ function createMediaDoc($person,&$uploadmedia){
                     //video image vorhanden,resourceId kein url
                     $image	   = strtolower($person->media[$key]->image);
 
-            		$media["type"] = "media";
-            		$media["mediatype"] = "video";
+            		$media["type"] = "video";
             		//URL kann externer link sein oder auf das attachment zeigen
             		$media["image"] = $image;
             		$media["freischaltepisode"] = getFreigabeEpisode($image);
@@ -247,8 +407,7 @@ function createMediaDoc($person,&$uploadmedia){
 
                     $image	   = strtolower($person->media[$key]->url);
 
-            		$media["type"] = "media";
-            		$media["mediatype"] = "image";
+            		$media["type"] = "image";
             		//URL kann externer link sein oder auf das attachment zeigen
             		$media["image"] = $image;
             		$media["freischaltepisode"] = getFreigabeEpisode($image);

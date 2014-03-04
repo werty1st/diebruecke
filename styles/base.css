@@ -11603,7 +11603,7 @@ embed {
 }
 [class*="dr-icon"][class*="-boxed"]:before,
 [class*="dr-icon"][class*="-inverted"]:before {
-  background-color: #720705;
+  background-color: #000;
   color: #ffffff;
 }
 .container-red [class*="dr-icon"][class*="-boxed"]:before,

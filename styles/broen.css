@@ -9,7 +9,7 @@
   line-height: 20px;
 }
 #broen-gallery h2 .dr-link-readmore:before {
-  background-color: #720705;
+  background-color: #000;
   color: #fff;
 }
 #broen-gallery #broen-gallery-home {
@@ -76,7 +76,7 @@
   line-height: 20px;
 }
 #broen-gallery-person-media #broen-gallery-person-media-slider .dr-icon-close:before {
-  background-color: #720705;
+  background-color: #000;
   color: #fff;
 }
 #broen-gallery-person-media #broen-gallery-person-media-slider .section.boxed {
@@ -220,7 +220,7 @@ html.mobile #broen-gallery-person-media #broen-gallery-person-media-slider .dr-w
   right: 0;
 }
 .mobile #broen-gallery-graph ul li .dr-link-readmore:before {
-  background-color: #720705;
+  background-color: #000;
   color: #fff;
 }
 @media only screen and (max-width: 700px) {
@@ -315,7 +315,7 @@ html.mobile #broen-gallery-person-media #broen-gallery-person-media-slider .dr-w
 #broen-gallery-person-info .vote button {
   margin-top: 10px;
   width: 100px;
-  background-color: #720705;
+  background-color: #ff7f12;
 }
 
 #broen-gallery-graph-popover,
@@ -362,7 +362,7 @@ html.mobile #broen-gallery-person-media #broen-gallery-person-media-slider .dr-w
 }
 #broen-gallery-graph-popover .dr-link-readmore:before,
 #broen-gallery-home-popover .dr-link-readmore:before {
-  background-color: #720705;
+  background-color: #000;
   color: #fff;
 }
 #broen-gallery-graph-popover .vote,
@@ -384,5 +384,5 @@ html.mobile #broen-gallery-person-media #broen-gallery-person-media-slider .dr-w
 #broen-gallery-graph-popover .vote button,
 #broen-gallery-home-popover .vote button {
   float: right;
-  background-color: #720705;
+  background-color: #ff7f12;
 }

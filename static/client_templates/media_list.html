@@ -1,9 +1,9 @@
-{{#list doc.media}}
+{{#list usermedia}}
 
 	<div class="zeile">
 		<div class="zelle">
 			<div class="{{mediatype}}" doc-id="{{_id}}">
-				<a href="{{../mediabaseurl}}/{{image}}" ><img src="{{../mediabaseurl}}/{{thumbnail}}"/></a>
+				<a href="{{image}}" ><img src="{{thumbnail}}"/></a>
 			</div>
 		</div>
 		<div class="zelle">
@@ -20,7 +20,7 @@
 				  </select>			
 			</div>
 			<div class="tools">
-				<button type="button" btn-role="delete" class="btn btn-danger">Element löschen</button>
+				<button doc-id="{{_id}}" type="button" btn-role="delete" class="btn btn-danger">Element löschen</button>
 
 			</div>
 		</div>

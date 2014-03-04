@@ -29,3 +29,23 @@ for f in `find`; do mv -v $f `echo $f | tr '[A-Z]' '[a-z]'`; done
 //todo login auf startseite ziehen
 
 
+dateinamen alle kleingeschrieben ohne leerzeichen und sonderzeichen
+Video Spec:
+		breite = 734;
+		höhe = 413;
+		H.264 / AVC;		
+Fotos:
+		breite = 734;
+		höhe = 413;
+		jpg/png
+
+
+Todo:
+foto und video upload
+übersichtseite mit enddatum der einzelnen episoden
+sterbedatum einer person
+
+abstimmungsendpoint
+abstimmungsvisualisierung
+
+fotos und videos auf externen server/2.datenbank

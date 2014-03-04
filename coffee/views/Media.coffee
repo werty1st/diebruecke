@@ -54,7 +54,8 @@ class MediaView
                 window.fireEvent 'dr-dom-inserted', [$$('span.image-wrap')]
                 window.fireEvent 'dr-dom-inserted', [$$('div.dr-widget-video-player')]
         else
-            document.getElementById("myvideo").className = ""
+            if document.getElementById("myvideo")
+                document.getElementById("myvideo").className = ""
             @swipe.slide index
 
         @hasBeenOpened = true
@@ -65,7 +66,8 @@ class MediaView
 
         if player
             player.stop()
-            document.getElementById("myvideo").className = "hide"
+            if document.getElementById("myvideo")
+                document.getElementById("myvideo").className = "hide"
 
     html: ->
         html = '<div>'
@@ -111,7 +113,7 @@ class MediaView
                                         <div class="icon-film play-overlay" >
                                         </div>
                                         <div class="play-base" >
-                                            <img src="#{media.image}" id="video#{i1}" class="video" onclick="playvideo(this);return false;" alt="" width="0" height="0" role="presentation" aria-hidden="true" video-url="#{media.video}" /> 
+                                            <img src="#{media.image}" id="video#{i1}" class="video" onclick="playvideo(this);return false;" alt="" width="0" height="0" role="presentation" aria-hidden="true" video-url="#{media.videoURI}" /> 
                                         </div>
                                 </span>
                             </div>
