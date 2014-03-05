@@ -155,12 +155,14 @@ function td() {
 
 	$data = file_get_contents("data.json");
 	$jsdata = json_decode($data, false);
+	$jsdata2 = json_decode($data, false);
 
 	$personJson = array();
 	$personMedia = array();
 
 	foreach ($jsdata as $key => $person) {
 		echo "Name: ".$key."\n";
+		unset($person->media);
 		toLower($person);
         //uploadMediaDoc($person);
 		array_push($personJson, $person);
@@ -182,6 +184,13 @@ function td() {
 	system($cmd);
 	system("kanso upload data_split_ids.json ");
 
+
+
+	foreach ($jsdata2 as $key => $person) {
+		echo "Media für Name: ".$key."\n";
+		toLower($person);
+        uploadMediaDoc($person);
+	}
 
 	/*$cmd = "kanso transform add-ids ".
 	  '--src="function (doc) { if (doc.type==\"media\"); return doc; }" '.

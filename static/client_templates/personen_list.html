@@ -1,0 +1,26 @@
+{{#key_value personen}}  
+	  	<tr>
+	  		<td colspan="6">
+	  			<h2>{{value.name}}</h2>
+	  		</td>
+	  	</tr>
+	  	<tr>
+	  		<td>
+	  			<div class="body">sichtbar: ja/nein</div>
+	  		</td>
+	  		<td>
+	  			<div class="body">Freischaltdatum: XX.XX.XX</div>
+	  		</td>
+	  		<td>
+	  			<div class="body">Stimmen: {{value.stimmen}}</div>
+	  		</td>
+	  		<td>
+	  			<div class="editable" style="display:none">
+	  				<a href="/diebruecke/_design/b2/_show/detail_view_edit/{{value.slug}}">Edit</a>
+	  			</div>
+	  			<div>
+	  				<a href="/diebruecke/_design/b2/_show/detail_view/{{value.slug}}">Show</a>
+	  			</div>
+	  		</td>
+	  	</tr>		  
+{{/key_value}}

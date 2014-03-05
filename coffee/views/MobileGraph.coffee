@@ -31,6 +31,6 @@ class MobileGraph
             #{DR.BroenGallery.getFaceImg(faceImg, 50)}
             <a href="##{relation.slug}" class="name">#{relation.name}</a>
             <p>#{relation.text}</p>
-            <a href="##{relation.slug}" title="Se mere om #{relation.name}" class="dr-icon-link-small dr-link-readmore">Se mere</a>
+            <a href="##{relation.slug}" title="Mehr über #{relation.name}" class="dr-icon-link-small dr-link-readmore">Mehr</a>
         </li>
         """

@@ -42,13 +42,13 @@ class PopoverView
         html = """
                <h3><a href="#" class="dr-link-readmore dr-icon-close"></a><a href="##{person.slug}">#{person.name}</a></h3>
                <p>#{person.text}</p>
-               <a class="dr-icon-link-small dr-link-readmore" href="##{person.slug}">Se mere</a>
+               <a class="dr-icon-link-small dr-link-readmore" href="##{person.slug}">Mehr</a>
                """
 
         if DR.BroenGallery.config.votingEnabled
             html += """   
                     <div class="vote">
-                        <p>Er #{person.name}<br /> involveret?</p>
+                        <p>Ist #{person.name}<br /> beteiligt?</p>
                         <button class="vote-btn">ja!</button>
                     </div>
                     """

@@ -71,7 +71,7 @@ DR.BroenGallery.App = (function() {
   };
 
   App.prototype.html = function() {
-    return "<div id=\"broen-gallery\" class=\"section boxed container-green-light\">\n    <h2><a href=\"#home\">Verdächtige</a><a id=\"broen-home-link\" class=\"dr-icon-link-small dr-link-readmore hide\" href=\"#home\">Se alle</a></h2>\n\n    <div id=\"broen-gallery-home\" class=\"hide\">\n        <p class=\"intro-text\">Hier sind die wichtigsten Personen in die Brücke II und ihre Beziehungen zueinander.</p>\n        <div id=\"broen-gallery-home-persons\"></div>\n        <div id=\"broen-gallery-home-popover\" class=\"hide container-green\"></div>\n    </div>\n    \n    <div id=\"broen-gallery-person\">\n        <div id=\"broen-gallery-person-info\"></div>\n        <div id=\"broen-gallery-graph\">\n            <div id=\"broen-gallery-graph-popover\" class=\"hide container-green\"></div>\n        </div>\n    </div>\n</div>";
+    return "<div id=\"broen-gallery\" class=\"section boxed container-green-light\">\n    <h2><a href=\"#home\">Verdächtige</a><a id=\"broen-home-link\" class=\"dr-icon-link-small dr-link-readmore hide\" href=\"#home\">Zur Übersicht</a></h2>\n\n    <div id=\"broen-gallery-home\" class=\"hide\">\n        <p class=\"intro-text\">Hier sind die wichtigsten Personen in die Brücke II und ihre Beziehungen zueinander.</p>\n        <div id=\"broen-gallery-home-persons\"></div>\n        <div id=\"broen-gallery-home-popover\" class=\"hide container-green\"></div>\n    </div>\n    \n    <div id=\"broen-gallery-person\">\n        <div id=\"broen-gallery-person-info\"></div>\n        <div id=\"broen-gallery-graph\">\n            <div id=\"broen-gallery-graph-popover\" class=\"hide container-green\"></div>\n        </div>\n    </div>\n</div>";
   };
 
   return App;
@@ -613,7 +613,7 @@ MobileGraph = (function() {
   MobileGraph.prototype.relationHtml = function(relation) {
     var faceImg;
     faceImg = this.app.data[relation.slug].image;
-    return "<li>\n    " + (DR.BroenGallery.getFaceImg(faceImg, 50)) + "\n    <a href=\"#" + relation.slug + "\" class=\"name\">" + relation.name + "</a>\n    <p>" + relation.text + "</p>\n    <a href=\"#" + relation.slug + "\" title=\"Se mere om " + relation.name + "\" class=\"dr-icon-link-small dr-link-readmore\">Se mere</a>\n</li>";
+    return "<li>\n    " + (DR.BroenGallery.getFaceImg(faceImg, 50)) + "\n    <a href=\"#" + relation.slug + "\" class=\"name\">" + relation.name + "</a>\n    <p>" + relation.text + "</p>\n    <a href=\"#" + relation.slug + "\" title=\"Mehr über " + relation.name + "\" class=\"dr-icon-link-small dr-link-readmore\">Mehr</a>\n</li>";
   };
 
   return MobileGraph;
@@ -695,7 +695,7 @@ PersonInfoView = (function() {
     var html;
     html = "<div id=\"broen-gallery-person-info-inner\">\n    " + (DR.BroenGallery.getFaceImg(person.image, 50)) + "\n    <h2>" + person.name + "</h2>\n    <p id=\"broen-gallery-person-text\" data-maxlines=\"5\" data-readmore=\"true\" >" + person.longText + "</p>";
     if (DR.BroenGallery.config.votingEnabled) {
-      html += "<div class=\"vote\">Tror du " + person.name + " er involveret i forbrydelserne?<br /><button class=\"vote-btn\">ja!</button></div>";
+      html += "<div class=\"vote\">Glauben Sie, dass " + person.name + " in ein Verbrechen verwickelt ist?<br /><button class=\"vote-btn\">ja!</button></div>";
     }
     return html + "</div>";
   };
@@ -764,9 +764,9 @@ PopoverView = (function() {
 
   PopoverView.prototype.html = function(person) {
     var html;
-    html = "<h3><a href=\"#\" class=\"dr-link-readmore dr-icon-close\"></a><a href=\"#" + person.slug + "\">" + person.name + "</a></h3>\n<p>" + person.text + "</p>\n<a class=\"dr-icon-link-small dr-link-readmore\" href=\"#" + person.slug + "\">Se mere</a>";
+    html = "<h3><a href=\"#\" class=\"dr-link-readmore dr-icon-close\"></a><a href=\"#" + person.slug + "\">" + person.name + "</a></h3>\n<p>" + person.text + "</p>\n<a class=\"dr-icon-link-small dr-link-readmore\" href=\"#" + person.slug + "\">Mehr</a>";
     if (DR.BroenGallery.config.votingEnabled) {
-      html += "   \n<div class=\"vote\">\n    <p>Er " + person.name + "<br /> involveret?</p>\n    <button class=\"vote-btn\">ja!</button>\n</div>";
+      html += "   \n<div class=\"vote\">\n    <p>Ist " + person.name + "<br /> beteiligt?</p>\n    <button class=\"vote-btn\">ja!</button>\n</div>";
     }
     return html;
   };

@@ -41,11 +41,16 @@ Fotos:
 
 
 Todo:
-foto und video upload
-übersichtseite mit enddatum der einzelnen episoden
-sterbedatum einer person
+veröffentlichungsdatum einer person beachten
+sterbedatum einer person beachten
+
+reihenfolge korrigieren
+schriftart arial
 
 abstimmungsendpoint
 abstimmungsvisualisierung
 
 fotos und videos auf externen server/2.datenbank
+übersichtseite mit enddatum der einzelnen episoden
+foto und video upload
+videos kennzeichnen

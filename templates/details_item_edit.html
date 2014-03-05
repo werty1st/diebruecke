@@ -38,14 +38,14 @@
 			<textarea id="longText" cols="50">{{doc.longText}}</textarea>
 		</td>
 	</tr>	
-	<tr>
+<!-- 	<tr>
 		<td>
 			<label for="checkbox_id">sichtbar</label>
 		</td>
 		<td>
 			<input type="Checkbox" disabled="disabled" name="sichtbar" id="checkbox_id" value="visibilty" checked="checked">
 		</td>
-	</tr>
+	</tr> -->
 	<tr>
 		<td>
 			<label for="freischaltepisode">freischalten:</label>
@@ -53,6 +53,23 @@
 		<td>
 			<select id="freischaltepisode" class="selectpicker1" data-style="btn-primary">
 				{{#select doc.freischaltepisode}}
+			    <option value="0">von Anfang an</option>
+			    <option value="1">nach Episode 1</option>
+			    <option value="2">nach Episode 2</option>
+			    <option value="3">nach Episode 3</option>
+			    <option value="4">nach Episode 4</option>
+			    <option value="5">nach Episode 5</option>
+				{{/select}}   
+			  </select>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<label for="entfernennachepisode">durchstreichen:</label>
+		</td>
+		<td>
+			<select id="entfernennachepisode" class="selectpicker2" data-style="btn-primary">
+				{{#select doc.entfernennachepisode}}
 			    <option value="0">von Anfang an</option>
 			    <option value="1">nach Episode 1</option>
 			    <option value="2">nach Episode 2</option>
@@ -75,19 +92,20 @@
 
 <table>
 
-<div>
-<button class="btn btn-primary ladda-button" data-style="zoom-in" id="save_doc"><span class="ladda-label">speichern</span></button>
+<div id="save_doc_div">
+<button class="btn btn-primary ladda-button pull-right" data-style="zoom-in" id="save_doc"><span class="ladda-label">speichern</span></button>
 </div>
 
+<!--
 <div id="relations">
 Beziehungen
 {{#list doc.relations}}	
 	{{name}}
-	<!-- slug auf freischaltwoche prüfen und anzeigen
-	text übersetzt per ajax laden -->
+	slug auf freischaltwoche prüfen und anzeigen
+	text übersetzt per ajax laden
 {{/list}}
 </div>
-
+-->
 
 <div id="media">
 	<ul id="imagelist">
@@ -392,6 +410,7 @@ Beziehungen
 		user.text = $("#text").val();
 		user.longText = $("#longText").val();
 		user.freischaltepisode = $("#freischaltepisode").val();
+		user.entfernennachepisode = $("#entfernennachepisode").val();
 		// user.freischaltzeit = $("#freischaltzeit").val();
 		user.stimmen = $("#stimmen").val();
 
@@ -582,7 +601,9 @@ Beziehungen
 			console.log($("#freischaltzeit").val());
 		}
 	});	
-	
+
+	$('.selectpicker1').selectpicker();
+	$('.selectpicker2').selectpicker();	
 
 	//"/diebruecke/_design/b2/templates/media_list.js
 	function getMediaList() {
@@ -598,7 +619,7 @@ Beziehungen
 			var html    = template(context);
 			$("#imagelist").append(html);
 
-			$('.selectpicker1').selectpicker();
+
 			$('.selectpicker').selectpicker();
 			$("select.selectpicker").on("change", function(event){
 				saveMediaData(event);

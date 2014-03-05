@@ -2,8 +2,12 @@
 
 	<div class="zeile">
 		<div class="zelle">
-			<div class="{{mediatype}}" doc-id="{{_id}}">
+			<div class="{{type}}" doc-id="{{_id}}">
+				{{#if videoURI}}
+				<a href="{{videoURI}}" ><img src="{{thumbnail}}"/></a>
+				{{else}}
 				<a href="{{image}}" ><img src="{{thumbnail}}"/></a>
+				{{/if}}
 			</div>
 		</div>
 		<div class="zelle">
