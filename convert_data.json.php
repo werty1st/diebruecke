@@ -15,9 +15,17 @@ switch ($options["f"]) {
 		echo "execute funtion transform_data()\n";
 		td();
 		break;
+	case 'tdm':
+		echo "execute funtion transform_data()\n";
+		td(true);
+		break;
 	case 'gc':
 		echo "execute funtion garbabe_collector()\n";
 		gc();
+		break;	
+	case 'gcm':
+		echo "execute funtion garbabe_collector()\n";
+		gc(true);
 		break;	
 	default:
 		echo "Exit\n";
@@ -26,7 +34,7 @@ switch ($options["f"]) {
 
 exit;
 
-function gc(){
+function gc($m){
 	//curl -X GET http://localhost:5984/diebruecke/_design/b2/_view/allslugs	
 
 	// create curl resource 
@@ -42,16 +50,8 @@ function gc(){
 	$output = curl_exec($ch); 
 	$jsdata = json_decode($output, false);
 
-
-
-
-
-	$docs = delete_garbage($jsdata);
+	$docs = delete_garbage($jsdata,$m);
 	//var_dump($jsdata->rows);
-
-
-
-
 
 	$docsout = new stdClass();
 	$docsout->docs = $docs;
@@ -77,10 +77,9 @@ function gc(){
 }
 
 
-function delete_garbage($jsdata){
+function delete_garbage($jsdata,$m){
 
 	$docs = array();
-
 
 	foreach ($jsdata->rows as $i => $obj) {
 		$obj1 = $obj->doc;
@@ -96,14 +95,16 @@ function delete_garbage($jsdata){
 			continue;
 		}
 
+		if($m){		
 		//video or images
-		if (property_exists($obj1,"type")){
-			if(($obj1->type == "video") || ($obj1->type == "image") || ($obj1->type == "media")){
-				echo $obj1->type == "foto OR video"."\n";
-				$obj1->_deleted = true;
-				// $docs[$obj1->slug} = $obj1;
-				array_push($docs, $obj1);
-				continue;
+			if (property_exists($obj1,"type")){
+				if(($obj1->type == "video") || ($obj1->type == "image") || ($obj1->type == "media")){
+					echo $obj1->type == "foto OR video"."\n";
+					$obj1->_deleted = true;
+					// $docs[$obj1->slug} = $obj1;
+					array_push($docs, $obj1);
+					continue;
+				}
 			}
 		}
 
@@ -126,8 +127,8 @@ function delete_garbage($jsdata){
 			continue;
 		}
 
-		if (!property_exists($obj1,"type")) echo "kein type";
-		if (strpos($obj1->{"_id"},"_design")==0) echo "ist design";
+		//if (!property_exists($obj1,"type")) echo "kein type";
+		//if (strpos($obj1->{"_id"},"_design")==0) echo "ist design";
 /*		echo "doc without type\n";
 		if ((!property_exists($obj1,"type"))){
 			echo "deleting orphaned doc\n";
@@ -151,7 +152,7 @@ function delete_garbage($jsdata){
 
 
 
-function td() {
+function td($m) {
 
 	$data = file_get_contents("data.json");
 	$jsdata = json_decode($data, false);
@@ -164,6 +165,7 @@ function td() {
 		echo "Name: ".$key."\n";
 		unset($person->media);
 		toLower($person);
+		remove_ude($person);
         //uploadMediaDoc($person);
 		array_push($personJson, $person);
 	}
@@ -185,11 +187,12 @@ function td() {
 	system("kanso upload data_split_ids.json ");
 
 
-
-	foreach ($jsdata2 as $key => $person) {
-		echo "Media für Name: ".$key."\n";
-		toLower($person);
-        uploadMediaDoc($person);
+	if($m){			
+		foreach ($jsdata2 as $key => $person) {
+			echo "Media für Name: ".$key."\n";
+			toLower($person);
+	        uploadMediaDoc($person);
+		}
 	}
 
 	/*$cmd = "kanso transform add-ids ".
@@ -325,7 +328,7 @@ function uploadMediaDoc($person){
                 $media["_attachments"]["thumbnail.jpg"]["data"] = $imdata;
 
         		//URL kann externer link sein oder auf das attachment zeigen
-        		$media["videoURI"] = ""; 
+        		$media["videouri"] = ""; 
 
 
                 //delete
@@ -360,7 +363,7 @@ function uploadMediaDoc($person){
                 $media["_attachments"]["thumbnail.jpg"]["data"] = $imdata;
 
         		//URL kann externer link sein oder auf das attachment zeigen
-        		$media["videoURI"] = ""; 
+        		$media["videouri"] = ""; 
 
                 //delete
                 unset($person->media[$key]->url);
@@ -403,7 +406,7 @@ function createMediaDoc($person,&$uploadmedia){
             		//URL kann externer link sein oder auf das attachment zeigen
             		$media["thumbnail"] = makeLinkThumbnail($image);
             		//URL kann externer link sein oder auf das attachment zeigen
-            		$media["videoURI"] = ""; 
+            		$media["videouri"] = ""; 
 
 
                     //delete
@@ -423,7 +426,7 @@ function createMediaDoc($person,&$uploadmedia){
             		//URL kann externer link sein oder auf das attachment zeigen
             		$media["thumbnail"] = makeLinkThumbnail($image);
             		//URL kann externer link sein oder auf das attachment zeigen
-            		$media["videoURI"] = ""; 
+            		$media["videouri"] = ""; 
 
                     //delete
                     unset($person->media[$key]->url);
@@ -434,11 +437,15 @@ function createMediaDoc($person,&$uploadmedia){
 	// var_dump($uploadmedia); exit;
 }
 
+function remove_ude($person){
+
+	//$person->image = str_replace("_ude","",$person->image);
+	$person->image = preg_replace('/_ude/',"", $person->image);
+
+}
 
 function toLower($person){
 
-	$person->image = strtolower($person->image);
-        
-
+	$person->image = strtolower($person->image);     
 
 }

@@ -574,7 +574,7 @@ MediaView = (function() {
       if (media.type === 'image') {
         html += "<div class=\"carousel-item\">\n    <div class=\"item\" >\n        <span role=\"presentation\" aria-hidden=\"true\" class=\"image-wrap ratio-16-9\">\n            <img src=\"" + media.image + "\" alt=\"\" width=\"0\" height=\"0\" role=\"presentation\" aria-hidden=\"true\" />                                    \n        </span>\n    </div>\n</div>";
       } else if (media.type === 'video') {
-        html += "<div class=\"carousel-item\">\n    <div class=\"item\" >\n        <span role=\"presentation\" aria-hidden=\"true\" class=\"image-wrap ratio-16-9\">\n                <div class=\"icon-film play-overlay\" >\n                </div>\n                <div class=\"play-base\" >\n                    <img src=\"" + media.image + "\" id=\"video" + i1 + "\" class=\"video\" onclick=\"playvideo(this);return false;\" alt=\"\" width=\"0\" height=\"0\" role=\"presentation\" aria-hidden=\"true\" video-url=\"" + media.videoURI + "\" /> \n                </div>\n        </span>\n    </div>\n</div>";
+        html += "<div class=\"carousel-item\">\n    <div class=\"item\" >\n        <span role=\"presentation\" aria-hidden=\"true\" class=\"image-wrap ratio-16-9\">\n                <div class=\"icon-film play-overlay\" >\n                </div>\n                <div class=\"play-base\" >\n                    <img src=\"" + media.image + "\" id=\"video" + i1 + "\" class=\"video\" onclick=\"playvideo(this);return false;\" alt=\"\" width=\"0\" height=\"0\" role=\"presentation\" aria-hidden=\"true\" video-url=\"" + media.videouri + "\" /> \n                </div>\n        </span>\n    </div>\n</div>";
       }
     }
     return html + "</div></div>";

@@ -70,7 +70,7 @@
 		<td>
 			<select id="entfernennachepisode" class="selectpicker2" data-style="btn-primary">
 				{{#select doc.entfernennachepisode}}
-			    <option value="0">von Anfang an</option>
+			    <option value="0">nie</option>
 			    <option value="1">nach Episode 1</option>
 			    <option value="2">nach Episode 2</option>
 			    <option value="3">nach Episode 3</option>
@@ -431,7 +431,7 @@ Beziehungen
 "image": "img/foto_b/alexander/alexander_afs3_1.jpg",
 "freischaltepisode": "2",
 "thumbnail": "img/foto_b/alexander/s79_alexander_afs3_1.jpg",
-"videoURI": ""
+"videouri": ""
 }
 */
 
@@ -459,7 +459,7 @@ Beziehungen
 			video.freischaltepisode = "0";
 			video.thumbnail = baseurl + "/"+myuuid+"/thumbnail.png";
 			video.image = baseurl + "/"+myuuid+"/image.png";
-			video.videoURI = baseurl + "/"+myuuid+"/video.mp4";
+			video.videouri = baseurl + "/"+myuuid+"/video.mp4";
 
 			video._attachments = {
 				"thumbnail.png" : {

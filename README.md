@@ -46,6 +46,7 @@ sterbedatum einer person beachten
 
 reihenfolge korrigieren
 schriftart arial
+player tooltips
 
 abstimmungsendpoint
 abstimmungsvisualisierung
