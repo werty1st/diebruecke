@@ -44,14 +44,57 @@ Todo:
 veröffentlichungsdatum einer person beachten
 sterbedatum einer person beachten
 
+DR.BroenGallery.config = {
+    jsonDataUrl: als array(0-5) je episode ein link alternativ eine url mit automatisch vom server erzeugten ein und ausblendedaten
+
+
+
 reihenfolge korrigieren
 schriftart arial
 player tooltips
 
-abstimmungsendpoint
+abstimmungsendpoint (personen die tot sind blocken)
 abstimmungsvisualisierung
 
 fotos und videos auf externen server/2.datenbank
 übersichtseite mit enddatum der einzelnen episoden
 foto und video upload
 videos kennzeichnen
+
+
+
+
+
+Data.json 00-10
+
+data0-10 einlesen, zu jeder person einen datensatz anlegen
+person.text = array wenn text unterschiedlich echo"xxx"
+person.longtext = array wenn text unterschiedlich echo"xxx"
+image immer gleich uder per css classe
+wenn person zum erstenmal erkannt wird dateiname=freischaltzeit
+wenn person:_sterbezeit=wenn person.image enthält "_ude.jpg" zum ersten mal
+
+relationen = array mit slug, name ,text, freischaltzeit
+
+ "saga": {
+
+    "name": "Saga Noren",
+    "slug": "saga",
+    "text" : array 0-5
+    "longText": array 0-5
+    "image": "saga.jpg",
+    freischalt:
+    ude
+
+    "relations": [
+      {
+        "slug": "martin",
+        "name": "Martin",
+        "text": "Sagas politimakker i Danmark."
+        freischalt
+      },
+     
+    ],
+
+    "media": [
+      {

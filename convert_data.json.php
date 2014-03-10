@@ -13,7 +13,7 @@ $options = getopt("f:");
 switch ($options["f"]) {
 	case 'td':
 		echo "execute funtion transform_data()\n";
-		td();
+		td(false);
 		break;
 	case 'tdm':
 		echo "execute funtion transform_data()\n";
@@ -21,7 +21,7 @@ switch ($options["f"]) {
 		break;
 	case 'gc':
 		echo "execute funtion garbabe_collector()\n";
-		gc();
+		gc(false);
 		break;	
 	case 'gcm':
 		echo "execute funtion garbabe_collector()\n";
@@ -129,7 +129,8 @@ function delete_garbage($jsdata,$m){
 
 		//if (!property_exists($obj1,"type")) echo "kein type";
 		//if (strpos($obj1->{"_id"},"_design")==0) echo "ist design";
-/*		echo "doc without type\n";
+		/*
+		echo "doc without type\n";
 		if ((!property_exists($obj1,"type"))){
 			echo "deleting orphaned doc\n";
 			$obj1->_deleted = true;		
@@ -154,21 +155,101 @@ function delete_garbage($jsdata,$m){
 
 function td($m) {
 
-	$data = file_get_contents("data.json");
-	$jsdata = json_decode($data, false);
+	$personJson = array();
+	$personJson2 = array();
+	$personMedia = array();
+	
+	//read data dir
+	$directory = 'jsonfiler';
+	$scanned_directory = array_diff(scandir($directory), array('..', '.'));
+
+	foreach ($scanned_directory as $key => $filename) {
+		echo "Datei: $filename ";
+		$data = file_get_contents($directory."/".$filename);
+		$jsdata = json_decode($data, false);
+		echo "to json\n";
+
+		//get freischaltepisode
+		$freischaltepisode = $f = getFreigabeEpisode($filename);
+
+		foreach ($jsdata as $key => $person) {
+			echo "\tverarbeite Name: ".$person->slug."\n";
+
+			unset($person->media);		//videos und fotos entfernen
+			toLower($person);			//string to lowercase
+			$udeabepisode = remove_ude($person)?$f:-1;		//replace ude with original image string
+	        //uploadMediaDoc($person);
+
+
+			//relations enddatum hinzufügen
+			foreach ($person->relations as $key => $value) {
+				unset($person->relations[$key]->text);
+				unset($person->relations[$key]->name);
+				$person->relations[$key]->freischaltepisode = $f;
+			}
+
+
+	        //freischaltzeit erkennen
+	        if (!array_key_exists($person->slug,$personJson2)){
+	        	//person neu
+	        	echo "\terstes auftreten von $person->slug in episode: $freischaltepisode\n";
+	        	$person->freischaltepisode = $freischaltepisode;
+	        	$personJson2[$person->slug] = $person;
+	        } else {
+	        	if ($f==3 && $person->slug == "beate"){
+	        		echo "knusper";
+	        	}
+	        	modifyrelations($personJson2[$person->slug]->relations,$person->relations);
+	        }
+
+	        // if ($f==4){
+	        // 	var_dump($personJson2["saga"]); exit;
+	        // 	// var_dump($personJson2["saga"]->relations); exit;
+	        // }
+
+	        //if ($person->slug == "niklas"){
+				//sterbezeit erkennen
+				if (!array_key_exists("durchstreichen",$personJson2[$person->slug]) && ($udeabepisode>0)){
+					$personJson2[$person->slug]->durchstreichen = $udeabepisode;
+					echo "\t$person->slug ist in folge $f gestorben.\n";
+				}
+	        	
+	        //}
+			
+
+
+
+			
+	        // if ($personJson2[$key]->longText !== $person->longText)
+	        // {
+	        // 	echo "longText unterschiedlich bei $person->slug in folge $f\n";
+	        // 	echo $personJson2[$key]->longText."\n";
+	        // 	echo $person->longText."\n\n";
+	        // }
+
+	        // if ($personJson2[$key]->longText !== $person->longText)
+	        // {
+	        // 	echo "longText unterschiedlich bei $person->slug in folge $f\n";
+	        // 	echo $personJson2[$key]->longText."\n";
+	        // 	echo $person->longText."\n\n";
+	        // }	
+		}
+
+		
+
+	}
+
+	foreach ($personJson2 as $key => $value) {
+		# code...
+		array_push($personJson, $value);
+	}
+
+
+	
 	$jsdata2 = json_decode($data, false);
 
-	$personJson = array();
-	$personMedia = array();
 
-	foreach ($jsdata as $key => $person) {
-		echo "Name: ".$key."\n";
-		unset($person->media);
-		toLower($person);
-		remove_ude($person);
-        //uploadMediaDoc($person);
-		array_push($personJson, $person);
-	}
+
 	
 
 	//$personJson = array_merge($personJson, $personMedia);
@@ -186,6 +267,7 @@ function td($m) {
 	system($cmd);
 	system("kanso upload data_split_ids.json ");
 
+	
 
 	if($m){			
 		foreach ($jsdata2 as $key => $person) {
@@ -210,6 +292,27 @@ function td($m) {
 	unlink("data_split_ids.json");
 
 	echo"finished\n";
+}
+
+
+function modifyrelations(&$altpersonrelations, $neupersonrelations){
+
+
+	foreach ($neupersonrelations as $key => $new) {
+		$skip = false;
+		foreach ($altpersonrelations as $key => $old) {
+			if ($old->slug == $new->slug){
+				$skip = true;
+				break;
+			} 
+		}
+		if ($skip){
+			continue;
+		} else
+		{
+			array_push($altpersonrelations, $new);
+		}
+	}
 }
 
 function makeLinkThumbnail($path){
@@ -238,6 +341,17 @@ function getFreigabeEpisode($path){
 	if (strpos($path, "afs9")) return "5";
 	if (strpos($path, "afs10")) return "5";
 
+	if (strpos($path, "data_00")!== false) return "0";
+	if (strpos($path, "data_01")!== false) return "1";
+	if (strpos($path, "data_02")!== false) return "1";
+	if (strpos($path, "data_03")!== false) return "2";
+	if (strpos($path, "data_04")!== false) return "2";
+	if (strpos($path, "data_05")!== false) return "3";
+	if (strpos($path, "data_06")!== false) return "3";
+	if (strpos($path, "data_07")!== false) return "4";
+	if (strpos($path, "data_08")!== false) return "4";
+	if (strpos($path, "data_09")!== false) return "5";
+	if (strpos($path, "data_10")!== false) return "5";
 
 }
 
@@ -305,8 +419,9 @@ function uploadMediaDoc($person){
                 $image = strtolower($person->media[$key]->image);                
 
 
-
-                $image = preg_replace('/img/', 'img2', $image, 1);
+                $v = preg_quote('/tjenester/broen2',"/");
+                $image = preg_replace("/$v/", 'img2', $image, 1);
+                //$image = preg_replace('/img/', 'img2', $image, 1);
 				$im = file_get_contents($image);
 				$imdata = base64_encode($im);  
                 $media["_attachments"]["image.jpg"] = array();
@@ -341,7 +456,9 @@ function uploadMediaDoc($person){
         		$media["type"] = "image";
                 $image	   = strtolower($person->media[$key]->url);
 
-                $image = preg_replace('/img/', 'img2', $image, 1);
+                $v = preg_quote('/tjenester/broen2',"/");
+                $image = preg_replace("/$v/", 'img2', $image, 1);
+                //$image = preg_replace('/img/', 'img2', $image, 1);
 				$im = file_get_contents($image);
 				$imdata = base64_encode($im);  
                 $media["_attachments"]["image.jpg"] = array();
@@ -439,9 +556,13 @@ function createMediaDoc($person,&$uploadmedia){
 
 function remove_ude($person){
 
+	$ude = (strpos($person->image, "_ude") !== false);
+
 	//$person->image = str_replace("_ude","",$person->image);
 	$person->image = preg_replace('/_ude/',"", $person->image);
 
+	//wenn ude gefunden dann return true
+	return $ude;
 }
 
 function toLower($person){
