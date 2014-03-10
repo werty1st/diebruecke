@@ -20,6 +20,10 @@ class DR.BroenGallery.VoteMachine
             return true
 
     vote: (slug) ->
+        if (@app.data[slug].ude)
+            alert 'Für diese Person kann nicht mehr abgestimmt werden.'
+            return
+            
         if @hasVotedThisWeek
             alert 'Sie haben in dieser Woche bereits einmal abgestimmt.'
         else

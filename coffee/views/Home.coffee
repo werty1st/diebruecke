@@ -33,7 +33,14 @@ class HomeView
 
     render: ->
         for slug, person of @app.data
-            @personsEl.innerHTML += this.personHTML slug, person
+            if person.freischaltepisode <= @app.episode
+                if person.durchstreichen <= @app.episode
+                    person.ude = true
+                    @app.data[slug].ude = true
+                else
+                    @app.data[slug].ude = false
+
+                @personsEl.innerHTML += this.personHTML slug, person
 
         @hasBeenShow = true
 
@@ -46,8 +53,9 @@ class HomeView
         @popover.hide()
 
     personHTML: (slug, person) ->
+        ude = (if person.ude then "ude" else "")        
         """
-        <a href="##{slug}" data-person-slug="#{slug}" class="person">
+        <a href="##{slug}" data-person-slug="#{slug}" class="person #{ude}">
             #{DR.BroenGallery.getFaceImg(person.image)}
         </a>
         """

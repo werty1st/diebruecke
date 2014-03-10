@@ -29,6 +29,11 @@ http://www.dr.dk/assets/fonts/dricons/dr-icons-webfont.ttf
 http://www.dr.dk/assets/fonts/dricons/dr-icons-webfont.svg
 */
 
+.ude {
+    filter: url(filters.svg#grayscale); /* Firefox 3.5+ */
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+}
 
 @font-face {
   font-family: "gibsonLight";
@@ -36,7 +41,7 @@ http://www.dr.dk/assets/fonts/dricons/dr-icons-webfont.svg
   src: url("fonts/gibson-light-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/gibson-light-webfont.woff") format("woff"), url("fonts/gibson-light-webfont.ttf") format("truetype"), url("fonts/gibson-light-webfont.svg") format("svg");
   font-weight: normal;
 }
-@font-face {
+@font-face { 
   font-family: "gibsonRegular";
   src: url("fonts/gibson-regular-webfont.eot");
   src: url("fonts/gibson-regular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/gibson-regular-webfont.woff") format("woff"), url("fonts/gibson-regular-webfont.ttf") format("truetype"), url("fonts/gibson-regular-webfont.svg") format("svg");
@@ -85,7 +90,7 @@ section {
   display: block;
 }
 body {
-  font-family: "Georgia", serif;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   line-height: 1.2;
 }
 h1,
@@ -1771,7 +1776,8 @@ body > .ie > #globalnavigation {
 }
 .item .subheadline {
   display: block;
-  font-family: 'GibsonRegular';
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  /*font-family: 'GibsonRegular';*/
   font-size: 14px;
   text-transform: uppercase;
 }
@@ -1800,7 +1806,8 @@ body > .ie > #globalnavigation {
 .item aside {
   margin-top: 10px;
   line-height: 18px;
-  font-family: "gibsonSemiBold", "Arial Black", sans-serif;
+  font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
+  /*font-family: "gibsonSemiBold", "Arial Black", sans-serif;*/
 }
 .item aside span {
   color: grey;
@@ -1936,7 +1943,8 @@ body > .ie > #globalnavigation {
   }
 }
 .site-wrapper .site-content .must-hear .item span + p {
-  font-family: "gibsonRegular", "Arial", sans-serif;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  /*font-family: "gibsonRegular", "Arial", sans-serif;*/
 }
 .site-wrapper .site-content .must-hear .item [class*="heading-"] {
   color: #000;
@@ -1947,7 +1955,8 @@ h1 {
 .site-id > h1 {
   line-height: 85px;
   margin: 0 10px;
-  font-family: "gibsonBold", "Arial Black", sans-serif;
+  font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
+  /*font-family: "gibsonBold", "Arial Black", sans-serif;*/
   text-transform: uppercase;
 }
 .combine-layout > h2 {
@@ -1965,14 +1974,16 @@ h1 {
   box-sizing: border-box;
 }
 .combine-layout > h2 span {
-  font-family: "gibsonRegular", "Arial", sans-serif;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  /*font-family: "gibsonRegular", "Arial", sans-serif;*/
 }
 .combine-layout .readmore {
   text-transform: uppercase;
   color: #666;
   text-align: right;
   display: block;
-  font-family: "gibsonRegular", "Arial", sans-serif;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  /*font-family: "gibsonRegular", "Arial", sans-serif;*/
 }
 .mixin-section-header-large {
   border-top-width: 6px;
@@ -1992,7 +2003,8 @@ h1 {
   font: inherit;
 }
 .mixin-section-header-large span {
-  font-family: "gibsonRegular", "Arial", sans-serif;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  /*font-family: "gibsonRegular", "Arial", sans-serif;*/
 }
 .mixin-section-header-large > [class*="dr-icon-"]:before {
   float: left;
@@ -2014,7 +2026,7 @@ h1 {
   text-transform: inherit;
   font: inherit;
 }
-.mixin-section-header-medium span {
+.mixin-section-header-medium span { 
   font-family: "gibsonRegular", "Arial", sans-serif;
 }
 .mixin-section-header-medium > [class*="dr-icon-"]:before {
@@ -2037,7 +2049,7 @@ h1 {
   text-transform: inherit;
   font: inherit;
 }
-.mixin-section-header-small span {
+.mixin-section-header-small span { 
   font-family: "gibsonRegular", "Arial", sans-serif;
 }
 .mixin-section-header-small > [class*="dr-icon-"]:before {
@@ -2066,7 +2078,7 @@ h1 {
   font: inherit;
 }
 .section > h2 span,
-.dr-form > h2 span {
+.dr-form > h2 span { 
   font-family: "gibsonRegular", "Arial", sans-serif;
 }
 .section > h2 > [class*="dr-icon-"]:before,
@@ -2112,7 +2124,7 @@ h1 {
 .section > h5 span,
 .dr-form > h5 span,
 .section > h6 span,
-.dr-form > h6 span {
+.dr-form > h6 span { 
   font-family: "gibsonRegular", "Arial", sans-serif;
 }
 .section > h3 > [class*="dr-icon-"]:before,
@@ -2155,7 +2167,7 @@ h1 {
 .span-5 > .section > h2 span,
 .span-4 > .section > h2 span,
 .span-3 > .section > h2 span,
-.span-2 > .section > h2 span {
+.span-2 > .section > h2 span { 
   font-family: "gibsonRegular", "Arial", sans-serif;
 }
 .span-6 > .section > h2 > [class*="dr-icon-"]:before,
@@ -2183,7 +2195,7 @@ body .section .section-header-large a {
   text-transform: inherit;
   font: inherit;
 }
-body .section .section-header-large span {
+body .section .section-header-large span { 
   font-family: "gibsonRegular", "Arial", sans-serif;
 }
 body .section .section-header-large > [class*="dr-icon-"]:before {
@@ -2207,7 +2219,7 @@ body .section .section-header-medium a {
   text-transform: inherit;
   font: inherit;
 }
-body .section .section-header-medium span {
+body .section .section-header-medium span { 
   font-family: "gibsonRegular", "Arial", sans-serif;
 }
 body .section .section-header-medium > [class*="dr-icon-"]:before {
@@ -2231,14 +2243,14 @@ body .section .section-header-small a {
   text-transform: inherit;
   font: inherit;
 }
-body .section .section-header-small span {
+body .section .section-header-small span { 
   font-family: "gibsonRegular", "Arial", sans-serif;
 }
 body .section .section-header-small > [class*="dr-icon-"]:before {
   float: left;
   margin-top: 1px;
 }
-.item [class*="heading-"] span {
+.item [class*="heading-"] span { 
   font-family: "gibsonRegular", "Arial", sans-serif;
 }
 .metainfo {
@@ -2247,7 +2259,7 @@ body .section .section-header-small > [class*="dr-icon-"]:before {
   line-height: 1;
   padding: 0;
   text-transform: uppercase;
-  display: block;
+  display: block; 
   font-family: "gibsonRegular", "Arial", sans-serif;
 }
 .metainfo time {
@@ -2320,7 +2332,8 @@ body .section .section-header-small > [class*="dr-icon-"]:before {
  */
 [class*="heading-"] {
   display: block;
-  font-family: "gibsonSemiBold", "Arial Black", sans-serif;
+  font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
+  /*font-family: "gibsonSemiBold", "Arial Black", sans-serif;*/
   word-wrap: break-word;
   overflow-wrap: break-word;
 }
@@ -2329,7 +2342,7 @@ body .section .section-header-small > [class*="dr-icon-"]:before {
 }
 .heading-xxsmall {
   font-size: 14px;
-  line-height: 16px;
+  line-height: 16px; 
   font-family: "gibsonRegular", "Arial", sans-serif;
 }
 .heading-xsmall {
@@ -2429,7 +2442,8 @@ body .section .section-header-small > [class*="dr-icon-"]:before {
   padding: 2px 5px;
   color: white;
   background-color: black;
-  font-family: "gibsonSemiBold", "Arial Black", sans-serif;
+  font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
+  /*font-family: "gibsonSemiBold", "Arial Black", sans-serif;*/
 }
 .lang-rtl {
   direction: rtl;
@@ -2751,7 +2765,7 @@ html:not(.mobile) #globalnavigation .mobile,
   color: #bbb;
   text-transform: uppercase;
   text-decoration: underline;
-  text-indent: 0;
+  text-indent: 0; 
   font-family: "gibsonRegular", "Arial", sans-serif;
 }
 #globalnavigation a.dr-logo-label:hover {
@@ -2795,7 +2809,8 @@ html:not(.mobile) #globalnavigation .mobile,
   font-weight: normal;
   color: #fff;
   text-transform: uppercase;
-  font-family: "gibsonSemiBold", "Arial Black", sans-serif;
+  font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
+  /*font-family: "gibsonSemiBold", "Arial Black", sans-serif;*/
 }
 #globalnavigation ul a:hover {
   color: #fff;
@@ -2841,8 +2856,8 @@ html:not(.mobile) #globalnavigation .mobile,
   /*
 				background: transparent url("../../img/dr-globalnavigation-responsive-sprite.gif") no-repeat left -104px;
 				*/
-
-  font-family: "gibsonRegular", "Arial", sans-serif;
+       
+        font-family: "gibsonRegular", "Arial", sans-serif;
 }
 #globalnavigation .expand li.active li a:hover {
   color: #333;
@@ -2850,7 +2865,8 @@ html:not(.mobile) #globalnavigation .mobile,
 }
 #globalnavigation .expand li.active li.selected a {
   color: #000;
-  font-family: "gibsonSemiBold", "Arial Black", sans-serif;
+  font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
+  /*font-family: "gibsonSemiBold", "Arial Black", sans-serif;*/
 }
 #globalnavigation form label,
 #globalnavigation input#top-submit {
@@ -2868,7 +2884,7 @@ html:not(.mobile) #globalnavigation .mobile,
 #globalnavigation form label {
   padding: 0 0 0 7px;
   font: bold 14px/26px sans-serif;
-  color: #484848;
+  color: #484848; 
   font-family: "gibsonRegular", "Arial", sans-serif;
 }
 #globalnavigation button#top-submit {
@@ -2910,7 +2926,7 @@ html:not(.mobile) #globalnavigation .mobile,
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   -o-box-sizing: border-box;
-  box-sizing: border-box;
+  box-sizing: border-box; 
   font-family: "gibsonRegular", "Arial", sans-serif;
 }
 #globalnavigation input#top-search.no-icon {
@@ -3044,7 +3060,7 @@ html:not(.mobile) #globalnavigation.expand-nav ul.desktop,
   color: #999;
 }
 #globalnavigation.expand-nav > div.nav-wrapper > ul li.active li.selected a {
-  color: #ccc;
+  color: #ccc; 
   font-family: "gibsonRegular", "Arial", sans-serif;
   background-color: #131313;
 }
@@ -3058,7 +3074,7 @@ html:not(.mobile) #globalnavigation.expand-nav ul.desktop,
 }
 #globalnavigation.expand-nav > div.nav-wrapper > ul > li ul li a {
   text-transform: none;
-  color: #999;
+  color: #999; 
   font-family: "gibsonRegular", "Arial", sans-serif;
 }
 #globalnavigation.expand-nav > div.nav-wrapper > ul li ul li a {
@@ -3129,7 +3145,8 @@ body > .ie > #globalnavigation {
   color: #FFF;
   background-color: black;
   text-transform: uppercase;
-  font-family: "gibsonSemiBold", "Arial Black", sans-serif;
+  font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
+  /*font-family: "gibsonSemiBold", "Arial Black", sans-serif;*/
 }
 .dr-banner-spot.heading-xsmall div {
   border-left: 4px solid black;
@@ -3205,7 +3222,8 @@ html:not(.mobile) #globalfooter .desktop,
   height: auto;
   color: #fff;
   text-transform: uppercase;
-  font-family: "gibsonSemiBold", "Arial Black", sans-serif;
+  font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
+  /*font-family: "gibsonSemiBold", "Arial Black", sans-serif;*/
 }
 #globalfooter nav h3 {
   margin: 0 0 10px;
@@ -3219,7 +3237,8 @@ html:not(.mobile) #globalfooter .desktop,
   background-color: transparent;
   background-image: none;
   border: none;
-  font-family: "gibsonSemiBold", "Arial Black", sans-serif;
+  font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
+  /*font-family: "gibsonSemiBold", "Arial Black", sans-serif;*/
 }
 #globalfooter nav a,
 #globalfooter nav a:link,
@@ -3232,7 +3251,7 @@ html:not(.mobile) #globalfooter .desktop,
   font-size: 14px;
   font-weight: normal;
   line-height: 100%;
-  color: #b3b2b2;
+  color: #b3b2b2; 
   font-family: "gibsonRegular", "Arial", sans-serif;
 }
 #globalfooter nav a:hover {
@@ -3288,7 +3307,7 @@ html:not(.mobile) #globalfooter .desktop,
   left: -9999px;
   padding: 0 0 0 7px;
   font: bold 14px/26px sans-serif;
-  color: #484848;
+  color: #484848; 
   font-family: "gibsonRegular", "Arial", sans-serif;
 }
 #globalfooter .footer-search button#footer-submit {
@@ -3325,7 +3344,7 @@ html:not(.mobile) #globalfooter .desktop,
   border: 1px solid #222222;
   background-color: #bdbdbd;
   box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.46);
-  outline: none;
+  outline: none; 
   font-family: "gibsonRegular", "Arial", sans-serif;
   width: 100%;
   height: 26px;
@@ -3515,7 +3534,7 @@ html:not(.mobile) #globalfooter .desktop,
   padding: 0;
   line-height: 100%;
   font-size: 14px;
-  color: #000;
+  color: #000; 
   font-family: "gibsonRegular", "Arial", sans-serif;
 }
 #globalfooter #globalSSOwrapper {
@@ -3666,7 +3685,7 @@ html:not(.mobile) #globalfooter .desktop,
 }
 .dr-page-suggestion a {
   cursor: pointer;
-  text-transform: uppercase;
+  text-transform: uppercase; 
   font-family: "gibsonRegular", "Arial", sans-serif;
   font-size: 60px;
   line-height: 60px;
@@ -3713,7 +3732,7 @@ html:not(.mobile) #globalfooter .desktop,
   clear: left;
   color: #666;
   font-size: 14px;
-  line-height: 18px;
+  line-height: 18px; 
   font-family: "gibsonRegular", "Arial", sans-serif;
 }
 .dr-page-article .article-author {
@@ -3740,12 +3759,13 @@ html:not(.mobile) #globalfooter .desktop,
   /*text-transform: uppercase;*/
 
   color: #000;
-  font-weight: normal;
+  font-weight: normal; 
   font-family: "gibsonRegular", "Arial", sans-serif;
 }
 .dr-page-article .article-author .author-name {
   color: #000;
-  font-family: "gibsonSemiBold", "Arial Black", sans-serif;
+  font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
+  /*font-family: "gibsonSemiBold", "Arial Black", sans-serif;*/
   font-size: 14px;
 }
 .dr-page-article .article-author .department {
@@ -4128,7 +4148,8 @@ input[type=submit][class*="dr-icon"]:before {
 .dr-ui-paging-tabs a {
   border-radius: 0;
   margin-bottom: 1px;
-  font-family: "gibsonSemiBold", "Arial Black", sans-serif;
+  font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
+  /*font-family: "gibsonSemiBold", "Arial Black", sans-serif;*/
 }
 .dr-ui-paging-tabs a + a {
   margin-left: 1px;
@@ -4193,7 +4214,8 @@ input[type=submit][class*="dr-icon"]:before {
   color: #FFF;
   background-color: #999;
   background-color: rgba(0, 0, 0, 0.4);
-  font-family: "gibsonSemiBold", "Arial Black", sans-serif;
+  font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
+  /*font-family: "gibsonSemiBold", "Arial Black", sans-serif;*/
 }
 .dr-ui-paging-numeric a + a {
   margin-left: 10px;
@@ -4236,7 +4258,7 @@ input[type=submit][class*="dr-icon"]:before {
   font: 14px/1 "gibsonSemibold", Arial, sans-serif;
   padding: 7px 10px;
 }
-.dr-ui-dropdown-list a span {
+.dr-ui-dropdown-list a span { 
   font-family: "gibsonRegular", "Arial", sans-serif;
 }
 .dr-ui-dropdown-list a:active {
@@ -4326,7 +4348,8 @@ input[type=checkbox] {
 }
 .dr-widget-quickvote h1 a,
 .dr-widget-quickvote h3 a {
-  font: normal 18px/1 "gibsonSemiBold", "Arial Black", sans-serif;
+  font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
+  /*font: normal 18px/1 "gibsonSemiBold", "Arial Black", sans-serif;*/
   text-transform: uppercase;
 }
 .dr-widget-quickvote .dr-icon-help-boxed {
@@ -4351,7 +4374,8 @@ input[type=checkbox] {
   padding: 5px 3px;
   line-height: 20px;
   font-size: 14px;
-  font-family: "gibsonSemiBold", "Arial Black", sans-serif;
+  font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
+  /*font-family: "gibsonSemiBold", "Arial Black", sans-serif;*/
 }
 .dr-widget-quickvote > fieldset {
   display: block;
@@ -4364,10 +4388,11 @@ input[type=checkbox] {
   padding-top: 10px;
 }
 .dr-widget-quickvote > div li span {
-  font: normal 14px/1 "gibsonSemiBold", "Arial Black", sans-serif;
+  font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
+  /*font: normal 14px/1 "gibsonSemiBold", "Arial Black", sans-serif;*/
   float: left;
 }
-.dr-widget-quickvote > div li span.percentage {
+.dr-widget-quickvote > div li span.percentage { 
   font-family: "gibsonRegular", "Arial", sans-serif;
   float: none;
 }
@@ -4478,7 +4503,7 @@ input[type=checkbox] {
 [class*=dr-widget-carousel] [class*="dr-icon-arrow"][class*="disabled"]:before {
   color: white;
 }
-[class*=dr-widget-carousel] .pager {
+[class*=dr-widget-carousel] .pager { 
   font-family: "gibsonRegular", "Arial", sans-serif;
   color: #808080;
   position: absolute;
@@ -4644,7 +4669,7 @@ input[type=checkbox] {
 }
 [class*=dr-widget-carousel][class*="dr-widget-carousel-slideshow"] .figcaption {
   font-size: 14px;
-  color: #808080;
+  color: #808080; 
   font-family: "gibsonRegular", "Arial", sans-serif;
   float: left;
   max-width: 70%;
@@ -4802,7 +4827,7 @@ input[type=checkbox] {
   position: absolute;
   top: 6px;
   right: 0;
-  color: #676767;
+  color: #676767; 
   font-family: "gibsonRegular", "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
@@ -4810,7 +4835,8 @@ input[type=checkbox] {
 }
 [class*="dr-widget-swipe-carousel"] + .swipe-pager span:first-child {
   color: #000;
-  font-family: "gibsonSemiBold", "Arial Black", sans-serif;
+  font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
+  /*font-family: "gibsonSemiBold", "Arial Black", sans-serif;*/
 }
 @media only screen and (max-width: 700px) {
   [class*="dr-widget-swipe-carousel"] + .swipe-pager {
@@ -4842,7 +4868,7 @@ input[type=checkbox] {
 [class*="dr-widget-swipe-carousel-iscroll"] .carousel-item .item {
   padding: 0;
 }
-[class*="dr-widget-swipe-carousel-iscroll"] .carousel-item .item p {
+[class*="dr-widget-swipe-carousel-iscroll"] .carousel-item .item p { 
   font-family: "gibsonRegular", "Arial", sans-serif;
   margin: 10px 0 0 0;
 }
@@ -4862,7 +4888,7 @@ input[type=checkbox] {
   margin-bottom: 20px;
   vertical-align: text-top;
 }
-.dr-widget-swipe-carousel-iscroll-carousel-navigation * {
+.dr-widget-swipe-carousel-iscroll-carousel-navigation * { 
   font-family: "gibsonRegular", "Arial", sans-serif;
   text-transform: uppercase;
 }
@@ -5123,7 +5149,8 @@ section.dr-widget-video-playlist .video-article figcaption {
   padding: 10px 0;
   font-size: 18px;
   color: white;
-  font-family: "gibsonSemiBold", "Arial Black", sans-serif;
+  font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
+  /*font-family: "gibsonSemiBold", "Arial Black", sans-serif;*/
 }
 .dr-widget-video-playlist .playlist-item,
 section.dr-widget-video-playlist .playlist-item {
@@ -5142,7 +5169,8 @@ section.dr-widget-video-playlist .playlist-item img {
 section.dr-widget-video-playlist .playlist-item i {
   display: block;
   font-style: normal;
-  font-family: "gibsonSemiBold", "Arial Black", sans-serif;
+  font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
+  /*font-family: "gibsonSemiBold", "Arial Black", sans-serif;*/
   word-wrap: break-word;
   font-size: 14px;
 }
@@ -5610,7 +5638,8 @@ section.dr-widget-video-playlist .dr-link-readmore {
   padding-bottom: 10px;
 }
 .dr-widget-1212 .content-wrapper .files .file {
-  font-family: "gibsonSemiBold", "Arial Black", sans-serif;
+  font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
+  /*font-family: "gibsonSemiBold", "Arial Black", sans-serif;*/
   position: relative;
   background-color: #E5E5E5;
   border-bottom: 1px solid #b5b5b5;
@@ -5637,7 +5666,7 @@ section.dr-widget-video-playlist .dr-link-readmore {
 .dr-widget-1212 .content-wrapper .files .file .remove span {
   display: none;
 }
-.dr-widget-1212 .content-wrapper .files .file em {
+.dr-widget-1212 .content-wrapper .files .file em { 
   font-family: "gibsonRegular", "Arial", sans-serif;
   position: absolute;
   top: 10px;
@@ -5664,7 +5693,7 @@ section.dr-widget-video-playlist .dr-link-readmore {
 .dr-widget-1212 .content-wrapper .form .fieldset {
   position: relative;
 }
-.dr-widget-1212 .content-wrapper .form .fieldset label {
+.dr-widget-1212 .content-wrapper .form .fieldset label { 
   font-family: "gibsonRegular", "Arial", sans-serif;
   position: absolute;
   top: 11px;
@@ -5672,7 +5701,7 @@ section.dr-widget-video-playlist .dr-link-readmore {
   color: #666666;
 }
 .dr-widget-1212 .content-wrapper .form .fieldset input,
-.dr-widget-1212 .content-wrapper .form .fieldset textarea {
+.dr-widget-1212 .content-wrapper .form .fieldset textarea { 
   font-family: "gibsonRegular", "Arial", sans-serif;
   width: 250px;
   height: 32px;
@@ -5705,7 +5734,7 @@ section.dr-widget-video-playlist .dr-link-readmore {
 }
 .dr-widget-1212 .buttons-wrapper a {
   margin-left: 20px;
-  float: right;
+  float: right; 
   font-family: "gibsonRegular", "Arial", sans-serif;
   background-color: #7f7f7f;
   color: #fff;
@@ -5776,7 +5805,8 @@ section.dr-widget-video-playlist .dr-link-readmore {
   background-color: #df0d8e;
 }
 .dr-widget-1212 .upload-info-wrapper h3 {
-  font-family: "gibsonSemiBold", "Arial Black", sans-serif;
+  font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
+  /*font-family: "gibsonSemiBold", "Arial Black", sans-serif;*/
   padding-top: 10px;
 }
 .dr-widget-1212 .upload-info-wrapper .dr-icon-play-boxed:before {
@@ -5970,7 +6000,7 @@ section.dr-widget-video-playlist .dr-link-readmore {
   color: #000;
   text-decoration: underline;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 12px; 
   font-family: "gibsonRegular", "Arial", sans-serif;
 }
 .dr-link {
@@ -6080,7 +6110,8 @@ footer .dr-link-readmore {
   color: #fff;
   background-color: #000;
   position: relative;
-  font-family: "gibsonSemiBold", "Arial Black", sans-serif;
+  font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
+  /*font-family: "gibsonSemiBold", "Arial Black", sans-serif;*/
 }
 .dr-site-navigation a {
   border-right: 1px solid #FFF;
@@ -6186,7 +6217,7 @@ footer .dr-link-readmore {
   border: none;
   color: #000;
   font-size: 18px;
-  text-transform: none;
+  text-transform: none; 
   font-family: "gibsonRegular", "Arial", sans-serif;
 }
 .site-content > .current-topics,
@@ -6212,7 +6243,7 @@ footer .dr-link-readmore {
   padding: 0 20px 10px;
   background-color: #999999;
   color: white;
-  border: none;
+  border: none; 
   font-family: "gibsonRegular", "Arial", sans-serif;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -6390,7 +6421,7 @@ footer .dr-link-readmore {
   padding: 0 20px 10px;
   background-color: #e5e5e5;
   color: black;
-  border: none;
+  border: none; 
   font-family: "gibsonRegular", "Arial", sans-serif;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -6439,7 +6470,8 @@ footer .dr-link-readmore {
 [class*="dr-site-quickpoll"] ul li label,
 [class*="dr-site-quickpoll"] ul li p,
 [class*="dr-site-quickpoll"] ul li .result-percentage {
-  font-family: "gibsonSemiBold", "Arial Black", sans-serif;
+  font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
+  /*font-family: "gibsonSemiBold", "Arial Black", sans-serif;*/
   font-size: 14px;
   color: #000;
 }
@@ -6521,7 +6553,7 @@ footer .dr-link-readmore {
   width: 130px;
   margin-left: -150px;
 }
-[class*="dr-site-share"] > span {
+[class*="dr-site-share"] > span { 
   font-family: "gibsonRegular", "Arial", sans-serif;
   text-transform: uppercase;
 }
@@ -6541,7 +6573,7 @@ footer .dr-link-readmore {
 [class*="dr-site-share"] menu.actions {
   margin-bottom: 10px;
 }
-[class*="dr-site-share"] a {
+[class*="dr-site-share"] a { 
   font-family: "gibsonRegular", "Arial", sans-serif;
   font-size: 12px;
   line-height: 34px;
@@ -6635,7 +6667,7 @@ footer .dr-link-readmore {
         font-size: 12px;
         */
 
-  text-transform: uppercase;
+  text-transform: uppercase; 
   font-family: "gibsonRegular", "Arial", sans-serif;
 }
 .dr-site-comment a.cancel {
@@ -6651,7 +6683,8 @@ footer .dr-link-readmore {
 .dr-site-comment h3 span {
   margin: 0;
   color: black;
-  font-family: "gibsonSemiBold", "Arial Black", sans-serif;
+  font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
+  /*font-family: "gibsonSemiBold", "Arial Black", sans-serif;*/
   font-size: 18px;
   font-weight: normal;
   line-height: 22px;
@@ -6727,7 +6760,7 @@ footer .dr-link-readmore {
   border-color: rgba(128, 128, 128, 0.5);
   resize: none;
   font-size: 14px;
-  line-height: 14px;
+  line-height: 14px; 
   font-family: "gibsonRegular", "Arial", sans-serif;
   -webkit-box-shadow: 0 3px 6px 0px rgba(0, 0, 0, 0.15) inset;
   -khtml-box-shadow: 0 3px 6px 0px rgba(0, 0, 0, 0.15) inset;
@@ -6841,12 +6874,14 @@ footer .dr-link-readmore {
 
   font-size: 24px;
   line-height: 26px;
-  font-family: "gibsonSemiBold", "Arial Black", sans-serif;
+  font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
+  /*font-family: "gibsonSemiBold", "Arial Black", sans-serif;*/
   font-weight: normal;
 }
 .dr-site-comment .header.threadClosed span {
   color: white;
-  font-family: "gibsonSemiBold", "Arial Black", sans-serif;
+  font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
+  /*font-family: "gibsonSemiBold", "Arial Black", sans-serif;*/
   font-size: 18px;
 }
 .dr-site-comment .dr-ui-paging-tabs {
@@ -6899,7 +6934,8 @@ footer .dr-link-readmore {
   text-decoration: none;
 }
 .dr-site-comment .dr-ui-paging-tabs a {
-  font-family: "gibsonSemiBold", "Arial Black", sans-serif;
+  font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
+  /*font-family: "gibsonSemiBold", "Arial Black", sans-serif;*/
   font-size: 14px;
   color: white;
   text-decoration: none;
@@ -6911,7 +6947,7 @@ footer .dr-link-readmore {
   line-height: 1;
   height: auto;
 }
-.dr-site-comment p.UserData span {
+.dr-site-comment p.UserData span { 
   font-family: "gibsonRegular", "Arial", sans-serif;
   color: white;
   line-height: 18px;
@@ -6920,11 +6956,12 @@ footer .dr-link-readmore {
 .dr-site-comment p.UserData span:before {
   content: attr(title);
   color: #343434;
-  margin-right: 0.5em;
+  margin-right: 0.5em; 
   font-family: "gibsonRegular", "Arial", sans-serif;
 }
 .dr-site-comment p.UserData .name {
-  font-family: "gibsonSemiBold", "Arial Black", sans-serif;
+  font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
+  /*font-family: "gibsonSemiBold", "Arial Black", sans-serif;*/
 }
 .dr-site-comment p.UserData .name:after {
   content: "\A";
@@ -6934,7 +6971,7 @@ footer .dr-link-readmore {
   content: attr(alt);
   padding-left: 0.3em;
 }
-.dr-site-comment .option {
+.dr-site-comment .option { 
   font-family: "gibsonRegular", "Arial", sans-serif;
   font-size: 14px;
   line-height: 30px;
@@ -6954,7 +6991,7 @@ footer .dr-link-readmore {
 .dr-site-comment p.errorMsg,
 .dr-site-comment p.infoMsg {
   clear: both;
-  padding: 20px 0 0;
+  padding: 20px 0 0; 
   font-family: "gibsonRegular", "Arial", sans-serif;
   font-size: 14px;
   line-height: 16px;
@@ -6994,7 +7031,8 @@ footer .dr-link-readmore {
 }
 .dr-site-comment .infobar .range {
   text-transform: uppercase;
-  font-family: "gibsonSemiBold", "Arial Black", sans-serif;
+  font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
+  /*font-family: "gibsonSemiBold", "Arial Black", sans-serif;*/
 }
 .dr-site-comment .infobar .sorting {
   float: right;
@@ -7007,7 +7045,8 @@ footer .dr-link-readmore {
 .dr-site-comment .infobar a.active {
   color: black;
   text-decoration: none;
-  font-family: "gibsonSemiBold", "Arial Black", sans-serif;
+  font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
+  /*font-family: "gibsonSemiBold", "Arial Black", sans-serif;*/
 }
 .dr-site-comment .infobar a:last-child {
   border: none;
@@ -7145,7 +7184,7 @@ footer .dr-link-readmore {
 .dr-site-comment .comments .item .metainfo .metastyle,
 .dr-site-comment .comments .comment .metainfo .metastyle {
   color: #676767;
-  display: block;
+  display: block; 
   font-family: "gibsonRegular", "Arial", sans-serif;
   font-size: 11px;
   line-height: 200%;
@@ -7158,7 +7197,7 @@ footer .dr-link-readmore {
 .dr-site-comment .comments .item .metainfo span,
 .dr-site-comment .comments .comment .metainfo span {
   color: #676767;
-  display: block;
+  display: block; 
   font-family: "gibsonRegular", "Arial", sans-serif;
   font-size: 11px;
   line-height: 200%;
@@ -7169,7 +7208,7 @@ footer .dr-link-readmore {
 .dr-site-comment .comments .item .metainfo .origin,
 .dr-site-comment .comments .comment .metainfo .origin {
   color: #676767;
-  display: block;
+  display: block; 
   font-family: "gibsonRegular", "Arial", sans-serif;
   font-size: 11px;
   line-height: 200%;
@@ -7187,7 +7226,7 @@ footer .dr-link-readmore {
   background-color: #00cefd;
 }
 .dr-site-comment .comments .item .comment-text,
-.dr-site-comment .comments .comment .comment-text {
+.dr-site-comment .comments .comment .comment-text { 
   font-family: "gibsonRegular", "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
@@ -7222,7 +7261,7 @@ footer .dr-link-readmore {
   clear: both;
 }
 .dr-site-comment .comments .item .comment-text a,
-.dr-site-comment .comments .comment .comment-text a {
+.dr-site-comment .comments .comment .comment-text a { 
   font-family: "gibsonRegular", "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
@@ -7290,7 +7329,8 @@ footer .dr-link-readmore {
 .dr-site-comment .comments .item .comment-text .comment-resource a .title,
 .dr-site-comment .comments .comment .comment-text .comment-resource a .title {
   display: block;
-  font-family: "gibsonSemiBold", "Arial Black", sans-serif;
+  font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
+  /*font-family: "gibsonSemiBold", "Arial Black", sans-serif;*/
 }
 .dr-site-comment .comments .item .comment-text .comment-resource a .url,
 .dr-site-comment .comments .comment .comment-text .comment-resource a .url {
@@ -7336,7 +7376,7 @@ footer .dr-link-readmore {
   font-style: italic;
 }
 .dr-site-comment .comments .item .reply-report,
-.dr-site-comment .comments .comment .reply-report {
+.dr-site-comment .comments .comment .reply-report { 
   font-family: "gibsonRegular", "Arial", sans-serif;
   zoom: 1;
   *zoom: 1;
@@ -7497,7 +7537,7 @@ footer .dr-link-readmore {
   color: white;
   border: none;
 }
-.dr-site-comment .comments .write-report p {
+.dr-site-comment .comments .write-report p { 
   font-family: "gibsonRegular", "Arial", sans-serif;
   color: white;
   font-size: 14px;
@@ -7564,7 +7604,7 @@ footer .dr-link-readmore {
   word-wrap: break-word;
 }
 .dr-site-quotationbox cite {
-  font-style: normal;
+  font-style: normal; 
   font-family: "gibsonRegular", "Arial", sans-serif;
   text-align: right;
   display: block;
@@ -7585,7 +7625,8 @@ footer .dr-link-readmore {
   padding: 8px 0;
   line-height: 18px;
   font-size: 14px;
-  font-family: "gibsonSemiBold", "Arial Black", sans-serif;
+  font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
+  /*font-family: "gibsonSemiBold", "Arial Black", sans-serif;*/
 }
 .dr-site-footer-help .site-footer-contact ul {
   padding-bottom: 15px;
@@ -7641,7 +7682,7 @@ footer .dr-link-readmore {
 .dr-site-footer-help i {
   display: inline;
   font-style: normal;
-  line-height: 100%;
+  line-height: 100%; 
   font-family: "gibsonRegular", "Arial", sans-serif;
 }
 .section.dr-site-footer-onduty {
@@ -7669,10 +7710,11 @@ footer .dr-link-readmore {
 .section.dr-site-footer-onduty [class*="span-"] > .item p {
   position: static;
   padding: 0;
-  font-family: "gibsonSemiBold", "Arial Black", sans-serif;
+  font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
+  /*font-family: "gibsonSemiBold", "Arial Black", sans-serif;*/
 }
 .section.dr-site-footer-onduty [class*="span-"] > .item a {
-  display: block;
+  display: block; 
   font-family: "gibsonRegular", "Arial", sans-serif;
   line-height: 18px;
   font-size: 14px;
@@ -7717,7 +7759,7 @@ footer .dr-link-readmore {
   font-size: 14px;
   color: white;
   text-transform: uppercase;
-  line-height: 30px;
+  line-height: 30px; 
   font-family: "gibsonRegular", "Arial", sans-serif;
 }
 [class*="featured-section"][class*="-video"] .dr-link-readmore,
@@ -7747,7 +7789,7 @@ footer .dr-link-readmore {
   color: white;
   text-transform: uppercase;
   font-size: 18px;
-  line-height: 30px;
+  line-height: 30px; 
   font-family: "gibsonRegular", "Arial", sans-serif;
 }
 [class*="featured-section"][class*="-video"][class*="-news"] footer .dr-ui-linklist,
@@ -7757,7 +7799,7 @@ footer .dr-link-readmore {
 [class*="featured-section"] h2 {
   border-bottom: none;
 }
-[class*="featured-section"] h2 span {
+[class*="featured-section"] h2 span { 
   font-family: "gibsonRegular", "Arial", sans-serif;
 }
 [class*="featured-section"] .dr-link-readmore {
@@ -7789,7 +7831,7 @@ footer .dr-link-readmore {
   border-bottom: 1px solid #FFF;
   border-bottom-color: rgba(255, 255, 255, 0.5);
 }
-.dr-breaking-news h2 span {
+.dr-breaking-news h2 span { 
   font-family: "gibsonRegular", "Arial", sans-serif;
 }
 .dr-breaking-news .row {
@@ -7854,7 +7896,7 @@ footer .dr-link-readmore {
   padding: 0;
   line-height: 42px;
   text-align: right;
-  margin-right: 10px;
+  margin-right: 10px; 
   font-family: "gibsonRegular", "Arial", sans-serif;
 }
 .linkbox {
@@ -7948,7 +7990,8 @@ article > aside [class*="dr-icon"][class*="-boxed"]:before {
   left: 20px;
 }
 .dr-spot [class*="heading-"] span {
-  font-family: "gibsonSemiBold", "Arial Black", sans-serif;
+  font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
+  /*font-family: "gibsonSemiBold", "Arial Black", sans-serif;*/
 }
 .dr-spot div span {
   float: left;
@@ -7973,7 +8016,7 @@ article > aside [class*="dr-icon"][class*="-boxed"]:before {
 }
 .dr-spot .label span,
 .dr-spot .subtitle span {
-  color: #b2b2b2;
+  color: #b2b2b2; 
   font-family: "gibsonRegular", "Arial", sans-serif;
 }
 .dr-spot .subtitle {
@@ -7981,7 +8024,7 @@ article > aside [class*="dr-icon"][class*="-boxed"]:before {
 }
 .dr-spot .subspot .subtitle {
   border-left: 0px;
-  color: #676767;
+  color: #676767; 
   font-family: "gibsonRegular", "Arial", sans-serif;
 }
 .dr-spot .heading-xxsmall > div,
@@ -8076,7 +8119,8 @@ article > aside [class*="dr-icon"][class*="-boxed"]:before {
   bottom: 10px;
   color: #00AEDE !important;
   font-size: 14px;
-  font-family: "gibsonSemiBold", "Arial Black", sans-serif;
+  font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
+  /*font-family: "gibsonSemiBold", "Arial Black", sans-serif;*/
 }
 .dr-codecomponent object {
   width: 100% !important;
@@ -8166,7 +8210,8 @@ div.dr-cookie-info-box > div > h1 {
   display: block;
   margin: 10px 0 5px 0;
   padding-left: 32px;
-  font: 18px/22px "gibsonSemiBold", "arial black", sans-serif;
+  font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
+  /*font: 18px/22px "gibsonSemiBold", "arial black", sans-serif;*/
   color: #fff;
   text-transform: none;
 }
@@ -8291,7 +8336,7 @@ div.dr-cookie-info-box > div > p a {
 .dr-infobox p {
   margin-top: 20px;
   font-size: 18px;
-  padding-bottom: 0;
+  padding-bottom: 0; 
   font-family: "gibsonRegular", "Arial", sans-serif;
 }
 .dr-infobox p a {
@@ -8299,7 +8344,8 @@ div.dr-cookie-info-box > div > p a {
 }
 .dr-infobox .dr-icon-link-boxed {
   font-size: 14px;
-  font-family: gibsonSemiBold, Arial, sans-serif;
+  font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
+  /*font-family: gibsonSemiBold, Arial, sans-serif;*/
   text-decoration: none;
 }
 .dr-infobox .close {
@@ -8393,7 +8439,8 @@ div.dr-cookie-info-box > div > p a {
   display: block;
 }
 .trackInfo .track {
-  font-family: gibsonSemiBold;
+  font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
+  /*font-family: gibsonSemiBold;*/
   display: inline;
 }
 .trackInfo .track:after {
@@ -8451,8 +8498,9 @@ div.dr-cookie-info-box > div > p a {
   top: 50%;
   margin-top: -10px;
   color: #4d4d4d;
-  width: 50%;
-  font-family: "gibsonRegular", "Arial", sans-serif;
+  width: 50%; 
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  /*font-family: "gibsonRegular", "Arial", sans-serif;*/
   font-size: 20px;
   line-height: 20px;
 }
@@ -11081,7 +11129,8 @@ body:before .visually-hidden {
     text-transform: uppercase;
     color: #fff;
     line-height: 40px;
-    font-family: "gibsonSemiBold", "Arial Black", sans-serif;
+    font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
+    /*font-family: "gibsonSemiBold", "Arial Black", sans-serif;*/
   }
   [class*=dr-site-navigation] ul {
     padding: 0;
@@ -11529,7 +11578,8 @@ body {
 }
 @media only screen and (min-width: 721px) {
   body {
-    background-image: url("../img/bg-body-large-ny.jpg");
+    /*background-image: url("../img/bg-body-large-ny.jpg");*/
+    background-color: #696d7a;
   }
 }
 .site-id a:link,
@@ -11668,8 +11718,9 @@ embed {
 .programSerieBroadcastTimeContainer {
   overflow: hidden;
   margin-bottom: 20px;
-  text-transform: uppercase;
-  font-family: "gibsonRegular", "Arial", sans-serif;
+  text-transform: uppercase; 
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  /*font-family: "gibsonRegular", "Arial", sans-serif;*/
 }
 .programSerieBroadcastTimeContainer h3 {
   background-color: white;
@@ -11692,7 +11743,8 @@ embed {
 }
 .programSerieBroadcastTimeContainer .broadcastinfo p {
   color: #fff;
-  font-family: gibsonRegular;
+  /*font-family: gibsonRegular;*/
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 16px;
   padding: 0;
 }
@@ -11764,8 +11816,9 @@ embed {
   margin-bottom: 10px;
   padding: 0 20px 10px;
   color: #ffffff;
-  border: none;
-  font-family: "gibsonRegular", "Arial", sans-serif;
+  border: none; 
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  /*font-family: "gibsonRegular", "Arial", sans-serif;*/
 }
 .dr-site-quickpoll-article p {
   font-family: "Georgia", serif;

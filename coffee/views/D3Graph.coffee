@@ -21,8 +21,16 @@ class D3Graph
 
     initD3: ->
         @svg = d3.select(@container).append('svg:svg')
-            .attr('width', @width)
+
+        @svg.attr('width', @width)
             .attr('height', @height)
+            .append("defs")
+                .append("filter")
+                    .attr("id","saturate")
+                .append("feColorMatrix")
+                    .attr("type","matrix")
+                    .attr("values","0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0")
+        @svg
 
         @force = d3.layout.force()
             .linkDistance(40)
@@ -38,6 +46,8 @@ class D3Graph
 
         for r, i in person.relations
             r.image = @app.data[r.slug].image
+            if @app.data[r.slug].durchstreichen <= @app.episode
+                r.ude = true
 
             @links.push
                 'source': i + 1
@@ -47,6 +57,7 @@ class D3Graph
             'name': person.name
             'slug': person.slug
             'image': person.image
+            'ude': person.ude
             'isCenter': true
         
         nodes = [centerNode].concat person.relations
@@ -110,6 +121,12 @@ class D3Graph
                     90
                 else
                     60
+            )
+            .attr('filter', (d) ->
+                if (d.ude)
+                    "url(#saturate)"
+                else
+                    ""
             )
 
         node.append('text')

@@ -22,5 +22,9 @@ class PersonView
 
     show: (person) ->
         @el.className = ''
+
+        # if person.durchstreichen <= @app.episode
+        #     person.ude = true
+
         @info.show person
         @graph.show person

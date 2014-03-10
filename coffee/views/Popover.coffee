@@ -39,6 +39,8 @@ class PopoverView
         @open = false
 
     html: (person) ->
+        person.text = @app.data[person.slug].text
+        person.name = @app.data[person.slug].name
         html = """
                <h3><a href="#" class="dr-link-readmore dr-icon-close"></a><a href="##{person.slug}">#{person.name}</a></h3>
                <p>#{person.text}</p>

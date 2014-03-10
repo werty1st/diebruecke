@@ -34,8 +34,16 @@
 
 	<script type="text/javascript" src="js/broen.js"></script>
 	<script type="text/javascript">
+		var episode = "0";
 
-	    new DR.BroenGallery.App('broen-gallery-container');
+		if(window.location.hash) {
+		  // Fragment exists
+		  var episode = window.location.hash.substr(1);
+		  window.location.hash = ""
+		}
+
+	    var x = new DR.BroenGallery.App('broen-gallery-container',episode);
+	    document.title = 'Geladen für Episode '+episode;
 	    //var session = require("session");
 		
 	</script>

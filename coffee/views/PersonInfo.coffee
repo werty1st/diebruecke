@@ -13,8 +13,16 @@ class PersonInfoView
                 if e.preventDefault then e.preventDefault() else e.returnValue = false
                 @app.vote @person.slug
 
-    show: (person) ->
+    show: (person) ->        
         @person = person
+
+        if person.freischaltepisode <= @app.episode
+            if person.durchstreichen <= @app.episode
+                person.ude = true
+                @app.data[person.slug].ude = true
+            else
+                @app.data[person.slug].ude = false
+
         @container.innerHTML = this.html person
         p = document.getElementById 'broen-gallery-person-text'
         window.fireEvent 'dr-dom-inserted', [$$('p')]
@@ -24,9 +32,10 @@ class PersonInfoView
             inner.appendChild new MediaView person.name, person.media, @app.isMobile
 
     html: (person) ->
+        ude = (if person.ude then "ude" else "") 
         html =  """
                 <div id="broen-gallery-person-info-inner">
-                    #{DR.BroenGallery.getFaceImg(person.image, 50)}
+                    <div class="#{ude}" >#{DR.BroenGallery.getFaceImg(person.image, 50)}</div>
                     <h2>#{person.name}</h2>
                     <p id="broen-gallery-person-text" data-maxlines="5" data-readmore="true" >#{person.longText}</p>
                 """

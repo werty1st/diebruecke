@@ -25,7 +25,10 @@ if(host == 'www.dr.dk') {
 
   App.prototype.data = null;
 
-  function App(containerId) {
+  function App(containerId, episode) {
+    if (episode == null) {
+      episode = 5;
+    }
     this.fetchData();
     this.featureDetect();
     this.container = document.getElementById(containerId);
@@ -33,6 +36,7 @@ if(host == 'www.dr.dk') {
     this.homeLink = document.getElementById('broen-home-link');
     this.homeView = new HomeView(this);
     this.personView = new PersonView(this);
+    this.episode = episode;
     this.initVoting();
     return this;
   }
@@ -91,7 +95,7 @@ if(host == 'www.dr.dk') {
   };
 
   App.prototype.html = function() {
-    return "<div id=\"broen-gallery\" class=\"section boxed container-green-light\">\n    <h2><a href=\"#home\">Verdächtige</a><a id=\"broen-home-link\" class=\"dr-icon-link-small dr-link-readmore hide\" href=\"#home\">Zur Übersicht</a></h2>\n\n    <div id=\"broen-gallery-home\" class=\"hide\">\n        <p class=\"intro-text\">Hier sind die wichtigsten Personen in die Brücke II und ihre Beziehungen zueinander.</p>\n        <div id=\"broen-gallery-home-persons\"></div>\n        <div id=\"broen-gallery-home-popover\" class=\"hide container-green\"></div>\n    </div>\n    \n    <div id=\"broen-gallery-person\">\n        <div id=\"broen-gallery-person-info\"></div>\n        <div id=\"broen-gallery-graph\">\n            <div id=\"broen-gallery-graph-popover\" class=\"hide container-green\"></div>\n        </div>\n    </div>\n</div>";
+    return "<div id=\"broen-gallery\" class=\"section boxed container-green-light\">\n    <h2><a href=\"#home\">Verdächtige</a><a id=\"broen-home-link\" class=\"dr-icon-link-small dr-link-readmore hide\" href=\"#home\">Zur Übersicht</a></h2>\n\n    <div id=\"broen-gallery-home\" class=\"hide\">\n        <p class=\"intro-text\">Die wichtigsten Personen und ihre Beziehungen zueinander</p>\n        <div id=\"broen-gallery-home-persons\"></div>\n        <div id=\"broen-gallery-home-popover\" class=\"hide container-green\"></div>\n    </div>\n    \n    <div id=\"broen-gallery-person\">\n        <div id=\"broen-gallery-person-info\"></div>\n        <div id=\"broen-gallery-graph\">\n            <div id=\"broen-gallery-graph-popover\" class=\"hide container-green\"></div>\n        </div>\n    </div>\n</div>";
   };
 
   return App;
@@ -108,7 +112,16 @@ MooRouter = (function() {
     router = Router.implement({
       routes: {
         '': 'homeRoute',
+        '#0': 'reload',
+        '#1': 'reload',
+        '#2': 'reload',
+        '#3': 'reload',
+        '#4': 'reload',
+        '#5': 'reload',
         '#:slug': 'personRoute'
+      },
+      reload: function() {
+        return window.location.reload();
       },
       homeRoute: function() {
         return _this.app.showHome();
@@ -168,6 +181,10 @@ DR.BroenGallery.VoteMachine = (function() {
   VoteMachine.prototype.vote = function(slug) {
     var req, voteId,
       _this = this;
+    if (this.app.data[slug].ude) {
+      alert('Für diese Person kann nicht mehr abgestimmt werden.');
+      return;
+    }
     if (this.hasVotedThisWeek) {
       return alert('Sie haben in dieser Woche bereits einmal abgestimmt.');
     } else {
@@ -283,7 +300,9 @@ D3Graph = (function() {
   };
 
   D3Graph.prototype.initD3 = function() {
-    this.svg = d3.select(this.container).append('svg:svg').attr('width', this.width).attr('height', this.height);
+    this.svg = d3.select(this.container).append('svg:svg');
+    this.svg.attr('width', this.width).attr('height', this.height).append("defs").append("filter").attr("id", "saturate").append("feColorMatrix").attr("type", "matrix").attr("values", "0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0");
+    this.svg;
     this.force = d3.layout.force().linkDistance(40).distance(130).charge(-1000).size([this.width, this.height]);
     this.nodes = this.force.nodes();
     return this.links = this.force.links();
@@ -296,6 +315,9 @@ D3Graph = (function() {
     for (i = _i = 0, _len = _ref.length; _i < _len; i = ++_i) {
       r = _ref[i];
       r.image = this.app.data[r.slug].image;
+      if (this.app.data[r.slug].durchstreichen <= this.app.episode) {
+        r.ude = true;
+      }
       this.links.push({
         'source': i + 1,
         'target': 0
@@ -305,6 +327,7 @@ D3Graph = (function() {
       'name': person.name,
       'slug': person.slug,
       'image': person.image,
+      'ude': person.ude,
       'isCenter': true
     };
     nodes = [centerNode].concat(person.relations);
@@ -372,6 +395,12 @@ D3Graph = (function() {
         return 90;
       } else {
         return 60;
+      }
+    }).attr('filter', function(d) {
+      if (d.ude) {
+        return "url(#saturate)";
+      } else {
+        return "";
       }
     });
     node.append('text').attr('x', -20).attr('y', function(d) {
@@ -451,7 +480,15 @@ HomeView = (function() {
     _ref = this.app.data;
     for (slug in _ref) {
       person = _ref[slug];
-      this.personsEl.innerHTML += this.personHTML(slug, person);
+      if (person.freischaltepisode <= this.app.episode) {
+        if (person.durchstreichen <= this.app.episode) {
+          person.ude = true;
+          this.app.data[slug].ude = true;
+        } else {
+          this.app.data[slug].ude = false;
+        }
+        this.personsEl.innerHTML += this.personHTML(slug, person);
+      }
     }
     return this.hasBeenShow = true;
   };
@@ -469,7 +506,9 @@ HomeView = (function() {
   };
 
   HomeView.prototype.personHTML = function(slug, person) {
-    return "<a href=\"#" + slug + "\" data-person-slug=\"" + slug + "\" class=\"person\">\n    " + (DR.BroenGallery.getFaceImg(person.image)) + "\n</a>";
+    var ude;
+    ude = (person.ude ? "ude" : "");
+    return "<a href=\"#" + slug + "\" data-person-slug=\"" + slug + "\" class=\"person " + ude + "\">\n    " + (DR.BroenGallery.getFaceImg(person.image)) + "\n</a>";
   };
 
   return HomeView;
@@ -702,6 +741,14 @@ PersonInfoView = (function() {
   PersonInfoView.prototype.show = function(person) {
     var inner, p;
     this.person = person;
+    if (person.freischaltepisode <= this.app.episode) {
+      if (person.durchstreichen <= this.app.episode) {
+        person.ude = true;
+        this.app.data[person.slug].ude = true;
+      } else {
+        this.app.data[person.slug].ude = false;
+      }
+    }
     this.container.innerHTML = this.html(person);
     p = document.getElementById('broen-gallery-person-text');
     window.fireEvent('dr-dom-inserted', [$$('p')]);
@@ -712,8 +759,9 @@ PersonInfoView = (function() {
   };
 
   PersonInfoView.prototype.html = function(person) {
-    var html;
-    html = "<div id=\"broen-gallery-person-info-inner\">\n    " + (DR.BroenGallery.getFaceImg(person.image, 50)) + "\n    <h2>" + person.name + "</h2>\n    <p id=\"broen-gallery-person-text\" data-maxlines=\"5\" data-readmore=\"true\" >" + person.longText + "</p>";
+    var html, ude;
+    ude = (person.ude ? "ude" : "");
+    html = "<div id=\"broen-gallery-person-info-inner\">\n    <div class=\"" + ude + "\" >" + (DR.BroenGallery.getFaceImg(person.image, 50)) + "</div>\n    <h2>" + person.name + "</h2>\n    <p id=\"broen-gallery-person-text\" data-maxlines=\"5\" data-readmore=\"true\" >" + person.longText + "</p>";
     if (DR.BroenGallery.config.votingEnabled) {
       html += "<div class=\"vote\">Glauben Sie, dass " + person.name + " in ein Verbrechen verwickelt ist?<br /><button class=\"vote-btn\">ja!</button></div>";
     }
@@ -784,6 +832,8 @@ PopoverView = (function() {
 
   PopoverView.prototype.html = function(person) {
     var html;
+    person.text = this.app.data[person.slug].text;
+    person.name = this.app.data[person.slug].name;
     html = "<h3><a href=\"#\" class=\"dr-link-readmore dr-icon-close\"></a><a href=\"#" + person.slug + "\">" + person.name + "</a></h3>\n<p>" + person.text + "</p>\n<a class=\"dr-icon-link-small dr-link-readmore\" href=\"#" + person.slug + "\">Mehr</a>";
     if (DR.BroenGallery.config.votingEnabled) {
       html += "   \n<div class=\"vote\">\n    <p>Ist " + person.name + "<br /> beteiligt?</p>\n    <button class=\"vote-btn\">ja!</button>\n</div>";

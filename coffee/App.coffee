@@ -5,7 +5,7 @@ class DR.BroenGallery.App
     
     data: null
 
-    constructor: (containerId) ->
+    constructor: (containerId, episode=5) ->
         this.fetchData()
         this.featureDetect()
 
@@ -15,6 +15,9 @@ class DR.BroenGallery.App
 
         @homeView = new HomeView this
         @personView = new PersonView this
+
+        @episode = episode;
+
         this.initVoting()
 
         return this
@@ -62,7 +65,7 @@ class DR.BroenGallery.App
             <h2><a href="#home">Verdächtige</a><a id="broen-home-link" class="dr-icon-link-small dr-link-readmore hide" href="#home">Zur Übersicht</a></h2>
 
             <div id="broen-gallery-home" class="hide">
-                <p class="intro-text">Hier sind die wichtigsten Personen in die Brücke II und ihre Beziehungen zueinander.</p>
+                <p class="intro-text">Die wichtigsten Personen und ihre Beziehungen zueinander</p>
                 <div id="broen-gallery-home-persons"></div>
                 <div id="broen-gallery-home-popover" class="hide container-green"></div>
             </div>

@@ -271,9 +271,12 @@ function td($m) {
 
 	if($m){			
 		foreach ($jsdata2 as $key => $person) {
-			echo "Media für Name: ".$key."\n";
-			toLower($person);
-	        uploadMediaDoc($person);
+			//if ($person->slug == "john")
+			{
+				echo "Media für Name: ".$key."\n";
+				toLower($person);
+        		uploadMediaDoc($person);				
+			}
 		}
 	}
 
@@ -565,8 +568,9 @@ function remove_ude($person){
 	return $ude;
 }
 
-function toLower($person){
+function toLower(&$person){
 
 	$person->image = strtolower($person->image);     
+	$person->slug = strtolower($person->slug);     
 
 }
