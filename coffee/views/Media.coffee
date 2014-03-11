@@ -113,7 +113,7 @@ class MediaView
                                         <div class="icon-film play-overlay" >
                                         </div>
                                         <div class="play-base" >
-                                            <img src="#{media.image}" id="video#{i1}" class="video" onclick="playvideo(this);return false;" alt="" width="0" height="0" role="presentation" aria-hidden="true" video-url="#{media.videouri}" /> 
+                                            <img src="#{media.image}" id="video#{i}" class="video" onclick="playvideo(this);return false;" alt="" width="0" height="0" role="presentation" aria-hidden="true" video-url="#{media.videouri}" /> 
                                         </div>
                                 </span>
                             </div>

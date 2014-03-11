@@ -353,7 +353,7 @@ Swipe.prototype = {
     
     var from = this.index;
 
-    if (from == to) return; // do nothing if already on requested slide
+    //if (from == to) return; // do nothing if already on requested slide
     
     if (this.browser.transitions) {
       var toStack = Math.abs(from-to) - 1,
