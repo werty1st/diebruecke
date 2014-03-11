@@ -41,6 +41,6 @@ class PersonInfoView
                 """
 
         if DR.BroenGallery.config.votingEnabled
-            html += """<div class="vote">Glauben Sie, dass #{person.name} in ein Verbrechen verwickelt ist?<br /><button class="vote-btn">ja!</button></div>"""
+            html += """<div class="vote">Glauben Sie, dass #{person.name} hinter den Anschlägen steckt?<br /><button class="vote-btn">ja!</button></div>"""
 
         return html + "</div>"

@@ -29,10 +29,12 @@ http://www.dr.dk/assets/fonts/dricons/dr-icons-webfont.ttf
 http://www.dr.dk/assets/fonts/dricons/dr-icons-webfont.svg
 */
 
-.ude {
-    filter: url(filters.svg#grayscale); /* Firefox 3.5+ */
-    filter: gray; /* IE6-9 */
-    -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+
+.ude img {   
+    filter: url(filter.svg#grayscale);
+    filter: grayscale(1);
+    filter: gray;
+    -webkit-filter: grayscale(1);
 }
 
 @font-face {
