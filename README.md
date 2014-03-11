@@ -41,6 +41,13 @@ Fotos:
 
 
 Todo:
+player tooltips und vollbild
+Rolf hilft mir dann noch beim verpixeln.
+abstimmungsendpoint (personen die tot sind blocken)
+abstimmungsvisualisierung
+
+
+
 
 veröffentlichungsdatum einer person beachten
 sterbedatum einer person beachten
@@ -49,15 +56,11 @@ DR.BroenGallery.config = {
     jsonDataUrl: als array(0-5) je episode ein link alternativ eine url mit automatisch vom server erzeugten ein und ausblendedaten
 
 Dann kümmere ich mich um die Abstimmung und den Akamai Cache.
-Rolf hilft mir dann noch beim verpixeln.
 Dann gucke ich nochmal nach dem Backend.
 
 
 reihenfolge korrigieren
-player tooltips
 
-abstimmungsendpoint (personen die tot sind blocken)
-abstimmungsvisualisierung
 
 schriftart arial
 fotos und videos auf externen server/2.datenbank

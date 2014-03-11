@@ -1,6 +1,8 @@
 #broen-gallery {
   min-height: 400px;
   margin-top: 20px;
+  max-width: 960px;
+  margin: 0 auto;
 }
 #broen-gallery h2 .dr-link-readmore {
   position: absolute;
@@ -301,6 +303,9 @@ html.mobile #broen-gallery-person-media #broen-gallery-person-media-slider .dr-w
   height: 79px;
   float: left;
   margin-right: 10px;
+}
+#broen-gallery-person-info #broen-gallery-person-media .floatleft {
+  float: left;
 }
 #broen-gallery-person-info #broen-gallery-person-media img {
   margin-right: 10px;

@@ -27,9 +27,20 @@ class PersonInfoView
         p = document.getElementById 'broen-gallery-person-text'
         window.fireEvent 'dr-dom-inserted', [$$('p')]
 
+
+        #unerlaubtes filtern
+        len = @person.media.length
+        while len--
+            media = person.media[len]
+            #console.log "elementfreigabe: #{media.freischaltepisode}"
+            if (media.freischaltepisode > @app.episode)
+                @person.media.splice(len,1)                
+            
+
+
         if person.media and person.media.length > 0
             inner = document.getElementById 'broen-gallery-person-info-inner'
-            inner.appendChild new MediaView person.name, person.media, @app.isMobile
+            inner.appendChild new MediaView person.name, person.media, @app.isMobile, @app
 
     html: (person) ->
         ude = (if person.ude then "ude" else "") 

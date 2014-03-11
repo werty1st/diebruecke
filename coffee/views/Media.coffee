@@ -1,10 +1,11 @@
 class MediaView
     hasBeenOpened: false
 
-    constructor: (name, media, isMobile) ->
+    constructor: (name, media, isMobile, app) ->
         @name = name
         @media = media
         @isMobile = isMobile
+        @app = app
 
         @el = document.createElement('div')
         @el.setAttribute 'id', 'broen-gallery-person-media'
@@ -71,7 +72,6 @@ class MediaView
 
     html: ->
         html = '<div>'
-
         for media in @media
             if media.type is 'image'
                 html += """
@@ -92,9 +92,9 @@ class MediaView
                      <h3>#{@name} - Fotos/Videos<a href="#" class="dr-link-readmore dr-icon-close">Schließen</a></h3>
                      <div id="broen-gallery-swipe-carousel" class="dr-widget-swipe-carousel" data-min-item-span="8">"""
 
-        i1=0
-        for media in @media
-            i1++
+        i1=0        
+        for media,i in @media
+            i1++            
             if media.type is 'image'
                 html += """
                         <div class="carousel-item">

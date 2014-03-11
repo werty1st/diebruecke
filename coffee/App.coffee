@@ -5,7 +5,7 @@ class DR.BroenGallery.App
     
     data: null
 
-    constructor: (containerId, episode=5) ->
+    constructor: (containerId, episode=0) ->
         this.fetchData()
         this.featureDetect()
 

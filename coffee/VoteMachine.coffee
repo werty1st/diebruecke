@@ -38,7 +38,7 @@ class DR.BroenGallery.VoteMachine
                    @hasVotedThisWeek = true
 
                 onFailure: ->
-                    alert 'Serverfehler! Es wurde keine Stimme vergeben.'
+                    alert 'Die Abstimmung ist noch nicht freigeschaltet'
 
             req.send()
          

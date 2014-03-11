@@ -27,7 +27,7 @@ if(host == 'www.dr.dk') {
 
   function App(containerId, episode) {
     if (episode == null) {
-      episode = 5;
+      episode = 0;
     }
     this.fetchData();
     this.featureDetect();
@@ -112,16 +112,7 @@ MooRouter = (function() {
     router = Router.implement({
       routes: {
         '': 'homeRoute',
-        '#0': 'reload',
-        '#1': 'reload',
-        '#2': 'reload',
-        '#3': 'reload',
-        '#4': 'reload',
-        '#5': 'reload',
         '#:slug': 'personRoute'
-      },
-      reload: function() {
-        return window.location.reload();
       },
       homeRoute: function() {
         return _this.app.showHome();
@@ -197,7 +188,7 @@ DR.BroenGallery.VoteMachine = (function() {
           return _this.hasVotedThisWeek = true;
         },
         onFailure: function() {
-          return alert('Serverfehler! Es wurde keine Stimme vergeben.');
+          return alert('Die Abstimmung ist noch nicht freigeschaltet');
         }
       });
       return req.send();
@@ -244,7 +235,7 @@ window.bindEvent = function(el, eventName, eventHandler) {
 };
 
 DR.BroenGallery.getImg = function(url, w, h) {
-  return "<img src=\"" + (DR.BroenGallery.getResizedImg(url, w, h)) + "\" width=\"" + w + "\" height=\"" + h + "\" />";
+  return "<img class=\"floatleft\" src=\"" + (DR.BroenGallery.getResizedImg(url, w, h)) + "\" width=\"" + w + "\" height=\"" + h + "\" />";
 };
 
 DR.BroenGallery.getResizedImg = function(url, w, h) {
@@ -520,10 +511,11 @@ var MediaView;
 MediaView = (function() {
   MediaView.prototype.hasBeenOpened = false;
 
-  function MediaView(name, media, isMobile) {
+  function MediaView(name, media, isMobile, app) {
     this.name = name;
     this.media = media;
     this.isMobile = isMobile;
+    this.app = app;
     this.el = document.createElement('div');
     this.el.setAttribute('id', 'broen-gallery-person-media');
     this.el.innerHTML = this.html();
@@ -623,12 +615,12 @@ MediaView = (function() {
   };
 
   MediaView.prototype.getSliderHTML = function() {
-    var html, i1, media, _i, _len, _ref;
+    var html, i, i1, media, _i, _len, _ref;
     html = "<div class=\"section boxed\">\n<h3>" + this.name + " - Fotos/Videos<a href=\"#\" class=\"dr-link-readmore dr-icon-close\">Schließen</a></h3>\n<div id=\"broen-gallery-swipe-carousel\" class=\"dr-widget-swipe-carousel\" data-min-item-span=\"8\">";
     i1 = 0;
     _ref = this.media;
-    for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-      media = _ref[_i];
+    for (i = _i = 0, _len = _ref.length; _i < _len; i = ++_i) {
+      media = _ref[i];
       i1++;
       if (media.type === 'image') {
         html += "<div class=\"carousel-item\">\n    <div class=\"item\" >\n        <span role=\"presentation\" aria-hidden=\"true\" class=\"image-wrap ratio-16-9\">\n            <img src=\"" + media.image + "\" alt=\"\" width=\"0\" height=\"0\" role=\"presentation\" aria-hidden=\"true\" />                                    \n        </span>\n    </div>\n</div>";
@@ -739,7 +731,7 @@ PersonInfoView = (function() {
   };
 
   PersonInfoView.prototype.show = function(person) {
-    var inner, p;
+    var inner, len, media, p;
     this.person = person;
     if (person.freischaltepisode <= this.app.episode) {
       if (person.durchstreichen <= this.app.episode) {
@@ -752,9 +744,16 @@ PersonInfoView = (function() {
     this.container.innerHTML = this.html(person);
     p = document.getElementById('broen-gallery-person-text');
     window.fireEvent('dr-dom-inserted', [$$('p')]);
+    len = this.person.media.length;
+    while (len--) {
+      media = person.media[len];
+      if (media.freischaltepisode > this.app.episode) {
+        this.person.media.splice(len, 1);
+      }
+    }
     if (person.media && person.media.length > 0) {
       inner = document.getElementById('broen-gallery-person-info-inner');
-      return inner.appendChild(new MediaView(person.name, person.media, this.app.isMobile));
+      return inner.appendChild(new MediaView(person.name, person.media, this.app.isMobile, this.app));
     }
   };
 
@@ -836,7 +835,7 @@ PopoverView = (function() {
     person.name = this.app.data[person.slug].name;
     html = "<h3><a href=\"#\" class=\"dr-link-readmore dr-icon-close\"></a><a href=\"#" + person.slug + "\">" + person.name + "</a></h3>\n<p>" + person.text + "</p>\n<a class=\"dr-icon-link-small dr-link-readmore\" href=\"#" + person.slug + "\">Mehr</a>";
     if (DR.BroenGallery.config.votingEnabled) {
-      html += "   \n<div class=\"vote\">\n    <p>Ist " + person.name + "<br /> beteiligt?</p>\n    <button class=\"vote-btn\">ja!</button>\n</div>";
+      html += "   \n<div class=\"vote\">\n    <p>Steckt " + person.name + "<br /> hinter den Anschlägen?</p>\n    <button class=\"vote-btn\">ja!</button>\n</div>";
     }
     return html;
   };

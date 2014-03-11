@@ -5,16 +5,7 @@ class MooRouter
         router = Router.implement
             routes:
                 ''       : 'homeRoute'
-                '#0'      : 'reload'
-                '#1'      : 'reload'
-                '#2'      : 'reload'
-                '#3'      : 'reload'
-                '#4'      : 'reload'
-                '#5'      : 'reload'
                 '#:slug' : 'personRoute'
-
-            reload: =>
-                window.location.reload()
 
             homeRoute: =>
                 @app.showHome()

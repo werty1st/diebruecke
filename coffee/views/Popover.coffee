@@ -50,7 +50,7 @@ class PopoverView
         if DR.BroenGallery.config.votingEnabled
             html += """   
                     <div class="vote">
-                        <p>Ist #{person.name}<br /> beteiligt?</p>
+                        <p>Steckt #{person.name}<br /> hinter den Anschlägen?</p>
                         <button class="vote-btn">ja!</button>
                     </div>
                     """

@@ -10,7 +10,7 @@ window.bindEvent = (el, eventName, eventHandler) ->
 
 
 DR.BroenGallery.getImg = (url, w, h) ->
-    return """<img src="#{DR.BroenGallery.getResizedImg(url, w, h)}" width="#{w}" height="#{h}" />"""
+    return """<img class="floatleft" src="#{DR.BroenGallery.getResizedImg(url, w, h)}" width="#{w}" height="#{h}" />"""
 
 
 DR.BroenGallery.getResizedImg = (url, w, h) ->
