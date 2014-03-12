@@ -428,7 +428,7 @@
 					verticalAlign="middle"
 					/>	
 					
-				<widget width="2" />	
+				<widget width="6" />	
 				
 				<widget
                   id="volumeButton"
@@ -454,22 +454,9 @@
                   value="0.75"                  
                   />
 
-				<widget width="2" />					
+				<widget width="6" />					
 
-				
-				<widget
-					id="fullScreenButton"
-					type="fullScreenButton"
-					verticalAlign="middle"
-					upFace="fullScreenEnterUp"
-					downFace="fullScreenEnterDown"
-					disabledFace="fullScreenEnterDisabled"
-					selectedUpFace="fullScreenLeaveUp"
-					selectedDownFace="fullScreenLeaveDown"
-					selectedDisabledFace="fullScreenLeaveDisabled"	
-					buttonMode="true"
-					tooltip="Vollbild"						
-					/>	
+	
 								
 				<widget width="2" />
 				

@@ -89,7 +89,11 @@ Swipe.prototype = {
     this.cache = new Array(this.length);
 
     // return immediately if their are less than two slides
-    if (this.length < 2) return;
+    // if (this.length < 2)
+    // {
+    //   this.container.style.visibility = 'visible';
+    //   return;
+    // } 
 
     // determine width of each slide
     this.width = this.container.getBoundingClientRect().width || this.container.offsetWidth;
@@ -353,7 +357,7 @@ Swipe.prototype = {
     
     var from = this.index;
 
-    //if (from == to) return; // do nothing if already on requested slide
+    if (from == to) return; // do nothing if already on requested slide
     
     if (this.browser.transitions) {
       var toStack = Math.abs(from-to) - 1,
