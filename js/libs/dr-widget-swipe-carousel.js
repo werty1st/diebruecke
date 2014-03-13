@@ -96,18 +96,25 @@ define("dr-widget-swipe-carousel", ["swipejs"], function (Swipe) {
 			this.wrapped = false;
 		},
 
+		stopplayback: function(){
+			try{
+	        	document.stopvideo();				
+			} catch (e)
+			{}
+		},
+
 		createButtons: function () {
 
 			this.pagingPrev = new Element('a', {
 				'class': 'carousel-button dr-icon-arrow-left-notext',
 				//'class': 'carousel-button icon-arrow-left',
-				events: { click: function (e) { if(player)player.stop(); if(!this.loading) { this.prev(); this.toggleButtons(); } } .bind(this) }
+				events: { click: function (e) { if(!this.loading) { this.stopplayback(); this.prev(); this.toggleButtons(); } } .bind(this) }
 			}).inject(this.container, 'after');
 
 			this.pagingNext = new Element('a', {
 				'class': 'carousel-button dr-icon-arrow-right-notext',
 				//'class': 'carousel-button icon-arrow-right',
-				events: { click: function (e) { if(player)player.stop(); if(!this.loading) { this.next(); } this.toggleButtons(); } .bind(this) }
+				events: { click: function (e) { if(!this.loading) { this.stopplayback(); this.next(); } this.toggleButtons(); } .bind(this) }
 			}).inject(this.container, 'after');
 		},
 

@@ -496,6 +496,7 @@ MediaView = (function() {
     this.media = media;
     this.isMobile = isMobile;
     this.app = app;
+    this.player;
     this.el = document.createElement('div');
     this.el.setAttribute('id', 'broen-gallery-person-media');
     this.el.innerHTML = this.html();
@@ -517,6 +518,7 @@ MediaView = (function() {
           target = target.getParent();
         }
         index = target.getParent().getChildren().indexOf(target);
+        _this.stopvideo();
         _this.openSlider(index);
         if (e.preventDefault) {
           return e.preventDefault();
@@ -530,6 +532,10 @@ MediaView = (function() {
           e.returnValue = false;
         }
         return _this.closeSlider();
+      } else if ((target.tagName.toLowerCase()) === 'img' && (target.className === "video")) {
+        document.lastimage = target;
+        target.className = "hide";
+        return _this.playvideo(target);
       } else {
         return false;
       }
@@ -541,6 +547,46 @@ MediaView = (function() {
     return this.slider.innerHTML = this.getSliderHTML();
   };
 
+  MediaView.prototype.playvideo = function(target) {
+    var url, video;
+    document.stopvideo = this.stopvideo;
+    console.log("play video");
+    url = target.getAttribute("video-url");
+    video = document.createElement('video');
+    video.setAttribute("controls", "");
+    video.setAttribute("preload", "auto");
+    video.setAttribute("width", 720);
+    video.setAttribute("height", 416);
+    video.setAttribute("class", "video-js vjs-default-skin");
+    video.id = 'myvideo';
+    target.parentNode.insertBefore(video, target);
+    console.log(url);
+    return require(["js/libs/video"], function(videojs) {
+      return videojs("myvideo").ready(function() {
+        var myPlayer;
+        myPlayer = this;
+        myPlayer.src(url);
+        myPlayer.play();
+        return document.myPlayer = myPlayer;
+      });
+    });
+  };
+
+  MediaView.prototype.stopvideo = function() {
+    var e, video;
+    if ((video = document.getElementById('myvideo'))) {
+      try {
+        document.myPlayer.pause();
+        video.remove();
+        document.myPlayer.dispose();
+        document.lastimage.className = "video";
+        return document.lastimage = false;
+      } catch (_error) {
+        e = _error;
+      }
+    }
+  };
+
   MediaView.prototype.openSlider = function(index) {
     var el,
       _this = this;
@@ -548,6 +594,7 @@ MediaView = (function() {
     if (this.isMobile) {
       document.body.className = 'broen';
     }
+    this.stopvideo();
     if (!this.hasBeenOpened) {
       el = $('broen-gallery-swipe-carousel');
       require(["dr-widget-swipe-carousel"], function(Swipe) {
@@ -558,9 +605,6 @@ MediaView = (function() {
         return window.fireEvent('dr-dom-inserted', [$$('div.dr-widget-video-player')]);
       });
     } else {
-      if (document.getElementById("myvideo")) {
-        document.getElementById("myvideo").className = "";
-      }
       this.swipe.slide(index);
     }
     return this.hasBeenOpened = true;
@@ -571,12 +615,7 @@ MediaView = (function() {
     if (this.isMobile) {
       document.body.className = '';
     }
-    if (player) {
-      player.stop();
-      if (document.getElementById("myvideo")) {
-        return document.getElementById("myvideo").className = "hide";
-      }
-    }
+    return this.stopvideo();
   };
 
   MediaView.prototype.html = function() {
@@ -605,7 +644,7 @@ MediaView = (function() {
       if (media.type === 'image') {
         html += "<div class=\"carousel-item\">\n    <div class=\"item\" >\n        <span role=\"presentation\" aria-hidden=\"true\" class=\"image-wrap ratio-16-9\">\n            <img src=\"" + media.image + "\" alt=\"\" width=\"0\" height=\"0\" role=\"presentation\" aria-hidden=\"true\" />                                    \n        </span>\n    </div>\n</div>";
       } else if (media.type === 'video') {
-        html += "<div class=\"carousel-item\">\n    <div class=\"item\" >\n        <span role=\"presentation\" aria-hidden=\"true\" class=\"image-wrap ratio-16-9\">\n                <div class=\"icon-film play-overlay\" >\n                </div>\n                <div class=\"play-base\" >\n                    <img src=\"" + media.image + "\" id=\"video" + i + "\" class=\"video\" onclick=\"playvideo(this);return false;\" alt=\"\" width=\"0\" height=\"0\" role=\"presentation\" aria-hidden=\"true\" video-url=\"" + media.videouri + "\" /> \n                </div>\n        </span>\n    </div>\n</div>";
+        html += "<div class=\"carousel-item\">\n    <div class=\"item\" >\n        <span role=\"presentation\" aria-hidden=\"true\" class=\"image-wrap ratio-16-9\">\n                <div class=\"icon-film play-overlay\" >\n                </div>\n                <div class=\"play-base\" >\n                    <img src=\"" + media.image + "\" id=\"video" + i + "\" class=\"video\" alt=\"\" width=\"0\" height=\"0\" role=\"presentation\" aria-hidden=\"true\" video-url=\"" + media.videouri + "\" /> \n                </div>\n        </span>\n    </div>\n</div>";
       }
     }
     return html + "</div></div>";

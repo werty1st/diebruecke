@@ -7,11 +7,13 @@ class MediaView
         @isMobile = isMobile
         @app = app
 
+        @player
+
         @el = document.createElement('div')
         @el.setAttribute 'id', 'broen-gallery-person-media'
         @el.innerHTML = this.html()
 
-        this.addEvents()
+        this.addEvents()        
         return @el
 
     addEvents: ->
@@ -19,21 +21,27 @@ class MediaView
             target = if e.target then e.target else window.event.srcElement
 
             if ((target.tagName.toLowerCase()) is 'img' and (target.className != "video"))
-                this.initSlider() unless @hasBeenOpened
-            
+                this.initSlider() unless @hasBeenOpened             
 
                 target = $(target)
                 if target.getParent().hasClass 'image-wrap'
                     target = target.getParent()
 
-                index = target.getParent().getChildren().indexOf(target) 
+                index = target.getParent().getChildren().indexOf(target)
+                this.stopvideo()
                 this.openSlider(index)
 
                 if e.preventDefault then e.preventDefault() else e.returnValue = false
             else if target.className is 'dr-link-readmore dr-icon-close'
                 if e.preventDefault then e.preventDefault() else e.returnValue = false
-
                 this.closeSlider()
+
+            else if ((target.tagName.toLowerCase()) is 'img' and (target.className == "video"))
+                #get playbase item
+                document.lastimage = target
+                target.className = "hide"
+                this.playvideo(target)
+
             else
                 false
 
@@ -41,10 +49,48 @@ class MediaView
         @slider = document.getElementById 'broen-gallery-person-media-slider'
         @slider.innerHTML = this.getSliderHTML()
 
+
+    playvideo: (target) ->
+        document.stopvideo = this.stopvideo
+        console.log "play video"
+        url = target.getAttribute "video-url"
+        # elid = target.id;
+        video = document.createElement('video')
+        video.setAttribute("controls","")
+        video.setAttribute("preload","auto")
+        video.setAttribute("width",720)
+        video.setAttribute("height",416)
+        video.setAttribute("class","video-js vjs-default-skin")
+        video.id = 'myvideo'
+        target.parentNode.insertBefore(video, target)
+
+        console.log url
+
+        require ["js/libs/video"], (videojs) ->
+            videojs("myvideo").ready(->
+                myPlayer = this
+                myPlayer.src(url)
+                myPlayer.play()
+                document.myPlayer = myPlayer
+            )
+
+
+    stopvideo: ->
+        if (video = document.getElementById('myvideo'))
+            try
+                document.myPlayer.pause()
+                video.remove()
+                document.myPlayer.dispose()
+                document.lastimage.className = "video"        
+                document.lastimage = false        
+            catch e
+
+            
+
     openSlider: (index) ->
         @slider.className = ''
         if @isMobile then document.body.className = 'broen'
-
+        this.stopvideo()
 
         if not @hasBeenOpened
             el = $('broen-gallery-swipe-carousel')
@@ -55,8 +101,8 @@ class MediaView
                 window.fireEvent 'dr-dom-inserted', [$$('span.image-wrap')]
                 window.fireEvent 'dr-dom-inserted', [$$('div.dr-widget-video-player')]
         else
-            if document.getElementById("myvideo")
-                document.getElementById("myvideo").className = ""
+            # if document.getElementById("myvideo")
+            #     document.getElementById("myvideo").className = ""
             @swipe.slide index
 
         @hasBeenOpened = true
@@ -64,11 +110,8 @@ class MediaView
     closeSlider: ->
         @slider.className = 'hide'
         if @isMobile then document.body.className = ''
+        this.stopvideo()
 
-        if player
-            player.stop()
-            if document.getElementById("myvideo")
-                document.getElementById("myvideo").className = "hide"
 
     html: ->
         html = '<div>'
@@ -113,7 +156,7 @@ class MediaView
                                         <div class="icon-film play-overlay" >
                                         </div>
                                         <div class="play-base" >
-                                            <img src="#{media.image}" id="video#{i}" class="video" onclick="playvideo(this);return false;" alt="" width="0" height="0" role="presentation" aria-hidden="true" video-url="#{media.videouri}" /> 
+                                            <img src="#{media.image}" id="video#{i}" class="video" alt="" width="0" height="0" role="presentation" aria-hidden="true" video-url="#{media.videouri}" /> 
                                         </div>
                                 </span>
                             </div>

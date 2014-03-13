@@ -6,7 +6,8 @@
 		<link rel="stylesheet" href="styles/base.css" media="screen"/>
 		<link rel="stylesheet" href="styles/broen.css" media="screen"/>
 		<link rel="stylesheet" href="styles/icomoon.css">
-		<link type="text/css" href="styles/zdfplayer-1.4.2356.min.css" rel="stylesheet" />	
+		<!-- <link type="text/css" href="styles/zdfplayer-1.4.2356.min.css" rel="stylesheet" /> -->
+		<link href="styles/video-js.min.css" rel="stylesheet">	
 	</head>
 
 	<body>
@@ -37,94 +38,26 @@
 			myRequest.send();
 			
 		</script>
-		<script type="text/javascript" src="js/libs/zdfplayer-with-all-1.4.2356.min.js"></script>
 
 		<script>
 
-			var player = null;
 
 
-			function createasset(url){
+			// var player = null;
 
-				var formitaeten = [			
-					new zdfplayer.media.Formitaet({
-						baseType : 'h264_aac_mp4_http_na_na',
-						quality : 'veryhigh',
-						url : url,
-						videoBitrate : 1680000,
-						audioBitrate : 48000
-					})
-				]
+			// function playvideo(el){
 
-				var asset = new zdfplayer.media.ManualAsset({
-	                type : 'vod', // default or 'live'
-					title : 'Lorem',
-					description : 'Ipsum',
-					airTime : '01.10.2012 12:00',
-					timeToLive : '08.06.2013 19:59',   
-					channelTitle : 'ZDF DZF FZD',
-					vcmsURL : '',
-					cuepoints : "",
-					formitaeten : formitaeten,
-					teaserImages : "",
-					family : '',
-					count : ''
-				});			
-				return asset;
-			}
+			// 	var url = el.getAttribute("video-url");
+			// 	var elid = el.id;
 
-			function playvideo(el){
+			// 	jQuery( "<div id='myvideo'></div>" ).insertBefore("#"+elid);
+				
 
-				var url = el.getAttribute("video-url");
-				var elid = el.id;
+				
 
-				// register Listener for player ready event
-				// player.addEventListener(zdfplayer.Player.READY, function(event)
-				// {
-				// 	console.log('Hello I am your player. I am ready now');
-				// 	setTimeout( function(){
-				// 		console.log("autoplay");
-				// 		player.play();
-				// 		},3000)
-				// })
+			// 	return false;
+	  //   	}
 
-				if (!jQuery( "#myvideo" ).length>0){
-
-					// create player instance via PlayerFactory
-					player = zdfplayer.PlayerFactory.instanciate(
-					{
-						id: 'zdfplayer1',
-						configurationUrl: 'js/libs/configuration_full_feature.xml',
-						mediaAsset : createasset(url),
-						preloaderImageUrl : "img/spinner.gif",
-						settings:
-						{
-							source : 'manual',
-							autoPlay : true,
-							embedTypes : 'html5',
-							scaleMode : 'letterbox',
-							//width : 720,
-							width : 734,
-							// height : 416,
-							height : 416,
-							tracking : { source : 'manual'},
-		                    initialQuality: 'high'
-
-						}
-					});
-
-					jQuery( "<div id='myvideo'></div>" ).insertBefore("#"+elid);
-					player.embed("myvideo");			
-					
-				} else
-				{
-					//display
-					jQuery( "#myvideo" ).insertBefore("#"+elid);				
-	        		player.changeAsset(createasset(url));
-	        		player.play();
-	        	}
-				return false;
-	    	}
 		</script>
 		
 	</body>
