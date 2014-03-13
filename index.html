@@ -18,11 +18,23 @@
 		<script type="text/javascript" src="js/libs/require.js"></script>
 		<script type="text/javascript" src="js/libs/require.config.js"></script>
 		<script type="text/javascript" src="js/libs/mootools-router.js"></script>
+		<script type="text/javascript" src="//script.ioam.de/iam.js" language="JavaScript"></script>
 		<script type="text/javascript" src="js/libs/swipe.js"></script>
-		<script type="text/javascript" src="js/libs/dr-widget-swipe-carousel.js"></script>
+		 <script type="text/javascript" src="js/libs/dr-widget-swipe-carousel.js"></script>
+<!--
+
+-->
 		<script type="text/javascript" src="js/broen.js"></script>
-	
+		
 		<script type="text/javascript">
+			var iam_data = {
+				"st":"zdfsup",
+				"cp":"ZD/zdfde_Die_Bruecke",
+				"co":"Modul/DieBruecke2/A016464",
+				"sv":"ke"
+			};
+			//install ivw function
+			window.ivw = function() {iom.c(iam_data,1)};
 
 			var myRequest = new Request({
 			    url: 'episode',
@@ -33,7 +45,9 @@
 
 			        new DR.BroenGallery.App('broen-gallery-container',e);
 					console.log('Geladen für Episode '+e);
-			    }
+					
+
+				}
 			});			 
 			myRequest.send();
 			

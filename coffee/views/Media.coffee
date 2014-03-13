@@ -72,6 +72,7 @@ class MediaView
                 myPlayer.play()
                 document.myPlayer = myPlayer
             )
+        window.ivw()
 
 
     stopvideo: ->
@@ -105,11 +106,13 @@ class MediaView
 
         @hasBeenOpened = true
         this.stopvideo()
+        window.ivw()
 
     closeSlider: ->
         @slider.className = 'hide'
         if @isMobile then document.body.className = ''
         this.stopvideo()
+        window.ivw()
 
 
     html: ->

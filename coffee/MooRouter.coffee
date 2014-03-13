@@ -9,9 +9,11 @@ class MooRouter
 
             homeRoute: =>
                 @app.showHome()
+                window.ivw()
 
             personRoute: ->
                 this.showPerson this.param.slug
+                window.ivw()
 
             showPerson: (slug) =>
                 if slug is 'home'

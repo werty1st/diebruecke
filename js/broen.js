@@ -115,10 +115,12 @@ MooRouter = (function() {
         '#:slug': 'personRoute'
       },
       homeRoute: function() {
-        return _this.app.showHome();
+        _this.app.showHome();
+        return window.ivw();
       },
       personRoute: function() {
-        return this.showPerson(this.param.slug);
+        this.showPerson(this.param.slug);
+        return window.ivw();
       },
       showPerson: function(slug) {
         var offset;
@@ -580,7 +582,7 @@ MediaView = (function() {
     video.id = 'myvideo';
     target.parentNode.insertBefore(video, target);
     console.log(url);
-    return require(["js/libs/video"], function(videojs) {
+    require(["js/libs/video"], function(videojs) {
       return videojs("myvideo").ready(function() {
         var myPlayer;
         myPlayer = this;
@@ -589,6 +591,7 @@ MediaView = (function() {
         return document.myPlayer = myPlayer;
       });
     });
+    return window.ivw();
   };
 
   MediaView.prototype.stopvideo = function() {
@@ -625,7 +628,8 @@ MediaView = (function() {
       this.swipe.slide(index);
     }
     this.hasBeenOpened = true;
-    return this.stopvideo();
+    this.stopvideo();
+    return window.ivw();
   };
 
   MediaView.prototype.closeSlider = function() {
@@ -633,7 +637,8 @@ MediaView = (function() {
     if (this.isMobile) {
       document.body.className = '';
     }
-    return this.stopvideo();
+    this.stopvideo();
+    return window.ivw();
   };
 
   MediaView.prototype.html = function() {
