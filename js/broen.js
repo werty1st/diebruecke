@@ -538,7 +538,6 @@ MediaView = (function() {
           target = target.getParent();
         }
         index = target.getParent().getChildren().indexOf(target);
-        _this.stopvideo();
         _this.openSlider(index);
         if (e.preventDefault) {
           return e.preventDefault();
@@ -614,20 +613,19 @@ MediaView = (function() {
     if (this.isMobile) {
       document.body.className = 'broen';
     }
-    this.stopvideo();
     if (!this.hasBeenOpened) {
       el = $('broen-gallery-swipe-carousel');
       require(["dr-widget-swipe-carousel"], function(Swipe) {
-        _this.swipe = new Swipe(el, {
-          startSlide: index
-        });
+        _this.swipe = new Swipe(el);
+        _this.swipe.slide(index);
         window.fireEvent('dr-dom-inserted', [$$('span.image-wrap')]);
         return window.fireEvent('dr-dom-inserted', [$$('div.dr-widget-video-player')]);
       });
     } else {
       this.swipe.slide(index);
     }
-    return this.hasBeenOpened = true;
+    this.hasBeenOpened = true;
+    return this.stopvideo();
   };
 
   MediaView.prototype.closeSlider = function() {

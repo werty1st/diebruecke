@@ -28,7 +28,6 @@ class MediaView
                     target = target.getParent()
 
                 index = target.getParent().getChildren().indexOf(target)
-                this.stopvideo()
                 this.openSlider(index)
 
                 if e.preventDefault then e.preventDefault() else e.returnValue = false
@@ -90,14 +89,13 @@ class MediaView
     openSlider: (index) ->
         @slider.className = ''
         if @isMobile then document.body.className = 'broen'
-        this.stopvideo()
 
         if not @hasBeenOpened
             el = $('broen-gallery-swipe-carousel')
             require ["dr-widget-swipe-carousel"], (Swipe) =>
-                @swipe = new Swipe el,
-                    startSlide: index
+                @swipe = new Swipe el
 
+                @swipe.slide index
                 window.fireEvent 'dr-dom-inserted', [$$('span.image-wrap')]
                 window.fireEvent 'dr-dom-inserted', [$$('div.dr-widget-video-player')]
         else
@@ -106,6 +104,7 @@ class MediaView
             @swipe.slide index
 
         @hasBeenOpened = true
+        this.stopvideo()
 
     closeSlider: ->
         @slider.className = 'hide'
