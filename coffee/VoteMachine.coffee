@@ -1,20 +1,21 @@
 class DR.BroenGallery.VoteMachine
-    hasVotedThisWeek: false 
+    hasVotedThisDay: false 
 
     constructor: (app)->
         @app = app
         require ["js/libs/more"], =>
             @cookie = new Hash.Cookie 'benzErGud2',
-                duration: 365
+                duration: 60
 
-            @currentWeek = @getWeek(new Date())
-            @hasVotedThisWeek = this.hasVotedThisWeek()
+            @currentDay = Date.now()
+            @hasVotedThisDay = this.hasVotedThisDay()
             return this
 
-    hasVotedThisWeek: ->
-        lastVotedWeek = @cookie.get 'week'
+    hasVotedThisDay: ->
+        lastVotedDay = @cookie.get 'day'
 
-        if not lastVotedWeek or lastVotedWeek isnt @currentWeek
+
+        if not lastVotedDay or (lastVotedDay+1000*3600*8) < @currentDay
             return false
         else
             return true
@@ -23,34 +24,48 @@ class DR.BroenGallery.VoteMachine
         if (@app.data[slug].ude)
             alert 'Für diese Person kann nicht mehr abgestimmt werden.'
             return
-            
-        if @hasVotedThisWeek
-            alert 'Sie haben in dieser Woche bereits einmal abgestimmt.'
-        else
-            voteId = @app.data[slug].voteId
 
-            req = new Request
-                url: DR.BroenGallery.config.voteEndpoint + '?qid=5&aid=' + voteId
+        if @hasVotedThisDay
+            alert 'Sie haben heute bereits einmal abgestimmt.'
+            return
+        
+        voteId = @app.data[slug].voteId + 1763
+        myvote = new Request(
+            url: "http://vote.zdf.de/gate/"
+            method: "POST"
+            data:
+                aid: voteId
+                qid: 591
+                auth4: global.auth4
+                auth6: global.auth
 
-                onSuccess: =>
-                   alert 'Vielen Dank für Ihre Stimme. Sie können nächste Woche noch einmal abstimmen.'
-                   @cookie.set 'week', @currentWeek
-                   @hasVotedThisWeek = true
+            onSuccess: (json) =>
+                @cookie.set 'day', @currentDay
+                @hasVotedThisDay = true
+                alert 'Vielen Dank für Ihre Stimme. Sie können Morgen wieder abstimmen.'
+                return
+        )
+        myvote.send()
+        return
 
-                onFailure: ->
-                    alert 'Die Abstimmung ist noch nicht freigeschaltet'
+        # if @hasVotedThisWeek
+        #     alert 'Sie haben in dieser Woche bereits einmal abgestimmt.'
+        # else
+        #     voteId = @app.data[slug].voteId
 
-            req.send()
+        #     req = new Request
+        #         url: DR.BroenGallery.config.voteEndpoint + '?qid=5&aid=' + voteId
+
+        #         onSuccess: =>
+        #            alert 'Vielen Dank für Ihre Stimme. Sie können nächste Woche noch einmal abstimmen.'
+        #            @cookie.set 'week', @currentWeek
+        #            @hasVotedThisWeek = true
+
+        #         onFailure: ->
+        #             alert 'Die Abstimmung ist noch nicht freigeschaltet'
+
+        #     req.send()
          
-    getWeek: (d) ->
-        target = new Date(d.valueOf())
-        dayNr = (d.getDay() + 6) % 7
-        target.setDate(target.getDate() - dayNr + 3)
-        jan4 = new Date(target.getFullYear(), 0, 4)
-        dayDiff = (target - jan4) / 86400000  
-        weekNr = 1 + Math.ceil(dayDiff / 7)
-
-        return weekNr
 
 ###
 todo

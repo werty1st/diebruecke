@@ -35,3 +35,16 @@ DR.BroenGallery.getFaceImg = (image, size) ->
 
 DR.BroenGallery.getFaceImgUrl = (image) ->
     DR.BroenGallery.config.faces.url + image
+    
+Element::remove = ->
+  @parentElement.removeChild this
+  return
+
+NodeList::remove = HTMLCollection::remove = ->
+  i = 0
+  len = @length
+
+  while i < len
+    this[i].parentElement.removeChild this[i]  if this[i] and this[i].parentElement
+    i++
+  return
