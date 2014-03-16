@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="dfsf mo-bile">
+<html>
 	<head>
 		<meta charset="UTF-8">
 		<style>
@@ -38,8 +38,8 @@
 	
 		</div>
 	</body>
-	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
+	<script src="js/libs/d3.min.js" charset="utf-8"></script>
+	<script type="text/javascript" src="js/libs/jquery-2.1.0.min.js"></script>
 	<script type="text/javascript">
 		$("#poll-container").empty();
 		
@@ -98,7 +98,7 @@
 			}
 
 		$.getJSON("stimmen.json",function (results1){
-			$.getJSON("http://vote.zdf.de/res/407.json",function (results2){
+			$.getJSON("votes/407.json",function (results2){
 				//.voteId + 1763
 				var votes = {};
 				var votesarray = [];

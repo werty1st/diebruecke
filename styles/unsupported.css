@@ -1,0 +1,9 @@
+body{
+	background-color: #ff7f12;
+	color: #fff;
+	font-size: 16;
+}
+
+body:after{
+	content: "Bitte verwenden sie einen aktuellen Browser";
+}
