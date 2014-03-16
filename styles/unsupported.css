@@ -1,9 +1,24 @@
 body{
-	background-color: #ff7f12;
-	color: #fff;
-	font-size: 16;
+	background-color: #696d7a !important;
+	color: #fff !important;
+	font-size: 16px !important;
+	font-weight: bold;
 }
 
-body:after{
-	content: "Bitte verwenden sie einen aktuellen Browser";
+.vframe{
+	display:none !important;
+}
+
+#broen-gallery-container{
+	display: none !important;
+}
+
+#unsupported{
+	display: block;
+	background-color: #696d7a !important;
+	color: #fff !important;
+	font-size: 16px !important;
+	font-weight: bold;	
+	height: 100%;
+	width: 100%;
 }
