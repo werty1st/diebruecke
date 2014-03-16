@@ -14,7 +14,7 @@ body{
 }
 
 #unsupported{
-	display: block;
+	display: block !important;
 	background-color: #696d7a !important;
 	color: #fff !important;
 	font-size: 16px !important;
