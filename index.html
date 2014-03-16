@@ -27,6 +27,9 @@
 		<script type="text/javascript" src="js/broen.js"></script>
 		
 		<script type="text/javascript">
+			//vote auth
+			var global = {};
+
 			var iam_data = {
 				"st":"zdfsup",
 				"cp":"ZD/zdfde_Die_Bruecke",
@@ -51,9 +54,8 @@
 			
 
 
-			//var aKey = $("body").data("auth");
+			//vote appkey
 			var aKey = "63008d4bee6de5cef4e3b380b2be11e4";
-			var global = {};
 
 			var myvoteauth = new Request({
 			    url: 'http://vote.zdf.de/auth/',
@@ -69,26 +71,6 @@
 				}
 			});			 
 			myvoteauth.send();
-
-
-			//voteId
-			function voate(id){
-				var myvote = new Request({
-				    url: 'http://vote.zdf.de/gate/',
-				    method: "POST",
-				    data: {aid: 1774, qid:591, auth4: global.auth4, auth6: global.auth},
-
-				    onSuccess: function(json){
-						var jsdata = JSON.decode(json);
-						global.auth4 = jsdata.auth4;
-						global.auth6 = jsdata.auth6;
-						global.valid = jsdata.valid;
-						global.uar = jsdata.uar;			
-					}
-				});			 
-
-				myvote.send();
-			}
 
 		</script>
 

@@ -40,11 +40,9 @@ class DR.BroenGallery.App
     fetchData: ->
         dataUrl = DR.BroenGallery.config.jsonDataUrl
 
-        if document.location.href.indexOf('testjson') > -1
-            dataUrl = DR.BroenGallery.config.jsonDataTestUrl
-
         d3.json dataUrl, (error, data) =>
             @data = data
+            #window.global.data = data
             this.start()
 
     vote: (slug) ->

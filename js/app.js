@@ -43,9 +43,6 @@ DR.BroenGallery.App = (function() {
     var dataUrl,
       _this = this;
     dataUrl = DR.BroenGallery.config.jsonDataUrl;
-    if (document.location.href.indexOf('testjson') > -1) {
-      dataUrl = DR.BroenGallery.config.jsonDataTestUrl;
-    }
     return d3.json(dataUrl, function(error, data) {
       _this.data = data;
       return _this.start();
@@ -126,25 +123,26 @@ MooRouter = (function() {
 })();
 
 DR.BroenGallery.VoteMachine = (function() {
-  VoteMachine.prototype.hasVotedThisWeek = false;
+  VoteMachine.prototype.hasVotedThisDay = false;
 
   function VoteMachine(app) {
     var _this = this;
     this.app = app;
     require(["js/libs/more"], function() {
       _this.cookie = new Hash.Cookie('benzErGud2', {
-        duration: 365
+        duration: 60
       });
-      _this.currentWeek = _this.getWeek(new Date());
-      _this.hasVotedThisWeek = _this.hasVotedThisWeek();
+      _this.currentDay = Date.now();
+      _this.hasVotedThisDay = _this.hasVotedThisDay();
       return _this;
     });
   }
 
-  VoteMachine.prototype.hasVotedThisWeek = function() {
-    var lastVotedWeek;
-    lastVotedWeek = this.cookie.get('week');
-    if (!lastVotedWeek || lastVotedWeek !== this.currentWeek) {
+  VoteMachine.prototype.hasVotedThisDay = function() {
+    var lastVotedDay, timeover;
+    lastVotedDay = this.cookie.get('day');
+    timeover = lastVotedDay + 1000 * 3600 * 8;
+    if (!lastVotedDay || (timeover < this.currentDay)) {
       return false;
     } else {
       return true;
@@ -152,54 +150,38 @@ DR.BroenGallery.VoteMachine = (function() {
   };
 
   VoteMachine.prototype.vote = function(slug) {
-    var req, voteId,
+    var myvote, voteId,
       _this = this;
     if (this.app.data[slug].ude) {
       alert('Für diese Person kann nicht mehr abgestimmt werden.');
       return;
     }
-    if (this.hasVotedThisWeek) {
-      return alert('Sie haben in dieser Woche bereits einmal abgestimmt.');
-    } else {
-      voteId = this.app.data[slug].voteId;
-      req = new Request({
-        url: DR.BroenGallery.config.voteEndpoint + '?qid=5&aid=' + voteId,
-        onSuccess: function() {
-          alert('Vielen Dank für Ihre Stimme. Sie können nächste Woche noch einmal abstimmen.');
-          _this.cookie.set('week', _this.currentWeek);
-          return _this.hasVotedThisWeek = true;
-        },
-        onFailure: function() {
-          return alert('Die Abstimmung ist noch nicht freigeschaltet');
-        }
-      });
-      return req.send();
+    if (this.hasVotedThisDay) {
+      alert('Sie haben heute bereits einmal abgestimmt.');
+      return;
     }
-  };
-
-  VoteMachine.prototype.getWeek = function(d) {
-    var dayDiff, dayNr, jan4, target, weekNr;
-    target = new Date(d.valueOf());
-    dayNr = (d.getDay() + 6) % 7;
-    target.setDate(target.getDate() - dayNr + 3);
-    jan4 = new Date(target.getFullYear(), 0, 4);
-    dayDiff = (target - jan4) / 86400000;
-    weekNr = 1 + Math.ceil(dayDiff / 7);
-    return weekNr;
+    voteId = this.app.data[slug].voteId + 1763;
+    myvote = new Request({
+      url: "http://vote.zdf.de/gate/",
+      method: "POST",
+      data: {
+        aid: voteId,
+        qid: 591,
+        auth4: global.auth4,
+        auth6: global.auth
+      },
+      onSuccess: function(json) {
+        _this.cookie.set('day', _this.currentDay);
+        _this.hasVotedThisDay = true;
+        alert('Vielen Dank für Ihre Stimme. Sie können Morgen wieder abstimmen.');
+      }
+    });
+    myvote.send();
   };
 
   return VoteMachine;
 
 })();
-
-/*
-todo
-dr-widget-swipe-carousel.js fehlt
-swipe.js fehlt
-usw
-http://requirejs.org/docs/faq-advanced.html namepsace benutzen damit couchdb funktioniert
-*/
-
 
 window.log = function(x, y) {
   if (y == null) {
@@ -244,6 +226,22 @@ DR.BroenGallery.getFaceImg = function(image, size) {
 
 DR.BroenGallery.getFaceImgUrl = function(image) {
   return DR.BroenGallery.config.faces.url + image;
+};
+
+Element.prototype.remove = function() {
+  this.parentElement.removeChild(this);
+};
+
+NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
+  var i, len;
+  i = 0;
+  len = this.length;
+  while (i < len) {
+    if (this[i] && this[i].parentElement) {
+      this[i].parentElement.removeChild(this[i]);
+    }
+    i++;
+  }
 };
 
 var D3Graph;

@@ -14,8 +14,9 @@ class DR.BroenGallery.VoteMachine
     hasVotedThisDay: ->
         lastVotedDay = @cookie.get 'day'
 
+        timeover = lastVotedDay+1000*3600*8
 
-        if not lastVotedDay or (lastVotedDay+1000*3600*8) < @currentDay
+        if not lastVotedDay or (timeover < @currentDay)
             return false
         else
             return true
@@ -48,29 +49,3 @@ class DR.BroenGallery.VoteMachine
         myvote.send()
         return
 
-        # if @hasVotedThisWeek
-        #     alert 'Sie haben in dieser Woche bereits einmal abgestimmt.'
-        # else
-        #     voteId = @app.data[slug].voteId
-
-        #     req = new Request
-        #         url: DR.BroenGallery.config.voteEndpoint + '?qid=5&aid=' + voteId
-
-        #         onSuccess: =>
-        #            alert 'Vielen Dank für Ihre Stimme. Sie können nächste Woche noch einmal abstimmen.'
-        #            @cookie.set 'week', @currentWeek
-        #            @hasVotedThisWeek = true
-
-        #         onFailure: ->
-        #             alert 'Die Abstimmung ist noch nicht freigeschaltet'
-
-        #     req.send()
-         
-
-###
-todo
-dr-widget-swipe-carousel.js fehlt
-swipe.js fehlt
-usw
-http://requirejs.org/docs/faq-advanced.html namepsace benutzen damit couchdb funktioniert
-###

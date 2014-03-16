@@ -4,7 +4,7 @@
     "description": "Modul mit Hintergrundinformationen und Beziehungen der Hauptfiguren",
     "load": "lib/app",
     "modules": ["lib"],
-    "attachments": ["index.html","wartung.html", "img", "js/libs","js/broen.js","styles","static"],
+    "attachments": ["index.html","vote.html", "img", "js/libs","js/broen.js","styles","static"],
     "handlebars": {
         "all_partials": false,
         "templates": "templates"
