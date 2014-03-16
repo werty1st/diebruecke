@@ -162,7 +162,7 @@ DR.BroenGallery.VoteMachine = (function() {
     }
     voteId = this.app.data[slug].voteId + 1763;
     myvote = new Request({
-      url: "http://vote.zdf.de/gate/",
+      url: "votes/gate/",
       method: "POST",
       data: {
         aid: voteId,
