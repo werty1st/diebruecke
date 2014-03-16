@@ -52,7 +52,7 @@
 			votes.sort(function(a,b){return b.stimmen-a.stimmen});
 			votes.splice(5,31);
 
-			console.log(votes);
+			//console.log(votes);
 			animateResults(votes,vsum);
 
 		}
@@ -104,7 +104,7 @@
 				var votesarray = [];
 				var vsum = 0;
 
-				console.log(results1);
+				//console.log(results1);
 				
 				for(var index in results2.questions[0].answers){
 					var antwort = results2.questions[0].answers[index];
