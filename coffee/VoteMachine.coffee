@@ -32,7 +32,7 @@ class DR.BroenGallery.VoteMachine
         
         voteId = @app.data[slug].voteId + 1763
         myvote = new Request(
-            url: "votes/gate/"
+            url: "http://vote.zdf.de/gate/"
             method: "POST"
             data:
                 aid: voteId

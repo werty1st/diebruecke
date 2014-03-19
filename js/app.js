@@ -162,7 +162,7 @@ DR.BroenGallery.VoteMachine = (function() {
     }
     voteId = this.app.data[slug].voteId + 1763;
     myvote = new Request({
-      url: "votes/gate/",
+      url: "http://vote.zdf.de/gate/",
       method: "POST",
       data: {
         aid: voteId,
@@ -500,9 +500,17 @@ MediaView = (function() {
     this.el = document.createElement('div');
     this.el.setAttribute('id', 'broen-gallery-person-media');
     this.el.innerHTML = this.html();
+    this.newh = this.getDocHeight();
+    parent.postMessage(this.newh, 'http://www.zdf.de');
     this.addEvents();
     return this.el;
   }
+
+  MediaView.prototype.getDocHeight = function() {
+    var D;
+    D = document;
+    return Math.max(D.body.scrollHeight, D.documentElement.scrollHeight, D.body.offsetHeight, D.documentElement.offsetHeight, D.body.clientHeight, D.documentElement.clientHeight);
+  };
 
   MediaView.prototype.addEvents = function() {
     var _this = this;

@@ -22,6 +22,15 @@
 			  margin: 1px;
 			  color: #fff;
 			}		
+			.d3name a{
+				text-decoration: none;
+				color: #fff;
+			}
+			.d3name a:hover{
+				text-decoration: underline;
+				color: #fff;
+				cursor: pointer;
+			}			
 			.d3bar{
 				padding-bottom: 8px;
 			}		
@@ -57,6 +66,11 @@
 
 		}
 		
+		function switch2slug(person){
+			parent.location.hash = "#" + person.slug;
+			return false;
+		}
+
 		function animateResults(data,vsum){
 
 			//max 250px
@@ -77,7 +91,10 @@
 			  .data(data)
 			 .enter().append("div").attr("class","d3bar");
     		 
-    		 div1.append("div").attr("class","d3name").text(function(d) { return d.name; })
+    		 div1.append("div").attr("class","d3name")
+    		 					.append("a")
+    		 					.on("click", switch2slug)
+    		 					.text(function(d) { return d.name; })
 			 div1.append("div").attr("class","d3value").text(function(d) {
 			 	var p = (d.stimmen / sum)*100;
 			 	return (p | 0)+ "%";
@@ -98,7 +115,7 @@
 			}
 
 		$.getJSON("stimmen.json",function (results1){
-			$.getJSON("votes/res/407.json",function (results2){
+			$.getJSON("http://vote.zdf.de/res/407.json",function (results2){
 				//.voteId + 1763
 				var votes = {};
 				var votesarray = [];
@@ -120,7 +137,8 @@
 					vsum += person.stimmen;
 					votesarray.push({
 						name: person.name,
-						stimmen: person.stimmen
+						stimmen: person.stimmen,
+						slug: person.slug
 						});
 				}
 				sortvotes(votesarray,vsum);

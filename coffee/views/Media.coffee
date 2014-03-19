@@ -12,9 +12,25 @@ class MediaView
         @el = document.createElement('div')
         @el.setAttribute 'id', 'broen-gallery-person-media'
         @el.innerHTML = this.html()
-
+        
+        @newh = this.getDocHeight()
+        parent.postMessage(@newh, 'http://www.zdf.de');
+        #parent.postMessage(@newh, 'http://cm2-prod-pre.zdf.de/');
+        
         this.addEvents()        
         return @el
+
+
+    getDocHeight: ->
+        D = document;
+        Math.max(
+            D.body.scrollHeight,
+            D.documentElement.scrollHeight,
+            D.body.offsetHeight, D.documentElement.offsetHeight,
+            D.body.clientHeight,
+            D.documentElement.clientHeight
+        )
+ 
 
     addEvents: ->
         bindEvent @el, 'click', (e) =>
