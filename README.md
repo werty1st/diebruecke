@@ -41,35 +41,10 @@ Fotos:
 
 
 Todo:
-player tooltips und vollbild
-Rolf hilft mir dann noch beim verpixeln.
-abstimmungsendpoint (personen die tot sind blocken)
-abstimmungsvisualisierung
 
-
-
-
-veröffentlichungsdatum einer person beachten
-sterbedatum einer person beachten
-
-DR.BroenGallery.config = {
-    jsonDataUrl: als array(0-5) je episode ein link alternativ eine url mit automatisch vom server erzeugten ein und ausblendedaten
-
-Dann kümmere ich mich um die Abstimmung und den Akamai Cache.
-Dann gucke ich nochmal nach dem Backend.
-
-
-reihenfolge korrigieren
-
-
-schriftart arial
-fotos und videos auf externen server/2.datenbank
+Backend
+Personen Verknüpfungen bearbeiten und mit datum versehen
 übersichtseite mit enddatum der einzelnen episoden
-foto und video upload
-videos kennzeichnen
-
-
-
 
 
 Data.json 00-10
@@ -105,3 +80,15 @@ relationen = array mit slug, name ,text, freischaltzeit
 
     "media": [
       {
+
+
+window.addEventListener('message', receiveMessage);
+ 
+function receiveMessage(event) {
+  if (event.origin !== 'http://sofa01.zdf.de')
+    return;
+ 
+ 
+  var height = parseInt(event.data) + 100;
+  document.getElementById("bruecke2").height = height
+}      	
