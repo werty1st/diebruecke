@@ -24,7 +24,7 @@ class HomeView
                     if @app.isMobile
                         @popover.updatePos parent.offsetLeft + 40, parent.offsetTop + 40
                     else   
-                        @popover.updatePos parent.offsetLeft + 55, parent.offsetTop + 55
+                        @popover.updatePos parent.offsetLeft + 30, parent.offsetTop + 55
 
                     @popover.show @app.data[slug]
 

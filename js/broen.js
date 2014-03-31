@@ -456,7 +456,7 @@ HomeView = (function() {
           if (_this.app.isMobile) {
             _this.popover.updatePos(parent.offsetLeft + 40, parent.offsetTop + 40);
           } else {
-            _this.popover.updatePos(parent.offsetLeft + 55, parent.offsetTop + 55);
+            _this.popover.updatePos(parent.offsetLeft + 30, parent.offsetTop + 55);
           }
           return _this.popover.show(_this.app.data[slug]);
         }
