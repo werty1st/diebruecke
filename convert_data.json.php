@@ -20,11 +20,11 @@ switch ($options["f"]) {
 		td(true);
 		break;
 	case 'gc':
-		echo "execute funtion garbabe_collector()\n";
+		echo "execute funtion garbage_collector()\n";
 		gc(false);
 		break;	
 	case 'gcm':
-		echo "execute funtion garbabe_collector()\n";
+		echo "execute funtion garbage_collector()\n";
 		gc(true);
 		break;	
 	default:
